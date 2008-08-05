@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/publishqueue/buttons/publish_current.png</destination>
+		<type>image</type>
+		<uuidstructure>dca7dc0e-73fd-11db-a471-bf6fa13020a5</uuidstructure>
+		<uuidresource>dca7dc0f-73fd-11db-a471-bf6fa13020a5</uuidresource>
+		<datelastmodified>Tue, 14 Nov 2006 16:33:53 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 14 Nov 2006 16:33:30 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

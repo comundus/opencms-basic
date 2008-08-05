@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/views/explorer/contextmenu.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>5f47deec-b548-11db-8faa-57d0fde741a5</uuidstructure>
+		<uuidresource>5f47deed-b548-11db-8faa-57d0fde741a5</uuidresource>
+		<datelastmodified>Mon, 23 Apr 2007 12:27:51 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 05 Feb 2007 18:40:37 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Context Menu Builder]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
