@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/searchindex/index.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>ce801765-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>77ed82c7-ff54-11d9-a992-0334e4183c08</uuidresource>
+		<datelastmodified>Mon, 11 Dec 2006 15:32:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 28 Jul 2005 10:43:43 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[/tools/searchindex/icons/big/searchindex.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_GROUPS_SEARCHINDEX_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Search Index List]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.CmsInvisibleToolHandler]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

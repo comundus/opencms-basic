@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/replace.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>c8a20474-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>f3763be2-f1e0-11d8-9d42-7f1f3bbc97b8</uuidresource>
+		<datelastmodified>Mon, 23 Apr 2007 12:27:53 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Dialog - Replace resource]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/accounts/imexport_user_data/dodownload.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>ce4d6bd6-c574-11db-bdd9-6b9f86bc881c</uuidstructure>
+		<uuidresource>ce4d6bd7-c574-11db-bdd9-6b9f86bc881c</uuidresource>
+		<datelastmodified>Wed, 14 Mar 2007 14:12:02 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 26 Feb 2007 08:39:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Download popup]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

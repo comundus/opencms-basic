@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/handler/template/handlertemplate</destination>
+		<type>jsp</type>
+		<uuidstructure>82e86dd2-366c-11db-ab2a-8b2c5a4caf8d</uuidstructure>
+		<uuidresource>0d30d7bb-98b8-11da-972c-9152ffc73fe6</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 08 Feb 2006 15:32:02 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Template for error handlers]]></value>
+			</property>
+			<property>
+				<name>cache</name>
+				<value><![CDATA[uri;element]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/handler/template/style.css]]></value>
+			</property>
+			<property>
+				<name>template-elements</name>
+				<value><![CDATA[foot*|Foot,head*|Head]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

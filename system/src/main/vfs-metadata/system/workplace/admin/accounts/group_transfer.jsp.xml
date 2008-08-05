@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/accounts/group_transfer.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>e96ca367-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>37e713a1-0a6b-11da-9201-1d873b0b8abd</uuidresource>
+		<datelastmodified>Wed, 14 Mar 2007 14:12:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 11 Aug 2005 13:24:17 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Transfer Group Permissions]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
