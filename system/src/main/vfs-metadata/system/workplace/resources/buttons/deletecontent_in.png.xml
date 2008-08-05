@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/buttons/deletecontent_in.png</destination>
+		<type>image</type>
+		<uuidstructure>82cfb840-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>4e4b37bc-dcd4-11d9-b163-0fc796c4637a</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

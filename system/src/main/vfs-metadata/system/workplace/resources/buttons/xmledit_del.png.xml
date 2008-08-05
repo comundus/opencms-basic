@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/buttons/xmledit_del.png</destination>
+		<type>image</type>
+		<uuidstructure>8ade18ae-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>1bf4f21c-ba48-11da-8cb6-0df9507b543e</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 23 Mar 2006 08:36:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
