@@ -118,7 +118,7 @@
                 <groupId>com.comundus.maven</groupId>
                 <artifactId>maven-vfs-plugin</artifactId>
                 <configuration>
-                    <adminPassword>cmopencms</adminPassword>
+                    <adminPassword>admin</adminPassword>
                 </configuration>
             </plugin>
             <plugin>
