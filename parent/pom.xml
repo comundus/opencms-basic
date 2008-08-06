@@ -33,6 +33,21 @@
             <properties/>
         </developer>
     </developers>
+	
+	<repositories>
+		<repository>
+			<id>opencms-maven-sourceforge</id>
+			<url>http://mavplugocms.sourceforge.net/maven2repository</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+        <pluginRepository>
+            <id>opencms-maven-sourceforge</id>
+            <name/>
+            <url>http://mavplugocms.sourceforge.net/maven2repository</url>
+        </pluginRepository>
+    </pluginRepositories>
+
 
     <scm>
         <!-- connection></connection -->
