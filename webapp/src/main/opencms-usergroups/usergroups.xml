@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<usergroupdata>
+		<groupdata>
+			<name>Administrators</name>
+			<description><![CDATA[%(key.GUI_DEFAULTGROUP_ROOT_ADMINS_DESCRIPTION_0)]]></description>
+			<flags>1026</flags>
+			<parentgroup/>
+		</groupdata>
+		<groupdata>
+			<name>Guests</name>
+			<description><![CDATA[%(key.GUI_DEFAULTGROUP_ROOT_GUESTS_DESCRIPTION_0)]]></description>
+			<flags>0</flags>
+			<parentgroup/>
+		</groupdata>
+		<groupdata>
+			<name>Projectmanagers</name>
+			<description><![CDATA[%(key.GUI_DEFAULTGROUP_ROOT_PROJMANS_DESCRIPTION_0)]]></description>
+			<flags>9222</flags>
+			<parentgroup>Users</parentgroup>
+		</groupdata>
+		<groupdata>
+			<name>Users</name>
+			<description><![CDATA[%(key.GUI_DEFAULTGROUP_ROOT_USERS_DESCRIPTION_0)]]></description>
+			<flags>17412</flags>
+			<parentgroup/>
+		</groupdata>
+		<groupdata>
+			<name>rootusers</name>
+			<description><![CDATA[root users]]></description>
+			<flags>0</flags>
+			<parentgroup>Users</parentgroup>
+		</groupdata>
+		<userdata>
+			<name>Admin</name>
+			<password><![CDATA[NzlGZ0Y1ZkZVNGVXRUNHTTJHN3Y2Zz09]]></password>
+			<firstname> </firstname>
+			<lastname> </lastname>
+			<email> </email>
+			<flags>0</flags>
+			<datecreated>1184846105746</datecreated>
+			<userinfo>
+				<entry name="USER_ADDRESS" type="java.lang.String"/>
+				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_ADMIN_DESCRIPTION_0)]]></entry>
+			</userinfo>
+			<usergroups>
+				<groupname>
+					<name>Administrators</name>
+				</groupname>
+			</usergroups>
+		</userdata>
+		<userdata>
+			<name>Export</name>
+			<password><![CDATA[a0xScGhJT1VkaW5qUlRDRHZJMWhRdz09]]></password>
+			<firstname> </firstname>
+			<lastname> </lastname>
+			<email> </email>
+			<flags>0</flags>
+			<datecreated>1184846105762</datecreated>
+			<userinfo>
+				<entry name="USER_ADDRESS" type="java.lang.String"/>
+				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_EXPORT_DESCRIPTION_0)]]></entry>
+			</userinfo>
+			<usergroups>
+				<groupname>
+					<name>Guests</name>
+				</groupname>
+			</usergroups>
+		</userdata>
+		<userdata>
+			<name>Guest</name>
+			<password><![CDATA[MUIyTTJZOEFzZ1RwZ0FtWTdQaENmZz09]]></password>
+			<firstname> </firstname>
+			<lastname> </lastname>
+			<email> </email>
+			<flags>0</flags>
+			<datecreated>1184846105731</datecreated>
+			<userinfo>
+				<entry name="USER_ADDRESS" type="java.lang.String"/>
+				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_GUEST_DESCRIPTION_0)]]></entry>
+			</userinfo>
+			<usergroups>
+				<groupname>
+					<name>Guests</name>
+				</groupname>
+			</usergroups>
+		</userdata>
+	</usergroupdata>
+</export>
