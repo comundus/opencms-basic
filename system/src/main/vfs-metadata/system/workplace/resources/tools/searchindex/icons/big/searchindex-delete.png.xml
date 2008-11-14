@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/searchindex/icons/big/searchindex-delete.png</destination>
+		<type>image</type>
+		<uuidstructure>cf8d6979-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>2b51af13-1873-11da-9aff-0334e4183c08</uuidresource>
+		<datelastmodified>Thu, 14 Dec 2006 09:26:49 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 29 Aug 2005 09:56:28 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:32,h:32]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

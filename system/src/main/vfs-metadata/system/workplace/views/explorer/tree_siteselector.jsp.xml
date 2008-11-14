@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/views/explorer/tree_siteselector.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>c7aa1053-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>ed14053a-f058-11d8-ba65-db38cc8f19d7</uuidresource>
+		<datelastmodified>Mon, 23 Apr 2007 12:27:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Tree FrameSet - Site selector Frame]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

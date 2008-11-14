@@ -1,0 +1,945 @@
+
+<opencms>
+    <modules>
+        <module>
+            <name>org.opencms.editors</name>
+            <nicename><![CDATA[OpenCms 7 Common editors]]></nicename>
+            <group>OpenCms Editors</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms Common Editing tools.</p>
+<p>This module is needed to be able to edit files in the OpenCms Workplace.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.3</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace" version="1.0.0"/>
+            </dependencies>
+            <exportpoints/>
+            <resources>
+                <resource uri="/system/workplace/editors/direct_edit.jsp"/>
+                <resource uri="/system/workplace/editors/direct_edit_include.txt"/>
+                <resource uri="/system/workplace/editors/editor.jsp"/>
+                <resource uri="/system/workplace/editors/editor_main.jsp"/>
+                <resource uri="/system/workplace/editors/configuration/"/>
+                <resource uri="/system/workplace/editors/dialogs/"/>
+                <resource uri="/system/workplace/editors/simple/"/>
+                <resource uri="/system/workplace/editors/simplehtml/"/>
+                <resource uri="/system/workplace/editors/xmlcontent/"/>
+                <resource uri="/system/workplace/resources/buttons/anchor.png"/>
+                <resource uri="/system/workplace/resources/buttons/bold.png"/>
+                <resource uri="/system/workplace/resources/buttons/bullist.png"/>
+                <resource uri="/system/workplace/resources/buttons/center.png"/>
+                <resource uri="/system/workplace/resources/buttons/cleanup.png"/>
+                <resource uri="/system/workplace/resources/buttons/color_fill.png"/>
+                <resource uri="/system/workplace/resources/buttons/color_text.png"/>
+                <resource uri="/system/workplace/resources/buttons/copy.png"/>
+                <resource uri="/system/workplace/resources/buttons/cut.png"/>
+                <resource uri="/system/workplace/resources/buttons/details.png"/>
+                <resource uri="/system/workplace/resources/buttons/directedit_cl.png"/>
+                <resource uri="/system/workplace/resources/buttons/directedit_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/directedit_op.png"/>
+                <resource uri="/system/workplace/resources/buttons/editorsearch.png"/>
+                <resource uri="/system/workplace/resources/buttons/elements.png"/>
+                <resource uri="/system/workplace/resources/buttons/elements_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/erase.png"/>
+                <resource uri="/system/workplace/resources/buttons/exit.png"/>
+                <resource uri="/system/workplace/resources/buttons/image.png"/>
+                <resource uri="/system/workplace/resources/buttons/indent.png"/>
+                <resource uri="/system/workplace/resources/buttons/italic.png"/>
+                <resource uri="/system/workplace/resources/buttons/left.png"/>
+                <resource uri="/system/workplace/resources/buttons/link.png"/>
+                <resource uri="/system/workplace/resources/buttons/numlist.png"/>
+                <resource uri="/system/workplace/resources/buttons/outdent.png"/>
+                <resource uri="/system/workplace/resources/buttons/paste.png"/>
+                <resource uri="/system/workplace/resources/buttons/properties.png"/>
+                <resource uri="/system/workplace/resources/buttons/properties_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/redo.png"/>
+                <resource uri="/system/workplace/resources/buttons/right.png"/>
+                <resource uri="/system/workplace/resources/buttons/save.png"/>
+                <resource uri="/system/workplace/resources/buttons/save_exit.png"/>
+                <resource uri="/system/workplace/resources/buttons/specialchar.png"/>
+                <resource uri="/system/workplace/resources/buttons/table.png"/>
+                <resource uri="/system/workplace/resources/buttons/table_td.png"/>
+                <resource uri="/system/workplace/resources/buttons/table_tr.png"/>
+                <resource uri="/system/workplace/resources/buttons/underline.png"/>
+                <resource uri="/system/workplace/resources/buttons/undo.png"/>
+                <resource uri="/system/workplace/resources/buttons/xmledit.png"/>
+                <resource uri="/system/workplace/resources/buttons/xmledit_add.png"/>
+                <resource uri="/system/workplace/resources/buttons/xmledit_del.png"/>
+                <resource uri="/system/workplace/resources/buttons/xmledit_del_add.png"/>
+                <resource uri="/system/workplace/resources/editors/simple/"/>
+                <resource uri="/system/workplace/resources/editors/simplehtml/"/>
+                <resource uri="/system/workplace/resources/editors/xmlcontent/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.editors.fckeditor</name>
+            <nicename><![CDATA[OpenCms 7 FCKeditor WYSIWYG editor plugin]]></nicename>
+            <group>OpenCms Editors</group>
+            <class/>
+            <description><![CDATA[<p>This module adds the popular Open Source HTML editor "FCKeditor" to the OpenCms Workplace.</p>
+<p>Install this module if you want a WYSIWYG editor for Mozilla based browsers. The version of FCKeditor is 2.4.2</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.3</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.editors" version="1.2.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.editors.fckeditor/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/editors/fckeditor/"/>
+                <resource uri="/system/workplace/resources/editors/fckeditor/"/>
+                <resource uri="/system/workplace/resources/components/widgets/fckeditor.js"/>
+                <resource uri="/system/modules/org.opencms.editors.fckeditor/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.frontend.layoutpage</name>
+            <nicename><![CDATA[OpenCms 7 frontend Layoutpage]]></nicename>
+            <group>OpenCms frontend</group>
+            <class/>
+            <description><![CDATA[<p>Contains the resource type "layoutpage" that helps creating pages following a set of predefined layout patterns.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies/>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.frontend.layoutpage/classes/" destination="WEB-INF/classes/"/>
+                <exportpoint uri="/system/modules/org.opencms.frontend.layoutpage/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/modules/org.opencms.frontend.layoutpage/"/>
+                <resource uri="/system/workplace/resources/filetypes/layoutpage.gif"/>
+            </resources>
+            <parameters/>
+            <resourcetypes>
+                <type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="layoutpage" id="56">
+                    <properties>
+                        <property>
+                            <name>content-conversion</name>
+                            <value type="shared"><![CDATA[cleanup;xhtml]]></value>
+                        </property>
+                        <property>
+                            <name>template-elements</name>
+                            <value type="shared"><![CDATA[/system/modules/org.opencms.frontend.layoutpage/pages/detail-layoutpage.html]]></value>
+                        </property>
+                    </properties>
+                    <param name="schema">/system/modules/org.opencms.frontend.layoutpage/schemas/layoutpage.xsd</param>
+                </type>
+            </resourcetypes>
+            <explorertypes>
+                <explorertype name="layoutpage" key="fileicon.layoutpage" icon="layoutpage.gif" reference="xmlcontent">
+                    <newresource uri="newresource_xmlcontent.jsp?newresourcetype=layoutpage" order="19" autosetnavigation="false" autosettitle="false" info="desc.layoutpage"/>
+                    <accesscontrol>
+                        <accessentry principal="ROLE.WORKPLACE_USER" permissions="+r+v+w+c"/>
+                    </accesscontrol>
+                </explorertype>
+            </explorertypes>
+        </module>
+        <module>
+            <name>org.opencms.locale.de</name>
+            <nicename><![CDATA[OpenCms 7 German localization for the workplace]]></nicename>
+            <group>OpenCms Localization</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the German language localization files for the OpenCms workplace.</p>
+<p>Install this module if you want to use the german version of the OpenCms Workplace.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.3</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies/>
+            <exportpoints>
+                <exportpoint uri="/system/workplace/locales/de/messages/" destination="WEB-INF/classes/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/locales/de/messages/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace</name>
+            <nicename><![CDATA[OpenCms 7 Workplace base]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms Workplace base files.</p>
+<p>It includes common used dialogs and style sheets, that are needed by any workplace module.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.3</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies/>
+            <exportpoints/>
+            <resources>
+                <resource uri="/system/login/"/>
+                <resource uri="/system/lost-found/"/>
+                <resource uri="/system/shared/page.dtd"/>
+                <resource uri="/system/shared/showversion"/>
+                <resource uri="/system/workplace/admin/notification/"/>
+                <resource uri="/system/workplace/commons/includes/"/>
+                <resource uri="/system/workplace/commons/style/"/>
+                <resource uri="/system/workplace/galleries/"/>
+                <resource uri="/system/workplace/locales/de/readme.txt"/>
+                <resource uri="/system/workplace/resources/buttons/apply.png"/>
+                <resource uri="/system/workplace/resources/buttons/apply_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/calendar.png"/>
+                <resource uri="/system/workplace/resources/buttons/deletecontent.png"/>
+                <resource uri="/system/workplace/resources/buttons/deletecontent_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/deletelocale.png"/>
+                <resource uri="/system/workplace/resources/buttons/deletelocale_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/downloadgallery.png"/>
+                <resource uri="/system/workplace/resources/buttons/edit.png"/>
+                <resource uri="/system/workplace/resources/buttons/edit_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/folder_refresh.png"/>
+                <resource uri="/system/workplace/resources/buttons/help.png"/>
+                <resource uri="/system/workplace/resources/buttons/htmlgallery.png"/>
+                <resource uri="/system/workplace/resources/buttons/imagegallery.png"/>
+                <resource uri="/system/workplace/resources/buttons/linkgallery.png"/>
+                <resource uri="/system/workplace/resources/buttons/logout.png"/>
+                <resource uri="/system/workplace/resources/buttons/move_down.png"/>
+                <resource uri="/system/workplace/resources/buttons/move_down_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/move_up.png"/>
+                <resource uri="/system/workplace/resources/buttons/move_up_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/new.png"/>
+                <resource uri="/system/workplace/resources/buttons/new_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/preferences.png"/>
+                <resource uri="/system/workplace/resources/buttons/preferences_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/preview.png"/>
+                <resource uri="/system/workplace/resources/buttons/publish.png"/>
+                <resource uri="/system/workplace/resources/buttons/publish_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/publish_queue.png"/>
+                <resource uri="/system/workplace/resources/buttons/reload.png"/>
+                <resource uri="/system/workplace/resources/buttons/search.png"/>
+                <resource uri="/system/workplace/resources/buttons/search_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/tablegallery.png"/>
+                <resource uri="/system/workplace/resources/buttons/wizard.png"/>
+                <resource uri="/system/workplace/resources/buttons/wizard_in.png"/>
+                <resource uri="/system/workplace/resources/commons/error.png"/>
+                <resource uri="/system/workplace/resources/commons/favicon.ico"/>
+                <resource uri="/system/workplace/resources/commons/help.png"/>
+                <resource uri="/system/workplace/resources/commons/login.png"/>
+                <resource uri="/system/workplace/resources/commons/login_logo.png"/>
+                <resource uri="/system/workplace/resources/commons/ok.png"/>
+                <resource uri="/system/workplace/resources/commons/wait.gif"/>
+                <resource uri="/system/workplace/resources/commons/warning.png"/>
+                <resource uri="/system/workplace/resources/commons/workplace.png"/>
+                <resource uri="/system/workplace/resources/components/js_calendar/"/>
+                <resource uri="/system/workplace/resources/components/js_colorpicker/"/>
+                <resource uri="/system/workplace/resources/components/widgets/category.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/colorpicker.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/combo.png"/>
+                <resource uri="/system/workplace/resources/components/widgets/combobox.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/downloadgallery.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/fileselector.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/groupselector.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/htmlgallery.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/imagegallery.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/linkgallery.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/orgunitselector.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/principalselector.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/tablegallery.js"/>
+                <resource uri="/system/workplace/resources/components/widgets/userselector.js"/>
+                <resource uri="/system/workplace/resources/filetypes/binary.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/downloadgallery.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/folder.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/gallery.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/htmlgallery.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/image.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/imagegallery.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/jsp.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/link.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/linkgallery.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/othertype.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/page.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/plain.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/pointer.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/tablegallery.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/unknown_file.png"/>
+                <resource uri="/system/workplace/resources/filetypes/unknown_folder.png"/>
+                <resource uri="/system/workplace/resources/filetypes/upload.png"/>
+                <resource uri="/system/workplace/resources/filetypes/velocity.gif"/>
+                <resource uri="/system/workplace/resources/filetypes/xmlcontent.gif"/>
+                <resource uri="/system/workplace/views/top_foot.jsp"/>
+                <resource uri="/system/workplace/views/top_fs.jsp"/>
+                <resource uri="/system/workplace/views/workplace.jsp"/>
+                <resource uri="/system/workplace/views/top_head.jsp"/>
+                <resource uri="/system/workplace/views/top_js.jsp"/>
+                <resource uri="/system/workplace/locales/en/readme.txt"/>
+                <resource uri="/system/shared/decoration/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.administration</name>
+            <nicename><![CDATA[OpenCms 7 Administration Framework]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the base components for the administration view.</p>
+<p>Its allows you to install and/or develop administration tools for OpenCms 7.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.administration/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/commons/list-csv.jsp"/>
+                <resource uri="/system/workplace/commons/list-explorer.jsp"/>
+                <resource uri="/system/workplace/commons/list-print.jsp"/>
+                <resource uri="/system/workplace/resources/admin/"/>
+                <resource uri="/system/workplace/resources/list/"/>
+                <resource uri="/system/workplace/views/admin/"/>
+                <resource uri="/system/modules/org.opencms.workplace.administration/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.categories</name>
+            <nicename><![CDATA[OpenCms 7 Workplace categories]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms Workplace category folders.</p>
+<p>It includes the system wide category folders.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.2</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies/>
+            <exportpoints/>
+            <resources>
+                <resource uri="/system/categories/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.explorer</name>
+            <nicename><![CDATA[OpenCms 7 Workplace explorer]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms Workplace Explorer.</p>
+<p>Install this module if you want a GUI to work on the OpenCms VFS.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.3</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace" version="1.0.0"/>
+            </dependencies>
+            <exportpoints/>
+            <resources>
+                <resource uri="/system/workplace/commons/availability.jsp"/>
+                <resource uri="/system/workplace/commons/chacc.jsp"/>
+                <resource uri="/system/workplace/commons/chnav.jsp"/>
+                <resource uri="/system/workplace/commons/chtype.jsp"/>
+                <resource uri="/system/workplace/commons/commentimages.jsp"/>
+                <resource uri="/system/workplace/commons/confirm_content_notification.jsp"/>
+                <resource uri="/system/workplace/commons/copy.jsp"/>
+                <resource uri="/system/workplace/commons/copytoproject.jsp"/>
+                <resource uri="/system/workplace/commons/delete.jsp"/>
+                <resource uri="/system/workplace/commons/delete_standard.jsp"/>
+                <resource uri="/system/workplace/commons/displayresource.jsp"/>
+                <resource uri="/system/workplace/commons/editpointer.jsp"/>
+                <resource uri="/system/workplace/commons/group_selection.jsp"/>
+                <resource uri="/system/workplace/commons/lock.jsp"/>
+                <resource uri="/system/workplace/commons/lock_standard.jsp"/>
+                <resource uri="/system/workplace/commons/lockchange.jsp"/>
+                <resource uri="/system/workplace/commons/lockchange_standard.jsp"/>
+                <resource uri="/system/workplace/commons/locks.jsp"/>
+                <resource uri="/system/workplace/commons/move.jsp"/>
+                <resource uri="/system/workplace/commons/newcsvfile_upload.jsp"/>
+                <resource uri="/system/workplace/commons/newresource.jsp"/>
+                <resource uri="/system/workplace/commons/newresource_folder.jsp"/>
+                <resource uri="/system/workplace/commons/newresource_pointer.jsp"/>
+                <resource uri="/system/workplace/commons/newresource_sibling.jsp"/>
+                <resource uri="/system/workplace/commons/newresource_upload.jsp"/>
+                <resource uri="/system/workplace/commons/newresource_xmlcontent.jsp"/>
+                <resource uri="/system/workplace/commons/newresource_xmlcontent_modelfile.jsp"/>
+                <resource uri="/system/workplace/commons/newresource_xmlpage.jsp"/>
+                <resource uri="/system/workplace/commons/opengallery.jsp"/>
+                <resource uri="/system/workplace/commons/orgunit_selection.jsp"/>
+                <resource uri="/system/workplace/commons/preferences.jsp"/>
+                <resource uri="/system/workplace/commons/principal_selection.jsp"/>
+                <resource uri="/system/workplace/commons/property.jsp"/>
+                <resource uri="/system/workplace/commons/property_advanced.jsp"/>
+                <resource uri="/system/workplace/commons/property_custom.jsp"/>
+                <resource uri="/system/workplace/commons/publishproject.jsp"/>
+                <resource uri="/system/workplace/commons/publishresource.jsp"/>
+                <resource uri="/system/workplace/commons/renameimages.jsp"/>
+                <resource uri="/system/workplace/commons/replace.jsp"/>
+                <resource uri="/system/workplace/commons/report-brokenrelations.jsp"/>
+                <resource uri="/system/workplace/commons/report-progress.jsp"/>
+                <resource uri="/system/workplace/commons/report-publishresources.jsp"/>
+                <resource uri="/system/workplace/commons/report-locks.jsp"/>
+                <resource uri="/system/workplace/commons/report-deleted.jsp"/>
+                <resource uri="/system/workplace/commons/secure.jsp"/>
+                <resource uri="/system/workplace/commons/show_deleted.jsp"/>
+                <resource uri="/system/workplace/commons/synchronize.jsp"/>
+                <resource uri="/system/workplace/commons/touch.jsp"/>
+                <resource uri="/system/workplace/commons/undelete.jsp"/>
+                <resource uri="/system/workplace/commons/undochanges.jsp"/>
+                <resource uri="/system/workplace/commons/unlock.jsp"/>
+                <resource uri="/system/workplace/commons/unlock_standard.jsp"/>
+                <resource uri="/system/workplace/commons/user_selection.jsp"/>
+                <resource uri="/system/workplace/resources/buttons/back.png"/>
+                <resource uri="/system/workplace/resources/buttons/ex_search.png"/>
+                <resource uri="/system/workplace/resources/buttons/folder.png"/>
+                <resource uri="/system/workplace/resources/buttons/folder_up.png"/>
+                <resource uri="/system/workplace/resources/buttons/folder_up_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/group.png"/>
+                <resource uri="/system/workplace/resources/buttons/orgunit.png"/>
+                <resource uri="/system/workplace/resources/buttons/principal.png"/>
+                <resource uri="/system/workplace/resources/buttons/upload.png"/>
+                <resource uri="/system/workplace/resources/buttons/upload_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/user.png"/>
+                <resource uri="/system/workplace/resources/commons/ajax.js"/>
+                <resource uri="/system/workplace/resources/commons/all_others.png"/>
+                <resource uri="/system/workplace/resources/commons/empty.html"/>
+                <resource uri="/system/workplace/resources/commons/explorer.css"/>
+                <resource uri="/system/workplace/resources/commons/explorer.js"/>
+                <resource uri="/system/workplace/resources/commons/group.png"/>
+                <resource uri="/system/workplace/resources/commons/minus.png"/>
+                <resource uri="/system/workplace/resources/commons/overwrite_all.png"/>
+                <resource uri="/system/workplace/resources/commons/plus.png"/>
+                <resource uri="/system/workplace/resources/commons/role.png"/>
+                <resource uri="/system/workplace/resources/commons/tree.js"/>
+                <resource uri="/system/workplace/resources/commons/user.png"/>
+                <resource uri="/system/workplace/resources/components/upload_applet/"/>
+                <resource uri="/system/workplace/resources/explorer/"/>
+                <resource uri="/system/workplace/resources/tree/"/>
+                <resource uri="/system/workplace/views/explorer/"/>
+                <resource uri="/system/workplace/explorer/categories/"/>
+                <resource uri="/system/workplace/explorer/history/"/>
+                <resource uri="/system/workplace/explorer/linkrelation/"/>
+                <resource uri="/system/workplace/explorer/search/"/>
+                <resource uri="/system/workplace/explorer/sibling/"/>
+                <resource uri="/system/workplace/explorer/readme.txt"/>
+                <resource uri="/system/workplace/resources/tools/ex_history/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.galleries</name>
+            <nicename><![CDATA[OpenCms 7 Workplace galleries]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms Workplace gallery folders.</p>
+<p>It includes the system wide gallery folders.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies/>
+            <exportpoints/>
+            <resources>
+                <resource uri="/system/galleries/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.handler</name>
+            <nicename><![CDATA[OpenCms 7 Workplace handler]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms Workplace handler files.</p>
+<p>It includes the 404 and 500 error handlers that are showed in case of an error of a frontend application.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies/>
+            <exportpoints/>
+            <resources>
+                <resource uri="/system/handler/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.help</name>
+            <nicename><![CDATA[OpenCms 7 Workplace online help - Base module]]></nicename>
+            <group>OpenCms Online Help</group>
+            <class/>
+            <description><![CDATA[<p>This module installs the basic templates required for the online help in all languages.</p>
+<p><i>(c) 2007 by Alkacon Software</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.help/classes/" destination="WEB-INF/classes/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/modules/org.opencms.workplace.help/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.help.de</name>
+            <nicename><![CDATA[OpenCms 7 Workplace german online help]]></nicename>
+            <group>OpenCms Online Help</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the online help pages for the OpenCms workplace in German language.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.help" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.help.de/classes/" destination="WEB-INF/classes/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/locales/de/help/"/>
+                <resource uri="/system/modules/org.opencms.workplace.help/classes/org/opencms/workplace/help/mappings_de.properties"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.help.en</name>
+            <nicename><![CDATA[OpenCms 7 Workplace english online help]]></nicename>
+            <group>OpenCms Online Help</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the english online help pages for the OpenCms workplace.</p>
+<p><i>(c) 2007 by Alkacon Software</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 22:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.help" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.help.en/classes/" destination="WEB-INF/classes/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/locales/en/help/"/>
+                <resource uri="/system/modules/org.opencms.workplace.help/classes/org/opencms/workplace/help/mappings.properties"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.accounts</name>
+            <nicename><![CDATA[OpenCms 7 Accounts management]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the user accounts and groups.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.3</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.accounts/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/accounts/"/>
+                <resource uri="/system/workplace/resources/tools/accounts/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.accounts/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.cache</name>
+            <nicename><![CDATA[OpenCms 7 Cache administration tools]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the different internal caches.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.cache/lib" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/flexcache/"/>
+                <resource uri="/system/workplace/resources/tools/cache/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.cache/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.content</name>
+            <nicename><![CDATA[OpenCms 7 Content tools]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the content of resources.</p>
+<p>Install this module if you want to modify file properties or content elements.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.3</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints/>
+            <resources>
+                <resource uri="/system/workplace/admin/contenttools/change/"/>
+                <resource uri="/system/workplace/admin/contenttools/delete/"/>
+                <resource uri="/system/workplace/admin/contenttools/merge/"/>
+                <resource uri="/system/workplace/admin/contenttools/renameelement/"/>
+                <resource uri="/system/workplace/admin/contenttools/reports/"/>
+                <resource uri="/system/workplace/admin/contenttools/changeelementlocale.jsp"/>
+                <resource uri="/system/workplace/admin/contenttools/tagreplace.jsp"/>
+                <resource uri="/system/workplace/admin/contenttools/xmlcontentrepair.jsp"/>
+                <resource uri="/system/workplace/admin/contenttools/check/index.jsp"/>
+                <resource uri="/system/workplace/admin/contenttools/check/report.jsp"/>
+                <resource uri="/system/workplace/admin/contenttools/check/result.jsp"/>
+                <resource uri="/system/workplace/admin/contenttools/check/plugin/propertycheck/"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/small/"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/change_elementlocale.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contentcheck.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contentcheck_configuration.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contentcheck_property_configuration.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contentmerge.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contentmerge_disabled.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contenttools.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contenttools_disabled.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/elements_rename.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/elements_rename_disabled.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/properties_change.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/properties_change_disabled.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/properties_delete.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/properties_delete_disabled.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/repair_xmlcontent.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/replace_html_tag.png"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.database</name>
+            <nicename><![CDATA[OpenCms 7 Database management tools]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms database maintainance tools.</p>
+<p>Install this module if you want to import/export data, it also contains a static export tool.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.3</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.database/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/database/"/>
+                <resource uri="/system/workplace/resources/tools/database/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.database/"/>
+                <resource uri="/system/workplace/commons/newresource_uploadHtml.jsp"/>
+                <resource uri="/system/workplace/resources/filetypes/htmlimport.png"/>
+                <resource uri="/system/workplace/explorer/uploadhtml/uploadHtml.jsp"/>
+            </resources>
+            <parameters/>
+            <explorertypes>
+                <explorertype name="uploadhtml" key="fileicon.uploadhtml" icon="htmlimport.png">
+                    <newresource uri="newresource_uploadHtml.jsp" order="90" autosetnavigation="false" autosettitle="false" info="desc.uploadhtml"/>
+                </explorertype>
+            </explorertypes>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.galleryoverview</name>
+            <nicename><![CDATA[OpenCms 7 Gallery administration tools]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains Overviews for every OpenCms gallery types.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.galleryoverview/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/galleryoverview/"/>
+                <resource uri="/system/workplace/resources/tools/galleryoverview/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.galleryoverview/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.history</name>
+            <nicename><![CDATA[OpenCms 7 File history administration tools]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the file history feature.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.history/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/history/"/>
+                <resource uri="/system/workplace/resources/tools/history/icons/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.history/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.link</name>
+            <nicename><![CDATA[OpenCms 7 Link checking tools]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms administration tools for validating links in xml documents and pointer links.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.link/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/linkvalidation/"/>
+                <resource uri="/system/workplace/resources/tools/linkvalidation/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.link/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.modules</name>
+            <nicename><![CDATA[OpenCms 7 Module management]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains administration tools for managing the OpenCms modules.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.modules/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/modules/"/>
+                <resource uri="/system/workplace/resources/tools/modules/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.modules/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.projects</name>
+            <nicename><![CDATA[OpenCms 7 Project management]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the tools for managing the OpenCms projects.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.projects/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/projects/"/>
+                <resource uri="/system/workplace/resources/tools/projects/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.projects/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.publishqueue</name>
+            <nicename><![CDATA[OpenCms 7 Publish queue]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the tools for view the OpenCms publish queue.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.2</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.publishqueue/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/publishqueue/"/>
+                <resource uri="/system/workplace/resources/tools/publishqueue/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.publishqueue/"/>
+                <resource uri="/system/workplace/explorer/publishqueue/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.scheduler</name>
+            <nicename><![CDATA[OpenCms 7 Scheduled jobs management]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the tools for managing scheduled jobs.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.2</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.scheduler/lib" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/scheduler/"/>
+                <resource uri="/system/workplace/resources/tools/scheduler/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.scheduler/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.searchindex</name>
+            <nicename><![CDATA[OpenCms 7 Search index administration tools]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains tools related to the search capabilities of OpenCms.</p>
+<p>Install this module if you need search capabilities in OpenCms.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.searchindex/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/searchindex/"/>
+                <resource uri="/system/workplace/resources/tools/searchindex/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.searchindex/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.workplace.tools.workplace</name>
+            <nicename><![CDATA[OpenCms 7 Workplace management tools]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms Workplace maintenance tools.</p>
+<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.workplace/lib/" destination="WEB-INF/lib/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/admin/workplace/"/>
+                <resource uri="/system/workplace/resources/tools/workplace/"/>
+                <resource uri="/system/modules/org.opencms.workplace.tools.workplace/"/>
+            </resources>
+            <parameters/>
+        </module>
+    </modules>
+</opencms>

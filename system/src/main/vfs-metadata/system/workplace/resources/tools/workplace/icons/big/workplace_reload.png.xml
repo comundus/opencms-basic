@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/workplace/icons/big/workplace_reload.png</destination>
+		<type>image</type>
+		<uuidstructure>c3d3b3fe-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>84b11a43-d8f0-11d9-9822-ef342b994563</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:32,h:32]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

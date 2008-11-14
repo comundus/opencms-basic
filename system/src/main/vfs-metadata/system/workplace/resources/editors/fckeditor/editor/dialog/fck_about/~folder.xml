@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/fckeditor/editor/dialog/fck_about</destination>
+		<type>folder</type>
+		<uuidstructure>3233192e-03ac-11dc-b2d2-19a36bcdebf7</uuidstructure>
+		<datelastmodified>Wed, 16 May 2007 12:51:42 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 16 May 2007 12:51:42 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

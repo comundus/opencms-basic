@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/explorer/linkrelation/linkrelation_target.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>f423307a-f1ab-11db-b7cc-8b0cab018767</uuidstructure>
+		<uuidresource>f423307b-f1ab-11db-b7cc-8b0cab018767</uuidresource>
+		<datelastmodified>Tue, 24 Apr 2007 15:23:09 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 23 Apr 2007 15:04:37 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_LINK_RELATION_TARGET_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Link Relation Target]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[params:resource=${param.resource}|path:/linkrelationtarget]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.CmsInvisibleToolHandler]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

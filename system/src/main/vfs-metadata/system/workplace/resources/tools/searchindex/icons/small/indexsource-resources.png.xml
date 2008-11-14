@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/searchindex/icons/small/indexsource-resources.png</destination>
+		<type>image</type>
+		<uuidstructure>cfac624e-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>f1d155db-1f7a-11da-b0bd-0334e4183c08</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 07 Sep 2005 08:39:46 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[List - icon for indexsource - ressources.]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[indexsource-resources]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

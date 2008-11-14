@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/includes/multiresourcelist.txt</destination>
+		<type>plain</type>
+		<uuidstructure>827eb1bc-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>7dc2353a-4166-11da-ab03-4714cf95dde1</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 20 Oct 2005 12:39:01 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Resource list include]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

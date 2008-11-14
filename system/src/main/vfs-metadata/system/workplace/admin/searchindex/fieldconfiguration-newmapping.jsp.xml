@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/searchindex/fieldconfiguration-newmapping.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>a92df128-8536-11db-848c-09c80f20c0b6</uuidstructure>
+		<uuidresource>a92df129-8536-11db-848c-09c80f20c0b6</uuidresource>
+		<datelastmodified>Thu, 14 Dec 2006 10:26:55 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 06 Dec 2006 14:32:55 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_LIST_MAPPING_NAME_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[/tools/searchindex/icons/big/fieldconfiguration-newmapping.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_GROUPS_FIELD_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[2.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_LIST_SEARCHINDEX_ACTION_MAPPINGS_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Add new mapping to field]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[params:action=initial&fieldconfiguration=${param.fieldconfiguration}&field=${param.field}|path:/searchindex/fieldconfigurations/fieldconfiguration/field/newmapping]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.searchindex.CmsSearchToolHandler]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

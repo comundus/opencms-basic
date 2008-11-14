@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/modules/reports/export.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>d74f7e92-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>2f789de2-cba0-11d9-a301-218dc7aa42ee</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Report for exporting modules]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
