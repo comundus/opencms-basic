@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/list/leftarrow_disabled.png</destination>
+		<type>image</type>
+		<uuidstructure>96d5c1be-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>1688b652-aeb6-11da-a781-57930b21733f</uuidresource>
+		<datelastmodified>Wed, 07 Feb 2007 11:31:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 08 Mar 2006 15:13:24 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

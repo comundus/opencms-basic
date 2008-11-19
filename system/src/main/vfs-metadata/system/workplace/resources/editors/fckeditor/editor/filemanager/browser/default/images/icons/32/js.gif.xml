@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/fckeditor/editor/filemanager/browser/default/images/icons/32/js.gif</destination>
+		<type>image</type>
+		<uuidstructure>f34ca82f-e068-11dc-a7de-d17a851929f6</uuidstructure>
+		<uuidresource>f34ca830-e068-11dc-a7de-d17a851929f6</uuidresource>
+		<datelastmodified>Thu, 21 Feb 2008 10:38:27 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 21 Feb 2008 10:37:07 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:32,h:32]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

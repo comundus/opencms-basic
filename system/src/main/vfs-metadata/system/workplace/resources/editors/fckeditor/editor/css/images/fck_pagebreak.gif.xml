@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/fckeditor/editor/css/images/fck_pagebreak.gif</destination>
+		<type>image</type>
+		<uuidstructure>efa794b4-e068-11dc-a7de-d17a851929f6</uuidstructure>
+		<uuidresource>efa794b5-e068-11dc-a7de-d17a851929f6</uuidresource>
+		<datelastmodified>Thu, 21 Feb 2008 10:38:28 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 21 Feb 2008 10:37:01 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:15,h:5]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

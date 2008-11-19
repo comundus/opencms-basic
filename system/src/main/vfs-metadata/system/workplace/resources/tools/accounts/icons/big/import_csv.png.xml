@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/accounts/icons/big/import_csv.png</destination>
+		<type>image</type>
+		<uuidstructure>bc4bdefb-d0ad-11db-9edd-871f936c639e</uuidstructure>
+		<uuidresource>bc4bdefc-d0ad-11db-9edd-871f936c639e</uuidresource>
+		<datelastmodified>Mon, 12 Mar 2007 15:46:15 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 12 Mar 2007 15:24:14 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:32,h:32]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

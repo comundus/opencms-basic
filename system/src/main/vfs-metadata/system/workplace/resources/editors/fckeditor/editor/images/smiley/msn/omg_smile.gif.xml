@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/fckeditor/editor/images/smiley/msn/omg_smile.gif</destination>
+		<type>image</type>
+		<uuidstructure>f86aed83-e068-11dc-a7de-d17a851929f6</uuidstructure>
+		<uuidresource>f86aed84-e068-11dc-a7de-d17a851929f6</uuidresource>
+		<datelastmodified>Thu, 21 Feb 2008 10:38:25 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 21 Feb 2008 10:37:16 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:19,h:19]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

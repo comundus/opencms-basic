@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/fckeditor/editor/skins/silver/images/toolbar.end.gif</destination>
+		<type>image</type>
+		<uuidstructure>fca8bed6-e068-11dc-a7de-d17a851929f6</uuidstructure>
+		<uuidresource>fca8bed7-e068-11dc-a7de-d17a851929f6</uuidresource>
+		<datelastmodified>Thu, 21 Feb 2008 10:38:23 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 21 Feb 2008 10:37:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:1,h:1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

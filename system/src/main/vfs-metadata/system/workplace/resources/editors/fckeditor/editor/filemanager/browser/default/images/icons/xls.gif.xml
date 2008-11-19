@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/fckeditor/editor/filemanager/browser/default/images/icons/xls.gif</destination>
+		<type>image</type>
+		<uuidstructure>f530d117-e068-11dc-a7de-d17a851929f6</uuidstructure>
+		<uuidresource>f530d118-e068-11dc-a7de-d17a851929f6</uuidresource>
+		<datelastmodified>Thu, 21 Feb 2008 10:38:26 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 21 Feb 2008 10:37:10 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:16,h:16]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
