@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/template/default.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>388aa38c-dfa5-11dc-8e49-3bdd2ea0b1ac</uuidstructure>
+		<uuidresource>388aa38d-dfa5-11dc-8e49-3bdd2ea0b1ac</uuidresource>
+		<datelastmodified>Tue, 26 Feb 2008 14:56:01 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 20 Feb 2008 11:16:02 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[OpenCms Default Template]]></value>
+			</property>
+			<property type="shared">
+				<name>cache</name>
+				<value><![CDATA[uri;element]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

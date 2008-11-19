@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/projects/project_overview.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>10760aa6-5f82-11db-8e8d-d3ee01eaa4cf</uuidstructure>
+		<uuidresource>cb5bbdbd-d8ce-11d9-a5d9-efaaea26ed93</uuidresource>
+		<datelastmodified>Mon, 23 Oct 2006 08:29:06 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_VIEWPROJECT_ADMIN_TOOL_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[tools/projects/icons/big/projects.png:tools/projects/icons/small/projects.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_VIEWPROJECT_ADMIN_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[10.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_VIEWPROJECT_ADMIN_TOOL_NAVBARNAME_0}:${key.GUI_VIEWPROJECT_ADMIN_TOOL_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Project Overview]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[path:/project_overview]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.projects.CmsProjectsToolHandler]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

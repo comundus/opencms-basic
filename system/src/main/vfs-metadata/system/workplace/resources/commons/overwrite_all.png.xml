@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/commons/overwrite_all.png</destination>
+		<type>image</type>
+		<uuidstructure>74760673-ce32-11db-9b41-075bba0c4c47</uuidstructure>
+		<uuidresource>74760674-ce32-11db-9b41-075bba0c4c47</uuidresource>
+		<datelastmodified>Fri, 09 Mar 2007 11:36:57 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 09 Mar 2007 11:36:43 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

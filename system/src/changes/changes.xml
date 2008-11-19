@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- see http://maven.apache.org/maven-1.x/plugins/changes/ -->
+<document>
+    <properties>
+        <title>OpenCms System Changes</title>
+        <author email="d.pleiss@comundus.com">Detlef Pleiß</author>
+    </properties>
+  
+    <body>
+		<release version="7.0.5" date="2008-10-01"/>
+		<release version="7.0.3" date="2008-01-15"/>
+        <release version="7.0.1" date="2007-07-12">
+            <action dev="ds" type="add">initial release</action>              
+        </release>
+
+        <!-- release version="1.1" date="2005-11-07">
+            <action dev="dp" type="fix" issue="515">listing themes with each article</action>
+            <action dev="dp" type="fix" issue="517">made paragraph surtitles bold</action>
+            <action dev="dp" type="update">updated MySQL JDBC driver to version 3.1.11</action>
+        </release -->
+
+    </body>
+</document>

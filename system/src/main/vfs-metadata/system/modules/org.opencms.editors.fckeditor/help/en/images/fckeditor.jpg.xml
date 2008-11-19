@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.editors.fckeditor/help/en/images/fckeditor.jpg</destination>
+		<type>image</type>
+		<uuidstructure>50e10789-5cf1-11db-85b1-432854714568</uuidstructure>
+		<uuidresource>433e426b-6e30-11da-9b2d-a1bfce9e601e</uuidresource>
+		<datelastmodified>Tue, 09 Sep 2008 14:17:51 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 16 Dec 2005 12:34:12 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:600,h:400]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

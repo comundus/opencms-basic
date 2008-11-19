@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/help/explorer/generalTopics/permissions/inherit.html</destination>
+		<type>xmlpage</type>
+		<uuidstructure>f71642e6-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>8bd87377-eee5-11d9-85a7-21bd740a33b2</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 07 Jul 2005 12:49:24 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[Erklärung des Prinzps der Vererbung von Berechtigung bei Ressourcen.]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[1.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[Vererbung von Berechtigungen]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Vererbung von Berechtigungen]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/modules/org.opencms.workplace.help/jsptemplates/help]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

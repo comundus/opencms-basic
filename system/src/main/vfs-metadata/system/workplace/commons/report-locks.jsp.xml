@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/report-locks.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>f3e539be-5a9e-11db-8c9b-5bf59c6009b3</uuidstructure>
+		<uuidresource>f3e539bf-5a9e-11db-8c9b-5bf59c6009b3</uuidresource>
+		<datelastmodified>Mon, 23 Apr 2007 12:27:53 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 13 Oct 2006 09:41:08 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Lock Dialog - Locked Resources Dialog]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

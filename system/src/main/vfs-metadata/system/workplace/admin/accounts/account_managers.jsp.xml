@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/accounts/account_managers.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>0077123a-9450-11dc-b9a1-ef8e0ae2a83b</uuidstructure>
+		<uuidresource>974fac98-abab-11db-ad82-c7b5ef626300</uuidresource>
+		<datelastmodified>Wed, 14 Mar 2007 14:12:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 24 Jan 2007 13:05:40 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_OVERVIEWROLE_ADMIN_TOOL_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[tools/accounts/icons/big/role.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_ROLES_ADMIN_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[3]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_OVERVIEWACCMAN_ADMIN_TOOL_NAME_0}:${key.GUI_OVERVIEWACCMAN_ADMIN_TOOL_NAVBARNAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Overview Account Manager Role Users]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[params:oufqn=${param.oufqn}&role=${param.oufqn}RoleAccountManagers&action=initial|path:/accounts/orgunit/accman]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.accounts.CmsAccountsToolHandler]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

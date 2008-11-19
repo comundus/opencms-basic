@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.workplace.tools.searchindex/lib/org.opencms.workplace.tools.searchindex.jar</destination>
+		<type>binary</type>
+		<uuidstructure>ce71bf78-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>924cf38c-3b2b-11da-8883-df763b25cc68</uuidresource>
+		<datelastmodified>Tue, 09 Sep 2008 14:17:53 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 10 Oct 2005 08:10:10 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[org.opencms.workplace.tools.searchindex]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

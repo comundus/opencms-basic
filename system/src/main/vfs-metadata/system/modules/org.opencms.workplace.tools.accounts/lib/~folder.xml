@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.workplace.tools.accounts/lib</destination>
+		<type>folder</type>
+		<uuidstructure>e9384dbf-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<datelastmodified>Wed, 01 Oct 2008 14:07:09 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 10 Oct 2005 08:10:10 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.workplace.help/resources/search.js</destination>
+		<type>plain</type>
+		<uuidstructure>f443e892-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>d7e19e32-f526-11d9-970c-55fa789c6c3d</uuidresource>
+		<datelastmodified>Tue, 09 Sep 2008 14:17:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 15 Jul 2005 11:51:56 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Search query validation]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[true]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

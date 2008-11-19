@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.frontend.layoutpage/mappings/event.properties</destination>
+		<type>plain</type>
+		<uuidstructure>3184d913-65b4-11db-aabc-bf6fa13020a5</uuidstructure>
+		<uuidresource>3184d914-65b4-11db-aabc-bf6fa13020a5</uuidresource>
+		<datelastmodified>Tue, 09 Sep 2008 14:17:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 27 Oct 2006 12:10:53 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

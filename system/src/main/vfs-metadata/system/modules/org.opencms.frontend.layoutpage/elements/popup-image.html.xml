@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.frontend.layoutpage/elements/popup-image.html</destination>
+		<type>jsp</type>
+		<uuidstructure>c0ca9279-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>1e2727f5-e0f6-11da-b16e-0180483573c9</uuidresource>
+		<datelastmodified>Tue, 09 Sep 2008 14:17:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 11 May 2006 13:57:43 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Popup Image]]></value>
+			</property>
+			<property>
+				<name>cache</name>
+				<value><![CDATA[params=(uri,imgsize);locale]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

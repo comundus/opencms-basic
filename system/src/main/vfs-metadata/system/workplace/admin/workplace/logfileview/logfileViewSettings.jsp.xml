@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/workplace/logfileview/logfileViewSettings.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>c3a41842-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>330f4a74-d8f4-11d9-9822-ef342b994563</uuidresource>
+		<datelastmodified>Thu, 22 Feb 2007 08:33:08 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_WORKPLACE_LOGVIEW_SETTINGS_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[tools/workplace/icons/big/fileview_settings.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_WORKPLACE_LOGVIEW_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_WORKPLACE_LOGVIEW_SETTINGS_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Edit the logfile view settings]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.workplace.CmsWorkplaceToolHandler]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

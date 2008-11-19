@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/editarea/changed</destination>
+		<type>folder</type>
+		<uuidstructure>dc634b3d-f42e-11dc-a434-734b16235bd3</uuidstructure>
+		<datelastmodified>Tue, 18 Mar 2008 13:30:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 17 Mar 2008 14:31:41 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Changed files]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

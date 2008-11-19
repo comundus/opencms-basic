@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/en/help/editors/index.html</destination>
+		<type>xmlpage</type>
+		<uuidstructure>04f6cf65-11b8-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>85cd4007-d377-11d9-89d3-01ff5ab8f021</uuidresource>
+		<datelastmodified>Thu, 28 Jun 2007 10:01:42 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[2.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[Editors]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Editors]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/modules/org.opencms.workplace.help/jsptemplates/help]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

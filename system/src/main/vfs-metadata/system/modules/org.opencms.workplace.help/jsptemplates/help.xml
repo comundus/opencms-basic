@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.workplace.help/jsptemplates/help</destination>
+		<type>jsp</type>
+		<uuidstructure>f42e649e-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>51129e3d-d435-11d9-83b9-01ff5ab8f021</uuidresource>
+		<datelastmodified>Tue, 09 Sep 2008 14:17:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[OpenCms online help template]]></value>
+			</property>
+			<property>
+				<name>cache</name>
+				<value><![CDATA[bypass]]></value>
+			</property>
+			<property>
+				<name>content-encoding</name>
+				<value><![CDATA[utf-8]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/workplace/commons/style/onlinehelp.css]]></value>
+			</property>
+			<property>
+				<name>template-elements</name>
+				<value><![CDATA[body*|Body]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

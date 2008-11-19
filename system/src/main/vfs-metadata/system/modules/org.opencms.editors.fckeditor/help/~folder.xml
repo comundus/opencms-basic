@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.editors.fckeditor/help</destination>
+		<type>folder</type>
+		<uuidstructure>5097c976-5cf1-11db-85b1-432854714568</uuidstructure>
+		<datelastmodified>Wed, 01 Oct 2008 14:07:06 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 16 Dec 2005 12:22:50 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Editor online help]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/modules/org.opencms.workplace.help/jsptemplates/help]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

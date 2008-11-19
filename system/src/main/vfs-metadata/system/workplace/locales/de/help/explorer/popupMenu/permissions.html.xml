@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/help/explorer/popupMenu/permissions.html</destination>
+		<type>xmlpage</type>
+		<uuidstructure>f74f7ad8-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>8a9222cf-eebe-11d9-9d87-21bd740a33b2</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 07 Jul 2005 08:10:12 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[Erklärt, wie man Berechtigungen an Dateien und Verzeichnisse setzt.]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[1.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[Berechtigungen]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Berechtigungen]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/modules/org.opencms.workplace.help/jsptemplates/help]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

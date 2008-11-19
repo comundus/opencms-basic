@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/orgunits/Firma1_CH</destination>
+		<type>folder</type>
+		<uuidstructure>36857c68-8631-11dd-ba1b-1a1a1a1a1a1a</uuidstructure>
+		<datelastmodified>Fri, 19 Sep 2008 09:56:21 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 19 Sep 2008 09:56:21 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>512</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[OrgUnit Firma1 Schweiz]]></value>
+			</property>
+			<property>
+				<name>Keywords</name>
+				<value><![CDATA[369d713c-8631-11dd-ba1b-1a1a1a1a1a1a]]></value>
+			</property>
+		</properties>
+		<relations>
+			<relation>
+				<id>f5203d65-80cb-11dd-9c47-1a1a1a1a1a1a</id>
+				<path>/sites/default/Firma1/ch/</path>
+				<type>OU</type>
+			</relation>
+		</relations>
+		<accesscontrol/>
+	</file>
+</export>

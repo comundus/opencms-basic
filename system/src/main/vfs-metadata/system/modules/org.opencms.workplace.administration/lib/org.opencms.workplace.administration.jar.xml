@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.workplace.administration/lib/org.opencms.workplace.administration.jar</destination>
+		<type>binary</type>
+		<uuidstructure>95e742c0-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>c58d4f56-3b22-11da-8883-df763b25cc68</uuidresource>
+		<datelastmodified>Tue, 09 Sep 2008 14:17:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 10 Oct 2005 08:10:10 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

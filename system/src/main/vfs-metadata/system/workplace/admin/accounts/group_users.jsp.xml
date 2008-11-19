@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/accounts/group_users.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>e96f146b-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>75dee83d-d6a9-11d9-a49a-57d6fd0f62d2</uuidresource>
+		<datelastmodified>Wed, 14 Mar 2007 14:12:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_EDITGROUP_USERS_ADMIN_TOOL_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[tools/accounts/icons/big/user.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_EDITGROUP_USERS_ADMIN_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[2]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_EDITGROUP_USERS_ADMIN_TOOL_NAME_0}:${key.GUI_EDITGROUP_USERS_ADMIN_TOOL_NAVBARNAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Group Users]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[params:oufqn=${param.oufqn}&groupid=${param.groupid}&action=initial|path:/accounts/orgunit/groups/edit/users]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.accounts.CmsAccountsToolHandler]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

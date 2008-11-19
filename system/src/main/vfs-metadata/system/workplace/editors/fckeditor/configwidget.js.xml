@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/fckeditor/configwidget.js</destination>
+		<type>jsp</type>
+		<uuidstructure>52516073-5cf1-11db-85b1-432854714568</uuidstructure>
+		<uuidresource>c45ff8e4-6b15-11da-890c-f5519f4138f7</uuidresource>
+		<datelastmodified>Wed, 16 May 2007 13:44:03 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 12 Dec 2005 13:46:59 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>Title</name>
+				<value><![CDATA[Widgets custom config JS]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
