@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>7.0.5</version>
+        <version>7.5</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -11,7 +11,7 @@
     <artifactId>system</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms System</name>
-    <version>7.0.5</version>
+    <version>7.5</version>
     <description>OpenCms System</description>
     <url>http://opencms-maven.comundus.com</url>
     
@@ -60,10 +60,12 @@
 						<syncVFSPath>/system/modules/org.opencms.workplace/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.editors.fckeditor/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.frontend.layoutpage/</syncVFSPath>
+                        <syncVFSPath>/system/modules/org.opencms.frontend.photoalbum/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.workplace.administration/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.workplace.help/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.workplace.tools.accounts/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.workplace.tools.cache/</syncVFSPath>
+                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.content/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.workplace.tools.database/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.workplace.tools.galleryoverview/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.workplace.tools.history/</syncVFSPath>
@@ -76,6 +78,14 @@
                         <syncVFSPath>/system/modules/org.opencms.workplace.tools.workplace/</syncVFSPath>
                     </syncVFSPaths>
                 </configuration>
+                <dependencies>
+                        <dependency>
+            				<groupId>mysql</groupId>
+            				<artifactId>mysql-connector-java</artifactId>
+            				<version>5.0.7</version>
+        				</dependency>                
+                </dependencies>
+                
             </plugin>
         </plugins>
     </build>
