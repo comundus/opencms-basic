@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.workplace.tools.link/schemas/links.xsd</destination>
+		<type>plain</type>
+		<uuidstructure>ab09bc07-cc29-11dd-8fb7-53ec2a4a9072</uuidstructure>
+		<uuidresource>ab09bc08-cc29-11dd-8fb7-53ec2a4a9072</uuidresource>
+		<datelastmodified>Wed, 17 Dec 2008 11:05:04 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 17 Dec 2008 10:58:42 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[XSD for link definitions]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

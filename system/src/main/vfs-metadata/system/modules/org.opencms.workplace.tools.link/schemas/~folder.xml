@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.workplace.tools.link/schemas</destination>
+		<type>folder</type>
+		<uuidstructure>9663eff5-cc29-11dd-8fb7-53ec2a4a9072</uuidstructure>
+		<datelastmodified>Wed, 17 Dec 2008 10:58:08 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 17 Dec 2008 10:58:08 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
