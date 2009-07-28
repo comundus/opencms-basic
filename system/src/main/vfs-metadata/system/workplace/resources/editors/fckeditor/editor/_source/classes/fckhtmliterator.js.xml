@@ -2,10 +2,10 @@
 
 <export>
 	<file>
-		<destination>system/workplace/resources/editors/fckeditor/editor/_source/classes/fckw3crange.js</destination>
+		<destination>system/workplace/resources/editors/fckeditor/editor/_source/classes/fckhtmliterator.js</destination>
 		<type>plain</type>
-		<uuidstructure>8c756d38-f854-11dd-992b-a766547d5370</uuidstructure>
-		<uuidresource>8c756d39-f854-11dd-992b-a766547d5370</uuidresource>
+		<uuidstructure>8c3c3483-f854-11dd-992b-a766547d5370</uuidstructure>
+		<uuidresource>8c3c3484-f854-11dd-992b-a766547d5370</uuidresource>
 		<datelastmodified>Wed, 11 Feb 2009 15:57:09 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
 		<datecreated>Wed, 11 Feb 2009 15:56:30 GMT</datecreated>
