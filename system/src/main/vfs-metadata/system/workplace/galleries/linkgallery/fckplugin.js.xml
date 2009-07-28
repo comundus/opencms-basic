@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/linkgallery/fckplugin.js</destination>
+		<type>jsp</type>
+		<uuidstructure>7c9713ac-451c-11de-80e1-350e680a0242</uuidstructure>
+		<uuidresource>7c9713ad-451c-11de-80e1-350e680a0242</uuidresource>
+		<datelastmodified>Tue, 02 Jun 2009 14:37:14 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 20 May 2009 08:59:11 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Plugin JS for FCKeditor]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
