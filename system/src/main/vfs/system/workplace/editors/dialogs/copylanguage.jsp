@@ -1,8 +1,7 @@
 <%@ page import="
 	org.opencms.util.*,
 	org.opencms.workplace.*,
-	org.opencms.workplace.editors.*,
-	com.bayer.copylanguage.*
+	org.opencms.workplace.editors.*
 "%><%	
 
 	// initialize the workplace class
@@ -51,7 +50,22 @@ default:
 <!--
 
 function resizeWindow() {
-	var wantedHeight = document.body.offsetHeight + 20;
+	var deltaHeight = 30;
+	try {
+		var realHeight = window.outerHeight;
+		if (!isNaN(realHeight)) {
+			deltaHeight = realHeight - window.innerHeight;
+		}
+		// e.g. on Vista location bar cannot be hidden but does not count on outer height if 
+		// window.open was called with location=no. navigator.plattform is not specific for vista, 
+		// so match ie 7: 
+		if(navigator.appName.indexOf('Microsoft') >= 0) {
+			if(navigator.appVersion.indexOf('MSIE 7.0') >= 0) {
+				deltaHeight += 30;
+			}
+		}
+	} catch (e) {}
+	var wantedHeight = document.body.offsetHeight + deltaHeight;
 	if (wantedHeight > screen.availHeight) {
 		wantedHeight = screen.availHeight;
 	}

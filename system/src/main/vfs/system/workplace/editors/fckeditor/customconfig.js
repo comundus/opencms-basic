@@ -59,7 +59,12 @@ FCKConfig.ToolbarCanCollapse = false;
 FCKConfig.SkinPath = FCKConfig.BasePath + "skins/opencms/";
 
 FCKConfig.Plugins.Add("opencms", null, "<%= cms.link("plugins/") %>");
-FCKConfig.Plugins.Add("ocmsimage", "en,de", "<%= cms.link("plugins/") %>");
+// replaced by image gallery: FCKConfig.Plugins.Add("ocmsimage", null, "<%= cms.link("plugins/") %>");
+FCKConfig.Plugins.Add("imagegallery", null, "<%= cms.link("/system/workplace/galleries/") %>");
+FCKConfig.Plugins.Add("downloadgallery", null, "<%= cms.link("/system/workplace/galleries/") %>");
+FCKConfig.Plugins.Add("linkgallery", null, "<%= cms.link("/system/workplace/galleries/") %>");
+FCKConfig.Plugins.Add("htmlgallery", null, "<%= cms.link("/system/workplace/galleries/") %>");
+FCKConfig.Plugins.Add("tablegallery", null, "<%= cms.link("/system/workplace/galleries/") %>");
 <%
 
 boolean showTableOptions = options.showElement("option.table", displayOptions);
@@ -102,9 +107,6 @@ if (options.showElement("option.links", displayOptions)) {
 	toolbar.append(",'-','oc-link','Link', 'Anchor','Unlink'");
 }        
 
-// build the available gallery buttons
-toolbar.append(wp.buildGalleryButtonRow(options, displayOptions));
-
 // determine if the flash button button should be shown
 if (options.showElement("option.flash", displayOptions)) {
 	toolbar.append(",'-','Flash'");
@@ -112,7 +114,25 @@ if (options.showElement("option.flash", displayOptions)) {
 
 // determine if the insert/edit image button should be shown
 if (options.showElement("option.images", displayOptions)) {
-	toolbar.append(",'-', 'OcmsImage'");
+	// replaced by image gallery: toolbar.append(",'-', 'OcmsImage'");
+	toolbar.append(",'-', 'OcmsImageGallery'");
+}
+
+if (options.showElement("gallery.download", displayOptions)) {
+	//toolbar.append(",'-', 'OcmsDownloadGallery'"); // insert '-' for separator
+	toolbar.append(", 'OcmsDownloadGallery'");
+}
+
+if (options.showElement("gallery.link", displayOptions)) {
+	toolbar.append(", 'OcmsLinkGallery'");
+}
+
+if (options.showElement("gallery.html", displayOptions)) {
+	toolbar.append(", 'OcmsHtmlGallery'");
+}
+
+if (options.showElement("gallery.table", displayOptions)) {
+	toolbar.append(", 'OcmsTableGallery'");
 }
 
 // insert rule button
