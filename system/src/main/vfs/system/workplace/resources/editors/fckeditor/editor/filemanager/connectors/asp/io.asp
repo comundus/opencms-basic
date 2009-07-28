@@ -1,6 +1,6 @@
 ﻿<%
  ' FCKeditor - The text editor for Internet - http://www.fckeditor.net
- ' Copyright (C) 2003-2007 Frederico Caldeira Knabben
+ ' Copyright (C) 2003-2009 Frederico Caldeira Knabben
  '
  ' == BEGIN LICENSE ==
  '
@@ -22,7 +22,14 @@
 %>
 <%
 function CombinePaths( sBasePath, sFolder)
+	sFolder = replace(sFolder, "\", "/")
 	CombinePaths =  RemoveFromEnd( sBasePath, "/" ) & "/" & RemoveFromStart( sFolder, "/" )
+end function
+
+function CombineLocalPaths( sBasePath, sFolder)
+	sFolder = replace(sFolder, "/", "\")
+	' The RemoveFrom* functions use RegExp, so we must escape the \
+	CombineLocalPaths =  RemoveFromEnd( sBasePath, "\\" ) & "\" & RemoveFromStart( sFolder, "\\" )
 end function
 
 Function GetResourceTypePath( resourceType, sCommand )
@@ -40,14 +47,14 @@ Function GetResourceTypeDirectory( resourceType, sCommand )
 			GetResourceTypeDirectory = ConfigQuickUploadAbsolutePath.Item( resourceType )
 		else
 			' Map the "UserFiles" path to a local directory.
-			GetResourceTypeDirectory = Server.MapPath( ConfigQuickUploadPath.Item( resourceType ) ) 
+			GetResourceTypeDirectory = Server.MapPath( ConfigQuickUploadPath.Item( resourceType ) )
 		end if
 	else
-		if ( ConfigFileTypesAbsolutePath.Item( resourceType ) <> "" ) then 
+		if ( ConfigFileTypesAbsolutePath.Item( resourceType ) <> "" ) then
 			GetResourceTypeDirectory = ConfigFileTypesAbsolutePath.Item( resourceType )
 		else
 			' Map the "UserFiles" path to a local directory.
-			GetResourceTypeDirectory = Server.MapPath( ConfigFileTypesPath.Item( resourceType ) ) 
+			GetResourceTypeDirectory = Server.MapPath( ConfigFileTypesPath.Item( resourceType ) )
 		end if
 	end if
 end Function
@@ -63,13 +70,13 @@ End Function
 Function ServerMapFolder( resourceType, folderPath, sCommand )
 	Dim sResourceTypePath
 	' Get the resource type directory.
-	sResourceTypePath = GetResourceTypeDirectory( resourceType, sCommand ) 
+	sResourceTypePath = GetResourceTypeDirectory( resourceType, sCommand )
 
 	' Ensure that the directory exists.
 	CreateServerFolder sResourceTypePath
 
 	' Return the resource type directory combined with the required path.
-	ServerMapFolder = CombinePaths( sResourceTypePath, folderPath )
+	ServerMapFolder = CombineLocalPaths( sResourceTypePath, folderPath )
 End Function
 
 Sub CreateServerFolder( folderPath )
@@ -78,6 +85,10 @@ Sub CreateServerFolder( folderPath )
 
 	Dim sParent
 	sParent = oFSO.GetParentFolderName( folderPath )
+
+	' If folderPath is a network path (\\server\folder\) then sParent is an empty string.
+	' Get out.
+	if (sParent = "") then exit sub
 
 	' Check if the parent exists, or create it.
 	If ( NOT oFSO.FolderExists( sParent ) ) Then CreateServerFolder( sParent )
@@ -141,7 +152,7 @@ End Function
 Function IsAllowedType( resourceType )
 	Dim oRE
 	Set oRE	= New RegExp
-	oRE.IgnoreCase	= True
+	oRE.IgnoreCase	= False
 	oRE.Global		= True
 	oRE.Pattern		= "^(" & ConfigAllowedTypes & ")$"
 
@@ -172,7 +183,7 @@ function GetCurrentFolder()
 	If ( Left( sCurrentFolder, 1 ) <> "/" ) Then sCurrentFolder = "/" & sCurrentFolder
 
 	' Check for invalid folder paths (..)
-	If ( InStr( 1, sCurrentFolder, ".." ) <> 0 ) Then
+	If ( InStr( 1, sCurrentFolder, ".." ) <> 0 OR InStr( 1, sCurrentFolder, "\" ) <> 0) Then
 		SendError 102, ""
 	End If
 
@@ -185,8 +196,8 @@ function SanitizeFolderName( sNewFolderName )
 	Set oRegex = New RegExp
 	oRegex.Global		= True
 
-' remove . \ / | : ? *  " < >
-	oRegex.Pattern = "(\.|\\|\/|\||:|\?|\*|""|\<|\>)"
+' remove . \ / | : ? *  " < > and control characters
+	oRegex.Pattern = "(\.|\\|\/|\||:|\?|\*|""|\<|\>|[\u0000-\u001F]|\u007F)"
 	SanitizeFolderName = oRegex.Replace( sNewFolderName, "_" )
 
 	Set oRegex = Nothing
@@ -203,8 +214,8 @@ function SanitizeFileName( sNewFileName )
 		sNewFileName = oRegex.Replace( sNewFileName, "_" )
 	end if
 
-' remove \ / | : ? *  " < >
-	oRegex.Pattern = "(\\|\/|\||:|\?|\*|""|\<|\>)"
+' remove \ / | : ? *  " < > and control characters
+	oRegex.Pattern = "(\\|\/|\||:|\?|\*|""|\<|\>|[\u0000-\u001F]|\u007F)"
 	SanitizeFileName = oRegex.Replace( sNewFileName, "_" )
 
 	Set oRegex = Nothing
@@ -214,6 +225,10 @@ end function
 Sub SendUploadResults( errorNumber, fileUrl, fileName, customMsg )
 	Response.Clear
 	Response.Write "<script type=""text/javascript"">"
+	' Minified version of the document.domain automatic fix script (#1919).
+	' The original script can be found at _dev/domain_fix_template.js
+	Response.Write "(function(){var d=document.domain;while (true){try{var A=window.parent.document.domain;break;}catch(e) {};d=d.replace(/.*?(?:\.|$)/,'');if (d.length==0) break;try{document.domain=d;}catch (e){break;}}})();"
+
 	Response.Write "window.parent.OnUploadCompleted(" & errorNumber & ",""" & Replace( fileUrl, """", "\""" ) & """,""" & Replace( fileName, """", "\""" ) & """,""" & Replace( customMsg , """", "\""" ) & """) ;"
 	Response.Write "</script>"
 	Response.End

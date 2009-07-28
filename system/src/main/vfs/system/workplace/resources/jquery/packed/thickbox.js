@@ -3,14 +3,29 @@
  * By Cody Lindley (http://www.codylindley.com)
  * Copyright (c) 2007 cody lindley
  * Licensed under the MIT License: http://www.opensource.org/licenses/mit-license.php
+ *
+ * Changes to original code for OpenCms:
+ * - usage of tb_msg object to localize pagination and close links:
+ *   var tb_msg = {
+ *     'close': 'Close',
+ *     'next': 'Next >',
+ *     'prev': '< Previous',
+ *     'imageCount': 'Image !current of !total'
+ *   };
+ *
+ * - changed behaviour if clicking on thickbox image, now flips to next image;
+ *   check lines 152 and following, line 188 and following
 */
-		  
+
 /*!!!!!!!!!!!!!!!!! edit below this line at your own risk !!!!!!!!!!!!!!!!!!!!!!!*/
 
 //on page load call tb_init
 $(document).ready(function(){   
 	tb_init('a.thickbox, area.thickbox, input.thickbox');//pass where to apply thickbox
 	imgLoader = new Image();// preload image
+	try {
+		imgLoader.src = tb_pathToImage;
+	} catch (e) {}
 });
 
 //add thickbox to href & area elements that have a class of .thickbox
@@ -137,7 +152,9 @@ function tb_show(caption, url, imageGroup) {//function called when the user clic
 				$("#TB_prev").click(goPrev);
 			}
 			
-			if (!(TB_NextHTML === "")) {		
+			var hasNext = false;
+			if (!(TB_NextHTML === "")) {
+				hasNext = true;	
 				function goNext(){
 					$("#TB_window").remove();
 					$("body").append("<div id='TB_window'></div>");
@@ -171,7 +188,12 @@ function tb_show(caption, url, imageGroup) {//function called when the user clic
 			
 			tb_position();
 			$("#TB_load").remove();
-			$("#TB_ImageOff").click(tb_remove);
+			if (hasNext) {
+				$("#TB_ImageOff").click(goNext);
+				$("#TB_ImageOff").attr("title", tb_msg.next);
+			} else {
+				$("#TB_ImageOff").click(tb_remove);
+			}
 			$("#TB_window").css({display:"block"}); //for safari using css instead of show
 			};
 			
@@ -190,7 +212,7 @@ function tb_show(caption, url, imageGroup) {//function called when the user clic
 					urlNoQuery = url.split('TB_');
 					$("#TB_iframeContent").remove();
 					if(params['modal'] != "true"){//iframe no modal
-						$("#TB_window").append("<div id='TB_title'><div id='TB_ajaxWindowTitle'>"+caption+"</div><div id='TB_closeAjaxWindow'><a href='#' id='TB_closeWindowButton' title='Close'>close</a> or Esc Key</div></div><iframe frameborder='0' hspace='0' src='"+urlNoQuery[0]+"' id='TB_iframeContent' name='TB_iframeContent"+Math.round(Math.random()*1000)+"' onload='tb_showIframe()' style='width:"+(ajaxContentW + 29)+"px;height:"+(ajaxContentH + 17)+"px;' > </iframe>");
+						$("#TB_window").append("<div id='TB_title'><div id='TB_ajaxWindowTitle'>"+caption+"</div><div id='TB_closeAjaxWindow'><a href='#' id='TB_closeWindowButton' title='" + tb_msg.close + "'>" + tb_msg.close + "</a></div></div><iframe frameborder='0' hspace='0' src='"+urlNoQuery[0]+"' id='TB_iframeContent' name='TB_iframeContent"+Math.round(Math.random()*1000)+"' onload='tb_showIframe()' style='width:"+(ajaxContentW + 29)+"px;height:"+(ajaxContentH + 17)+"px;' > </iframe>");
 					}else{//iframe modal
 					$("#TB_overlay").unbind();
 						$("#TB_window").append("<iframe frameborder='0' hspace='0' src='"+urlNoQuery[0]+"' id='TB_iframeContent' name='TB_iframeContent"+Math.round(Math.random()*1000)+"' onload='tb_showIframe()' style='width:"+(ajaxContentW + 29)+"px;height:"+(ajaxContentH + 17)+"px;'> </iframe>");
@@ -198,7 +220,7 @@ function tb_show(caption, url, imageGroup) {//function called when the user clic
 			}else{// not an iframe, ajax
 					if($("#TB_window").css("display") != "block"){
 						if(params['modal'] != "true"){//ajax no modal
-						$("#TB_window").append("<div id='TB_title'><div id='TB_ajaxWindowTitle'>"+caption+"</div><div id='TB_closeAjaxWindow'><a href='#' id='TB_closeWindowButton'>close</a> or Esc Key</div></div><div id='TB_ajaxContent' style='width:"+ajaxContentW+"px;height:"+ajaxContentH+"px'></div>");
+						$("#TB_window").append("<div id='TB_title'><div id='TB_ajaxWindowTitle'>"+caption+"</div><div id='TB_closeAjaxWindow'><a href='#' id='TB_closeWindowButton'>" + tb_msg.close + "</a></div></div><div id='TB_ajaxContent' style='width:"+ajaxContentW+"px;height:"+ajaxContentH+"px'></div>");
 						}else{//ajax modal
 						$("#TB_overlay").unbind();
 						$("#TB_window").append("<div id='TB_ajaxContent' class='TB_modal' style='width:"+ajaxContentW+"px;height:"+ajaxContentH+"px;'></div>");	

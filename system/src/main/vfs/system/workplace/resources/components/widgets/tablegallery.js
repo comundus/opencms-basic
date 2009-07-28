@@ -34,14 +34,31 @@
  * initialize the context path (e.g. "/opencms/opencms") and gallery path in the opener properly:
  *
  * - tableGalleryPath = "<%= A_CmsGallery.PATH_GALLERIES + A_CmsGallery.OPEN_URI_SUFFIX + "?" + A_CmsGallery.PARAM_GALLERY_TYPENAME + "=tablegallery" %>";
+ * - tableGalleryPath for CmsAjaxTableGallery = "<%= A_CmsAjaxGallery.PATH_GALLERIES + A_CmsAjaxTableGallery.OPEN_URI_SUFFIX + "?" %>";
  */
 
 var tableGalleryPath;
+var tableGalleryInfo;
 
-// opens the download gallery popup window, dialog mode has to be "widget" (as defined in A_CmsGallery.MODE_WIDGET)
-function openTableGallery(dialogMode, fieldId) {
-	var paramString = "&dialogmode=" + dialogMode;
+// opens the table gallery popup window, dialog mode has to be "widget" (as defined in A_CmsAjaxGallery.MODE_WIDGET)
+function openTableGallery(dialogMode, fieldId, idHash) {
+	//parameter from the xml configuration
+	var startupFolder = eval('startupFolder' + idHash);
+	var startupType = eval('startupType' + idHash);
+	//edited resource has to be provided to use custom categories
+	var editedResource = "";
+	try {
+		editedResource = document.forms["EDITOR"].elements["resource"].value;
+	} catch (e) {};
+	tableGalleryInfo = {
+		"startupfolder": 	startupFolder,
+		"startuptype": 		startupType,
+		"editedresource": 	editedResource
+	};
+
+	var paramString = "dialogmode=" + dialogMode;
 	paramString += "&fieldid=" + fieldId;
+	paramString += "&params=" + JSON.stringify(tableGalleryInfo);
 	treewin = window.open(contextPath + tableGalleryPath + paramString, "opencms", 'toolbar=no,location=no,directories=no,status=yes,menubar=0,scrollbars=yes,resizable=yes,top=20,left=150,width=650,height=700');
 }
 
