@@ -10,7 +10,7 @@
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms Parent</name>
-    <version>7.0.5</version>
+    <version>7.5</version>
     <description>OpenCms</description>
     <url>http://opencms-maven.comundus.com</url>
 	<prerequisites>
@@ -20,9 +20,9 @@
 	
     <developers>
         <developer>
-            <id>dp</id>
-            <name>Detlef Pleiﬂ</name>
-            <email>d.pleiss@comundus.com</email>
+            <id>ar</id>
+            <name>Adrian Rodriguez</name>
+            <email>a.rodriguez@comundus.com</email>
             <url/>
             <organization>comundus GmbH</organization>
             <organizationUrl>http://www.comundus.com</organizationUrl>
@@ -57,7 +57,7 @@
     </scm>
 
 	<properties>
-		<opencms.db.jdbcDriver>org.gjt.mm.mysql.Driver</opencms.db.jdbcDriver>
+		<opencms.db.jdbcDriver>com.mysql.jdbc.Driver</opencms.db.jdbcDriver>
 		<opencms.db.jdbcUrl>jdbc:mysql://localhost:3306/opencms</opencms.db.jdbcUrl>
 		<opencms.db.jdbcUrl.params>?characterEncoding\=UTF-8</opencms.db.jdbcUrl.params>
 		<opencms.db.user>root</opencms.db.user>
@@ -129,6 +129,24 @@
                 </configuration>
             </plugin>
         </plugins>
+        <pluginManagement>
+        	<plugins>
+        	<plugin>
+                <groupId>com.comundus.maven</groupId>
+                <artifactId>maven-vfs-plugin</artifactId>
+                <version>7.5</version>    
+                 <dependencies>
+                        <dependency>
+            				<groupId>mysql</groupId>
+            				<artifactId>mysql-connector-java</artifactId>
+            				<version>5.0.7</version>
+        				</dependency>                
+                </dependencies>
+                            
+            </plugin>
+        	
+        	</plugins>
+        </pluginManagement>
     </build>
 
     <modules>
