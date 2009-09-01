@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>7.0.3</version>
+        <version>7.0.5</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -11,14 +11,14 @@
     <artifactId>content</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms Content</name>
-    <version>7.0.3</version>
+    <version>7.0.5</version>
     <description>OpenCms Content</description>
     <url>http://opencms-maven.comundus.com</url>
     
     <scm>
         <!-- connection></connection -->
-        <developerConnection>scm:svn:https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/content/</developerConnection>
-        <url>https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/content/</url>
+        <developerConnection>scm:svn:https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/tags/7.0.5/content/</developerConnection>
+        <url>https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/tags/7.0.5/content/</url>
         <tag/>
     </scm>
 
