@@ -1,4 +1,5 @@
 <%@ page import="
+	org.opencms.editors.editarea.*,
 	org.opencms.workplace.*,
 	org.opencms.workplace.editors.*,
 	org.opencms.workplace.help.*,
@@ -6,7 +7,7 @@
 %><%
 	
 CmsJspActionElement cms = new CmsJspActionElement(pageContext, request, response);
-CmsSimpleEditor wp = new CmsSimpleEditor(cms);
+CmsEditArea wp = new CmsEditArea(cms);
 
 int buttonStyle = wp.getSettings().getUserSettings().getEditorButtonStyle();
 
@@ -55,7 +56,6 @@ default:
 <link rel=stylesheet type="text/css" href="<%= wp.getStyleUri("workplace.css") %>">
 
 <script type="text/javascript">
-<!--
 	// Sets the Document Source-Code for later including into the editor
 	var content="<%= wp.getParamContent() %>";
 
@@ -66,7 +66,7 @@ default:
 	var actionExit = "<%= CmsEditor.EDITOR_EXIT %>";
 	var actionSaveExit = "<%= CmsEditor.EDITOR_SAVEEXIT %>";
 	var actionSave = "<%= CmsEditor.EDITOR_SAVE %>";
-	
+
 	// Ask user whether he really wants to leave Texteditor without saving
 	function confirmExit()
 	{
@@ -79,15 +79,43 @@ default:
 		out.println(CmsHelpTemplateBean.buildOnlineHelpJavaScript(wp.getLocale())); 
 	}
 %>
-//-->
 </script>
 
 <script type="text/javascript" src="<%= wp.getEditorResourceUri() %>edit.js"></script>
+<%-- cannot use edit_area_loader.js here because of IE 7 issues --%>
+<script type="text/javascript" src="<%= wp.getEditorResourceUri() %>dist/edit_area_full.js"></script>
+<script language="Javascript" type="text/javascript">
+	
+	// initialisation
+	editAreaLoader.init({
+		id: "editarea"	// id of the textarea to transform
+		,start_highlight: true
+		,font_size: "10"
+		,font_family: "courier new, monospace, Fixedsys"
+		,allow_resize: "no"
+		,allow_toggle: false
+		,language: "<%= wp.getEditorLanguage() %>"
+		,syntax: "<%= wp.getStartHighlight() %>"
+		,syntax_selection_allow: "css,html,js,jsp,xml"
+		,toolbar: "|, charmap, |, search, go_to_line, |, undo, redo, |, select_font, |, syntax_selection, |, change_smooth_selection, highlight, reset_highlight, |, help"
+		,begin_toolbar: "|, ocms_save_exit, ocms_save"
+		,end_toolbar: "|, ocms_exit"
+		,save_callback: "my_save"
+		,plugins: "charmap,opencms"
+		,charmap_default: "arrows"
+
+	});
+
+	// callback functions
+	function my_save(id, content){
+		buttonAction(3);
+	}	
+
+</script>
 
 </head>
 <body class="buttons-head" unselectable="on" onload="setContent();">
-
-<table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+<div>
 <form name="EDITOR" id="EDITOR" method="post" action="<%= wp.getDialogRealUri() %>">
 <input type="hidden" name="<%= CmsEditor.PARAM_CONTENT %>">
 <input type="hidden" name="<%= CmsDialog.PARAM_ACTION %>" value="<%= wp.getParamAction() %>">
@@ -97,32 +125,10 @@ default:
 <input type="hidden" name="<%= CmsEditor.PARAM_DIRECTEDIT %>" value="<%= wp.getParamDirectedit() %>">
 <input type="hidden" name="<%= CmsEditor.PARAM_BACKLINK %>" value="<%= wp.getParamBacklink() %>">
 <input type="hidden" name="<%= CmsEditor.PARAM_MODIFIED %>" value="<%= wp.getParamModified() %>">
-	<tr>
-		<td>
 
-<%= wp.buttonBar(CmsWorkplace.HTML_START) %>
-<%= wp.buttonBarStartTab(0, 5) %>
-<%= wp.button("javascript:buttonAction(2);", null, "save_exit", org.opencms.workplace.editors.Messages.GUI_BUTTON_SAVECLOSE_0, buttonStyle) %>
-<%= wp.button("javascript:buttonAction(3);", null, "save", org.opencms.workplace.editors.Messages.GUI_BUTTON_SAVE_0, buttonStyle) %>
-<%
-if (wp.isHelpEnabled()) {%>
-	<%= wp.buttonBarSeparator(5, 5) %>
-	<%= wp.button("javascript:openOnlineHelp('/editors/simple');", null, "help.png", org.opencms.workplace.editors.Messages.GUI_BUTTON_HELP_0, buttonStyle) %><%
-} %>
-<td class="maxwidth">&nbsp;</td>
-<%= wp.button("javascript:confirmExit();", null, "exit", org.opencms.workplace.editors.Messages.GUI_BUTTON_CLOSE_0, buttonStyle) %>
-<%= wp.buttonBarSpacer(5) %>
-<%= wp.buttonBar(CmsWorkplace.HTML_END) %> 
-
-	</td>
-</tr>
-<tr>
-<td class="texteditor" height="100%" width="100%">
-	<textarea wrap="off" name="edit1" id="edit1" onfocus="setContentDelayed();" style="width:100%; height:100%; font-family:Fixedsys, monospace"></textarea>
-</td>
-</tr>
+<textarea wrap="virtual" id="editarea" name="edit1" style="width: 100%; height: 100%; color: Window; background-color: Window; visibility: hidden;"></textarea>
 </form>
-</table>
+</div>
 </body>
 </html>	
 	

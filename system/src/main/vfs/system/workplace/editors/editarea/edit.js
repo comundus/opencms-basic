@@ -1,7 +1,7 @@
 /*
- * File   : $Source: /usr/local/cvs/opencms/modules/org.opencms.editors/resources/system/workplace/editors/simple/edit.js,v $
- * Date   : $Date: 2008-02-27 12:05:55 $
- * Version: $Revision: 1.7 $
+ * File   : $Source: /usr/local/cvs/opencms/modules/org.opencms.editors.editarea/resources/system/workplace/editors/editarea/edit.js,v $
+ * Date   : $Date: 2008-03-18 15:45:24 $
+ * Version: $Revision: 1.1 $
  *
  * This library is part of OpenCms -
  * the Open Source Content Management System
@@ -30,28 +30,16 @@
  */
 
 //------------------------------------------------------//
-// Script for default text editor (simple textarea)
+// Script for EditArea text editor (editor with syntax highlighting)
 //------------------------------------------------------//
 
-// Indicates if the content of the editor window is already set
-var contentSetted = false;
-
-// loads the file content into the editor
+// loads the file content into the editor, is called by the onload event of the body
 function setContent() {
-	// setting text can not be done now here for the text editor.
-	// MS IE 5 has problems with setting text when the editor control is not loaded.
-	// Workaround: focus() the text editor here and set the text
-	// using the onFocus event of the editor.
 	if (document.forms.EDITOR.edit1) {
-		document.forms.EDITOR.edit1.focus();
-	}
-}
-
-// load the file content into the editor. this is called by the onFocus event of the edit control
-function setContentDelayed() {
-	if(! contentSetted) {
 		document.EDITOR.edit1.value = decodeURIComponent(content);
 		contentSetted = true;
+		// workaround for IE browsers to start at the first line, not in the middle of nowhere
+		setTimeout("editAreaLoader.setSelectionRange(\"editarea\", 0, 0);", 250);
 	}
 }
 
@@ -60,7 +48,7 @@ function buttonAction(para) {
 	// We have to do a blur on the textarea here. Otherwise Netscape may have problems with reading the value
 	var _form = document.EDITOR;
 	_form.edit1.blur();
-	_form.content.value = encodeURIComponent(_form.edit1.value);
+	_form.content.value = encodeURIComponent(editAreaLoader.getValue("editarea"));
 
 	switch (para) {
 	case 1:
@@ -91,32 +79,10 @@ function buttonAction(para) {
 	}
 }
 
-function opensmallwin(url, name, w, h) {
-	encodedurl = encodeURI(url);
-	smallwindow = window.open(encodedurl, name, 'toolbar=no,location=no,directories=no,status=no,menubar=0,scrollbars=yes,resizable=yes,top=150,left=660,width='+w+',height='+h);
-	if(smallwindow != null) {
-		if (smallwindow.opener == null) {
-			smallwindow.opener = self;
-		}
-	}
-	return smallwindow;
-}
-
-// EVENT: all browsers have to check the keydown event
-if(document.captureEvents) {
-	//non IE
-	if (Event.KEYDOWN) {
-		//NS 4, NS 6+, Mozilla 0.9+
-		document.captureEvents(Event.KEYDOWN);
-	}
-}
-/* this next line tells the browser to detect a keydown
-event over the whole document and when it detects it,
-it should run the event handler function 'keyDownHandler' */
 document.onkeydown = keyDownHandler;
 
 function keyDownHandler(e) {
-	// EVENT HANDLER: handle tab key in text edit mode
+	// EVENT HANDLER: shortcuts (have to be added to editor JS additionally)
 	if (!e) {
 		// if the browser did not pass the event information to the
 		// function, we will have to obtain it from the event register
@@ -143,13 +109,6 @@ function keyDownHandler(e) {
 		return;
 	}
 
-	switch (key) {
-		case 9:
-		// prevent switching focus if tabulator key is pressed
-		checkTab();
-		break;
-	}
-
 	if (e.ctrlKey) {
 		if (key == 83) {
 			// 's' pressed
@@ -167,30 +126,5 @@ function keyDownHandler(e) {
 			confirmExit();
 			return false;
 		}
-	}
-}
-
-function addText(input, insText) {
-	input.focus();
-	if (input.createTextRange) {
-		document.selection.createRange().text += insText;
-	} else if (input.setSelectionRange) {
-		var len = input.selectionEnd;
-		input.value = input.value.substr(0, len)
-			+ insText + input.value.substr(len);
-		input.setSelectionRange(len + insText.length, len + insText.length);
-	} else {
-		input.value += insText;
-	}
-}
-
-function checkTab() {
-	input = document.getElementById("edit1");
-	if (input.createTextRange || input.setSelectionRange) {
-		input = document.getElementById("edit1");
-		if (input.createTextRange) {
-			document.getElementById("edit1").selection = document.selection.createRange();
-		}
-		setTimeout("addText(input, String.fromCharCode(9))", 0);
 	}
 }
