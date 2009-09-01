@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/help/explorer/newresource/index.html</destination>
+		<type>xmlpage</type>
+		<uuidstructure>f72229e0-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>e0e16b2d-f1ee-11d9-8b6b-21bd740a33b2</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 11 Jul 2005 09:33:46 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[Erklärt, wie man im OpenCms Explorer neue Ressourcen erstellt.]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Die Schaltfläche "Neu"]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/modules/org.opencms.workplace.help/jsptemplates/help]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

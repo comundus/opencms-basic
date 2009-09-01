@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/fckeditor/editor/dialog/common/moz-bindings.xml</destination>
+		<type>plain</type>
+		<uuidstructure>32255d8b-03ac-11dc-b2d2-19a36bcdebf7</uuidstructure>
+		<uuidresource>32255d8c-03ac-11dc-b2d2-19a36bcdebf7</uuidresource>
+		<datelastmodified>Wed, 16 May 2007 12:53:54 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 16 May 2007 12:51:42 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/fckeditor/editor/skins/office2003/fck_strip.gif</destination>
+		<type>image</type>
+		<uuidstructure>51faa068-03ac-11dc-b2d2-19a36bcdebf7</uuidstructure>
+		<uuidresource>51faa069-03ac-11dc-b2d2-19a36bcdebf7</uuidresource>
+		<datelastmodified>Wed, 16 May 2007 12:53:42 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 16 May 2007 12:52:35 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:16,h:1088]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

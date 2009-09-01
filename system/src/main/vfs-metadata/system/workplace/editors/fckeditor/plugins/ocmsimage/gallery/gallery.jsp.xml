@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/fckeditor/plugins/ocmsimage/gallery/gallery.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>96cfa1df-796c-11db-b523-e15ad2a7b8e1</uuidstructure>
+		<uuidresource>96cfa1e0-796c-11db-b523-e15ad2a7b8e1</uuidresource>
+		<datelastmodified>Wed, 20 Dec 2006 11:20:40 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 21 Nov 2006 14:28:43 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

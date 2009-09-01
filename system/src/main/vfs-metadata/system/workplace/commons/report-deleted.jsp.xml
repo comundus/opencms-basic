@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/report-deleted.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>5969ce29-ecdf-11db-be46-0bbe9ebfd414</uuidstructure>
+		<uuidresource>5969ce2a-ecdf-11db-be46-0bbe9ebfd414</uuidresource>
+		<datelastmodified>Thu, 19 Apr 2007 11:42:32 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 17 Apr 2007 12:29:55 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Show Deleted Dialog - Deleted Resources Report]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>sites/default</destination>
+		<type>folder</type>
+		<uuidstructure>95251a7c-c2b8-11dc-9ace-efecb78b33ce</uuidstructure>
+		<datelastmodified>Mon, 14 Jan 2008 15:51:34 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 14 Jan 2008 15:51:34 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol>
+			<accessentry>
+				<uuidprincipal>GROUP.Users</uuidprincipal>
+				<flags>34</flags>
+				<permissionset>
+					<allowed>7</allowed>
+					<denied>0</denied>
+				</permissionset>
+			</accessentry>
+		</accesscontrol>
+	</file>
+</export>

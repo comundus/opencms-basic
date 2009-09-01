@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/flexcache/index.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>e75dc11c-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>e75dc11b-11b7-11db-91cd-fdbae480bac9</uuidresource>
+		<datelastmodified>Thu, 19 Oct 2006 09:33:17 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[FlexCache Administration page]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

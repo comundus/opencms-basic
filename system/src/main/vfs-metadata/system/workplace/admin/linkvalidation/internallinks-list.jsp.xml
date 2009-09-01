@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/linkvalidation/internallinks-list.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>1bf5fcad-4fcc-11db-9861-5bf59c6009b3</uuidstructure>
+		<uuidresource>1bf5fcae-4fcc-11db-9861-5bf59c6009b3</uuidresource>
+		<datelastmodified>Fri, 29 Sep 2006 15:08:46 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 29 Sep 2006 15:06:39 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_CHECK_INTERNAL_LINK_LIST_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[tools/linkvalidation/icons/big/link_intern_validate.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_LINK_ADMIN_TOOL_LIST_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[1]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_CHECK_INTERNAL_LINK_LIST_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Check Internal Links]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[path:/linkvalidation/internallinks/list]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.CmsInvisibleToolHandler]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

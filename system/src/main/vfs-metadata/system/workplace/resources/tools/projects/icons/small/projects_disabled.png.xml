@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/projects/icons/small/projects_disabled.png</destination>
+		<type>image</type>
+		<uuidstructure>25d1430a-d310-11db-a74f-0195cffc70b7</uuidstructure>
+		<uuidresource>25d1430b-d310-11db-a74f-0195cffc70b7</uuidresource>
+		<datelastmodified>Thu, 15 Mar 2007 16:13:44 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 15 Mar 2007 16:13:44 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

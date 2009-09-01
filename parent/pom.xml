@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.comundus</groupId>
+        <artifactId>comundus</artifactId>
+        <version>1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.comundus.opencms</groupId>
+    <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
+    <name>OpenCms Parent</name>
+    <version>7.0.3</version>
+    <description>OpenCms</description>
+    <url>http://opencms-maven.comundus.com</url>
+	<prerequisites>
+    	<maven>2.0.5</maven>
+  	</prerequisites>
+    <inceptionYear>2007</inceptionYear>
+	
+    <developers>
+        <developer>
+            <id>dp</id>
+            <name>Detlef Pleiß</name>
+            <email>d.pleiss@comundus.com</email>
+            <url/>
+            <organization>comundus GmbH</organization>
+            <organizationUrl>http://www.comundus.com</organizationUrl>
+            <roles>
+                <role>lead developer</role>
+            </roles>
+            <timezone>1</timezone>
+            <properties/>
+        </developer>
+    </developers>
+	
+	<repositories>
+		<repository>
+			<id>opencms-maven-sourceforge</id>
+			<url>http://mavplugocms.sourceforge.net/maven2repository</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+        <pluginRepository>
+            <id>opencms-maven-sourceforge</id>
+            <name/>
+            <url>http://mavplugocms.sourceforge.net/maven2repository</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+    <scm>
+        <!-- connection></connection -->
+        <developerConnection>scm:svn:https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/parent</developerConnection>
+        <url>https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/parent</url>
+        <tag/>
+    </scm>
+
+	<properties>
+		<opencms.db.jdbcDriver>org.gjt.mm.mysql.Driver</opencms.db.jdbcDriver>
+		<opencms.db.jdbcUrl>jdbc:mysql://localhost:3306/opencms</opencms.db.jdbcUrl>
+		<opencms.db.jdbcUrl.params>?characterEncoding\=UTF-8</opencms.db.jdbcUrl.params>
+		<opencms.db.user>root</opencms.db.user>
+		<opencms.db.password>root</opencms.db.password>
+		<opencms.logfile>/opencms.log</opencms.logfile>
+		<jdbcDriver.groupId>mysql</jdbcDriver.groupId>
+		<jdbcDriver.artifactId>mysql-connector-java</jdbcDriver.artifactId>
+		<jdbcDriver.version>5.0.5</jdbcDriver.version>
+		<opencms.vfs.driver>org.opencms.db.mysql.CmsVfsDriver</opencms.vfs.driver>
+		<opencms.db.name>mysql_41</opencms.db.name>
+		<opencms.user.driver>org.opencms.db.mysql.CmsUserDriver</opencms.user.driver>
+		<opencms.project.driver>org.opencms.db.mysql.CmsProjectDriver</opencms.project.driver>
+		<opencms.history.driver>org.opencms.db.mysql.CmsHistoryDriver</opencms.history.driver>
+		<opencms.sqlmanager>org.opencms.db.mysql.CmsSqlManager</opencms.sqlmanager>
+		<drop_tables.sql>drop_tables.sql</drop_tables.sql>
+		<create_tables.sql>create_tables.sql</create_tables.sql>
+	</properties>
+<!-- per developer configuration may follow (and overwrite global properties) : 
+	<profiles>
+		<profile>
+			<id>det</id>
+			<properties>
+...
+			</properties>
+		</profile>
+	</profiles>
+-->
+
+    <build>
+        <!-- order here is significant for build execution! -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                 </configuration>
+             </plugin> 
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sql-maven-plugin</artifactId>
+                <configuration>
+                    <driver>${opencms.db.jdbcDriver}</driver>
+                    <username>${opencms.db.user}</username>
+                    <password>${opencms.db.password}</password>
+                    <url>${opencms.db.jdbcUrl}${opencms.db.jdbcUrl.params}</url>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>${jdbcDriver.groupId}</groupId>
+                        <artifactId>${jdbcDriver.artifactId}</artifactId>
+                        <version>${jdbcDriver.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+      		<plugin>
+                <groupId>com.comundus.maven</groupId>
+                <artifactId>maven-vfs-plugin</artifactId>
+				<version>7.0.1d</version>
+                <configuration>
+                    <adminPassword>admin</adminPassword>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>tomcat-maven-plugin</artifactId>
+                <configuration>
+                    <path>/opencms-basic</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <modules>
+        <module>../webapp</module>  <!-- this must always come first -->
+        <module>../system</module>	<!-- containing categories, but not orgunits -->
+        <module>../content</module>  <!-- requires categories from system -->
+        <module>../orgunits</module>  <!-- requires content -->
+    </modules>
+
+</project>

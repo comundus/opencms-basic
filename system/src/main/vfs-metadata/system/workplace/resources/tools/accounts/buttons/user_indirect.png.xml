@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/accounts/buttons/user_indirect.png</destination>
+		<type>image</type>
+		<uuidstructure>de8a2041-d2fb-11db-9529-871f936c639e</uuidstructure>
+		<uuidresource>de8a2042-d2fb-11db-9529-871f936c639e</uuidresource>
+		<datelastmodified>Thu, 15 Mar 2007 13:49:27 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 15 Mar 2007 13:48:35 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
