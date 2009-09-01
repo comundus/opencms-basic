@@ -15,23 +15,25 @@
     </description>
 
     <!--
-        Changing the servlet name from "opencms" to something else requires 3 changes in this file.        
+        Changing the servlet name from "opencms" to something else requires 2 changes in this file.        
         For example, to change the servlet name to "mycms" you must:
         
         1. Change the <context-param> called "OpenCmsServlet" from "/opencms/*" to "/mycms/*"
         2. Change the <servlet-mapping> for "OpenCmsServlet" from "/opencms/*" to "/mycms/*"
-        3. Change the <error-page> setting for the 404 error from "/opencms/handle404" to "/mycms/handle404"
     -->
-
+    
     <!--
 	    Changing the errorhandler servlet name from "opencms-errorhandler" to something
-		else requires 2 changes in this file.
+		else requires 3 changes in this file.
 		For example, to change the servlet name to "mycms-errorhandler" you must:
 
 		1. Change the <servlet-mapping> for "OpenCmsServletErrorHandler" from
 		   "/opencms-errorhandler/*" to "/mycms-errorhandler/*"
 		2. Change the <error-page> setting for the 404 error from
 		   "/opencms-errorhandler/handle404" to "/mycms-errorhandler/handle404"
+		3. Change the <error-page> setting for the 500 error from
+	       "/opencms-errorhandler/system/handler/handle500.html" to
+	       "/mycms-errorhandler/system/handler/handle500.html"
     -->
 
     <context-param>
@@ -65,19 +67,6 @@
         </description>
         <servlet-name>OpenCmsServlet</servlet-name>
         <servlet-class>org.opencms.main.OpenCmsServlet</servlet-class>
-        <!-- Uncomment this if using BEA WLS 9.x -->
-        <!-- 
-        <init-param>
-        	<param-name>OnErrorExitWithoutException</param-name>
-        	<param-value>true</param-value>
-        	<description>
-        		This is important while the setup/update wizard is enabled.
-        		The default value of 'false' should work for almost all servlet containers.
-        		But if using BEA WLS 9.x, you should set it to 'true'.
-        	</description>
-        </init-param>
-         -->
-        <!-- Uncomment this if using BEA WLS 9.x -->
         <load-on-startup>1</load-on-startup>
     </servlet>
     
@@ -87,28 +76,6 @@
         </description>
         <servlet-name>OpenCmsServletErrorHandler</servlet-name>
         <servlet-class>org.opencms.main.OpenCmsServletErrorHandler</servlet-class>
-        <!-- Uncomment this if using BEA WLS 9.x -->
-        <!-- 
-        <init-param>
-        	<param-name>OnErrorExitWithoutException</param-name>
-        	<param-value>true</param-value>
-        	<description>
-        		This is important while the setup/update wizard is enabled.
-        		The default value of 'false' should work for almost all servlet containers.
-        		But if using BEA WLS 9.x, you should set it to 'true'.
-        	</description>
-        </init-param>
-        <init-param>
-        	<param-name>RequestErrorPageAttribute</param-name>
-        	<param-value>weblogic.servlet.errorPage</param-value>
-        	<description>
-     			This is only needed when the HttpServletRequest#getPathInfo() is not 
-     			really working as expected like in BEA WLS 9.x, where you have to use 
-     			the 'weblogic.servlet.errorPage' attribute.
-        	</description>
-        </init-param>
-         -->
-        <!-- Uncomment this if using BEA WLS 9.x -->
         <load-on-startup>0</load-on-startup>
     </servlet>    
 
