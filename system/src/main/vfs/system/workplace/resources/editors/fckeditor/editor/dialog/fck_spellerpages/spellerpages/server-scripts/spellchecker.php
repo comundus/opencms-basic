@@ -7,7 +7,7 @@ $aspell_prog	= '"C:\Program Files\Aspell\bin\aspell.exe"';	// by FredCK (for Win
 //$aspell_prog	= 'aspell';										// by FredCK (for Linux)
 
 $lang			= 'en_US';
-$aspell_opts	= "-a --lang=$lang --encoding=utf-8 -H";		// by FredCK
+$aspell_opts	= "-a --lang=$lang --encoding=utf-8 -H --rem-sgml-check=alt";		// by FredCK
 
 $tempfiledir	= "./";
 
@@ -82,6 +82,10 @@ function print_checker_results() {
 	if( $fh = fopen( $tempfile, 'w' )) {
 		for( $i = 0; $i < count( $textinputs ); $i++ ) {
 			$text = urldecode( $textinputs[$i] );
+
+			// Strip all tags for the text. (by FredCK - #339 / #681)
+			$text = preg_replace( "/<[^>]+>/", " ", $text ) ;
+
 			$lines = explode( "\n", $text );
 			fwrite ( $fh, "%\n" ); # exit terse mode
 			fwrite ( $fh, "^$input_separator\n" );
@@ -166,7 +170,7 @@ wordWindowObj.suggestions = suggs;
 wordWindowObj.textInputs = textinputs;
 
 function init_spell() {
-	// check if any error occured during server-side processing
+	// check if any error occurred during server-side processing
 	if( error ) {
 		alert( error );
 	} else {
@@ -193,4 +197,5 @@ wordWindowObj.writeBody();
 
 </body>
 </html>
+
 
