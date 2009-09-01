@@ -7,7 +7,7 @@
     </properties>
   
     <body>
-
+		<release version="7.0.5" date="2008-10-01"/>
 		<release version="7.0.3" date="2008-01-15"/>
         <release version="7.0.1" date="2007-07-19">
             <action dev="ds" type="add">initial release</action>              
