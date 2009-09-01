@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>7.0.3</version>
+        <version>7.0.5</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -11,14 +11,14 @@
     <artifactId>system</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms System</name>
-    <version>7.0.3</version>
+    <version>7.0.5</version>
     <description>OpenCms System</description>
     <url>http://opencms-maven.comundus.com</url>
     
     <scm>
         <!-- connection></connection -->
-        <developerConnection>scm:svn:https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/system</developerConnection>
-        <url>https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/system</url>
+        <developerConnection>scm:svn:https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/tags/7.0.5/system</developerConnection>
+        <url>https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/tags/7.0.5/system</url>
         <tag/>
     </scm>
 
@@ -56,6 +56,8 @@
 						<!-- we synchronize subfolders of orgunits in their own project -->
                         <syncVFSPath>/system/shared/</syncVFSPath>
                         <syncVFSPath>/system/workplace/</syncVFSPath>
+						<!-- The module org.opencms.workplace is only needed if no other module which defines default_bodies is present-->
+						<syncVFSPath>/system/modules/org.opencms.workplace/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.editors.fckeditor/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.frontend.layoutpage/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.workplace.administration/</syncVFSPath>
