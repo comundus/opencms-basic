@@ -1,12 +1,12 @@
 /*
  * File   : $Source: /usr/local/cvs/opencms/modules/org.opencms.workplace.explorer/resources/system/workplace/resources/commons/tree.js,v $
- * Date   : $Date: 2007-08-13 16:30:19 $
- * Version: $Revision: 1.7 $
+ * Date   : $Date: 2008-02-27 12:05:56 $
+ * Version: $Revision: 1.9 $
  *
  * This library is part of OpenCms -
  * the Open Source Content Management System
  *
- * Copyright (c) 2002 - 2007 Alkacon Software GmbH (http://www.alkacon.com)
+ * Copyright (c) 2002 - 2008 Alkacon Software GmbH (http://www.alkacon.com)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -59,8 +59,8 @@ var treeHeadHtml2 =
 	+ "//-->\n"
 	+ "</script>\n"
 	+ "<style type=\"text/css\">\n"
-	+ "body  { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; padding: 2px 0px 0px 2px; margin: 0px; backgound-color: #ffffff; }\n"
-	+ "p, td { vertical-align: bottom; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; white-space: nowrap; color: #000000; }\n"
+	+ "body  { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; padding: 2px 0px 0px 2px; margin: 0px; background-color: Window; }\n"
+	+ "p, td { vertical-align: bottom; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; white-space: nowrap; color: WindowText; }\n"
 	+ "a     { vertical-align: bottom; text-decoration: none; cursor: pointer; }\n"
 	+ "a.ig  { vertical-align: bottom; text-decoration: none; color: #888888; }\n"
 	+ "a.igi { vertical-align: bottom; text-decoration: underline; color: #000088; }\n"
