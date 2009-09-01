@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/orgunits/Firma3_DE</destination>
+		<type>folder</type>
+		<uuidstructure>6af1e580-8631-11dd-ba1b-1a1a1a1a1a1a</uuidstructure>
+		<datelastmodified>Fri, 19 Sep 2008 09:57:49 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 19 Sep 2008 09:57:49 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>512</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[OrgUnit Firma3 Deutschland]]></value>
+			</property>
+			<property>
+				<name>Keywords</name>
+				<value><![CDATA[6b0c2444-8631-11dd-ba1b-1a1a1a1a1a1a]]></value>
+			</property>
+		</properties>
+		<relations>
+			<relation>
+				<id>2fe456d6-80cc-11dd-9c47-1a1a1a1a1a1a</id>
+				<path>/sites/default/Firma3/de/</path>
+				<type>OU</type>
+			</relation>
+		</relations>
+		<accesscontrol/>
+	</file>
+</export>

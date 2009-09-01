@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/directedit/img/ocms_de_delete_a.png</destination>
+		<type>image</type>
+		<uuidstructure>ca541f1e-e09d-11dc-a7d2-9b4307eb5433</uuidstructure>
+		<uuidresource>3a75b288-e066-11dc-a7d2-9b4307eb5433</uuidresource>
+		<datelastmodified>Thu, 21 Feb 2008 10:17:38 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 21 Feb 2008 10:17:38 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[de_delete_a]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.frontend.photoalbum/schemas/overview.xsd</destination>
+		<type>plain</type>
+		<uuidstructure>93d134be-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>2a3b8336-5114-11da-a3c8-3328c6d3b865</uuidresource>
+		<datelastmodified>Tue, 09 Sep 2008 14:17:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 09 Nov 2005 11:30:01 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Nested XSD for overview configuration]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

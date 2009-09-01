@@ -22,6 +22,15 @@
 			</property>
 		</properties>
 		<relations/>
-		<accesscontrol/>
+		<accesscontrol>
+			<accessentry>
+				<uuidprincipal>GROUP.Guests</uuidprincipal>
+				<flags>36</flags>
+				<permissionset>
+					<allowed>5</allowed>
+					<denied>0</denied>
+				</permissionset>
+			</accessentry>
+		</accesscontrol>
 	</file>
 </export>

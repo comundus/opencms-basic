@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/editarea/dist/plugins/opencms/images/save_exit.png</destination>
+		<type>image</type>
+		<uuidstructure>9d4f0579-f4e2-11dc-bfe8-734b16235bd3</uuidstructure>
+		<uuidresource>9d4f057a-f4e2-11dc-bfe8-734b16235bd3</uuidresource>
+		<datelastmodified>Tue, 18 Mar 2008 13:30:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 18 Mar 2008 11:58:25 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/jquery_direct_edit_include.txt</destination>
+		<type>plain</type>
+		<uuidstructure>6a2b2939-dbb1-11dc-a85f-9b4307eb5433</uuidstructure>
+		<uuidresource>6a2b293a-dbb1-11dc-a85f-9b4307eb5433</uuidresource>
+		<datelastmodified>Fri, 22 Feb 2008 11:17:32 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 15 Feb 2008 10:33:15 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Direct edit include file for jquery provider]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

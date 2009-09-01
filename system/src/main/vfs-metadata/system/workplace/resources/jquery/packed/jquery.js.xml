@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/jquery/packed/jquery.js</destination>
+		<type>plain</type>
+		<uuidstructure>3b9b7a1d-12ad-11dd-86ab-111d34530985</uuidstructure>
+		<uuidresource>3b9b7a1e-12ad-11dd-86ab-111d34530985</uuidresource>
+		<datelastmodified>Wed, 14 May 2008 08:19:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 25 Apr 2008 09:51:52 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[JQuery 1.2.3]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

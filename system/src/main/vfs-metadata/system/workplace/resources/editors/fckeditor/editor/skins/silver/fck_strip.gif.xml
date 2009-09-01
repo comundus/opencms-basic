@@ -4,17 +4,17 @@
 	<file>
 		<destination>system/workplace/resources/editors/fckeditor/editor/skins/silver/fck_strip.gif</destination>
 		<type>image</type>
-		<uuidstructure>5327aee6-03ac-11dc-b2d2-19a36bcdebf7</uuidstructure>
-		<uuidresource>5327aee7-03ac-11dc-b2d2-19a36bcdebf7</uuidresource>
-		<datelastmodified>Wed, 16 May 2007 12:53:42 GMT</datelastmodified>
+		<uuidstructure>fc2b7870-e068-11dc-a7de-d17a851929f6</uuidstructure>
+		<uuidresource>fc2b7871-e068-11dc-a7de-d17a851929f6</uuidresource>
+		<datelastmodified>Thu, 21 Feb 2008 10:38:23 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Wed, 16 May 2007 12:52:37 GMT</datecreated>
+		<datecreated>Thu, 21 Feb 2008 10:37:22 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties>
 			<property type="shared">
 				<name>image.size</name>
-				<value><![CDATA[w:16,h:1056]]></value>
+				<value><![CDATA[w:16,h:1168]]></value>
 			</property>
 		</properties>
 		<relations/>
