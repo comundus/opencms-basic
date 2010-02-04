@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/tablegallery/js/integrator_editor.js</destination>
+		<type>jsp</type>
+		<uuidstructure>68d2e5d4-4b67-11de-850a-350e680a0242</uuidstructure>
+		<uuidresource>68d2e5d5-4b67-11de-850a-350e680a0242</uuidresource>
+		<datelastmodified>Thu, 04 Jun 2009 12:53:17 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 28 May 2009 09:10:38 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Editor integrator JS]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/fckeditor/editor/dialog/fck_template/images/template1.gif</destination>
+		<type>image</type>
+		<uuidstructure>8814f923-f854-11dd-992b-a766547d5370</uuidstructure>
+		<uuidresource>8814f924-f854-11dd-992b-a766547d5370</uuidresource>
+		<datelastmodified>Wed, 11 Feb 2009 15:57:08 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 11 Feb 2009 15:56:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:100,h:70]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

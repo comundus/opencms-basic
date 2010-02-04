@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/fckeditor/plugins/ocmsimage/buttons/nav_beginning_i.png</destination>
+		<type>image</type>
+		<uuidstructure>1f6c5961-901c-11db-a4ac-e15ad2a7b8e1</uuidstructure>
+		<uuidresource>4b6b66c8-8c4a-11db-b7b7-c93f3446e280</uuidresource>
+		<datelastmodified>Fri, 15 Dec 2006 14:41:17 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 15 Dec 2006 14:41:05 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:16,h:16]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

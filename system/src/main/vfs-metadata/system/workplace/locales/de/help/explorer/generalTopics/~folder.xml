@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/help/explorer/generalTopics</destination>
+		<type>folder</type>
+		<uuidstructure>f6fc03e9-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 06 Jul 2005 12:51:15 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[3.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[Grundlegende Konzepte]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Grundlegende Konzepte des Explorer]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

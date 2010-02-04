@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/searchindex/icons/big/indexsource-new.png</destination>
+		<type>image</type>
+		<uuidstructure>cf7a569a-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>4c310231-1de4-11da-8b1d-0334e4183c08</uuidresource>
+		<datelastmodified>Thu, 14 Dec 2006 09:26:28 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 05 Sep 2005 08:08:52 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:32,h:32]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/fckeditor/editor.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>525c0edb-5cf1-11db-85b1-432854714568</uuidstructure>
+		<uuidresource>7d977100-2a83-11da-8917-45526fcb35b4</uuidresource>
+		<datelastmodified>Thu, 06 Nov 2008 08:34:51 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 21 Sep 2005 09:38:39 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[FCKeditor WYSIWYG editor]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

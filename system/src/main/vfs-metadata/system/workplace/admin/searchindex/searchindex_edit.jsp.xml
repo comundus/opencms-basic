@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/searchindex/searchindex_edit.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>ceafb349-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>3e49a7ec-035c-11da-92d5-0334e4183c08</uuidresource>
+		<datelastmodified>Mon, 11 Dec 2006 15:32:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 02 Aug 2005 13:49:27 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_GROUPS_SEARCHINDEX_TOOL_EDIT_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[/tools/searchindex/icons/big/searchindex-edit.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_GROUPS_SEARCHINDEX_TOOL_EDIT_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[1.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_GROUPS_SEARCHINDEX_TOOL_EDIT_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[New search index]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[params:indexname=${param.indexname}|path:/searchindex/singleindex/edit]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.searchindex.CmsSearchToolHandler]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

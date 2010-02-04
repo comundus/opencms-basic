@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/galleryelements/upload.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>b8539093-33f2-11de-8aa1-a75c4a166a24</uuidstructure>
+		<uuidresource>b8539094-33f2-11de-8aa1-a75c4a166a24</uuidresource>
+		<datelastmodified>Fri, 29 May 2009 08:37:11 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 28 Apr 2009 12:47:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Generates the upload applet]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

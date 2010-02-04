@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/explorer/search</destination>
+		<type>folder</type>
+		<uuidstructure>c5ba2699-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<datelastmodified>Thu, 30 Mar 2006 10:12:29 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 30 Mar 2006 10:12:19 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Search]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

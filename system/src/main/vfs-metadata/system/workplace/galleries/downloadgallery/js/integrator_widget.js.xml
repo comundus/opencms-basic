@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/downloadgallery/js/integrator_widget.js</destination>
+		<type>jsp</type>
+		<uuidstructure>23cc8aa7-2a93-11de-9a1c-a75c4a166a24</uuidstructure>
+		<uuidresource>23cc8aa8-2a93-11de-9a1c-a75c4a166a24</uuidresource>
+		<datelastmodified>Fri, 05 Jun 2009 10:33:30 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 16 Apr 2009 14:30:31 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Widget integrator JS]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

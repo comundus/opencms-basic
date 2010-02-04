@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/fckeditor/editor/filemanager/connectors/php/config.php</destination>
+		<type>plain</type>
+		<uuidstructure>899be709-f854-11dd-992b-a766547d5370</uuidstructure>
+		<uuidresource>899be70a-f854-11dd-992b-a766547d5370</uuidresource>
+		<datelastmodified>Wed, 11 Feb 2009 15:57:07 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 11 Feb 2009 15:56:26 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

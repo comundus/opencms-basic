@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/help/administration/accounts/users/edit-create.html</destination>
+		<type>xmlpage</type>
+		<uuidstructure>f6be0fff-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>fb431a0f-fdca-11d9-b447-0334e4183c08</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 26 Jul 2005 11:47:02 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[Beschreibt das Erstellen und Bearbeiten eines Benutzers]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[1.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[Benutzer erstellen und bearbeiten]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Benutzer erstellen und bearbeiten]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/modules/org.opencms.workplace.help/jsptemplates/help]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

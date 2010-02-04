@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/searchindex/indexsource-delete.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>ce84d25c-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>1a116985-1af1-11da-accb-0334e4183c08</uuidresource>
+		<datelastmodified>Mon, 11 Dec 2006 15:32:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 01 Sep 2005 14:02:58 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_GROUPS_INDEXSOURCE_TOOL_DELETE_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[/tools/searchindex/icons/big/indexsource-delete.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_GROUPS_INDEXSOURCE_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[4.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_LIST_INDEXSOURCE_ACTION_DELETE_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Edit indexsource]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[params:action=initial&indexsource=${param.indexsource}|path:/searchindex/indexsources/indexsource/delete]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.searchindex.CmsSearchToolHandler]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

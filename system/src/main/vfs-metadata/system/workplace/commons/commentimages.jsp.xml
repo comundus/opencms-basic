@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/commentimages.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>c85ce4ad-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>93e6c17a-574e-11da-8f45-3328c6d3b865</uuidresource>
+		<datelastmodified>Mon, 23 Apr 2007 12:27:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 17 Nov 2005 09:43:16 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Dialog - Comment images]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

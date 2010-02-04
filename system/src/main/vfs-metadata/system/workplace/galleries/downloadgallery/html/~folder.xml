@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/downloadgallery/html</destination>
+		<type>folder</type>
+		<uuidstructure>eee82db3-359b-11de-8f50-a75c4a166a24</uuidstructure>
+		<datelastmodified>Thu, 30 Apr 2009 15:31:37 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 30 Apr 2009 15:31:11 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[html snippets for gallery tags]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

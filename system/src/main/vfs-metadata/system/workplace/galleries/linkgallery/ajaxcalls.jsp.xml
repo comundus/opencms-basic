@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/linkgallery/ajaxcalls.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>7c8d9dc8-451c-11de-80e1-350e680a0242</uuidstructure>
+		<uuidresource>7c8d9dc9-451c-11de-80e1-350e680a0242</uuidresource>
+		<datelastmodified>Wed, 20 May 2009 09:23:09 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 20 May 2009 08:59:11 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Handles Ajax requests]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

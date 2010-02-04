@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/help/administration/accounts/groups</destination>
+		<type>folder</type>
+		<uuidstructure>f6ad6f0d-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 06 Jul 2005 09:00:56 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[3.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[Gruppen]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Gruppen]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

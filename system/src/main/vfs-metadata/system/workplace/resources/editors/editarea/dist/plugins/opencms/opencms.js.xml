@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/editarea/dist/plugins/opencms/opencms.js</destination>
+		<type>plain</type>
+		<uuidstructure>b979254f-3fad-11de-a300-f9441ff21e44</uuidstructure>
+		<uuidresource>b9792550-3fad-11de-a300-f9441ff21e44</uuidresource>
+		<datelastmodified>Wed, 13 May 2009 11:03:54 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 13 May 2009 11:03:44 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

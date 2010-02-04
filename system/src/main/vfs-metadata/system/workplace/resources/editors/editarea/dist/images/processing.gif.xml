@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/editarea/dist/images/processing.gif</destination>
+		<type>image</type>
+		<uuidstructure>601c84c5-3fac-11de-a300-f9441ff21e44</uuidstructure>
+		<uuidresource>601c84c6-3fac-11de-a300-f9441ff21e44</uuidresource>
+		<datelastmodified>Wed, 13 May 2009 10:55:44 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 13 May 2009 10:54:04 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:16,h:16]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

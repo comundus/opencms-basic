@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/searchindex/icons/small/fieldconfiguration-mapping.png</destination>
+		<type>image</type>
+		<uuidstructure>bb19743a-8b55-11db-824f-7102f397f5de</uuidstructure>
+		<uuidresource>bb19743b-8b55-11db-824f-7102f397f5de</uuidresource>
+		<datelastmodified>Thu, 14 Dec 2006 09:34:11 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 14 Dec 2006 09:30:26 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
