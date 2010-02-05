@@ -258,7 +258,17 @@ case 4:
 		<%= wp.dialogBlockEnd() %>
 	<%
 break;
-case 5:
+case 5: 
+	// ########## start galleries settings
+  	%>
+	<%= wp.dialogBlockStart(wp.key(Messages.GUI_PREF_SETTINGS_STARTUP_0)) %> 
+	<table border="0" cellpadding="4" cellspacing="0">
+	<%= wp.buildSelectStartGalleries("style=\"width: 400px;\"") %>
+	</table>
+	<%= wp.dialogBlockEnd() %>
+	<%
+break;
+case 6:
 	// ########## user data settings
 	%>
 		<script type="text/javascript">
@@ -286,6 +296,7 @@ case 5:
 				}
 				if (newPwd == conPwd) {
 					pwdForm.<%= wp.PARAM_ACTION %>.value = "<%= wp.DIALOG_CHPWD %>";
+					pwdForm.<%= wp.PARAM_FRAMENAME %>.value = window.name; 
 					pwdForm.submit();
 				} else {
 					alert("<%= wp.key(Messages.ERR_CHPWD_NO_MATCH_0) %>");

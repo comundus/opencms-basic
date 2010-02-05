@@ -70,7 +70,7 @@ if not "%OPENCMS_LIB%" == "" goto gotLib
 set OPENCMS_LIB=%OPENCMS_HOME%\lib
 :gotHome
 if exist "%OPENCMS_LIB%\opencms.jar" goto okLib
-if exist "%OPENCMS_LIB%\opencms-7.0.5-comundus.jar" goto okLib
+if exist "%OPENCMS_LIB%\opencms-7.5.2.jar" goto okLib
 echo The OPENCMS_LIB environment variable is not defined correctly
 echo This environment variable is needed to run this program
 goto end
@@ -81,6 +81,8 @@ for %%i in ("%OPENCMS_LIB%\*.jar") do call "%OPENCMS_HOME%\cpappend.bat" %%i
 rem Check for Tomcat libs
 rem Add all jars in TOMCAT_HOME\common\lib dir to TOMCAT_LIB variable (will include a initial semicolon ";")
 for %%i in ("%TOMCAT_HOME%\common\lib\*.jar") do call "%OPENCMS_HOME%\tlappend.bat" %%i
+rem also support different tomcat folder structure
+for %%i in ("%TOMCAT_HOME%\lib\*.jar") do call "%OPENCMS_HOME%\tlappend.bat" %%i
 :okLib
 
 rem ----- Execute The Requested Command ---------------------------------------

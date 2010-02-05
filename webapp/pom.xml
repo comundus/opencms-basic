@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>7.5</version>
+        <version>7.5.2</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -11,7 +11,7 @@
     <artifactId>webapp</artifactId>
     <packaging>war</packaging>
     <name>OpenCms Webapp</name>
-    <version>7.5</version>
+    <version>7.5.2</version>
     <description>OpenCms Webapplikation</description>
     <url>http://opencms-maven.comundus.com</url>
     
@@ -101,7 +101,7 @@
         <dependency>
             <groupId>org.opencms</groupId>
             <artifactId>opencms</artifactId>
-            <version>7.5</version>
+            <version>7.5.2</version>
         </dependency>
         <dependency>
 			<groupId>mysql</groupId>

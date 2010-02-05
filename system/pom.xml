@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>7.5</version>
+        <version>7.5.2</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -11,7 +11,7 @@
     <artifactId>system</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms System</name>
-    <version>7.5</version>
+    <version>7.5.2</version>
     <description>OpenCms System</description>
     <url>http://opencms-maven.comundus.com</url>
     
@@ -58,6 +58,7 @@
                         <syncVFSPath>/system/workplace/</syncVFSPath>
 						<!-- The module org.opencms.workplace is only needed if no other module which defines default_bodies is present-->
 						<syncVFSPath>/system/modules/org.opencms.workplace/</syncVFSPath>
+                        <syncVFSPath>/system/modules/org.opencms.editors.editarea/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.editors.fckeditor/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.frontend.layoutpage/</syncVFSPath>
                         <syncVFSPath>/system/modules/org.opencms.frontend.photoalbum/</syncVFSPath>

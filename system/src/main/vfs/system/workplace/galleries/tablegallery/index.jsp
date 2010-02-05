@@ -9,7 +9,7 @@ String jQueryResourcePath = org.opencms.workplace.CmsWorkplace.getSkinUri() + "j
 String jsIntegratorQuery = "";
 
 //check in settings if the upload-applet is used
-Boolean isAppletUsed = wp.getSettings().getUserSettings().useUploadApplet();
+boolean isAppletUsed = wp.getSettings().getUserSettings().useUploadApplet();
 
 %><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -19,8 +19,10 @@ Boolean isAppletUsed = wp.getSettings().getUserSettings().useUploadApplet();
 <title><%= wp.key(Messages.GUI_TITLE_TABLEGALLERY_0) %></title>
 
 <link rel="stylesheet" type="text/css" href="<%= galleryResourcePath %>css/dialog.css" />
-<link rel="stylesheet" type="text/css" href="<%= galleryResourcePath %>css/tabs.css" />
 <link rel="stylesheet" type="text/css" href="<%= jQueryResourcePath %>css/thickbox/thickbox.css" />
+<link rel="stylesheet" type="text/css" href="<%= jQueryResourcePath %>css/ui-ocms/jquery.ui.css" />
+<link rel="stylesheet" type="text/css" href="<%= jQueryResourcePath %>css/ui-ocms/jquery.ui.ocms.css" />
+
 <% if (wp.isModeEditor()) { %>
 <link rel="stylesheet" type="text/css" href="<%= galleryResourcePath %>css/editor.css" />
 <% } %>
@@ -80,7 +82,10 @@ var isAppletUsed = <%=isAppletUsed %>;
 	<div id="closebutton">
 		<button type="button" onclick="window.close();"><%= wp.key(Messages.GUI_GALLERY_BUTTON_CLOSE_0) %></button>
 	</div>
+	<!-- The dialog html for the search dialog -->
+	<%@ include file="%(link.strong:/system/workplace/galleries/galleryelements/searchdialog.html:01f57eeb-5f28-11de-8c07-2d12956623b5)" %>
 	<a href="#" class="thickbox" id="resourcepublishlink"></a>
+	<a href="#" class="thickbox" id="resourcedeletelink"></a>
 </body>
 
 </html>

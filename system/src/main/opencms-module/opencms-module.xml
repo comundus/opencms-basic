@@ -9,7 +9,7 @@
             <description><![CDATA[<p>This module contains the OpenCms Common Editing tools.</p>
 <p>This module is needed to be able to edit files in the OpenCms Workplace.</p>
 <p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.5.0</version>
+            <version>7.5.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -86,9 +86,9 @@
             <group>OpenCms Editors</group>
             <class/>
             <description><![CDATA[<p>This module adds the Open Source text editor "EditArea" to the OpenCms Workplace.</p>
-<p>Install this module if you want a source code editor with syntax highlighting. The version of EditArea is 0.8.1.1</p>
-<p><i>(c) 2009 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.5.0</version>
+<p>Install this module if you want a source code editor with syntax highlighting. The version of EditArea is 0.8.2</p>
+<p><i>(c) 2010 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -112,9 +112,9 @@
             <group>OpenCms Editors</group>
             <class/>
             <description><![CDATA[<p>This module adds the popular Open Source HTML editor "FCKeditor" to the OpenCms Workplace.</p>
-<p>Install this module if you want a WYSIWYG editor for Mozilla based browsers, Internet Explorer, Safari or Google Chrome. The version of FCKeditor is 2.6.4</p>
-<p><i>(c) 2009 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.5.0</version>
+<p>Install this module if you want a WYSIWYG editor for Mozilla based browsers, Internet Explorer, Safari or Google Chrome. The version of FCKeditor is 2.6.5</p>
+<p><i>(c) 2010 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -229,7 +229,7 @@
             <group>OpenCms frontend</group>
             <class/>
             <description><![CDATA[This modules includes the JQuery javascript libraries as well as several plugins used by OpenCms]]></description>
-            <version>7.5.0</version>
+            <version>7.5.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -250,7 +250,7 @@
             <description><![CDATA[<p>This module contains the German language localization files for the OpenCms workplace.</p>
 <p>Install this module if you want to use the german version of the OpenCms Workplace.</p>
 <p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.5.0</version>
+            <version>7.5.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -292,11 +292,11 @@
             <name>org.opencms.workplace</name>
             <nicename><![CDATA[OpenCms 7 Workplace base]]></nicename>
             <group>OpenCms Workplace</group>
-            <class/>
+            <class>org.opencms.workplace.CmsWorkplaceAction</class>
             <description><![CDATA[<p>This module contains the OpenCms Workplace base files.</p>
 <p>It includes common used dialogs and style sheets, that are needed by any workplace module.</p>
-<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.5.0</version>
+<p><i>(c) 2010 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -327,6 +327,7 @@
                 <resource uri="/system/workplace/resources/buttons/edit.png"/>
                 <resource uri="/system/workplace/resources/buttons/edit_in.png"/>
                 <resource uri="/system/workplace/resources/buttons/folder_refresh.png"/>
+                <resource uri="/system/workplace/resources/buttons/folder.png"/>
                 <resource uri="/system/workplace/resources/buttons/help.png"/>
                 <resource uri="/system/workplace/resources/buttons/htmlgallery.png"/>
                 <resource uri="/system/workplace/resources/buttons/imagegallery.png"/>
@@ -350,6 +351,7 @@
                 <resource uri="/system/workplace/resources/buttons/tablegallery.png"/>
                 <resource uri="/system/workplace/resources/buttons/wizard.png"/>
                 <resource uri="/system/workplace/resources/buttons/wizard_in.png"/>
+                <resource uri="/system/workplace/resources/buttons/upload.png"/>
                 <resource uri="/system/workplace/resources/commons/error.png"/>
                 <resource uri="/system/workplace/resources/commons/favicon.ico"/>
                 <resource uri="/system/workplace/resources/commons/help.png"/>
@@ -416,8 +418,8 @@
             <class/>
             <description><![CDATA[<p>This module contains the base components for the administration view.</p>
 <p>Its allows you to install and/or develop administration tools for OpenCms 7.</p>
-<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.0.4</version>
+<p><i>(c) 2010 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.5.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -469,7 +471,7 @@
             <description><![CDATA[<p>This module contains the OpenCms Workplace Explorer.</p>
 <p>Install this module if you want a GUI to work on the OpenCms VFS.</p>
 <p><i>(c) 2008 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.5.0</version>
+            <version>7.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -499,6 +501,7 @@
                 <resource uri="/system/workplace/commons/lockchange_standard.jsp"/>
                 <resource uri="/system/workplace/commons/locks.jsp"/>
                 <resource uri="/system/workplace/commons/move.jsp"/>
+                <resource uri="/system/workplace/commons/property_multifile.jsp"/>
                 <resource uri="/system/workplace/commons/newcsvfile_upload.jsp"/>
                 <resource uri="/system/workplace/commons/newresource.jsp"/>
                 <resource uri="/system/workplace/commons/newresource_folder.jsp"/>
@@ -527,12 +530,14 @@
                 <resource uri="/system/workplace/commons/secure.jsp"/>
                 <resource uri="/system/workplace/commons/show_deleted.jsp"/>
                 <resource uri="/system/workplace/commons/synchronize.jsp"/>
+                <resource uri="/system/workplace/commons/publishscheduledresource.jsp"/>
                 <resource uri="/system/workplace/commons/touch.jsp"/>
                 <resource uri="/system/workplace/commons/undelete.jsp"/>
                 <resource uri="/system/workplace/commons/undochanges.jsp"/>
                 <resource uri="/system/workplace/commons/unlock.jsp"/>
                 <resource uri="/system/workplace/commons/unlock_standard.jsp"/>
                 <resource uri="/system/workplace/commons/user_selection.jsp"/>
+                <resource uri="/system/workplace/commons/property_multifile.jsp"/>
                 <resource uri="/system/workplace/resources/buttons/back.png"/>
                 <resource uri="/system/workplace/resources/buttons/ex_search.png"/>
                 <resource uri="/system/workplace/resources/buttons/folder.png"/>
@@ -691,7 +696,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the user accounts and groups.</p>
 <p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.0.5</version>
+            <version>7.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -744,7 +749,7 @@
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the content of resources.</p>
 <p>Install this module if you want to modify file properties or content elements.</p>
 <p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.0.4</version>
+            <version>7.0.5</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -760,15 +765,19 @@
                 <resource uri="/system/modules/org.opencms.workplace.tools.content/"/>
                 <resource uri="/system/workplace/admin/contenttools/change/"/>
                 <resource uri="/system/workplace/admin/contenttools/delete/"/>
+                <resource uri="/system/workplace/admin/contenttools/languagecopy/"/>
                 <resource uri="/system/workplace/admin/contenttools/merge/"/>
                 <resource uri="/system/workplace/admin/contenttools/renameelement/"/>
                 <resource uri="/system/workplace/admin/contenttools/reports/"/>
                 <resource uri="/system/workplace/admin/contenttools/changeelementlocale.jsp"/>
+                <resource uri="/system/workplace/admin/contenttools/convertxml.jsp"/>
                 <resource uri="/system/workplace/admin/contenttools/tagreplace.jsp"/>
                 <resource uri="/system/workplace/admin/contenttools/xmlcontentrepair.jsp"/>
                 <resource uri="/system/workplace/admin/contenttools/check/index.jsp"/>
                 <resource uri="/system/workplace/admin/contenttools/check/report.jsp"/>
                 <resource uri="/system/workplace/admin/contenttools/check/result.jsp"/>
+                <resource uri="/system/workplace/admin/contenttools/propertyviewer.jsp"/>
+                <resource uri="/system/workplace/admin/contenttools/propertyviewer-list.jsp"/>
                 <resource uri="/system/workplace/admin/contenttools/check/plugin/propertycheck/"/>
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/small/"/>
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/big/change_elementlocale.png"/>
@@ -779,6 +788,7 @@
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contentmerge_disabled.png"/>
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contenttools.png"/>
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contenttools_disabled.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/contenttools_xmlcontent_convert.png"/>
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/big/elements_rename.png"/>
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/big/elements_rename_disabled.png"/>
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/big/properties_change.png"/>
@@ -787,6 +797,7 @@
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/big/properties_delete_disabled.png"/>
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/big/repair_xmlcontent.png"/>
                 <resource uri="/system/workplace/resources/tools/contenttools/icons/big/replace_html_tag.png"/>
+                <resource uri="/system/workplace/resources/tools/contenttools/icons/big/propertyviewer.png"/>
             </resources>
             <parameters/>
         </module>
@@ -797,8 +808,8 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms database maintainance tools.</p>
 <p>Install this module if you want to import/export data, it also contains a static export tool.</p>
-<p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.0.4</version>
+<p><i>(c) 2010 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>7.5.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -838,7 +849,7 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains Overviews for every OpenCms gallery types.</p>
-<p><i>(c) 2009 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>(c) 2010 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>7.5.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -944,7 +955,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the tools for managing the OpenCms projects.</p>
 <p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.0.5</version>
+            <version>7.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -1024,7 +1035,7 @@
             <description><![CDATA[<p>This module contains tools related to the search capabilities of OpenCms.</p>
 <p>Install this module if you need search capabilities in OpenCms.</p>
 <p><i>(c) 2007 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>7.0.5</version>
+            <version>7.5.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>

@@ -10,7 +10,7 @@
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms Parent</name>
-    <version>7.5</version>
+    <version>7.5.2</version>
     <description>OpenCms</description>
     <url>http://opencms-maven.comundus.com</url>
 	<prerequisites>
@@ -134,7 +134,7 @@
         	<plugin>
                 <groupId>com.comundus.maven</groupId>
                 <artifactId>maven-vfs-plugin</artifactId>
-                <version>7.5</version>    
+                <version>7.5.2</version>    
                  <dependencies>
                         <dependency>
             				<groupId>mysql</groupId>

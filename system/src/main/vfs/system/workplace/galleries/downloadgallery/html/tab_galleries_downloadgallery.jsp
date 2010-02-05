@@ -2,9 +2,21 @@
 	<div id="galleryfolders"><div class="head"><%= wp.key(Messages.GUI_GALLERY_GALLERIES_HL_AVAILABLE_0) %></div><div id="galleryfolderlist"></div></div>
 	<div id="galleryitems">
 		<div id="gallerybuttons">
-			<button type="button" id="galleryuploadbutton" onclick="$('#galleryitemuploadlink').click();"><%= wp.key(Messages.GUI_GALLERY_GALLERIES_BUTTON_UPLOAD_0) %></button><a href="#" class="thickbox" id="galleryitemuploadlink"></a>
-			<button type="button" onclick="showGalleryFolders();"><%= wp.key(Messages.GUI_GALLERY_GALLERIES_BUTTON_SHOW_0) %></button>
-			<button type="button" id="gallerypublishbutton" onclick="$('#gallerypublishlink').click();" disabled="disabled"><%= wp.key(Messages.GUI_GALLERY_GALLERIES_BUTTON_PUBLISH_0) %></button><a href="#" class="thickbox" id="gallerypublishlink"></a>
+			<button type="button" id="galleryuploadbutton" onclick="$('#galleryitemuploadlink').click();" disabled="disabled" title="<%= wp.key(Messages.GUI_GALLERY_GALLERIES_BUTTON_UPLOAD_0) %>">
+				<div> <%= wp.key(Messages.GUI_GALLERY_GALLERIES_BUTTON_UPLOAD_0) %> </div>
+			</button><a href="#" class="thickbox" id="galleryitemuploadlink"></a>
+			<button type="button" id="opengallerybutton" class="downloadgallery" onclick="showGalleryFolders();" title="<%= wp.key(Messages.GUI_GALLERY_GALLERIES_BUTTON_SHOW_0) %>">
+				<div> <%= wp.key(Messages.GUI_GALLERY_GALLERIES_BUTTON_SHOW_0) %> </div>
+			</button>
+			<button type="button" id="gallerysearchbutton" onclick="openSearchDialog('gallery');" title="<%= wp.key(Messages.GUI_GALLERY_BUTTON_SEARCH_0) %>">
+				<div> &nbsp; </div>
+			</button>
+			<button type="button" id="galleryresetsearchbutton" onclick="resetSearch('gallery');" title="<%= wp.key(Messages.GUI_GALLERY_BUTTON_SEARCH_RESET_0) %>">
+				<div> &nbsp;</div>
+			</button>
+			<button type="button" id="gallerypublishbutton" onclick="$('#gallerypublishlink').click();" disabled="disabled" title="<%= wp.key(Messages.GUI_GALLERY_GALLERIES_BUTTON_PUBLISH_0) %>">
+				<div> &nbsp; </div>
+			</button><a href="#" class="thickbox" id="gallerypublishlink"></a>
 		</div>
 		<!-- fillItems() -->
 		<div id="galleryitemlist"><p></p></div>	
@@ -19,6 +31,9 @@
 						</button>
 						<button id="galleryitempublishbutton" onclick="publishItem(galleryItems.markedItem, 'gallery');" type="button" title="<%= wp.key(Messages.GUI_GALLERY_ITEMDETAIL_PUBLISH_0) %>">
 							<img src="<%= org.opencms.workplace.CmsWorkplace.getSkinUri() %>buttons/publish.png" />
+						</button>
+						<button id="galleryitemdeletebutton" onclick="deleteItem(galleryItems.markedItem, 'gallery');" type="button" title="<%= wp.key(Messages.GUI_GALLERY_ITEMDETAIL_DELETE_0) %>">								
+							<img src="<%= org.opencms.workplace.CmsWorkplace.getSkinUri() %>buttons/deletecontent.png" />
 						</button>
 					</td>
 					<td style="width: 40%;" colspan="2" class="iteminfostate">

@@ -2,7 +2,15 @@
 		<div id="categoryfolders"><div class="head"><%= wp.key(Messages.GUI_GALLERY_CATEGORIES_HL_AVAILABLE_0) %></div><div id="categoryfolderlist"></div></div>
 		<div id="categoryitems">
 			<div id="categorybuttons">
-				<button type="button" onclick="showCategoryFolders();"><%= wp.key(Messages.GUI_GALLERY_CATEGORIES_BUTTON_SHOW_0) %></button>
+				<button id="opencategorybutton" onclick="showCategoryFolders();" title="<%= wp.key(Messages.GUI_GALLERY_CATEGORIES_BUTTON_SHOW_0) %>">
+					<div> <%= wp.key(Messages.GUI_GALLERY_CATEGORIES_BUTTON_SHOW_0) %> </div>
+				</button>
+				<button id="categorysearchbutton" onclick="openSearchDialog('category');" title="<%= wp.key(Messages.GUI_GALLERY_BUTTON_SEARCH_0) %>">
+					<div> &nbsp; </div>
+				</button>
+				<button id="categoryresetsearchbutton" onclick="resetSearch('category');" title="<%= wp.key(Messages.GUI_GALLERY_BUTTON_SEARCH_RESET_0) %>">
+					<div> &nbsp; </div>
+				</button>
 			</div>
 			<div id="categoryitemlist" ></div>
 			<div id="categoryiteminfo">
@@ -16,6 +24,11 @@
 							<button id="categoryitempublishbutton" onclick="publishItem(categoryItems.markedItem, 'category');" type="button" title="<%= wp.key(Messages.GUI_GALLERY_ITEMDETAIL_PUBLISH_0) %>">
 								<img src="<%= org.opencms.workplace.CmsWorkplace.getSkinUri() %>buttons/publish.png" />
 							</button>
+							<!-- Delete-->
+							<button id="categoryitemdeletebutton" onclick="deleteItem(categoryItems.markedItem, 'category');" type="button" title="<%= wp.key(Messages.GUI_GALLERY_ITEMDETAIL_DELETE_0) %>">							
+								<img src="<%= org.opencms.workplace.CmsWorkplace.getSkinUri() %>buttons/deletecontent.png" />
+							</button>
+							<!-- Delete-->
 						</td>
 						<td style="width: 40%;" colspan="2" class="iteminfostate">
 							<span id="categoryitemstate"></span>

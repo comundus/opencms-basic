@@ -63,20 +63,20 @@
 				<type class="org.opencms.file.types.CmsResourceTypeXmlPage" name="xmlpage" id="6"/>
 				<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="xmlcontent" id="7"/>
 				<type class="org.opencms.file.types.CmsResourceTypeFolderExtended" name="imagegallery" id="8">
-					<param name="folder.class">org.opencms.workplace.galleries.CmsImageGallery</param>
-					<param name="folder.class.params">w:120,h:90,c:dddddd,t:1,r:2</param>
+					<param name="folder.class">org.opencms.workplace.galleries.CmsAjaxImageGallery</param>
+					<param name="folder.class.params">w:120,h:90,c:D4D0C8,t:1,r:2</param>
 				</type>
 				<type class="org.opencms.file.types.CmsResourceTypeFolderExtended" name="downloadgallery" id="9">
-					<param name="folder.class">org.opencms.workplace.galleries.CmsDownloadGallery</param>
+					<param name="folder.class">org.opencms.workplace.galleries.CmsAjaxDownloadGallery</param>
 				</type>	
 				<type class="org.opencms.file.types.CmsResourceTypeFolderExtended" name="linkgallery" id="10">
-					<param name="folder.class">org.opencms.workplace.galleries.CmsLinkGallery</param>
+					<param name="folder.class">org.opencms.workplace.galleries.CmsAjaxLinkGallery</param>
 				</type>
 				<type class="org.opencms.file.types.CmsResourceTypeFolderExtended" name="htmlgallery" id="11">
-					<param name="folder.class">org.opencms.workplace.galleries.CmsHtmlGallery</param>
+					<param name="folder.class">org.opencms.workplace.galleries.CmsAjaxHtmlGallery</param>
 				</type>
 				<type class="org.opencms.file.types.CmsResourceTypeFolderExtended" name="tablegallery" id="12">
-					<param name="folder.class">org.opencms.workplace.galleries.CmsTableGallery</param>
+					<param name="folder.class">org.opencms.workplace.galleries.CmsAjaxTableGallery</param>
 				</type>
 			</resourcetypes>
 			<collectors>
@@ -581,7 +581,40 @@
 				<mimetype extension=".rss" type="application/rss+xml" />
  		        <mimetype extension=".jar" type="application/java-archive"/>
 				<mimetype extension=".jad" type="text/vnd.sun.j2me.app-descriptor"/>
+				<mimetype extension=".docx" type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+		        <mimetype extension=".docm" type="application/vnd.ms-word.document.macroEnabled.12"/>
+		        <mimetype extension=".dotx" type="application/vnd.openxmlformats-officedocument.wordprocessingml.template"/>
+		        <mimetype extension=".dotm" type="application/vnd.ms-word.template.macroEnabled.12"/>
+		        <mimetype extension=".xlsx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+		        <mimetype extension=".xlsm" type="application/vnd.ms-excel.sheet.macroEnabled.12"/>
+		        <mimetype extension=".xltx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.template"/>
+		        <mimetype extension=".xltm" type="application/vnd.ms-excel.template.macroEnabled.12"/>
+		        <mimetype extension=".xlsb" type="application/vnd.ms-excel.sheet.binary.macroEnabled.12"/>
+		        <mimetype extension=".xlam" type="application/vnd.ms-excel.addin.macroEnabled.12"/>
+		        <mimetype extension=".pptx" type="application/vnd.openxmlformats-officedocument.presentationml.presentation"/>
+		        <mimetype extension=".pptm" type="application/vnd.ms-powerpoint.presentation.macroEnabled.12"/>
+		        <mimetype extension=".ppsx" type="application/vnd.openxmlformats-officedocument.presentationml.slideshow"/>
+		        <mimetype extension=".ppsm" type="application/vnd.ms-powerpoint.slideshow.macroEnabled.12"/>
+		        <mimetype extension=".potx" type="application/vnd.openxmlformats-officedocument.presentationml.template"/>
+		        <mimetype extension=".potm" type="application/vnd.ms-powerpoint.template.macroEnabled.12"/>
+		        <mimetype extension=".ppam" type="application/vnd.ms-powerpoint.addin.macroEnabled.12"/>
+		        <mimetype extension=".sldx" type="application/vnd.openxmlformats-officedocument.presentationml.slide"/>
+		        <mimetype extension=".sldm" type="application/vnd.ms-powerpoint.slide.macroEnabled.12"/>
+		        <mimetype extension=".thmx" type="application/vnd.ms-officetheme"/>
+		        <mimetype extension=".onetoc" type="application/onenote"/>
+		        <mimetype extension=".onetoc2" type="application/onenote"/>
+		        <mimetype extension=".onetmp" type="application/onenote"/>
+		        <mimetype extension=".onepkg" type="application/onenote"/>
+		        <mimetype extension=".rar" type="application/x-rar-compressed"/>
+		        <mimetype extension=".flv" type="video/x-flv"/>
+		   		<mimetype extension=".msg" type="application/vnd.ms-outlook"/>
 			</mimetypes>
+			<html-converters>
+  		  		<html-converter name="true" class="org.opencms.util.CmsHtmlConverterJTidy" />
+  		  		<html-converter name="xhtml" class="org.opencms.util.CmsHtmlConverterJTidy" />
+  		  		<html-converter name="cleanup" class="org.opencms.util.CmsHtmlConverterJTidy" />
+  		  		<html-converter name="replace-paragraphs" class="org.opencms.util.CmsHtmlConverterJTidy" />
+			</html-converters>
 		</resources>
 		<defaultfiles>
 			<defaultfile name="index.html" />
@@ -629,7 +662,8 @@
 				<widget class="org.opencms.widgets.CmsTextareaWidget" alias="TextareaWidget" />
                 <widget class="org.opencms.widgets.CmsTextareaWidgetPlaintext" alias="TextareaWidgetPlaintext" />                
 				<widget class="org.opencms.widgets.CmsUserWidget" alias="UserWidget"/>
-				<widget class="org.opencms.widgets.CmsVfsFileWidget" alias="VfsFileWidget"/>     
+				<widget class="org.opencms.widgets.CmsVfsFileWidget" alias="VfsFileWidget"/>
+				<widget class="org.opencms.widgets.CmsVfsImageWidget" alias="VfsImageWidget"/>
 			</widgets>
 			<schematypes>
 				<schematype class="org.opencms.xml.types.CmsXmlBooleanValue" defaultwidget="org.opencms.widgets.CmsCheckboxWidget" />
@@ -640,6 +674,7 @@
 				<schematype class="org.opencms.xml.types.CmsXmlStringValue" defaultwidget="org.opencms.widgets.CmsInputWidget" />
                 <schematype class="org.opencms.xml.types.CmsXmlVarLinkValue" defaultwidget="org.opencms.widgets.CmsVfsFileWidget" />
 				<schematype class="org.opencms.xml.types.CmsXmlVfsFileValue" defaultwidget="org.opencms.widgets.CmsVfsFileWidget" />
+				<schematype class="org.opencms.xml.types.CmsXmlVfsImageValue" defaultwidget="org.opencms.widgets.CmsVfsImageWidget" />
 			</schematypes>
 		</xmlcontent>
 	</vfs>

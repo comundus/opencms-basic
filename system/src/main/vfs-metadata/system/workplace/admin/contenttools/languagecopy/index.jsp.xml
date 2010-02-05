@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/contenttools/languagecopy/index.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>b16695ec-6d0f-11dd-80eb-b37cfc8f9e4e</uuidstructure>
+		<uuidresource>b16695ed-6d0f-11dd-80eb-b37cfc8f9e4e</uuidresource>
+		<datelastmodified>Thu, 30 Jul 2009 09:39:15 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 18 Aug 2008 10:23:25 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

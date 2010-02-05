@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$tabs = $("#tabs").tabs({
 	});
+	initSearchDialog();
 	initPopup();
 });
 
@@ -12,10 +13,37 @@ function fillItems(data, modeName) {
 	var foundItems = eval(data);
 	var publishInfo = foundItems.shift();
 	if (modeName == "category") {
+		// disable search button, if there are no items in the gallery
+		if (foundItems.length == 0) {
+			$("#categorysearchbutton").addClass("ui-state-disabled");
+			$("#categorysearchbutton").get(0).disabled = true;
+		} else {
+			$("#categorysearchbutton").removeClass("ui-state-disabled");
+			$("#categorysearchbutton").get(0).disabled = false;
+		}
+		// filter search results
+		foundItems = filterItems(foundItems, modeName);
+		// break building list, if no result are found for given search
+		if (foundItems == "noresults") {
+			return;
+		}		
 		categoryItems = new ItemList();
 		categoryItems.items = foundItems;
+		// display number of search results if not 0 
+		var categorysearchresult = " ";
+		var cTitle = categories[activeCategory].title;
+		if (searchKeyword != null) {
+			if (foundItems.length == 1) {link
+				categorysearchresult = ": " + foundItems.length + " " + LANG.SEARCH_RESULT + " \""  + searchKeyword + "\"";
+			} else {
+				categorysearchresult = ": " + foundItems.length + " " + LANG.SEARCH_RESULTS + " \""  + searchKeyword + "\"";
+			}
+			//cut the title of the gallery, if it is too long
+			cTitle = cutTitle(cTitle);
+		}
 		$("#" + modeName + "itemlist").append("<div id=\"categoryname\">"
-			+ categories[activeCategory].title
+			+ cTitle
+			+ categorysearchresult 
 			+ "<span>"
 			+ categories[activeCategory].path
 			+ "</span></div>");
@@ -26,10 +54,44 @@ function fillItems(data, modeName) {
 		}
 		$("#" + modeName + "itemtitle").removeClass();
 		$("#" + modeName + "itemtitle").unbind();
+		//Delete
+		$("#" + modeName + "itemdeletebutton").hide();
+		//Delete
 	} else {
+		// disable search button, if there are no items in the gallery
+		if (foundItems.length == 0) {
+			$("#gallerysearchbutton").addClass("ui-state-disabled");
+			$("#gallerysearchbutton").get(0).disabled = true;
+		} else {
+			$("#gallerysearchbutton").removeClass("ui-state-disabled");
+			$("#gallerysearchbutton").get(0).disabled = false;
+		}
+		// filter search results
+		foundItems = filterItems(foundItems, modeName);
+		// break building list, if no result are found for given search
+		if (foundItems == "noresults") {
+			return;
+		}
 		galleryItems = new ItemList();
 		galleryItems.items = foundItems;
 		galleryItems.publishable = publishInfo.publishable;
+		if (galleryItems.publishable == true) { // enabled		
+			$("#gallerypublishbutton").removeClass("ui-state-disabled");
+		} else { //galleryItems.publishable == false -> disabled
+			$("#gallerypublishbutton").addClass("ui-state-disabled");		
+		}
+		$("#gallerypublishbutton").get(0).disabled = !galleryItems.publishable;
+		// display the upload button if user has write permissions		
+		galleryItems.directpublish = publishInfo.directpublish;
+		galleryItems.writepermission = publishInfo.writepermission;
+		if (galleryItems.writepermission == false) { // disabled	
+			$("#galleryuploadbutton").addClass("ui-state-disabled");
+			$("#galleryuploadbutton").get(0).disabled = true;
+		} else {
+			$("#galleryuploadbutton").removeClass("ui-state-disabled");
+			$("#galleryuploadbutton").get(0).disabled = false;
+		}
+
 		var gTitle, gPath;
 		if (activeGallery != -1) {
 			gTitle = galleries[activeGallery].title;
@@ -39,11 +101,22 @@ function fillItems(data, modeName) {
 			gTitle = startGallery.title;
 			gPath = startGallery.path;
 		}
-		
-		$("#gallerypublishbutton").get(0).disabled = !galleryItems.publishable;
+		// display number of search results if not 0
+		var gallerysearchresult = " ";
+		if (searchKeyword != null) {
+			if (foundItems.length == 1) {
+				gallerysearchresult = ": " + foundItems.length + " " + LANG.SEARCH_RESULT + " \""  + searchKeyword + "\"";
+			} else {
+				gallerysearchresult = ": " + foundItems.length + " " + LANG.SEARCH_RESULTS + " \""  + searchKeyword + "\"";
+			}
+			//prepare title of the gallery, if too long
+			gTitle = cutTitle(gTitle);
+		}
+
 		/* Name and path of the gallery */
 		$("#" + modeName + "itemlist").append("<div id=\"galleryname\">"
 			+ gTitle
+			+ gallerysearchresult
 			+ "<span>"
 			+ gPath
 			+ "</span></div>");
@@ -55,6 +128,9 @@ function fillItems(data, modeName) {
 		}
 		$("#" + modeName + "itemtitle").removeClass();
 		$("#" + modeName + "itemtitle").unbind();
+		//Delete
+		$("#" + modeName + "itemdeletebutton").hide();
+		//Delete
 	}
 	var innerListId = modeName + "itemlistinner";
 	$("#" + modeName + "itemlist").append("<div id=\"" + innerListId  + "\"></div>");
@@ -153,7 +229,7 @@ function fillItems(data, modeName) {
 		itemHtml += "</tr>";
 		itemHtml += "<tr>";
 		itemHtml += "<td style=\"width\ : 60%\"><span class=\"filename\" alt=\"";
-		itemHtml += fileitem.linkpath;
+		itemHtml += fileitem.sitepath;
 		itemHtml += "\"  >";
 		itemHtml += itemName;
 		itemHtml += "</span></td>";
@@ -252,7 +328,7 @@ function showItemInfo(itemIndex, idPrefix, currItem) {
 			idPrefix = "#" + idPrefix;
 		}
 		var itemName = "<span title=\"";
-		itemName += currItem.linkpath;
+		itemName += currItem.sitepath;
 		itemName += "\">";
 		itemName += currItem.linkpath.substring(currItem.linkpath.lastIndexOf("/") + 1);
 		itemName += "</span>";
@@ -338,27 +414,49 @@ function markItem(itemIndex, idPrefix) {
 	if (markedIndex != -1) {
 		var isEditable;
 		var state = 0;
+		var hasDirectPublish;	
+		var hasWritePermission;
+		// set permissions on the given resource
 		if (idPrefix == "gallery") {
 			isEditable = galleryItems.items[markedIndex].editable;
+			hasDirectPublish = galleryItems.items[markedIndex].directpublish;	
+			hasWritePermission = galleryItems.items[markedIndex].writepermission;
 			state = galleryItems.items[markedIndex].state;
 		} else {
 			isEditable = categoryItems.items[markedIndex].editable;
+			hasDirectPublish = categoryItems.items[markedIndex].directpublish;	
+			hasWritePermission = categoryItems.items[markedIndex].writepermission;
 			state = categoryItems.items[markedIndex].state;
 		}
+		// is editable or unlocked
 		if (isEditable == true) {
-			$("#" + idPrefix + "itemtitle").attr("class", "editable");
-			$("#" + idPrefix + "itemtitle").editable(function(value, settings) {
-			    setItemTitle(value, idPrefix);
-			    return(value);
-			 }, {
-			    submit   : LANG.BUTTON_OK,
-			    cancel   : LANG.BUTTON_CANCEL,
-			    cssclass : "edittitle",
-			    height   : "none",
-			    select   : true,
-			    tooltip  : LANG.DETAIL_EDIT_HELP
-			});
-			if (state != 0) {
+			// user has write permission for this resource
+			if (hasWritePermission == true) { 
+				$("#" + idPrefix + "itemtitle").attr("class", "editable");
+				$("#" + idPrefix + "itemtitle").editable(function(value, settings) {
+				    setItemTitle(value, idPrefix);
+				    return(value);
+				 }, {
+				    submit   : LANG.BUTTON_OK,
+				    cancel   : LANG.BUTTON_CANCEL,
+				    cssclass : "edittitle",
+				    height   : "none",
+				    select   : true,
+				    tooltip  : LANG.DETAIL_EDIT_HELP
+				});
+				// Delete
+				$("#" + idPrefix + "itemdeletebutton").fadeIn("fast");	
+			} else {
+				$("#" + idPrefix + "itemtitle").unbind();
+				$("#" + idPrefix + "itemtitle").removeClass();
+				$("#" + idPrefix + "itempublishbutton").fadeOut("fast");
+				// Delete
+				$("#" + idPrefix + "itemdeletebutton").fadeOut("fast");
+				// Delete
+			}
+
+			// user has direct publish permission for this resource
+			if (state != 0 && hasDirectPublish == true) {
 				$("#" + idPrefix + "itempublishbutton").fadeIn("fast");
 			} else {
 				$("#" + idPrefix + "itempublishbutton").fadeOut("slow");
@@ -367,6 +465,9 @@ function markItem(itemIndex, idPrefix) {
 			$("#" + idPrefix + "itemtitle").unbind();
 			$("#" + idPrefix + "itemtitle").removeClass();
 			$("#" + idPrefix + "itempublishbutton").fadeOut("slow");
+			// Delete
+			$("#" + idPrefix + "itemdeletebutton").fadeOut("fast");
+			// Delete
 		}
 		showItemInfo(markedIndex, idPrefix);
 		if (initValues.viewonly == false) {
@@ -389,6 +490,9 @@ function markItem(itemIndex, idPrefix) {
 		if (initValues.dialogmode == "widget") {
 			$("#" + idPrefix + "okbutton").fadeOut("slow");
 		}
+		// Delete
+		$("#" + idPrefix + "itemdeletebutton").fadeOut("fast");
+		// Delete
 	}
 }
 
@@ -425,6 +529,8 @@ function loadActiveItem(data, isInitial) {
 function refreshMarkedItem(data, modeName) {
 	var state;
 	var itemIndex;
+	// direct publish permissions for given resource
+	var hasDirectPublish;
 	var newImg = eval("(" + data + ")");
 	if (activeItem != null && activeItem.sitepath == newImg.sitepath) {
 		// update the item preview with the new iteminformation
@@ -437,17 +543,28 @@ function refreshMarkedItem(data, modeName) {
 		updateTitleInItemlist(itemIndex, modeName, newImg.title);
 		updateModDateInItemlist(itemIndex, modeName, newImg.datelastmodified);
 		state = galleryItems.items[itemIndex].state;
-		$("#gallerypublishbutton").get(0).disabled = false;
+		// direct publish permissions for given resource
+		hasDirectPublish = galleryItems.items[itemIndex].directpublish;
+		// direct publish permissions for the gallery folder
+		if (galleryItems.directpublish == true) {
+			$("#gallerypublishbutton").get(0).disabled = false;
+			$("#gallerypublishbutton").removeClass("ui-state-disabled");
+		}
 	} else {
 		itemIndex = categoryItems.markedItem;
 		categoryItems.items[itemIndex] = newImg;
 		updateTitleInItemlist(itemIndex, modeName, newImg.title);
 		updateModDateInItemlist(itemIndex, modeName, newImg.datelastmodified);
 		state = categoryItems.items[itemIndex].state;
+		// direct publish permissions for given resource
+		hasDirectPublish = categoryItems.items[itemIndex].directpublish;	
 	}
 	if (state == 1 || state == 2) {
 		$("#" + modeName + "itemlayer" + itemIndex).empty();
-		$("#" + modeName + "itempublishbutton").fadeIn();
+		// show the resource publish button, if user has direct publish permission
+		if (hasDirectPublish == true) {
+			$("#" + modeName + "itempublishbutton").fadeIn();
+		}
 		var imgHtml = "";
 		if (state == 1) {
 			// changed item

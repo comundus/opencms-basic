@@ -14,7 +14,7 @@
 		<properties>
 			<property>
 				<name>NavImage</name>
-				<value><![CDATA[/tools/searchindex/icons/big/fieldconfiguration-editfield.png]]></value>
+				<value><![CDATA[tools/searchindex/icons/big/fieldconfiguration-editfield.png]]></value>
 			</property>
 			<property>
 				<name>NavPos</name>

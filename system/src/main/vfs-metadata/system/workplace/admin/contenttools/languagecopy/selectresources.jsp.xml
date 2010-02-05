@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/contenttools/languagecopy/selectresources.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>b5e991c2-6e13-11dd-9527-b37cfc8f9e4e</uuidstructure>
+		<uuidresource>b5e991c3-6e13-11dd-9527-b37cfc8f9e4e</uuidresource>
+		<datelastmodified>Thu, 30 Jul 2009 12:12:39 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 19 Aug 2008 17:24:42 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[path:/languagecopy/selectresources|params:paths=${param.paths}&sourcelanguage=${param.sourcelanguage}&targetlanguage=${param.targetlanguage}]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

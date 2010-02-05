@@ -10,10 +10,16 @@ input, textarea, select {
 }
 
 button {
-	width: auto;
-	overflow: visible;
-	padding-left: 4px;
-	padding-right: 4px;
+	width: auto;		/* should be set to handle ie problem with button text */
+	overflow: visible;	/* should be set to handle ie problem with button text */
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-left: 4px;
+	height: 25px;
+}
+
+#gallerybuttons a {
+	text-decoration: none;
 }
 
 body {
@@ -60,15 +66,14 @@ img {
 #dialogbuttons {
 	clear: left;
 	text-align: center;
-	padding-top: 6px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	visibility: visible;
 }
 
 #closebutton {
 	text-align: center;
 	padding: 8px 0 0 0;
-	background-color: Window;
-	color: WindowText;
 	display: none;
 }
 
@@ -210,11 +215,11 @@ input.showborder, select.showborder {
 }
 
 #galleryfolderlist div:hover, #categoryfolderlist div:hover, #galleryfolderlist div.active:hover, #categoryfolderlist div.active:hover {
-	background-color: Background;
+	background-color: #a8adb4;
 }
 
 #galleryfolderlist div.active, #categoryfolderlist div.active {
-	background-color: Highlight;
+	background-color: #003082;
 }
 
 #galleryfolderlist div span.title, #categoryfolderlist div span.title {
@@ -248,23 +253,21 @@ input.showborder, select.showborder {
 
 }
 
-
 #galleryitemlistinner div div, #categoryitemlistinner div div {
 	margin-bottom: 1px;
 	padding: 2px;
 	background-color: Window;
 	border: 1px solid ButtonShadow;
 	cursor: pointer;
-	width: 100%;
 }
 
 #galleryitemlistinner div  div:hover, #galleryitemlistinner div  div.active:hover,
 #categoryitemlistinner div  div:hover, #categoryitemlistinner div  div.active:hover {
-	background-color: Background;
+	background-color: #a8adb4;
 }
 
 #galleryitemlistinner div div.active, #categoryitemlistinner div div.active {
-	background-color: Highlight;
+	background-color: #003082;
 }
 
 #galleryitemlistinner div div span.title, #categoryitemlistinner  div div span.title {
@@ -291,23 +294,105 @@ input.showborder, select.showborder {
 	color: HighlightText;
 }
 
-
 /* ----------------------------------------------------------------- */
 
 #gallerybuttons, #categorybuttons {
-	background-color: InfoBackground;
-	color: InfoText;
-	padding: 6px 4px;
-}
-
-#gallerypublishbutton {
-	margin-left: 4px;
+	padding: 3px 4px;
 }
 
 #galleryuploadbutton, #gallerynewlinkbutton {
 	float: right;
 }
 
+#galleryuploadbutton div, #gallerynewlinkbutton div,
+#opengallerybutton div, #opencategorybutton div {
+	padding-left: 18px;
+}
+
+#gallerypublishbutton div, 
+#gallerysearchbutton div, #categorysearchbutton div,
+#galleryresetsearchbutton div, #categoryresetsearchbutton div {
+	visibility: hidden;
+}
+
+#gallerynewlinkbutton {
+	background-repeat: no-repeat;
+	background-image: url("../../../buttons/wizard.png");
+	background-position: left;
+}
+
+#galleryuploadbutton {
+	background-repeat: no-repeat;
+	background-image: url("../../../buttons/upload.png");
+	background-position: left;
+}
+
+#opengallerybutton {
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+#opengallerybutton.imagegallery {
+	background-image: url("../../../buttons/imagegallery.png");
+}
+
+#opengallerybutton.downloadgallery {
+	background-image: url("../../../buttons/downloadgallery.png");
+}
+
+#opengallerybutton.linkgallery {
+	background-image: url("../../../buttons/linkgallery.png");
+}
+
+#opengallerybutton.htmlgallery {
+	background-image: url("../../../buttons/htmlgallery.png");
+}
+
+#opengallerybutton.tablegallery {
+	background-image: url("../../../buttons/tablegallery.png");
+}
+
+#opencategorybutton {
+	background-repeat: no-repeat;
+	background-image: url("../../../buttons/folder.png");
+	background-position: left;
+}
+
+#gallerypublishbutton {
+	background-repeat:no-repeat;
+	width: 27px;
+	background-image: url("../../../buttons/publish.png");
+	background-position: center;
+
+}
+
+#gallerysearchbutton, #categorysearchbutton {
+	background-repeat:no-repeat;
+	width: 27px;
+	background-image: url("../../../buttons/search.png");
+	background-position: center;
+
+}
+
+#galleryresetsearchbutton, #categoryresetsearchbutton {
+	background-repeat:no-repeat;
+	width: 27px;
+	background-image: url("../../../buttons/deletelocale.png");
+	background-position: center;
+
+}
+
+.smalltext {
+	font-size: 11px;
+	font-style: italic;
+}
+
+#gallerysearchstring, #categorysearchstring {
+	width: 308px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+ 
 #galleryitemlist, #categoryitemlist {
 	background-color: ButtonFace;
 	border-bottom: 1px solid ButtonShadow; 
@@ -403,7 +488,6 @@ input.showborder, select.showborder {
 	padding: 2px;
 }
 
-
 td.iteminfoheadline, td.iteminfostate {
 	font-size: 12px !important;
 	line-height: 15px;
@@ -445,7 +529,8 @@ td.imageinfostate, td.iteminfostate, td.infostate {
 
 #galleryitemselectbutton, #categoryitemselectbutton, 
 #galleryitempublishbutton, #categoryitempublishbutton,
-#galleryitempreviewbutton, #categoryitempreviewbutton {
+#galleryitempreviewbutton, #categoryitempreviewbutton,
+#galleryitemdeletebutton, #categoryitemdeletebutton {
 	display: none;
 	width: 28px;
 	height: 18px;
@@ -456,7 +541,8 @@ td.imageinfostate, td.iteminfostate, td.infostate {
 
 #galleryitemselectbutton img, #categoryitemselectbutton img, 
 #galleryitempublishbutton img, #categoryitempublishbutton img,
-#galleryitempreviewbutton img, #categoryitempreviewbutton img {
+#galleryitempreviewbutton img, #categoryitempreviewbutton img, 
+#galleryitemdeletebutton img, #categoryitemdeletebutton img{
 	margin-top: -4px;
 	margin-left: -2px;
 }
@@ -525,12 +611,13 @@ div.imgitem {
 }
 
 div.imgitemhover {
-	border: 1px solid ButtonShadow;
+	border: 3px solid #a8adb4;
+	padding: 0px 8px;
 }
 
 div.imgitemactive {
-	border: 1px solid Highlight;
-	background-color: ActiveCaption;
+	border: 3px solid #003082;
+	padding: 0px 8px;
 }
 
 div.imgitemwrapper {
@@ -557,7 +644,6 @@ span.imglayer img {
 }
 
 /* download gallery: show change icon */
-/* span.imgitemwrapper0 { */
 span.changeiconwrapper {
 	position: relative;
 }

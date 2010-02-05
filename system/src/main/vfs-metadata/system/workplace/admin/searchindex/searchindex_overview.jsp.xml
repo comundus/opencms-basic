@@ -18,7 +18,7 @@
 			</property>
 			<property>
 				<name>NavImage</name>
-				<value><![CDATA[/tools/searchindex/icons/big/searchindex.png]]></value>
+				<value><![CDATA[tools/searchindex/icons/big/searchindex.png]]></value>
 			</property>
 			<property>
 				<name>NavInfo</name>

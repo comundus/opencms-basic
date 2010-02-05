@@ -35,7 +35,7 @@
 	<cfset var sTempDir = "">
 	<cfset var sTempFilePath = "">
 	<cfset var errorNumber = 0>
-	<cfset var customMsg = 0>
+	<cfset var customMsg = "">
 	<cfset var counter = 0>
 	<cfset var destination = "">
 
@@ -108,7 +108,17 @@
 			<cffile action="move" source="#sTempFilePath#" destination="#destination#" mode="755">
 			<!--- omit CF 6.1 error during moving uploaded file, just copy that file instead of moving --->
 			<cfcatch type="any">
-				<cffile action="copy" source="#sTempFilePath#" destination="#destination#" mode="755">
+				<cftry>
+					<cffile action="copy" source="#sTempFilePath#" destination="#destination#" mode="755">
+					<cfcatch type="any">
+						<cfset errorNumber = 102>
+					</cfcatch>
+				</cftry>
+				<cftry>
+					<cffile action="delete" file="#sTempFilePath#">
+					<cfcatch type="any">
+					</cfcatch>
+				</cftry>
 			</cfcatch>
 		</cftry>
 		</cflock>
@@ -226,5 +236,5 @@
 		</cftry>
 	</cfif>
 
-	<cfoutput><Error number="#errorNumber#" originalDescription="#HTMLEditFormat(sErrorMsg)#" /></cfoutput>
+	<cfoutput><Error number="#errorNumber#" /></cfoutput>
 </cffunction>

@@ -7,6 +7,7 @@ var LANG = {
 
 	"DETAIL_SIZE"			: "<%= wp.key(Messages.GUI_GALLERY_ITEMDETAIL_SIZE_0) %>",
 	"DETAIL_EDIT_HELP"		: "<%= wp.key(Messages.GUI_GALLERY_ITEMDETAIL_EDIT_HELP_0) %>",
+	"DETAIL_EDIT_URL_HELP"		: "<%= wp.key(Messages.GUI_GALLERY_ITEMDETAIL_EDIT_URL_HELP_0) %>",
 	"DETAIL_DM"			: "<%= wp.key(Messages.GUI_GALLERY_ITEMDETAIL_DATE_MODIFIED_0) %>",
 	"IMGDETAIL_STATE_NEW"		: "<%= wp.key(Messages.GUI_IMAGEGALLERY_IMGDETAIL_STATE_NEW_0) %>",
 	"IMGDETAIL_STATE_CHANGED"	: "<%= wp.key(Messages.GUI_IMAGEGALLERY_IMGDETAIL_STATE_CHANGED_0) %>",
@@ -40,6 +41,8 @@ var LANG = {
 	"FORMAT_LARGE"			: "<%= wp.key(Messages.GUI_IMAGEGALLERY_FORMAT_LARGE_0) %>",
 
 	"BUTTON_OK"			: "<%= wp.key(Messages.GUI_GALLERY_BUTTON_OK_0) %>",
-	"BUTTON_CANCEL"			: "<%= wp.key(Messages.GUI_GALLERY_BUTTON_CANCEL_0) %>"
-
+	"BUTTON_CANCEL"			: "<%= wp.key(Messages.GUI_GALLERY_BUTTON_CANCEL_0) %>",
+	"NO_SEARCH_RESULTS"		: "<%= wp.key(Messages.GUI_GALLERY_SEARCH_NORESULTS_0) %>",
+	"SEARCH_RESULTS"		: "<%= wp.key(Messages.GUI_GALLERY_SEARCH_RESULTS_0) %>",
+	"SEARCH_RESULT"			: "<%= wp.key(Messages.GUI_GALLERY_SEARCH_RESULT_0) %>"
 };
