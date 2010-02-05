@@ -1,0 +1,72 @@
+# Editor display options
+
+# format selector
+option.formatselect=true
+formatselect.options=p;h1;h2;h3;h4;h5;h6;pre;address;div
+
+# font manipulation
+font.size=false
+font.face=false
+font.color=true
+font.decoration=true
+
+# color
+bg.color=true
+
+# paragraph manipulation
+text.align=true
+text.indent=true
+text.lists=true
+
+# individual buttons for paragraph manipulation
+button.bold=true
+button.italic=true
+button.underline=true
+button.strikethrough=true
+button.super=true
+button.sub=true
+button.alignleft=true
+button.aligncenter=true
+button.alignright=true
+button.justify=true
+button.indent=true
+button.outdent=true
+button.orderedlist=true
+button.unorderedlist=true
+
+# customized editor button
+button.customized=true
+
+# page editor options
+option.element.selection=true
+option.element.language=true
+option.properties=true
+option.cleanup=true
+option.sourcecode=true
+
+# galleries
+gallery.download=true
+gallery.link=true
+gallery.image=true
+gallery.html=true
+gallery.table=true
+
+# link & anchor options
+option.links=true
+option.linkstyleinputs=false
+option.link=true
+option.extlink=true
+option.anchor=true
+option.unlink=true
+
+# misc buttons
+option.images=true
+option.specialchars=true
+option.rule=false
+option.table=true
+option.form=false
+option.style=false
+option.flash=false
+option.spellcheck=false
+option.print=true
+option.help=true

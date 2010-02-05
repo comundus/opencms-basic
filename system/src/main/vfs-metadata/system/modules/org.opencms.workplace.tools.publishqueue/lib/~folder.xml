@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.workplace.tools.publishqueue/lib</destination>
+		<type>folder</type>
+		<uuidstructure>dae07411-22b7-cbdb-91cd-fdbae480bac9</uuidstructure>
+		<datelastmodified>Tue, 02 Feb 2010 17:04:24 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 10 Oct 2005 08:10:10 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

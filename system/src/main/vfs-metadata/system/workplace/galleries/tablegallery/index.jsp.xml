@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/tablegallery/index.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>690c1e54-4b67-11de-850a-350e680a0242</uuidstructure>
+		<uuidresource>690c1e55-4b67-11de-850a-350e680a0242</uuidresource>
+		<datelastmodified>Wed, 03 Jun 2009 15:42:02 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 28 May 2009 09:10:38 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Download gallery start jsp]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

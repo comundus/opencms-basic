@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/template</destination>
+		<type>folder</type>
+		<uuidstructure>b7febc98-e47a-11dc-8d1e-3bdd2ea0b1ac</uuidstructure>
+		<datelastmodified>Tue, 02 Feb 2010 17:03:36 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 26 Feb 2008 14:54:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.frontend.layoutpage/mappings</destination>
+		<type>folder</type>
+		<uuidstructure>f9909008-64c4-11db-8fcc-d3ee01eaa4cf</uuidstructure>
+		<datelastmodified>Tue, 02 Feb 2010 17:04:22 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 26 Oct 2006 07:38:30 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

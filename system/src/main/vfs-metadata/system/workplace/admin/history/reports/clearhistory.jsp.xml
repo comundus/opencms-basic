@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/history/reports/clearhistory.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>83593959-143f-11dc-bce6-edd7343a1375</uuidstructure>
+		<uuidresource>8359395a-143f-11dc-bce6-edd7343a1375</uuidresource>
+		<datelastmodified>Wed, 06 Jun 2007 15:07:19 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 06 Jun 2007 15:06:33 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

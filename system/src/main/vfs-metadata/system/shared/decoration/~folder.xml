@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/shared/decoration</destination>
+		<type>folder</type>
+		<uuidstructure>82692dc9-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<datelastmodified>Tue, 02 Feb 2010 17:03:31 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 08 Nov 2005 14:03:22 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[HTML Decoration]]></value>
+			</property>
+			<property>
+				<name>locale</name>
+				<value><![CDATA[en]]></value>
+			</property>
+			<property>
+				<name>locale-available</name>
+				<value><![CDATA[en]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

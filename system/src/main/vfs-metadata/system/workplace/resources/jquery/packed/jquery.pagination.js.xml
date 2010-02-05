@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/jquery/packed/jquery.pagination.js</destination>
+		<type>plain</type>
+		<uuidstructure>12653688-1d13-11dd-b203-111d34530985</uuidstructure>
+		<uuidresource>12653689-1d13-11dd-b203-111d34530985</uuidresource>
+		<datelastmodified>Tue, 13 May 2008 12:43:22 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 08 May 2008 15:26:04 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[JQuery Pagination 1.2]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

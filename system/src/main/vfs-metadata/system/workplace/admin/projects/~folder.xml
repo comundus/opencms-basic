@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/projects</destination>
+		<type>folder</type>
+		<uuidstructure>d469ead2-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<datelastmodified>Tue, 02 Feb 2010 17:03:34 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_PROJECTS_ADMIN_TOOL_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[tools/projects/icons/big/projects.png:tools/projects/icons/small/projects.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_PROJECTS_ADMIN_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[10.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_PROJECTS_ADMIN_TOOL_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Project Management]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.projects.CmsProjectsToolHandler]]></value>
+			</property>
+			<property>
+				<name>default-file</name>
+				<value><![CDATA[projects_list.jsp]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

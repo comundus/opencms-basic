@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/views/explorer</destination>
+		<type>folder</type>
+		<uuidstructure>c79e2959-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<datelastmodified>Tue, 02 Feb 2010 17:04:20 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[10]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_EXPLORER_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>default-file</name>
+				<value><![CDATA[explorer_fs.jsp]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

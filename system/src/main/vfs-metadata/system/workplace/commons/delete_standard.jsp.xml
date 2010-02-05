@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/delete_standard.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>c86b1591-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>69135a2f-f052-11d8-ba65-db38cc8f19d7</uuidresource>
+		<datelastmodified>Mon, 23 Apr 2007 12:27:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Dialog - Delete resource]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

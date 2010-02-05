@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/database/icons/big/htmldefault.png</destination>
+		<type>image</type>
+		<uuidstructure>59f4aa52-7b32-11dc-a308-7799c52f7191</uuidstructure>
+		<uuidresource>59f4aa53-7b32-11dc-a308-7799c52f7191</uuidresource>
+		<datelastmodified>Mon, 15 Oct 2007 15:21:50 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 15 Oct 2007 15:21:50 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[htmldefault]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:32,h:32]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

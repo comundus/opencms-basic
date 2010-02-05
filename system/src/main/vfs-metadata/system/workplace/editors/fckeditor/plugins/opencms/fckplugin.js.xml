@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/fckeditor/plugins/opencms/fckplugin.js</destination>
+		<type>jsp</type>
+		<uuidstructure>527f274e-5cf1-11db-85b1-432854714568</uuidstructure>
+		<uuidresource>0748f93a-66fe-11da-a41e-f5519f4138f7</uuidresource>
+		<datelastmodified>Wed, 16 May 2007 13:30:05 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 07 Dec 2005 08:46:59 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[OpenCms plugin]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/publishqueue/icons/small/publish_queue.png</destination>
+		<type>image</type>
+		<uuidstructure>ed2e6e92-7096-11db-942b-bf6fa13020a5</uuidstructure>
+		<uuidresource>f3cc8825-6db4-11db-905e-bf6fa13020a5</uuidresource>
+		<datelastmodified>Fri, 10 Nov 2006 08:40:48 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 06 Nov 2006 16:36:29 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/renameimages.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>c89f9370-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>c9590a03-56a1-11da-8947-3328c6d3b865</uuidresource>
+		<datelastmodified>Mon, 23 Apr 2007 12:27:53 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 16 Nov 2005 13:06:22 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Dialog - Rename images]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/newresource_uploadHtml.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>b402bb97-7810-11dc-9289-7799c52f7191</uuidstructure>
+		<uuidresource>a641f473-7802-11dc-bb96-7799c52f7191</uuidresource>
+		<datelastmodified>Fri, 12 Oct 2007 09:29:31 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 11 Oct 2007 14:02:49 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Dialog - New resource upload HTML]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[params:resource=${param.resource}|path:/history]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

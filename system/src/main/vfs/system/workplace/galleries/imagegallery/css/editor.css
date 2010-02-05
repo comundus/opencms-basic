@@ -1,0 +1,99 @@
+#gallerydialog input, #gallerydialog textarea, #gallerydialog select, #gallerydialog td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+#preview #previewwrapper {
+	height: 230px;
+}
+
+#preview #previewwrapperhtml {
+	height: 475px;
+}
+
+#preview #htmlpreview {
+	height: 475px;
+}
+
+#preview #imgoptions {
+	height: 148px;
+	padding: 6px 4px;
+	border-bottom: 1px solid ButtonShadow;
+}
+
+#preview #imgdetails {
+	padding: 3px 4px 6px 4px;
+	border-bottom: none;
+}
+
+#preview #imgalignspacer {
+	margin-top: 18px;
+	padding: 6px 0;
+	border-top: 1px solid ButtonShadow;
+}
+
+#preview #imgalign {
+	margin-top: 4px;
+}
+
+#preview #imgalign td {
+	padding-top: 2px;
+	white-space: nowrap;
+}
+
+#preview #imgalign #enhOrig {
+	padding-top: 4px;
+}
+
+#advanced {
+	color: InfoText;
+	background-color: InfoBackground;
+}
+
+#advanced .head {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 4px 0 8px 0;
+}
+
+#advlink {
+	padding: 6px 4px 16px 4px;
+	border-bottom: 1px solid ButtonShadow;
+}
+
+#advattrs {
+	padding: 6px 4px;
+}
+
+div.advinput {
+	margin-top: 8px;
+}
+
+div.imgitem, div.imgitemhover, div.imgitemactive {
+	margin: 2px 4px;
+}
+
+div.imgitemhover, div.imgitemactive {
+	padding: 0px 8px;
+}
+
+#galleryfolderlist, #categoryfolderlist {
+	height: 460px;
+}
+
+#galleryitemlist, #categoryitemlist {
+	height: 376px;
+}
+
+#galleryitemlistinner, #categoryitemlistinner {
+	height: 305px; /*  overwritten in editor.css */
+}
+
+#galleryimagelistinner, #categoryimagelistinner {
+	height: 305px;
+}

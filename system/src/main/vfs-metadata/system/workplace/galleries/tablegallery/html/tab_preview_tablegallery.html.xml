@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/tablegallery/html/tab_preview_tablegallery.html</destination>
+		<type>plain</type>
+		<uuidstructure>68b3ec1c-4b67-11de-850a-350e680a0242</uuidstructure>
+		<uuidresource>68b3ec1d-4b67-11de-850a-350e680a0242</uuidresource>
+		<datelastmodified>Wed, 27 May 2009 13:36:44 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 28 May 2009 09:10:37 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Tabs for widget dialog mode]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

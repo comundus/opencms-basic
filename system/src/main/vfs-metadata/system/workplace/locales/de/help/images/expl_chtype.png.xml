@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/help/images/expl_chtype.png</destination>
+		<type>image</type>
+		<uuidstructure>f7a2f255-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>a5afed96-f43e-11d9-a16d-1950d6847260</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 14 Jul 2005 08:09:48 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:450,h:370]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

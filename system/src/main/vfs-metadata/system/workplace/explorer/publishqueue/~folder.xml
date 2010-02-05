@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/explorer/publishqueue</destination>
+		<type>folder</type>
+		<uuidstructure>d74023ea-b854-11db-8fff-57d0fde741a5</uuidstructure>
+		<datelastmodified>Tue, 02 Feb 2010 17:03:40 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 09 Feb 2007 15:47:26 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_PUBLISHQUEUE_ADMIN_TOOL_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[tools/publishqueue/icons/big/publish_queue.png:tools/publishqueue/icons/small/publish_queue.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_PUBLISHQUEUE_ADMIN_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[15.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_PUBLISHQUEUE_ADMIN_TOOL_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Publish Queue]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.CmsDefaultToolHandler]]></value>
+			</property>
+			<property>
+				<name>default-file</name>
+				<value><![CDATA[publishqueue.jsp]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

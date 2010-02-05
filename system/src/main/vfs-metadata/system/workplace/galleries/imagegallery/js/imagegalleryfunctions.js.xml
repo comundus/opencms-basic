@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/imagegallery/js/imagegalleryfunctions.js</destination>
+		<type>plain</type>
+		<uuidstructure>1f6fadd4-29b7-11de-91c4-a75c4a166a24</uuidstructure>
+		<uuidresource>a047d4e1-2363-11de-8ba2-a75c4a166a24</uuidresource>
+		<datelastmodified>Fri, 05 Jun 2009 10:08:36 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 07 Apr 2009 11:02:46 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Image functions]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

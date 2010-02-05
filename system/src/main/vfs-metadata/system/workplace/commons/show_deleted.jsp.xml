@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/show_deleted.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>fd9316ed-ecc1-11db-8866-0bbe9ebfd414</uuidstructure>
+		<uuidresource>fd9316ee-ecc1-11db-8866-0bbe9ebfd414</uuidresource>
+		<datelastmodified>Thu, 19 Apr 2007 11:42:32 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 17 Apr 2007 08:59:46 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Dialog - Show deleted resources]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/handler</destination>
+		<type>folder</type>
+		<uuidstructure>82a54b3f-366c-11db-ab2a-8b2c5a4caf8d</uuidstructure>
+		<datelastmodified>Tue, 02 Feb 2010 17:03:31 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>cache</name>
+				<value><![CDATA[false]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/handler/template/handlertemplate]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

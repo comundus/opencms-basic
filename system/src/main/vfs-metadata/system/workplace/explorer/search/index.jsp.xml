@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/explorer/search/index.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>c5c39c7f-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>abf7e4ce-bfd5-11da-9f5a-1bb54330f911</uuidresource>
+		<datelastmodified>Mon, 23 Apr 2007 12:27:51 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 30 Mar 2006 10:12:19 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_SEARCH_EXPLORER_TOOL_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_SEARCH_EXPLORER_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_SEARCH_EXPLORER_TOOL_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Search]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[path:/search]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.CmsInvisibleToolHandler]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

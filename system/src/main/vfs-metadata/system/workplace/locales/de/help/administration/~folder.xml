@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/help/administration</destination>
+		<type>folder</type>
+		<uuidstructure>f6933035-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<datelastmodified>Tue, 02 Feb 2010 17:03:42 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 04 Jul 2005 14:34:46 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[3.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[Administration]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Administrationsansicht]]></value>
+			</property>
+			<property>
+				<name>category</name>
+				<value><![CDATA[administration]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

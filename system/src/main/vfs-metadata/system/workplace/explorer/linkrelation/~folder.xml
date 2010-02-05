@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/explorer/linkrelation</destination>
+		<type>folder</type>
+		<uuidstructure>7ae60ca7-f1ab-11db-b7cc-8b0cab018767</uuidstructure>
+		<datelastmodified>Tue, 02 Feb 2010 17:03:39 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 23 Apr 2007 15:01:14 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Link Relation]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

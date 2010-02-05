@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/jquery/packed/jquery.dimensions.js</destination>
+		<type>plain</type>
+		<uuidstructure>a8383c83-12ae-11dd-86ab-111d34530985</uuidstructure>
+		<uuidresource>a8383c84-12ae-11dd-86ab-111d34530985</uuidresource>
+		<datelastmodified>Fri, 25 Apr 2008 10:02:45 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 25 Apr 2008 10:02:04 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Jquery Dimensions 1.2.0]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
