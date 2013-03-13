@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.containerpage/resources/containerpage/containerpage.nocache.js</destination>
+		<type>plain</type>
+		<uuidstructure>431fcc87-6dae-11e1-93f6-d9538f94e136</uuidstructure>
+		<uuidresource>43221678-6dae-11e1-93f6-d9538f94e136</uuidresource>
+		<datelastmodified>Wed, 14 Mar 2012 08:18:21 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 14 Mar 2012 08:18:21 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

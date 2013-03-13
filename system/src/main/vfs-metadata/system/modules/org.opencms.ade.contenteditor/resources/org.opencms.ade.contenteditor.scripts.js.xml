@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.contenteditor/resources/org.opencms.ade.contenteditor.scripts.js</destination>
+		<type>plain</type>
+		<uuidstructure>4b7782dd-f057-11e1-b5f5-15b3be0b5948</uuidstructure>
+		<uuidresource>4b7782de-f057-11e1-b5f5-15b3be0b5948</uuidresource>
+		<datelastmodified>Mon, 27 Aug 2012 14:55:51 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Aug 2012 14:55:51 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[org.opencms.ade.contenteditor.scripts]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

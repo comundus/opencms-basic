@@ -1,0 +1,97 @@
+/* Overrides default JQuery UI styles */
+.ui-widget-content { border: 1px solid ButtonFace; background: none; background-color: ButtonFace; color: WindowText; }
+.ui-widget-content-search { border: 1px solid #aaaaaa; background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #222222; }
+.ui-widget-content a { color: WindowText; }
+.ui-widget-header { color: WindowText; }
+.ui-widget-header a { color: WindowText; }
+
+.ui-tabs .ui-tabs-panel { padding: 0; background-color: ButtonFace; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { background-color: ButtonFace !important; }
+
+.ui-state-active, .ui-widget-content .ui-state-active { background: none !important; background-color: ButtonFace; color: WindowText; }
+.ui-state-error, .ui-widget-content .ui-state-error {border: 1px solid #cd0a0a !important; background: #fef1ec url(images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x !important; }
+
+.ui-state-warning, .ui-widget-content .ui-state-warning{border: 1px solid #EE7700 !important; color: #EE7700; background: #fbf9ee url(images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x !important; }
+.ui-state-warning a, .ui-widget-content .ui-state-warning a { color: #EE7700;  }
+
+.ui-widget-overlay { background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; opacity: .60;filter:Alpha(Opacity=60); }
+
+
+
+div.galleryDialog {
+
+ padding: 6px 5px 5px 5px;
+ margin: 0;
+ 
+ background-image: url(images/dialogBackground.png);
+ background-position: top;
+ background-color: #1F232A;
+ background-repeat:repeat-x;
+ border-width: 1px;
+ border-style: solid;
+ border-top-color: #606161;
+ border-right-color: black;
+ border-bottom-color: black;
+ border-left-color: black;
+
+ -moz-box-shadow: 6px 6px 12px #666666;
+ -moz-border-radius: 12px;
+
+ -webkit-box-shadow: 6px 6px 12px #666666;
+ -webkit-border-radius: 12px;
+
+ box-shadow: 6px 6px 12px #666666;
+ border-radius: 12px;
+}
+
+div.galleryDialog .ui-dialog-titlebar, div.galleryDialog .ui-dialog-content{
+ border: 0;
+ padding: 0;
+ margin: 0;
+ background: transparent;
+}
+
+div.galleryDialog .ui-dialog-titlebar {
+    cursor: move;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 0 5px 5px;
+}
+div.galleryDialog .ui-dialog-titlebar .ui-dialog-title{
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 25px;
+    white-space: nowrap;
+}
+
+div.galleryDialog div.ui-dialog-titlebar a.ui-dialog-titlebar-close{
+    background-image: url(images/dialogCloseImage.png);
+    background-color: transparent;
+	cursor: pointer;
+    height: 23px;
+    overflow: hidden;
+    position: absolute;
+    right: -17px;
+    top: -18px;
+    width: 23px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+div.galleryDialog div.ui-dialog-titlebar a.ui-dialog-titlebar-close *{
+	display: none;
+}
+
+div.galleryDialog.hideCaption div.ui-dialog-titlebar span.ui-dialog-title {
+	display: none;
+}
+
+div.galleryDialog.hideCaption div.ui-dialog-titlebar {
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}

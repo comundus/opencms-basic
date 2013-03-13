@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.contenteditor/resources/contenteditor/65B22523B8946A6D344AF2FEB3A3D3D0.gwt.rpc</destination>
+		<type>plain</type>
+		<uuidstructure>88cad6b2-609e-11e2-b0c0-d99ab7ef5390</uuidstructure>
+		<uuidresource>88cad6b3-609e-11e2-b0c0-d99ab7ef5390</uuidresource>
+		<datelastmodified>Thu, 17 Jan 2013 12:07:59 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 17 Jan 2013 12:07:59 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

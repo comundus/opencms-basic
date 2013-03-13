@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.editprovider/resources/editprovider/editprovider.nocache.js</destination>
+		<type>plain</type>
+		<uuidstructure>a2110813-71b1-11e0-bb3d-7d4173ac7431</uuidstructure>
+		<uuidresource>a2110814-71b1-11e0-bb3d-7d4173ac7431</uuidresource>
+		<datelastmodified>Thu, 28 Apr 2011 16:07:36 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 28 Apr 2011 16:07:36 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.contenteditor/resources/hallo/images/divider.png</destination>
+		<type>image</type>
+		<uuidstructure>304130ac-8a0a-11e1-ba9c-7f70c80a9ad8</uuidstructure>
+		<uuidresource>304130ad-8a0a-11e1-ba9c-7f70c80a9ad8</uuidresource>
+		<datelastmodified>Thu, 19 Apr 2012 10:26:56 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 19 Apr 2012 10:26:56 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[divider]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:2,h:26]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

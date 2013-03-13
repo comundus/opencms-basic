@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/filetypes/inheritancegroup.png</destination>
+		<type>image</type>
+		<uuidstructure>fa1b3707-6c26-11e1-8c1e-91bd90e3b856</uuidstructure>
+		<uuidresource>fa1b3708-6c26-11e1-8c1e-91bd90e3b856</uuidresource>
+		<datelastmodified>Mon, 12 Mar 2012 09:37:25 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 12 Mar 2012 09:37:25 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[inheritancegroup]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:16,h:16]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/corners.gif</destination>
+		<type>image</type>
+		<uuidstructure>d7b4a23c-3c5d-11e1-9604-974a2cad26ef</uuidstructure>
+		<uuidresource>d7b4a23d-3c5d-11e1-9604-974a2cad26ef</uuidresource>
+		<datelastmodified>Wed, 11 Jan 2012 14:09:14 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 11 Jan 2012 14:09:14 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[corners]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:39,h:23]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.jquery/resources/css/flora/i/accordion-right-over.png</destination>
+		<type>image</type>
+		<uuidstructure>6240b1c8-8a92-11e0-ad6c-bff56146ac12</uuidstructure>
+		<uuidresource>64762bae-12d6-11dd-98ed-111d34530985</uuidresource>
+		<datelastmodified>Fri, 25 Apr 2008 14:46:30 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 25 Apr 2008 14:46:30 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[accordion-right-over]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:3,h:28]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

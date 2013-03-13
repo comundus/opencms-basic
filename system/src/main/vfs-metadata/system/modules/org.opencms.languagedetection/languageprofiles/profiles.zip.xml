@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.languagedetection/languageprofiles/profiles.zip</destination>
+		<type>binary</type>
+		<uuidstructure>27ba04e9-6544-11e2-a592-61faba8fe0ac</uuidstructure>
+		<uuidresource>27ba04ea-6544-11e2-a592-61faba8fe0ac</uuidresource>
+		<datelastmodified>Wed, 23 Jan 2013 10:59:34 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 23 Jan 2013 10:03:37 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[language profiles]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

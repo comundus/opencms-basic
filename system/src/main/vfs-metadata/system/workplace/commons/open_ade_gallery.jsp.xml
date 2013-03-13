@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/open_ade_gallery.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>c94f1961-7489-11df-bd01-83befda52004</uuidstructure>
+		<uuidresource>c94f1962-7489-11df-bd01-83befda52004</uuidresource>
+		<datelastmodified>Thu, 10 Jun 2010 12:16:47 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 10 Jun 2010 12:14:58 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Dialog - Open ADE gallery]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

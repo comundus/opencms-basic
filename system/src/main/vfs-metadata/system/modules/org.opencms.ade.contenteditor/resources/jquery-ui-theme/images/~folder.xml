@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.contenteditor/resources/jquery-ui-theme/images</destination>
+		<type>folder</type>
+		<uuidstructure>8c20db26-f057-11e1-b5f5-15b3be0b5948</uuidstructure>
+		<datelastmodified>Mon, 27 Aug 2012 14:57:40 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Aug 2012 14:57:40 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tiny_mce/themes/advanced/img/shockwave.gif</destination>
+		<type>image</type>
+		<uuidstructure>d85b1c17-3c5d-11e1-9604-974a2cad26ef</uuidstructure>
+		<uuidresource>d85b1c18-3c5d-11e1-9604-974a2cad26ef</uuidresource>
+		<datelastmodified>Wed, 11 Jan 2012 14:09:15 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 11 Jan 2012 14:09:15 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[shockwave]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:21,h:16]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

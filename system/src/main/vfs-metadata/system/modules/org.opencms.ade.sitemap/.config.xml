@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.sitemap/.config</destination>
+		<type>module_config</type>
+		<uuidstructure>cf584f92-93b2-4788-ad9f-d9c3b4955ce6</uuidstructure>
+		<uuidresource>cf584f92-93b2-4788-ad9f-d9c3b4955ce7</uuidresource>
+		<datelastmodified>Mon, 17 Jan 2011 10:01:54 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 17 Jan 2011 09:34:17 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>locale</name>
+				<value><![CDATA[en]]></value>
+			</property>
+			<property>
+				<name>locale-available</name>
+				<value><![CDATA[en]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

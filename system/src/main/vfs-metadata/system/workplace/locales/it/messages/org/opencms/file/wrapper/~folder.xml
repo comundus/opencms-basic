@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/it/messages/org/opencms/file/wrapper</destination>
+		<type>folder</type>
+		<uuidstructure>7f567204-a649-11e0-9af7-bd0e963009c0</uuidstructure>
+		<datelastmodified>Mon, 04 Jul 2011 14:25:42 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 04 Jul 2011 14:25:42 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

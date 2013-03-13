@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/codemirror/codemirror-ocms.css</destination>
+		<type>plain</type>
+		<uuidstructure>d4dbd131-50d4-11e1-a698-49528da9658f</uuidstructure>
+		<uuidresource>d4dbd132-50d4-11e1-a698-49528da9658f</uuidresource>
+		<datelastmodified>Mon, 25 Jun 2012 07:23:35 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 06 Feb 2012 15:11:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[CSS changes for OpenCms]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/messages/org/opencms/ade/sitemap/messages_de.properties</destination>
+		<type>plain</type>
+		<uuidstructure>1801ba7a-7637-11e0-bcc1-4dcd2ca9d6dc</uuidstructure>
+		<uuidresource>1801ba7b-7637-11e0-bcc1-4dcd2ca9d6dc</uuidresource>
+		<datelastmodified>Wed, 04 May 2011 10:13:48 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 04 May 2011 10:13:01 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

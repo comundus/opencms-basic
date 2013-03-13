@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.contenteditor/resources/hallo/fontawesome/font</destination>
+		<type>folder</type>
+		<uuidstructure>301fecf2-8a0a-11e1-ba9c-7f70c80a9ad8</uuidstructure>
+		<datelastmodified>Thu, 19 Apr 2012 10:26:55 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 19 Apr 2012 10:26:55 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

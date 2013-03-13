@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.postupload/resources/postupload/614A8351A28C0A4378525F849533D3FF.gwt.rpc</destination>
+		<type>plain</type>
+		<uuidstructure>6b1c1f63-c50c-11e1-9e5a-b72decf1921a</uuidstructure>
+		<uuidresource>6b1c1f64-c50c-11e1-9e5a-b72decf1921a</uuidresource>
+		<datelastmodified>Tue, 03 Jul 2012 12:41:32 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 03 Jul 2012 12:41:32 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

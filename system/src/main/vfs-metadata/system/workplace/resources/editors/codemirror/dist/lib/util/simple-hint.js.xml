@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/codemirror/dist/lib/util/simple-hint.js</destination>
+		<type>plain</type>
+		<uuidstructure>69de5eac-f1b9-11e1-82ea-f34ad62d517e</uuidstructure>
+		<uuidresource>69de5ead-f1b9-11e1-82ea-f34ad62d517e</uuidresource>
+		<datelastmodified>Wed, 29 Aug 2012 09:11:14 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 29 Aug 2012 09:10:44 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

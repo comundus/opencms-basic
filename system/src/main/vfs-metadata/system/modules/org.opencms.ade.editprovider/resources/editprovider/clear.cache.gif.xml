@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.editprovider/resources/editprovider/clear.cache.gif</destination>
+		<type>image</type>
+		<uuidstructure>a2079221-71b1-11e0-bb3d-7d4173ac7431</uuidstructure>
+		<uuidresource>a2079222-71b1-11e0-bb3d-7d4173ac7431</uuidresource>
+		<datelastmodified>Thu, 28 Apr 2011 16:07:36 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 28 Apr 2011 16:07:36 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:1,h:1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

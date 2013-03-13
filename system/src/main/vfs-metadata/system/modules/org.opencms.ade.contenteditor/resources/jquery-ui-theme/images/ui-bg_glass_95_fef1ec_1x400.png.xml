@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.contenteditor/resources/jquery-ui-theme/images/ui-bg_glass_95_fef1ec_1x400.png</destination>
+		<type>image</type>
+		<uuidstructure>1986cbc7-f764-11e1-895e-9d0ade2146a3</uuidstructure>
+		<uuidresource>1986cbc8-f764-11e1-895e-9d0ade2146a3</uuidresource>
+		<datelastmodified>Wed, 05 Sep 2012 14:15:09 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 05 Sep 2012 14:15:09 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[ui-bg_glass_95_fef1ec_1x400]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:1,h:400]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

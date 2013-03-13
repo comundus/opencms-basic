@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tiny_mce/langs/en.js</destination>
+		<type>plain</type>
+		<uuidstructure>d7ed3e9f-3c5d-11e1-9604-974a2cad26ef</uuidstructure>
+		<uuidresource>d7ed3ea0-3c5d-11e1-9604-974a2cad26ef</uuidresource>
+		<datelastmodified>Wed, 11 Jan 2012 14:09:15 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 11 Jan 2012 14:09:15 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[en]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

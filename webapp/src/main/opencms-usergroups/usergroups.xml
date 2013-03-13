@@ -39,8 +39,11 @@
 			<lastname> </lastname>
 			<email> </email>
 			<flags>0</flags>
-			<datecreated>1184846105746</datecreated>
+			<datecreated>1360579378879</datecreated>
 			<userinfo>
+				<entry name="USERPREFERENCES_editors-preferrededitorsplain" type="java.lang.String"><![CDATA[bestavailable]]></entry>
+				<entry name="USERPREFERENCES_editors-preferrededitorsxmlpage" type="java.lang.String"><![CDATA[bestavailable]]></entry>
+				<entry name="USERPREFERENCES_workplace-searchsearchview-style" type="java.lang.String"><![CDATA[explorer]]></entry>
 				<entry name="USER_ADDRESS" type="java.lang.String"/>
 				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_ADMIN_DESCRIPTION_0)]]></entry>
 			</userinfo>
@@ -52,12 +55,12 @@
 		</userdata>
 		<userdata>
 			<name>Export</name>
-			<password><![CDATA[a0xScGhJT1VkaW5qUlRDRHZJMWhRdz09]]></password>
+			<password><![CDATA[ZE9oL2dwcUJKNTUwWWNPQ2Q3ekVKZz09]]></password>
 			<firstname> </firstname>
 			<lastname> </lastname>
 			<email> </email>
 			<flags>0</flags>
-			<datecreated>1184846105762</datecreated>
+			<datecreated>1360579378883</datecreated>
 			<userinfo>
 				<entry name="USER_ADDRESS" type="java.lang.String"/>
 				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_EXPORT_DESCRIPTION_0)]]></entry>
@@ -75,7 +78,7 @@
 			<lastname> </lastname>
 			<email> </email>
 			<flags>0</flags>
-			<datecreated>1184846105731</datecreated>
+			<datecreated>1360579378872</datecreated>
 			<userinfo>
 				<entry name="USER_ADDRESS" type="java.lang.String"/>
 				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_GUEST_DESCRIPTION_0)]]></entry>

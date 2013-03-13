@@ -9,7 +9,7 @@
     
     <description>
         OpenCms, the Open Source Content Management System. 
-        (c) 2005 Alkacon Software GmbH with contributions from the OpenCms community.
+        (c) 2009 Alkacon Software GmbH with contributions from the OpenCms community.
         For more details about OpenCms, please see http://www.opencms.org/.
         For more details about Alkacon Software GmbH, please see http://www.alkacon.com/.    
     </description>
@@ -56,6 +56,44 @@
         <param-value>myopencms</param-value>
     </context-param>
     -->
+    
+    <!-- *************************** start of CMIS configuration ******************************** -->
+     <listener>
+		<listener-class>org.apache.chemistry.opencmis.server.impl.CmisRepositoryContextListener</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+	</listener>
+	
+	
+	<servlet>
+		<servlet-name>cmisatom</servlet-name>
+		<servlet-class>org.apache.chemistry.opencmis.server.impl.atompub.CmisAtomPubServlet</servlet-class>
+		<init-param>
+			<param-name>callContextHandler</param-name>
+			<param-value>org.apache.chemistry.opencmis.server.shared.BasicAuthCallContextHandler</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	
+   <servlet>
+		<servlet-name>cmisws</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>cmisws</servlet-name>
+		<url-pattern>/services/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>cmisatom</servlet-name>
+		<url-pattern>/cmisatom/*</url-pattern>
+	</servlet-mapping>	
+	<!-- *************************** end of CMIS configuration ******************************** -->
 
     <listener>
         <listener-class>org.opencms.main.OpenCmsListener</listener-class>
@@ -72,7 +110,7 @@
     
     <servlet>
         <description>
-            The error handling servlet, also servers as trigger for static export requests.  
+            The error handling servlet, also serves as trigger for static export requests.  
         </description>
         <servlet-name>OpenCmsServletErrorHandler</servlet-name>
         <servlet-class>org.opencms.main.OpenCmsServletErrorHandler</servlet-class>

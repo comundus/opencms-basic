@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.contenteditor/resources/contenteditor/4ED1C0B9BE23F2D66FC198C0FD3527D2.cache.png</destination>
+		<type>image</type>
+		<uuidstructure>251e524e-fc2c-11e1-8c23-1572bf7072c6</uuidstructure>
+		<uuidresource>251e524f-fc2c-11e1-8c23-1572bf7072c6</uuidresource>
+		<datelastmodified>Tue, 11 Sep 2012 16:17:12 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 11 Sep 2012 16:17:12 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:984,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

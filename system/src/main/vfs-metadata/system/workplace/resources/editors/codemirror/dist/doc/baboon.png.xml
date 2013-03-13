@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/codemirror/dist/doc/baboon.png</destination>
+		<type>image</type>
+		<uuidstructure>69731961-f1b9-11e1-82ea-f34ad62d517e</uuidstructure>
+		<uuidresource>69731962-f1b9-11e1-82ea-f34ad62d517e</uuidresource>
+		<datelastmodified>Wed, 29 Aug 2012 09:11:14 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 29 Aug 2012 09:10:43 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:379,h:220]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

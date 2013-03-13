@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/buttons/log_button_off_i_2.png</destination>
+		<type>image</type>
+		<uuidstructure>43d62b13-5945-11e1-8ad4-e7aa6134161f</uuidstructure>
+		<uuidresource>43d62b14-5945-11e1-8ad4-e7aa6134161f</uuidresource>
+		<datelastmodified>Thu, 23 Feb 2012 11:03:40 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 17 Feb 2012 08:56:22 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[log_button_off_i_2]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:50,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

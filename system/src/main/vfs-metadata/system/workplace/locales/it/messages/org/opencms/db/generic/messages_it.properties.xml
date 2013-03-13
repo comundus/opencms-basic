@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/it/messages/org/opencms/db/generic/messages_it.properties</destination>
+		<type>plain</type>
+		<uuidstructure>66529929-a623-11e0-9af7-bd0e963009c0</uuidstructure>
+		<uuidresource>6652992a-a623-11e0-9af7-bd0e963009c0</uuidresource>
+		<datelastmodified>Tue, 18 Oct 2011 07:56:51 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 04 Jul 2011 09:52:59 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[messages_it]]></value>
+			</property>
+			<property>
+				<name>content-encoding</name>
+				<value><![CDATA[ISO-8859-1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

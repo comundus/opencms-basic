@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/codemirror/dist/mode/plsql</destination>
+		<type>folder</type>
+		<uuidstructure>6aebd6f0-f1b9-11e1-82ea-f34ad62d517e</uuidstructure>
+		<datelastmodified>Wed, 29 Aug 2012 09:10:46 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 29 Aug 2012 09:10:46 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.jquery/resources/css/thickbox/thickbox.css</destination>
+		<type>plain</type>
+		<uuidstructure>634e2994-8a92-11e0-ad6c-bff56146ac12</uuidstructure>
+		<uuidresource>d2260820-12ae-11dd-86ab-111d34530985</uuidresource>
+		<datelastmodified>Fri, 25 Apr 2008 10:04:24 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 25 Apr 2008 10:03:15 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Thickbox Stylesheet]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

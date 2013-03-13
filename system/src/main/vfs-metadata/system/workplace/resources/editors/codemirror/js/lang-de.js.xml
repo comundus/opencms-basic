@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/codemirror/js/lang-de.js</destination>
+		<type>plain</type>
+		<uuidstructure>e01ee3b1-b6d7-11e1-b5f2-49528da9658f</uuidstructure>
+		<uuidresource>e01ee3b2-b6d7-11e1-b5f2-49528da9658f</uuidresource>
+		<datelastmodified>Thu, 21 Jun 2012 08:53:51 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 15 Jun 2012 10:50:09 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[German localization for dialogs]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

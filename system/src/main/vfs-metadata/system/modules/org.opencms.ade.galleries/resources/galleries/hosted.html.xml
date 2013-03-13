@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.galleries/resources/galleries/hosted.html</destination>
+		<type>plain</type>
+		<uuidstructure>00a8b082-71b1-11e0-bda6-0d213cbd7b28</uuidstructure>
+		<uuidresource>00a8b083-71b1-11e0-bda6-0d213cbd7b28</uuidresource>
+		<datelastmodified>Thu, 28 Apr 2011 16:03:05 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 28 Apr 2011 16:03:05 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

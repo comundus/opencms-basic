@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tiny_mce/plugins/fullpage/langs/ru_dlg.js</destination>
+		<type>plain</type>
+		<uuidstructure>b771f5c5-831b-11e1-8a40-6f493c00dc32</uuidstructure>
+		<uuidresource>b771f5c6-831b-11e1-8a40-6f493c00dc32</uuidresource>
+		<datelastmodified>Tue, 10 Apr 2012 14:44:46 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 10 Apr 2012 14:44:46 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[ru_dlg]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

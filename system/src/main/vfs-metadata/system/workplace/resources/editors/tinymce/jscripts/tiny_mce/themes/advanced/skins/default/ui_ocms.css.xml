@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/ui_ocms.css</destination>
+		<type>plain</type>
+		<uuidstructure>698e6b5f-0761-4a8b-9654-8465f2500ee9</uuidstructure>
+		<uuidresource>698e6b50-0761-4a8b-9654-8465f2500ee9</uuidresource>
+		<datelastmodified>Wed, 11 Jan 2012 14:09:15 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 11 Jan 2012 14:09:15 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[ui]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

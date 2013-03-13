@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/codemirror/dist/mode/shell</destination>
+		<type>folder</type>
+		<uuidstructure>6b5e472e-f1b9-11e1-82ea-f34ad62d517e</uuidstructure>
+		<datelastmodified>Wed, 29 Aug 2012 09:10:47 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 29 Aug 2012 09:10:47 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

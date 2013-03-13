@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tiny_mce/plugins/advimage/langs/it_dlg.js</destination>
+		<type>plain</type>
+		<uuidstructure>f203157a-5941-11e1-a2b8-c7b67799edc2</uuidstructure>
+		<uuidresource>f203157b-5941-11e1-a2b8-c7b67799edc2</uuidresource>
+		<datelastmodified>Fri, 17 Feb 2012 08:32:36 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 17 Feb 2012 08:32:36 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[it_dlg]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

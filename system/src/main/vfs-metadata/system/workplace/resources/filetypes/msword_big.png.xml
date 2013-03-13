@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/filetypes/msword_big.png</destination>
+		<type>image</type>
+		<uuidstructure>024883a1-881d-11df-8611-83befda52004</uuidstructure>
+		<uuidresource>024883a2-881d-11df-8611-83befda52004</uuidresource>
+		<datelastmodified>Mon, 05 Jul 2010 10:06:41 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 05 Jul 2010 10:06:41 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:24,h:24]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

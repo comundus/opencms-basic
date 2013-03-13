@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/it/messages/readme.txt</destination>
+		<type>plain</type>
+		<uuidstructure>9e5e8035-053e-11e1-be01-3bdc289b56ab</uuidstructure>
+		<uuidresource>9e5e8036-053e-11e1-be01-3bdc289b56ab</uuidresource>
+		<datelastmodified>Wed, 02 Nov 2011 11:23:32 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 02 Nov 2011 10:37:10 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

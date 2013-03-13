@@ -70,7 +70,6 @@ if not "%OPENCMS_LIB%" == "" goto gotLib
 set OPENCMS_LIB=%OPENCMS_HOME%\lib
 :gotHome
 if exist "%OPENCMS_LIB%\opencms.jar" goto okLib
-if exist "%OPENCMS_LIB%\opencms-7.5.2.jar" goto okLib
 echo The OPENCMS_LIB environment variable is not defined correctly
 echo This environment variable is needed to run this program
 goto end

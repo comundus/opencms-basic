@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/ru/messages/org/opencms/configuration/messages_ru.properties</destination>
+		<type>plain</type>
+		<uuidstructure>509453f5-6f45-11e1-a62b-6192c87e77fb</uuidstructure>
+		<uuidresource>509453f6-6f45-11e1-a62b-6192c87e77fb</uuidresource>
+		<datelastmodified>Fri, 30 Mar 2012 05:39:33 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 16 Mar 2012 08:52:09 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

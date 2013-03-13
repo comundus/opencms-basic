@@ -10,6 +10,8 @@
 <%@ page import = "javax.mail.internet.*" %>
 <%@ page import = "javax.mail.MessagingException" %>
 <%@ page import = "java.security.*" %>
+<%@ page import = "java.lang.management.*" %>
+
 <%
 
 // Username und Passwort prüfen
@@ -354,7 +356,8 @@
 					}
 				}
 			}
-%>
+
+			%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
 <head>
@@ -453,6 +456,24 @@
 			</td>
 			<td>
 				<div class="Stil3"><%= cmsDefaultEnc %></div>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:top;">
+				<div class="Stil3"><strong>Tomcat Startup params:</strong></div>
+			</td>
+			<td>
+				<div class="Stil3">
+					<%
+					RuntimeMXBean RuntimemxBean = ManagementFactory.getRuntimeMXBean();
+					List<String> aList=RuntimemxBean.getInputArguments();
+					for(int i=0;i<aList.size();i++) {
+					%>
+						<%=aList.get(i)%><br>
+					<%	
+					}
+					%>
+				</div>
 			</td>
 		</tr>
 		<tr>

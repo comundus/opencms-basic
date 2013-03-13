@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/codemirror/js/search.js</destination>
+		<type>plain</type>
+		<uuidstructure>32747b00-b91d-11e1-aa3e-49528da9658f</uuidstructure>
+		<uuidresource>32747b01-b91d-11e1-aa3e-49528da9658f</uuidresource>
+		<datelastmodified>Thu, 21 Jun 2012 08:53:27 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 18 Jun 2012 08:11:24 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Modified search]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

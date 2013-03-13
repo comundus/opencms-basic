@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/searchindex/sourcesearch/sourcesearch.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>15233381-ae96-11df-85f4-00144f45afea</uuidstructure>
+		<uuidresource>15233382-ae96-11df-85f4-00144f45afea</uuidresource>
+		<datelastmodified>Mon, 23 Aug 2010 09:09:06 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 23 Aug 2010 09:09:06 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

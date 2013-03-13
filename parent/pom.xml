@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<!--
+		in order to make the parent pom smaller some information were put into a separate pom (general-pom.xml)
+	 -->
     <parent>
-        <groupId>com.comundus</groupId>
-        <artifactId>comundus</artifactId>
-        <version>1</version>
+        <groupId>com.comundus.opencms</groupId>
+        <artifactId>general</artifactId>
+        <version>8.5.1</version>
+        <relativePath>general-pom.xml</relativePath>
     </parent>
+	<!--
+		Parent POM for OpenCms-Basic. Database support can be triggered by
+		Maven profiles. Currently mysql, postgresql and db2 are supported.
+		tomcat and mysql profiles are activated by default (see activate section of the two profiles).
+		We do not use the <activeByDefault> directive within the profile itself because it will be
+		ignored if another profile from this POM will be activated by other
+		ways.
+	-->
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.comundus.opencms</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms Parent</name>
-    <version>7.5.2</version>
+	<version>8.5.1</version>
     <description>OpenCms</description>
     <url>http://opencms-maven.comundus.com</url>
 	<prerequisites>
@@ -33,58 +46,454 @@
             <properties/>
         </developer>
     </developers>
-	
-	<repositories>
-		<repository>
-			<id>opencms-maven-sourceforge</id>
-			<url>http://mavplugocms.sourceforge.net/maven2repository</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
+    
+    <pluginRepositories>
         <pluginRepository>
-            <id>opencms-maven-sourceforge</id>
-            <name/>
-            <url>http://mavplugocms.sourceforge.net/maven2repository</url>
+            <id>comundus-github</id>
+	        <url>https://github.com/comundus/maven2-repository/raw/master</url>
         </pluginRepository>
     </pluginRepositories>
-
-
     <scm>
-        <!-- connection></connection -->
-        <developerConnection>scm:svn:https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/parent</developerConnection>
-        <url>https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/parent</url>
-        <tag/>
-    </scm>
+        <connection>scm:git:git@github.com:comundus/opencms-basic.git</connection>
+        <developerConnection>scm:git:git@github.com:comundus/opencms-basic.git</developerConnection>
+        <url>http://github.com/comundus/opencms-basic</url>
+    </scm>    
 
 	<properties>
-		<opencms.db.jdbcDriver>com.mysql.jdbc.Driver</opencms.db.jdbcDriver>
-		<opencms.db.jdbcUrl>jdbc:mysql://localhost:3306/opencms</opencms.db.jdbcUrl>
-		<opencms.db.jdbcUrl.params>?characterEncoding\=UTF-8</opencms.db.jdbcUrl.params>
 		<opencms.db.user>root</opencms.db.user>
 		<opencms.db.password>root</opencms.db.password>
-		<opencms.logfile>/opencms.log</opencms.logfile>
-		<jdbcDriver.groupId>mysql</jdbcDriver.groupId>
-		<jdbcDriver.artifactId>mysql-connector-java</jdbcDriver.artifactId>
-		<jdbcDriver.version>5.0.5</jdbcDriver.version>
-		<opencms.vfs.driver>org.opencms.db.mysql.CmsVfsDriver</opencms.vfs.driver>
-		<opencms.db.name>mysql_41</opencms.db.name>
-		<opencms.user.driver>org.opencms.db.mysql.CmsUserDriver</opencms.user.driver>
-		<opencms.project.driver>org.opencms.db.mysql.CmsProjectDriver</opencms.project.driver>
-		<opencms.history.driver>org.opencms.db.mysql.CmsHistoryDriver</opencms.history.driver>
-		<opencms.sqlmanager>org.opencms.db.mysql.CmsSqlManager</opencms.sqlmanager>
-		<drop_tables.sql>drop_tables.sql</drop_tables.sql>
-		<create_tables.sql>create_tables.sql</create_tables.sql>
+		<opencms.db.name>opencms</opencms.db.name>
+		<!--
+			the log file path is relative to WEB-INF/classes
+			or to be more precise relative to log4j.properties
+		-->
+		<opencms.logfile>../logs/opencms.log</opencms.logfile>
 	</properties>
-<!-- per developer configuration may follow (and overwrite global properties) : 
+	<!--
+		per developer configuration may follow (and overwrite global
+		properties) : <profiles> <profile> <id>det</id> <properties> ...
+		</properties> </profile> </profiles>
+	-->
+
 	<profiles>
+	  <profile>
+		    <id>tomcat</id>
+		    <!--
+		    	this activates this profile automatically, even if another profile is called in the command line.
+		    	"activeByDefault" does not do this.
+		    	you can deactivate this profile by calling "mvn -P !tomcat..."
+		    	see: http://stackoverflow.com/questions/5309379/how-to-keep-maven-profiles-which-are-activebydefault-active-even-if-another-prof
+
+		    	cut and paste this section to another application server profile (weblogic) if you need it in your project.
+		    -->
+		    <activation>
+		    	<property>
+		        	<name>!skipTomcat</name>
+		    	</property>
+		    </activation>
+		    <build>
+			    <plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>tomcat-maven-plugin</artifactId>
+						<configuration>
+							<path>/opencms-basic</path>
+						</configuration>
+					</plugin>
+			    </plugins>
+		    </build>
+		</profile>
 		<profile>
-			<id>det</id>
+			<id>mysql</id>
+		    <!--
+		    	this activates this profile automatically, even if another profile is called in the command line.
+		    	"activeByDefault" does not do this.
+		    	you can deactivate this profile by calling "mvn -P !mysql..."
+		    	see: http://stackoverflow.com/questions/5309379/how-to-keep-maven-profiles-which-are-activebydefault-active-even-if-another-prof
+
+		    	cut and paste this section to another database  profile (postgresql, db2...) if you need it in your project.
+		    -->
+		    <activation>
+		    	<property>
+		        	<name>!skipMySql</name>
+		    	</property>
+		    </activation>
 			<properties>
-...
+				<opencms.db.jdbcDriver>com.mysql.jdbc.Driver</opencms.db.jdbcDriver>
+				<opencms.db.jdbcUrl>jdbc:mysql://localhost:3306/${opencms.db.name}</opencms.db.jdbcUrl>
+				<opencms.db.jdbcUrl.params>?characterEncoding\=UTF-8</opencms.db.jdbcUrl.params>
+				<jdbcDriver.groupId>mysql</jdbcDriver.groupId>
+				<jdbcDriver.artifactId>mysql-connector-java</jdbcDriver.artifactId>
+				<jdbcDriver.version>5.1.21</jdbcDriver.version>
+				<opencms.vfs.driver>org.opencms.db.mysql.CmsVfsDriver</opencms.vfs.driver>
+				<opencms.user.driver>org.opencms.db.mysql.CmsUserDriver</opencms.user.driver>
+				<opencms.project.driver>org.opencms.db.mysql.CmsProjectDriver</opencms.project.driver>
+				<opencms.history.driver>org.opencms.db.mysql.CmsHistoryDriver</opencms.history.driver>
+				<opencms.subscription.driver>org.opencms.db.mysql.CmsSubscriptionDriver</opencms.subscription.driver>
+				<opencms.sqlmanager>org.opencms.db.mysql.CmsSqlManager</opencms.sqlmanager>
+				<drop_tables.sql>mysql/drop_tables.sql</drop_tables.sql>
+				<create_tables.sql>mysql/create_tables.sql</create_tables.sql>
 			</properties>
 		</profile>
+		<!-- not tested -->
+		<profile>
+			<id>postgresql</id>
+			<properties>
+				<opencms.db.jdbcDriver>org.postgresql.Driver</opencms.db.jdbcDriver>
+				<opencms.db.jdbcUrl>jdbc:postgresql://localhost:5432/${opencms.db.name}</opencms.db.jdbcUrl>
+				<jdbcDriver.groupId>postgresql</jdbcDriver.groupId>
+				<jdbcDriver.artifactId>postgresql</jdbcDriver.artifactId>
+				<jdbcDriver.version>9.0-801.jdbc3</jdbcDriver.version>
+				<opencms.db.jdbcUrl.params></opencms.db.jdbcUrl.params>
+				<opencms.vfs.driver>org.opencms.db.postgresql.CmsVfsDriver</opencms.vfs.driver>
+				<opencms.user.driver>org.opencms.db.postgresql.CmsUserDriver</opencms.user.driver>
+				<opencms.project.driver>org.opencms.db.postgresql.CmsProjectDriver</opencms.project.driver>
+				<opencms.history.driver>org.opencms.db.postgresql.CmsHistoryDriver</opencms.history.driver>
+				<opencms.subscription.driver>org.opencms.db.postgresql.CmsSubscriptionDriver</opencms.subscription.driver>
+				<opencms.sqlmanager>org.opencms.db.postgresql.CmsSqlManager</opencms.sqlmanager>
+				<drop_tables.sql>postgresql/drop_tables.sql</drop_tables.sql>
+				<create_tables.sql>postgresql/create_tables.sql</create_tables.sql>
+			</properties>
+		</profile>
+		<profile>
+			<id>db2</id>
+			<properties>
+				<opencms.db.jdbcDriver>com.ibm.db2.jcc.DB2Driver</opencms.db.jdbcDriver>
+				<opencms.db.jdbcUrl>jdbc:db2://localhost:50000/${opencms.db.name}</opencms.db.jdbcUrl>
+				<opencms.db.jdbcUrl.params></opencms.db.jdbcUrl.params>
+				<opencms.db.user>db2admin</opencms.db.user>
+				<opencms.db.password>db2admin</opencms.db.password>
+				<opencms.db.name>opencms</opencms.db.name>
+				<jdbcDriver.groupId>com.ibm.db2.jdbc</jdbcDriver.groupId>
+				<jdbcDriver.artifactId>db2jcc4</jdbcDriver.artifactId>
+				<jdbcDriver.version>9.7.4</jdbcDriver.version>
+				<opencms.db.jdbcUrl.params></opencms.db.jdbcUrl.params>
+				<opencms.vfs.driver>org.opencms.db.db2.CmsVfsDriver</opencms.vfs.driver>
+				<opencms.user.driver>org.opencms.db.db2.CmsUserDriver</opencms.user.driver>
+				<opencms.project.driver>org.opencms.db.db2.CmsProjectDriver</opencms.project.driver>
+				<opencms.history.driver>org.opencms.db.db2.CmsHistoryDriver</opencms.history.driver>
+				<opencms.subscription.driver>org.opencms.db.db2.CmsSubscriptionDriver</opencms.subscription.driver>
+				<opencms.sqlmanager>org.opencms.db.db2.CmsSqlManager</opencms.sqlmanager>
+				<drop_tables.sql>db2/drop_tables.sql</drop_tables.sql>
+				<create_tables.sql>db2/create_tables.sql</create_tables.sql>
+			</properties>
+		</profile>
+		<!-- weblogic not working -->
+		<profile>
+			<id>weblogic</id>
+			<properties>
+				<weblogic.home>${env.MW_HOME}wlserver\</weblogic.home>
+				<weblogic.version>10.3.4</weblogic.version>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>weblogic-maven-plugin</artifactId>
+						<version>2.9.5</version>
+						<configuration>
+							<adminServerHostName>localhost</adminServerHostName>
+							<adminServerPort>7001</adminServerPort>
+							<adminServerProtocol>http</adminServerProtocol>
+							<userId>weblogic1</userId>
+							<password>weblogic1</password>
+							<upload>false</upload>
+							<remote>false</remote>
+							<verbose>false</verbose>
+							<debug>false</debug>
+							<targetNames>AdminServer</targetNames>
+							<exploded>false</exploded>
+							<name>webtest</name>
+						</configuration>
+						<dependencies>
+							<dependency>
+								<groupId>com.sun</groupId>
+								<artifactId>tools</artifactId>
+								<version>1.5</version>
+								<scope>system</scope>
+								<systemPath>${java.home}/../lib/tools.jar</systemPath>
+							</dependency>
+							<dependency>
+								<groupId>weblogic</groupId>
+								<artifactId>weblogic</artifactId>
+								<version>${weblogic.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>weblogic</groupId>
+								<artifactId>webservices</artifactId>
+								<version>${weblogic.version}</version>
+							</dependency>
+							<!-- dependency>
+								<groupId>weblogic</groupId>
+								<artifactId>xbean</artifactId>
+								<version>${weblogic.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>weblogic</groupId>
+								<artifactId>javelinx</artifactId>
+								<version>${weblogic.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>weblogic</groupId>
+								<artifactId>bcel</artifactId>
+								<version>5.1</version>
+							</dependency>
+							<dependency>
+								<groupId>weblogic</groupId>
+								<artifactId>wlw-util</artifactId>
+								<version>${weblogic.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>weblogic</groupId>
+								<artifactId>wlw-langx</artifactId>
+								<version>${weblogic.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>org.apache.xmlbeans</groupId>
+								<artifactId>xmlbeans</artifactId>
+								<version>2.3.0</version>
+							</dependency>
+							<dependency>
+								<groupId>weblogic</groupId>
+								<artifactId>weblogic-container-binding</artifactId>
+								<version>${weblogic.version}</version>
+							</dependency-->
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>builder</id>
+		    <properties>
+				<opencms.db.user>opencms-basic</opencms.db.user>
+				<opencms.db.password>opencms-basic</opencms.db.password>
+				<opencms.db.name>opencms-basic</opencms.db.name>
+				<opencms.db.jdbcDriver>com.mysql.jdbc.Driver</opencms.db.jdbcDriver>
+				<opencms.db.jdbcUrl>jdbc:mysql://10.0.1.182:3306/${opencms.db.name}</opencms.db.jdbcUrl>
+				<opencms.db.jdbcUrl.params>?characterEncoding\=UTF-8</opencms.db.jdbcUrl.params>
+				<jdbcDriver.groupId>mysql</jdbcDriver.groupId>
+				<jdbcDriver.artifactId>mysql-connector-java</jdbcDriver.artifactId>
+				<jdbcDriver.version>5.1.21</jdbcDriver.version>
+				<opencms.vfs.driver>org.opencms.db.mysql.CmsVfsDriver</opencms.vfs.driver>
+				<opencms.user.driver>org.opencms.db.mysql.CmsUserDriver</opencms.user.driver>
+				<opencms.project.driver>org.opencms.db.mysql.CmsProjectDriver</opencms.project.driver>
+				<opencms.history.driver>org.opencms.db.mysql.CmsHistoryDriver</opencms.history.driver>
+				<opencms.subscription.driver>org.opencms.db.mysql.CmsSubscriptionDriver</opencms.subscription.driver>
+				<opencms.sqlmanager>org.opencms.db.mysql.CmsSqlManager</opencms.sqlmanager>
+				<drop_tables.sql>mysql/drop_tables.sql</drop_tables.sql>
+				<create_tables.sql>mysql/create_tables.sql</create_tables.sql>
+			</properties>
+		</profile>
+		<!--
+			separating the vfs from the java modules allows us to
+			build all java modules without building the whole project
+
+			actually we don't need it in the opencms-basic project, because there are no java projects
+		-->
+       <profile>
+          <id>vfs</id>
+          <modules>
+				<!-- vfs modules -->
+                <module>../webapp</module>  <!-- this must always come first -->
+		        <module>../system</module>	<!-- containing categories, but not orgunits -->
+		        <module>../content</module>  <!-- requires categories from system -->
+		        <module>../orgunits</module>  <!-- requires content -->
+          </modules>
+        </profile>
+
+		<profile>
+			<id>release</id>
+			<properties>
+				<release.opencmsBase>${basedir}/../webapp/target/webapp/WEB-INF</release.opencmsBase>
+				<release.webappLibCP>${release.opencmsBase}/lib/*</release.webappLibCP>
+				<release.tomcatLibCP>target/servletlib/*</release.tomcatLibCP>
+				<release.webappClassesDir>${release.opencmsBase}/classes</release.webappClassesDir>
+				<release.cmsShellScript>src/release-scripts/release-${project.version}/exportopencms-commands.txt</release.cmsShellScript>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+						<inherited>false</inherited>
+						<executions>
+							<execution>
+								<id>copy-servlet-jars</id>
+								<phase>initialize</phase>
+								<goals>
+									<goal>copy</goal>
+								</goals>
+								<configuration>
+									<artifactItems>
+										<artifactItem>
+								            <groupId>javax.servlet</groupId>
+	            							<artifactId>servlet-api</artifactId>
+	            							<version>2.4</version>
+											<type>jar</type>
+											<overWrite>false</overWrite>
+										</artifactItem>
+										<artifactItem>
+								            <groupId>javax.servlet</groupId>
+	            							<artifactId>jsp-api</artifactId>
+	            							<version>2.0</version>
+											<type>jar</type>
+											<overWrite>false</overWrite>
+										</artifactItem>
+									</artifactItems>
+									<outputDirectory>${project.build.directory}/servletlib</outputDirectory>
+									<overWriteReleases>false</overWriteReleases>
+									<overWriteSnapshots>true</overWriteSnapshots>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<inherited>false</inherited>
+						<executions>
+							<execution>
+							    <id>assembly-release</id>
+								<phase>initialize</phase>
+								<goals>
+									<goal>directory-single</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<finalName>opencms</finalName>
+							<descriptors>
+								<descriptor>src/release-scripts/release-${project.version}/release-assembly.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</plugin>
+					<plugin>
+				        <groupId>org.codehaus.mojo</groupId>
+        				<artifactId>exec-maven-plugin</artifactId>
+        				<version>1.1</version>
+						<inherited>false</inherited>
+						<executions>
+							<execution>
+								<id>export-opencms</id>
+								<phase>initialize</phase>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<configuration>
+									<executable>java</executable>
+									<arguments>
+										<argument>-classpath</argument>
+										<argument>"${release.webappLibCP};${release.tomcatLibCP};${release.webappClassesDir}"</argument>
+										<argument>org.opencms.main.CmsShell</argument>
+										<argument>-base=${release.opencmsBase}</argument>
+										<argument>-script=${release.cmsShellScript}</argument>
+									</arguments>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<inherited>false</inherited>
+						<executions>
+						    <execution>
+						       <id>prepare-tree</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+									    <mkdir dir="target/opencms-release/modules" />
+									</target>
+								</configuration>
+						    </execution>
+						    <execution>
+								<id>copy-modules</id>
+								<phase>initialize</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+									    <!--  Copies modules from webapp to the assembly, replacing ampersands with the XML entity in manifest.xml -->
+	   								    <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath"/>
+									    <for param="filepath">
+									      <path>
+										     <fileset dir="../webapp/target/webapp/WEB-INF/packages/modules" includes="**/*.zip"/>
+										  </path>
+										  <sequential>
+										    <var name="for.filename" unset="true" />
+										    <basename property="for.filename" file="@{filepath}" />
+										    <unzip src="@{filepath}" dest="target/opencms-release-temp/modules/${for.filename}" encoding="UTF8" />
+										    <replace file="target/opencms-release-temp/modules/${for.filename}/manifest.xml" token="&amp;" value="&amp;amp;" encoding="UTF8" />
+										    <zip basedir="target/opencms-release-temp/modules/${for.filename}" destfile="target/opencms-release/modules/${for.filename}" encoding="UTF8" />
+										  </sequential>
+										</for>
+									</target>
+								</configuration>
+							</execution>
+						    <!--
+						    	copy comundus and customer jars and remove version number
+						    	comment in, if customer wants it and change/add the included files names
+							-->
+						    <!--execution>
+								<id>rename-jars</id>
+								<phase>initialize</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<copy toDir="target/opencms-release-${project.version}/webapp/WEB-INF/lib">
+											<fileset dir="../webapp/target/webapp/WEB-INF/lib"
+													 includes="*com.customer.project.module.*-${project.version}.jar,*com.comundus.*-${project.version}.jar"
+											/>
+											<globmapper from="*-${project.version}.jar" to="*.jar"/>
+										</copy>
+									</target>
+								</configuration>
+							</execution-->
+							<execution>
+								<id>zip-release</id>
+								<phase>initialize</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+	  									<!--  Zips release directory and renames it afterwards -->
+										<zip destfile="target/opencms-release-${project.version}.zip" basedir="target/opencms-release" encoding="UTF8" />
+										<move file="target/opencms-release" tofile="target/opencms-release-${project.version}"/>
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+						<dependencies>
+							<dependency>
+								<groupId>ant-contrib</groupId>
+								<artifactId>ant-contrib</artifactId>
+								<version>1.0b3</version>
+								<exclusions>
+									<exclusion>
+										<groupId>ant</groupId>
+										<artifactId>ant</artifactId>
+									</exclusion>
+								</exclusions>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+        <!--
+        	there are more profiles in general-pom.xml
+         -->
+
 	</profiles>
--->
+
 
     <build>
         <!-- order here is significant for build execution! -->
@@ -93,8 +502,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                  </configuration>
              </plugin> 
             <plugin>
@@ -116,36 +525,52 @@
             </plugin>
       		<plugin>
                 <groupId>com.comundus.maven</groupId>
-                <artifactId>maven-vfs-plugin</artifactId>
+		<artifactId>vfs-maven-plugin</artifactId>
                 <configuration>
                     <adminPassword>admin</adminPassword>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>tomcat-maven-plugin</artifactId>
-                <configuration>
-                    <path>/opencms-basic</path>
-                </configuration>
-            </plugin>
         </plugins>
         <pluginManagement>
-        	<plugins>
-        	<plugin>
-                <groupId>com.comundus.maven</groupId>
-                <artifactId>maven-vfs-plugin</artifactId>
-                <version>7.5.2</version>    
-                 <dependencies>
+            <plugins>
+        		<plugin>
+                    <groupId>com.comundus.maven</groupId>
+                    <artifactId>vfs-maven-plugin</artifactId>
+                    <version>8.5.1</version>
+                    <configuration>
+                    	<jspVersion>2.1</jspVersion>
+                    	<servletVersion>2.5</servletVersion>
+                    </configuration>
+                    <dependencies>
                         <dependency>
-            				<groupId>mysql</groupId>
-            				<artifactId>mysql-connector-java</artifactId>
-            				<version>5.0.7</version>
-        				</dependency>                
-                </dependencies>
-                            
-            </plugin>
-        	
-        	</plugins>
+            		    <groupId>mysql</groupId>
+            		    <artifactId>mysql-connector-java</artifactId>
+            		    <version>5.0.7</version>
+                        </dependency>                
+                    </dependencies>
+	        	</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>sql-maven-plugin</artifactId>
+					<version>1.5</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>tomcat-maven-plugin</artifactId>
+					<version>1.1</version>
+				</plugin>
+				<!-- all plugins not directly involved in building the project (e.g. 
+					report plugins) are in general-pom.xml -->   
+     	    </plugins>
         </pluginManagement>
     </build>
 

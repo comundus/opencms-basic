@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.sitemap/resources/sitemap/hosted.html</destination>
+		<type>plain</type>
+		<uuidstructure>f83cf7ed-71b1-11e0-891a-99f3e436b62a</uuidstructure>
+		<uuidresource>f83cf7ee-71b1-11e0-891a-99f3e436b62a</uuidresource>
+		<datelastmodified>Thu, 28 Apr 2011 16:10:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 28 Apr 2011 16:10:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/it/messages/org/opencms/workplace/tools/content/languagecopy/messages_it.properties</destination>
+		<type>plain</type>
+		<uuidstructure>3eb99e9e-f3e4-11e0-b401-3bdc289b56ab</uuidstructure>
+		<uuidresource>3eb99e9f-f3e4-11e0-b401-3bdc289b56ab</uuidresource>
+		<datelastmodified>Thu, 20 Oct 2011 17:32:25 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 11 Oct 2011 08:37:25 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>content-encoding</name>
+				<value><![CDATA[ISO-8859-1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

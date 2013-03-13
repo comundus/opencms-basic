@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>7.5.2</version>
+        <version>8.5.1</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -11,17 +11,8 @@
     <artifactId>webapp</artifactId>
     <packaging>war</packaging>
     <name>OpenCms Webapp</name>
-    <version>7.5.2</version>
-    <description>OpenCms Webapplikation</description>
+    <description>OpenCms web application</description>
     <url>http://opencms-maven.comundus.com</url>
-    
-    <scm>
-        <!-- connection></connection -->
-        <developerConnection>scm:svn:https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/cm-opencms/opencms-basic/trunk/webapp/</developerConnection>
-        <url>https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/webapp/</url>
-        <tag/>
-    </scm>
-
     <build>
         <finalName>webapp</finalName>
 		<resources>
@@ -75,7 +66,7 @@
             </plugin>
             <plugin>
                 <groupId>com.comundus.maven</groupId>
-                <artifactId>maven-vfs-plugin</artifactId>
+                <artifactId>vfs-maven-plugin</artifactId>
                 <executions>
                     <execution>
                         <id>clean</id>
@@ -100,13 +91,13 @@
 	<dependencies>    
         <dependency>
             <groupId>org.opencms</groupId>
-            <artifactId>opencms</artifactId>
-            <version>7.5.2</version>
+            <artifactId>opencms-core</artifactId>
+            <version>8.5.1</version>
         </dependency>
         <dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-    		<version>5.0.7</version>
+			<groupId>${jdbcDriver.groupId}</groupId>
+			<artifactId>${jdbcDriver.artifactId}</artifactId>
+			<version>${jdbcDriver.version}</version>
     	</dependency>
     </dependencies>
 

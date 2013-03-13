@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/ru/messages/org/opencms/jsp/util/errorpage.properties</destination>
+		<type>plain</type>
+		<uuidstructure>5c8d95b7-7184-11e1-a40f-6192c87e77fb</uuidstructure>
+		<uuidresource>5c8d95b8-7184-11e1-a40f-6192c87e77fb</uuidresource>
+		<datelastmodified>Mon, 19 Mar 2012 05:32:57 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 19 Mar 2012 05:28:30 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.contenteditor/resources/hallo/fontawesome/README.md</destination>
+		<type>plain</type>
+		<uuidstructure>3037bac3-8a0a-11e1-ba9c-7f70c80a9ad8</uuidstructure>
+		<uuidresource>3037bac4-8a0a-11e1-ba9c-7f70c80a9ad8</uuidresource>
+		<datelastmodified>Thu, 19 Apr 2012 10:26:56 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 19 Apr 2012 10:26:56 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[README]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

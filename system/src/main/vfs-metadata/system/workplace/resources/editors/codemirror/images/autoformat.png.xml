@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/codemirror/images/autoformat.png</destination>
+		<type>image</type>
+		<uuidstructure>7f918bf3-bab4-11e1-a92e-49528da9658f</uuidstructure>
+		<uuidresource>7f918bf4-bab4-11e1-a92e-49528da9658f</uuidresource>
+		<datelastmodified>Wed, 20 Jun 2012 08:47:08 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 20 Jun 2012 08:46:59 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
