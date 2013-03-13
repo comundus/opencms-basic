@@ -1,4 +1,4 @@
-<%@ page import="java.util.*,org.opencms.workplace.explorer.*" %><%	
+<%@ page import="java.util.*,org.opencms.workplace.explorer.*,org.opencms.gwt.shared.I_CmsUploadConstants" %><%	
 
 	// initialize the workplace class
 	CmsNewResourceUpload wp = new CmsNewResourceUpload(pageContext, request, response);
@@ -7,6 +7,13 @@
 	
 switch (wp.getAction()) {
 
+case CmsNewResourceUpload.ACTION_GWT:
+////////////////////ACTION: use the gwt upload
+    request.setAttribute(I_CmsUploadConstants.ATTR_CLOSE_LINK, wp.getCloseLink());
+	request.setAttribute(I_CmsUploadConstants.ATTR_CURRENT_FOLDER, wp.getParamCurrentFolder());
+    wp.sendForward(I_CmsUploadConstants.UPLOAD_JSP_URI, new HashMap<String, String[]>());
+break;   
+    
 case CmsNewResourceUpload.ACTION_APPLET:
 //////////////////// ACTION: use the upload applet
 	
@@ -66,10 +73,16 @@ break;
 
 
 case CmsNewResourceUpload.ACTION_SUBMITFORM:
+
 //////////////////// ACTION: upload name specified and form submitted
 	wp.actionUpload();
+    // insert uploaded file data as a comment, which can then be parsed by the upload applet
+	out.println(wp.getUploadedFiles());
+    out.println(wp.getUploadHook());
+    
 	if (wp.unzipUpload()) {
 		if (wp.getAction() != CmsNewResourceUpload.ACTION_SHOWERROR) {
+		    wp.setClosingAfterUnzip(true); 
 			wp.actionCloseDialog();
 		}
 		break;

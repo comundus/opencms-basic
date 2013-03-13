@@ -73,7 +73,7 @@
 }
 
 .link img {
-  width: 20px;
+  /*width: 20px;*/
   height: 20px;
   display: inline;
   vertical-align: middle;
@@ -574,7 +574,7 @@ span.combobutton {
 img.button {
 	height: 20px;
 	width: 20px;
-	border: 0px none;
+	border: none;
 	vertical-align: middle;
 }
 
@@ -588,7 +588,7 @@ a.button {
 /* Button - Normal style (inactive) */
 span.norm {
 	display: block;
-	border: 1px solid ThreeDFace;
+	border: 1px solid transparent;
 }
 
 /* Button - Hover style */
@@ -906,6 +906,12 @@ table.logindialog {
 	border-bottom: 1px solid ThreedDarkShadow;
 }
 
+div.loginsecurity {
+	border-bottom: 1px solid ThreeDHighlight;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
 input.loginbutton {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 11px;
@@ -915,6 +921,57 @@ input.loginbutton {
 	padding: 0 5px;
 	margin: 0px;
 	overflow: visible;
+}
+
+#ouSelId {
+	padding: 6px 4px;
+	min-width: 300px;
+	max-width: 420px;
+	min-height: 100px;
+	max-height: 250px;
+	overflow: auto;
+	background-color: InfoBackground;
+	border: 2px inset ButtonFace;
+}
+
+#ouSelId div {
+	margin-bottom: 6px;
+	padding: 4px;
+	background-color: Window;
+	border: 1px solid ButtonShadow;
+	cursor: pointer;
+}
+
+#ouSelId div:hover, #ouSelId div.active:hover {
+	background-color: #a8adb4;
+}
+
+#ouSelId div.active {
+	background-color: #003082;
+}
+
+#ouSelId div span.name {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	color: InfoText;
+	padding-bottom: 2px;
+}
+
+#ouSelId div span.path {
+	display: block;
+	color: GrayText;
+	font-size: 11px;
+	font-style: italic;
+	overflow: hidden;
+}
+
+#ouSelId div:hover span.name, #ouSelId div:hover span.path, #ouSelId div.active span.name, #ouSelId div.active span.path {
+	color: HighlightText;
+}
+
+#ouSearchId input.inactive {
+	color: GrayText;
 }
 
 .timewarp {
@@ -1083,6 +1140,27 @@ body.dialogadmin {
 	background-color: ThreeDFace; 
 	visibility: hidden; 
 	font-size: 8pt;
+}
+
+div.xmlChoiceItem {
+	cursor: pointer;
+	background-color: Window;
+	border: 1px solid ButtonShadow;
+	margin: 6px 0;
+	padding: 4px;
+	font-weight: bold;
+}
+
+div.xmlChoiceHelp {
+	padding-top: 2px;
+	color: GrayText;
+	font-style: italic;
+	font-weight: normal;
+}
+
+div.xmlChoiceItem:hover, div.xmlChoiceItem:hover div.xmlChoiceHelp {
+	background-color: #a8adb4;
+	color: HighlightText;
 }
 
 .textInput {<%

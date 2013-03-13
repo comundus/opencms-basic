@@ -156,8 +156,15 @@ function fillItems(data, modeName) {
 		var fileitem = foundItems[i];
 		
 		// name of the file item
-		var itemName = "";
-		itemName += fileitem.linkpath.substring(fileitem.linkpath.lastIndexOf("/") + 1);
+		var itemName = fileitem.linkpath.substring(fileitem.linkpath.lastIndexOf("/") + 1);
+		if (itemName.length > 50) {
+			itemName = itemName.substr(0, 49) + " ...";
+		}
+		// title of the file item
+		var itemTitle = fileitem.title;
+		if (itemTitle.length > 60) {
+			itemTitle = itemTitle.substr(0, 59) + " ...";
+		}
 		
 		var mouseAttrsClick = "";
 		mouseAttrsClick += " onclick=\"markItem(";
@@ -187,26 +194,23 @@ function fillItems(data, modeName) {
 		
 		itemHtml +="<tr" + mouseAttrs + " " + mouseAttrsClick + " >";
 		itemHtml +="<td style=\"width\ : 32px; padding-right: 10px\" >";
-		//show the thumb for the link item
-		itemHtml += "<img alt=\"";
-		itemHtml += fileitem.title;
-		itemHtml += "\" title=\"\" src=\"";
+		// show the thumb for the link item
+		itemHtml += "<img alt=\"\" title=\"\" src=\"";
 		itemHtml += vfsPathPrefixItems  + "pointer.png";
 		itemHtml += "\" />"; 
 		itemHtml += "</td>";
-		itemHtml += "<td >";
+		itemHtml += "<td>";
 		itemHtml += "<table style=\"width\ : 100%\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\"><tbody>";
 		itemHtml += "<tr>";
-		itemHtml += "<td style=\"width\ : 70%\">";
+		itemHtml += "<td colspan=\"2\" style=\"width\ : 95%\">";
 		itemHtml += "<span id=\"";
 		itemHtml += modeName;
 		itemHtml += "fileitemtitle";
 		itemHtml += i;
 		itemHtml += "\" ";
-		itemHtml += "class=\"title\">" + fileitem.title;
+		itemHtml += "class=\"title\">" + itemTitle;
 		itemHtml += "</span>";
 		itemHtml += "</td>";
-		itemHtml += "<td style=\"width\ : 20%\">&nbsp;</td>";
 		itemHtml += "<td style=\"width\ : 5%\">";
 		
 		itemHtml += "<span class=\"changeiconwrapper\">";
@@ -236,7 +240,7 @@ function fillItems(data, modeName) {
 		itemHtml += "</td>";
 		itemHtml += "</tr>";
 		itemHtml += "<tr>";
-		itemHtml += "<td style=\"width\ : 70%\">";
+		itemHtml += "<td style=\"width\ : 75%\">";
 		itemHtml += "<span id=\"";
 		itemHtml += modeName;
 		itemHtml += "fileitemlinkurl";
@@ -464,7 +468,7 @@ function markItem(itemIndex, idPrefix) {
 				    tooltip  : LANG.DETAIL_EDIT_URL_HELP
 				});
 				// Delete
-				$("#" + idPrefix + "itemdeletebutton").fadeIn("fast");	
+				$("#" + idPrefix + "itemdeletebutton").show();	
 
 			} else {
 				// disable title and link url edit mode
@@ -472,7 +476,6 @@ function markItem(itemIndex, idPrefix) {
 				$("#" + idPrefix + "itemtitle").removeClass();
 				$("#" + idPrefix + "itemlinkurl").unbind();
 				$("#" + idPrefix + "itemlinkurl").removeClass();
-				$("#" + idPrefix + "itempublishbutton").fadeOut("slow");
 				// Delete
 				$("#" + idPrefix + "itemdeletebutton").fadeOut("fast");
 				// Delete
@@ -480,7 +483,7 @@ function markItem(itemIndex, idPrefix) {
 
 			// user has direct publish permission for this resource
 			if (state != 0 && hasDirectPublish == true) {
-				$("#" + idPrefix + "itempublishbutton").fadeIn("fast");
+				$("#" + idPrefix + "itempublishbutton").show();
 			} else {
 				$("#" + idPrefix + "itempublishbutton").fadeOut("fast");
 			}
@@ -496,11 +499,11 @@ function markItem(itemIndex, idPrefix) {
 			// Delete
 		}
 		showItemInfo(markedIndex, idPrefix);
-		$("#" + idPrefix + "itempreviewbutton").fadeIn("fast");
+		$("#" + idPrefix + "itempreviewbutton").show();
 		if (initValues.viewonly == false) {
-			$("#" + idPrefix + "itemselectbutton").fadeIn("fast");
+			$("#" + idPrefix + "itemselectbutton").show();
 			if (initValues.dialogmode == "widget") {
-				$("#" + idPrefix + "okbutton").fadeIn("fast");			
+				$("#" + idPrefix + "okbutton").show();			
 			}
 			if (initValues.dialogmode == "editor") {
 				try {
@@ -540,7 +543,9 @@ function loadActiveItem(data, isInitial) {
 			okPressed();
 		}else if (initValues.dialogmode == "editor") {
 				Ok();
+			try {
 				dialog.CloseDialog();
+			} catch (e) {}
 		}
 	}
 }
@@ -598,7 +603,7 @@ function refreshMarkedItem(data, modeName) {
 		$("#" + modeName + "itemlayer" + itemIndex).empty();
 		// show the resource publish button, if user has direct publish permission
 		if (hasDirectPublish == true) {
-			$("#" + modeName + "itempublishbutton").fadeIn("fast");
+			$("#" + modeName + "itempublishbutton").show();
 		}
 		var imgHtml = "";
 		if (state == 1) {
@@ -623,6 +628,9 @@ function refreshMarkedItem(data, modeName) {
 
 function updateTitleInItemlist(itemIndex, modeName, newTitle) {
 	var id = "#" + modeName + "fileitemtitle" + itemIndex;
+	if (newTitle.length > 60) {
+		newTitle= newTitle.substr(0, 59) + " ...";
+	}
 	$(id).html(newTitle);
 	$(id).addClass("title");
 }

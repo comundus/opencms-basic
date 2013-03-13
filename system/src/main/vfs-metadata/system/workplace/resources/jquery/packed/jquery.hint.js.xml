@@ -11,7 +11,12 @@
 		<datecreated>Fri, 25 Apr 2008 10:00:16 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
-		<properties/>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[jQuery hint]]></value>
+			</property>
+		</properties>
 		<relations/>
 		<accesscontrol/>
 	</file>

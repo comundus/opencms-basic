@@ -1,6 +1,7 @@
 <%@ page import="
 	org.opencms.workplace.*,
-	org.opencms.workplace.tools.content.*
+	org.opencms.workplace.tools.content.*,
+	org.opencms.util.*
 "%><%	
 
 	// initialize the workplace class
@@ -33,7 +34,7 @@ case CmsDialog.ACTION_WAIT:
 <%= wp.dialogStart() %>
 <%= wp.dialogContentStart(wp.getParamTitle()) %>
 
-<%= wp.key(org.opencms.workplace.tools.content.Messages.GUI_INPUT_PROPERTYCHANGE_RESULT_0) %> "<%= wp.getParamNewValue() %>":
+<%= wp.key(org.opencms.workplace.tools.content.Messages.GUI_INPUT_PROPERTYCHANGE_RESULT_0) %> "<%= CmsStringUtil.escapeHtml(wp.getParamNewValue()) %>":
 <%= wp.dialogSpacer() %>
 
 <%= wp.dialogWhiteBoxStart() %>
@@ -72,8 +73,11 @@ default:
 <%= wp.dialogContentStart(wp.getParamTitle()) %>
 
 <%= wp.dialogBlockStart(null) %>
-<%= wp.key(org.opencms.workplace.tools.content.Messages.GUI_INPUT_PROPERTYCHANGE_INFO_0) %><br>
-<%= wp.key(org.opencms.workplace.tools.content.Messages.GUI_INPUT_PROPERTYCHANGE_INFO2_0) %>
+<ul>
+<li><%= wp.key(org.opencms.workplace.tools.content.Messages.GUI_INPUT_PROPERTYCHANGE_INFO_0) %></li>
+<li><%= wp.key(org.opencms.workplace.tools.content.Messages.GUI_INPUT_PROPERTYCHANGE_INFO2_0) %></li>
+<li><%= wp.key(org.opencms.workplace.tools.content.Messages.GUI_INPUT_PROPERTYCHANGE_INFO3_0) %></li>
+</ul>
 <%= wp.dialogBlockEnd() %>
 <%= wp.dialogSpacer() %>
 

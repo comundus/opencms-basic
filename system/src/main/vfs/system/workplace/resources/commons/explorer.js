@@ -1,12 +1,8 @@
 /*
- * File   : $Source: /usr/local/cvs/opencms/modules/org.opencms.workplace.explorer/resources/system/workplace/resources/commons/explorer.js,v $
- * Date   : $Date: 2010-01-18 10:03:57 $
- * Version: $Revision: 1.24 $
- *
  * This library is part of OpenCms -
  * the Open Source Content Management System
  *
- * Copyright (c) 2002 - 2010 Alkacon Software GmbH (http://www.alkacon.com)
+ * Copyright (c) Alkacon Software GmbH (http://www.alkacon.com)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -612,6 +608,25 @@ function printList(wo) {
         if ((win.fileswin.location.href.indexOf('list-explorer.jsp') >= 0) || (win.fileswin.location.href.indexOf('mode=galleryview') >= 0)) {
            top.active_target = '_parent';
         }
+        
+   // can't just return false because we have to bypass Chrome scrollbar bug 
+   var mousedownHandler = "function(e) {"+
+      "var target;"+
+      "if (!e) var e = window.event;"+
+      "if (e.target) {"+  
+      "   target = e.target;"+ 
+      "} else if (e.srcElement) {"+ 
+      "target = e.srcElement;"+ 
+      "}"+
+      "if (target.nodeType == 3) {"+
+          "target = target.parentNode;"+
+      "}"+
+      "if (target && target.tagName && target.tagName.match(/HTML/i)) {"+
+      "   return true;"+
+      "}"+
+      "return false;"+ 
+   "}";
+
 
 	var temp =
 	"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">"
@@ -621,7 +636,7 @@ function printList(wo) {
 	+ "\">\n"
 	+ "<script type=\"text/javascript\" language=\"JavaScript\">\n"
 	+ "document.oncontextmenu = new Function('return false;');\n"
-	+ "document.onmousedown = new Function('return false;');\n"
+	+ "document.onmousedown = " + mousedownHandler + ";\n"
 	+ "document.onmouseup = top.handleOnClick;\n"
 	+ "</script>\n"
 	+ "<style type='text/css'> @import url(" + vi.skinPath + "commons/explorer.css); </style>\n"
@@ -1096,9 +1111,9 @@ function displayHead(doc, pages, actpage){
 
 	+ "</head>\n"
 	+ "<body class=\"buttons-head\" onload=\"window.setTimeout('doSet()',50);\">\n"
+    + "<form name=\"urlform\" onsubmit=\"top.submitResource();return false;\">\n"
 	+ "<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
-	+ "<form name=\"urlform\" onsubmit=\"top.submitResource();return false;\">\n"
-	+ "<tr>\n"
+    + "<tr>\n"
 
 	+ buttonSep(0, 0, 0)
 	+ button("javascript:top.histGoBack();", null, "back.png", vr.langback, buttonType)
@@ -1112,7 +1127,7 @@ function displayHead(doc, pages, actpage){
 	+ "<td width=\"100%\"><input value=\"\" maxlength=\"255\" name=\"resource\" class=\"location\"></td>\n"
 	+ pageSelect
 
-	+ "</tr>\n</form>\n</table>\n"
+	+ "</tr>\n</table>\n</form>\n"
 	+ "</body>\n</html>";
 
 	doc.open();

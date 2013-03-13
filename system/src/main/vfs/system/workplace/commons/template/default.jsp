@@ -1,10 +1,12 @@
-<%@page buffer="none" session="false" import="org.opencms.main.*,org.opencms.jsp.*,org.opencms.jsp.util.*" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="cms" uri="http://www.opencms.org/taglib/cms" %>
+<%@page taglibs="c,cms,fmt" buffer="none" session="false" import="org.opencms.main.*,org.opencms.file.*,org.opencms.jsp.*,org.opencms.jsp.util.*,org.opencms.ade.galleries.*,org.opencms.file.types.CmsResourceTypeXmlContainerPage" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %><%
 
 	CmsJspActionElement cms = new CmsJspActionElement(pageContext, request, response);
+	CmsObject cmsObj = cms.getCmsObject();
+	CmsJspStandardContextBean standardContext = CmsJspStandardContextBean.getInstance(request);
+	pageContext.setAttribute("standardContext", standardContext);
 	pageContext.setAttribute("navlist", cms.getNavigation().getNavigationForFolder());
+	pageContext.setAttribute("isContainerPage", CmsResourceTypeXmlContainerPage.isContainerPage(cmsObj.readResource(cms.getRequestContext().getUri())));
 %>
 <cms:template element="head">
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -21,6 +23,16 @@
 
 	<cms:editable provider="org.opencms.workplace.editors.directedit.CmsDirectEditJQueryProvider"/>
 </head>
+
+
+<fmt:setBundle basename="org.opencms.workplace.messages" var="messages" scope="request" />
+<c:set var="warningMessage"><fmt:message key="ERR_DEFAULT_TEMPLATE_WARNING_0" bundle="${messages}"/></c:set>
+<c:set var="preview" value="${standardContext.previewFormatter[cms:vfs(pageContext).context.uri]}" />
+<c:choose>
+	<c:when test="${!empty preview}">
+		<c:set var="warningMessage"><fmt:message key="ERR_DEFAULT_TEMPLATE_ADE_WARNING_0" bundle="${messages}" /></c:set>
+	</c:when>
+</c:choose>
 
 <body>
 	<div id="window">
@@ -70,14 +82,18 @@
 					<div id="col2_content" class="clearfix">
 						<!-- anchor for accessible link to main content -->
 						<a id="content" name="content"></a>
-						<div id="warning">This is the default OpenCms template, since the template for this resource is not configured correctly.</div>
+						<div id="warning">${warningMessage}</div>
 </cms:template>
 <cms:template element="body">
 	<c:catch>
 		<c:set var="xml" value="${cms:vfs(pageContext).readXml[cms:vfs(pageContext).context.uri]}" />
+		<c:set var="preview" value="${standardContext.previewFormatter[cms:vfs(pageContext).context.uri]}" />
 	</c:catch>
 	<c:choose>
-		<c:when test="${!empty xml}">
+		<c:when test="${!empty preview}">
+			<%=CmsPreviewService.getPreviewContent(request, response, cmsObj, cmsObj.readResource(cms.getRequestContext().getUri()),cms.getRequestContext().getLocale())%>
+		</c:when>
+		<c:when test="${!empty xml && !isContainerPage}">
 			<c:forEach items="${xml.names}" var="element">
 				<cms:template ifexists="${element}">
 					<cms:include element="${element}" editable="true"/>

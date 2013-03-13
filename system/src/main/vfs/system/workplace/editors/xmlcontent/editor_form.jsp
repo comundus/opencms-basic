@@ -1,4 +1,4 @@
-	<%@ page import="
+<%@page import="
 	org.opencms.workplace.editors.*,
 	org.opencms.workplace.*,
 	org.opencms.jsp.*"
@@ -23,6 +23,12 @@ case CmsEditor.ACTION_PREVIEW:
 //////////////////// ACTION: preview the content
 
 	wp.actionPreview();
+
+break;
+case CmsXmlContentEditor.ACTION_SUBCHOICES:
+//////////////////// ACTION: get the sub choices
+
+	out.print(wp.buildSubChoices());
 
 break;
 case CmsEditor.ACTION_EXIT:
@@ -57,13 +63,14 @@ case CmsXmlContentEditor.ACTION_CONFIRMCORRECTION:
 	</script>
 	</head>
 	<body class="buttons-head" unselectable="on" onload="confirmCorrection();">
-	<form name="EDITOR" id="EDITOR" method="post" action="<%= wp.getJsp().link(CmsEditor.PATH_EDITORS + "xmlcontent/editor_form.jsp") %>">
+	<form name="EDITOR" id="EDITOR" method="post" action="<%= wp.getJsp().link(CmsEditor.PATH_EDITORS + "xmlcontent/editor_form.jsp") %>" onsubmit="return false">
 	<input type="hidden" name="<%= CmsDialog.PARAM_ACTION %>" value="">
-	<input type="hidden" name="<%= CmsDialog.PARAM_RESOURCE %>" value="<%= wp.getParamResource() %>">
-	<input type="hidden" name="<%= CmsEditor.PARAM_TEMPFILE %>" value="<%= wp.getParamTempfile() %>">
-	<input type="hidden" name="<%= CmsEditor.PARAM_DIRECTEDIT %>" value="<%= wp.getParamDirectedit() %>">
-	<input type="hidden" name="<%= CmsEditor.PARAM_BACKLINK %>" value="<%= wp.getParamBacklink() %>">
-	<input type="hidden" name="<%= CmsEditor.PARAM_MODIFIED %>" value="<%= wp.getParamModified() %>">
+	<input type="hidden" name="<%= CmsDialog.PARAM_RESOURCE %>" value="<%= wp.getParamResource() %>"/>
+	<input type="hidden" name="<%= CmsEditor.PARAM_TEMPFILE %>" value="<%= wp.getParamTempfile() %>"/>
+	<input type="hidden" name="<%= CmsEditor.PARAM_DIRECTEDIT %>" value="<%= wp.getParamDirectedit() %>"/>
+	<input type="hidden" name="<%= CmsEditor.PARAM_BACKLINK %>" value="<%= wp.getParamBacklink() %>"/>
+	<input type="hidden" name="<%= CmsEditor.PARAM_MODIFIED %>" value="<%= wp.getParamModified() %>"/>
+	<input type="hidden" name="<%= CmsEditor.PARAM_ELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>"/>
 	</form>
 	</body>
 	</html>	
@@ -86,13 +93,14 @@ case CmsEditor.ACTION_SAVEEXIT:
 		</script>
 		</head>
 		<body class="buttons-head" unselectable="on">
-		<form name="EDITOR" id="EDITOR" method="post" action="<%= wp.getJsp().link(CmsEditor.PATH_EDITORS + "xmlcontent/editor_form.jsp") %>">
+		<form name="EDITOR" id="EDITOR" method="post" action="<%= wp.getJsp().link(CmsEditor.PATH_EDITORS + "xmlcontent/editor_form.jsp") %>" onsubmit="return false">
 		<input type="hidden" name="<%= CmsDialog.PARAM_ACTION %>" value="">
-		<input type="hidden" name="<%= CmsDialog.PARAM_RESOURCE %>" value="<%= wp.getParamResource() %>">
-		<input type="hidden" name="<%= CmsEditor.PARAM_TEMPFILE %>" value="<%= wp.getParamTempfile() %>">
-		<input type="hidden" name="<%= CmsEditor.PARAM_DIRECTEDIT %>" value="<%= wp.getParamDirectedit() %>">
-		<input type="hidden" name="<%= CmsEditor.PARAM_BACKLINK %>" value="<%= wp.getParamBacklink() %>">
-		<input type="hidden" name="<%= CmsEditor.PARAM_MODIFIED %>" value="<%= wp.getParamModified() %>">
+		<input type="hidden" name="<%= CmsDialog.PARAM_RESOURCE %>" value="<%= wp.getParamResource() %>"/>
+		<input type="hidden" name="<%= CmsEditor.PARAM_TEMPFILE %>" value="<%= wp.getParamTempfile() %>"/>
+		<input type="hidden" name="<%= CmsEditor.PARAM_DIRECTEDIT %>" value="<%= wp.getParamDirectedit() %>"/>
+		<input type="hidden" name="<%= CmsEditor.PARAM_BACKLINK %>" value="<%= wp.getParamBacklink() %>"/>
+		<input type="hidden" name="<%= CmsEditor.PARAM_MODIFIED %>" value="<%= wp.getParamModified() %>"/>
+		<input type="hidden" name="<%= CmsEditor.PARAM_ELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>"/>
 		</form>
 		<script type="text/javascript">
 		<!--
@@ -198,6 +206,7 @@ var actionMoveElementUp = "<%= CmsXmlContentEditor.EDITOR_ACTION_ELEMENT_MOVE_UP
 var actionCorrectXml = "<%= CmsXmlContentEditor.EDITOR_CORRECTIONCONFIRMED %>";
 var actionDeleteLocale = "<%= CmsEditor.EDITOR_DELETELOCALE %>";
 var actionCopyLocale = "<%= CmsXmlContentEditor.EDITOR_COPYLOCALE %>";
+var actionSubChoices = "<%= CmsXmlContentEditor.EDITOR_ACTION_SUBCHOICES %>";
 
 // Localized button labels
 var LANG_BT_DELETE = "<%= wp.key(org.opencms.workplace.editors.Messages.GUI_BUTTON_DELETE_0) %>";
@@ -301,30 +310,33 @@ function httpStateDummy() {
 </head>
 <body class="buttons-head" unselectable="on" onload="init();" onunload="exitEditor();">
 
-<form name="EDITOR" id="EDITOR" method="post" action="<%= wp.getJsp().link(CmsEditor.PATH_EDITORS + "xmlcontent/editor_form.jsp") %>">
-<input type="hidden" name="<%= CmsDialog.PARAM_ACTION %>" value="<%= wp.getParamAction() %>">
-<input type="hidden" name="<%= CmsDialog.PARAM_RESOURCE %>" value="<%= wp.getParamResource() %>">
-<input type="hidden" name="<%= CmsEditor.PARAM_TEMPFILE %>" value="<%= wp.getParamTempfile() %>">
-<input type="hidden" name="<%= CmsEditor.PARAM_LOADDEFAULT %>" value="<%= wp.getParamLoaddefault() %>">
-<input type="hidden" name="<%= CmsEditor.PARAM_EDITASTEXT %>" value="<%= wp.getParamEditastext() %>">
-<input type="hidden" name="<%= CmsEditor.PARAM_ELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>">
-<input type="hidden" name="<%= CmsEditor.PARAM_OLDELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>">
-<input type="hidden" name="<%= CmsEditor.PARAM_DIRECTEDIT %>" value="<%= wp.getParamDirectedit() %>">
-<input type="hidden" name="<%= CmsEditor.PARAM_BACKLINK %>" value="<%= wp.getParamBacklink() %>">
-<input type="hidden" name="<%= CmsEditor.PARAM_MODIFIED %>" value="<%= wp.getParamModified() %>">
-<input type="hidden" name="<%= CmsXmlContentEditor.PARAM_ELEMENTINDEX %>" value="">
-<input type="hidden" name="<%= CmsXmlContentEditor.PARAM_ELEMENTNAME %>" value="">
+<form name="EDITOR" id="EDITOR" method="post" action="<%= wp.getJsp().link(CmsEditor.PATH_EDITORS + "xmlcontent/editor_form.jsp") %>" onsubmit="return false">
+<input type="hidden" name="<%= CmsDialog.PARAM_ACTION %>" value="<%= wp.getParamAction() %>"/>
+<input type="hidden" name="<%= CmsDialog.PARAM_RESOURCE %>" value="<%= wp.getParamResource() %>"/>
+<input type="hidden" name="<%= CmsEditor.PARAM_TEMPFILE %>" value="<%= wp.getParamTempfile() %>"/>
+<input type="hidden" name="<%= CmsEditor.PARAM_LOADDEFAULT %>" value="<%= wp.getParamLoaddefault() %>"/>
+<input type="hidden" name="<%= CmsEditor.PARAM_EDITASTEXT %>" value="<%= wp.getParamEditastext() %>"/>
+<input type="hidden" name="<%= CmsEditor.PARAM_ELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>"/>
+<input type="hidden" name="<%= CmsEditor.PARAM_OLDELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>"/>
+<input type="hidden" name="<%= CmsEditor.PARAM_DIRECTEDIT %>" value="<%= wp.getParamDirectedit() %>"/>
+<input type="hidden" name="<%= CmsEditor.PARAM_BACKLINK %>" value="<%= wp.getParamBacklink() %>"/>
+<input type="hidden" name="<%= CmsEditor.PARAM_MODIFIED %>" value="<%= wp.getParamModified() %>"/>
+<input type="hidden" name="<%= CmsXmlContentEditor.PARAM_EDITCONTEXT%>" value="<%=wp.getParamEditContext()%>" %>
+<input type="hidden" name="<%= CmsXmlContentEditor.PARAM_ELEMENTINDEX %>" value=""/>
+<input type="hidden" name="<%= CmsXmlContentEditor.PARAM_ELEMENTNAME %>" value=""/>
+<input type="hidden" name="<%= CmsXmlContentEditor.PARAM_CHOICEELEMENT %>" value=""/>
+<input type="hidden" name="<%= CmsXmlContentEditor.PARAM_CHOICETYPE %>" value=""/>
  
 <%= wp.getXmlEditorForm() %>
 
 </form>
 
 <form style="display: none;" name="COPYLANGUAGE" action="../dialogs/copylanguage.jsp" target="DIALOGCOPYLANGUAGE" method="post">
-<input type="hidden" name="<%= CmsEditor.PARAM_TEMPFILE %>" value="<%= wp.getParamTempfile() %>">
-<input type="hidden" name="<%= CmsEditor.PARAM_ELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>">
-<input type="hidden" name="<%= CmsDialog.PARAM_RESOURCE %>" value="<%= wp.getParamTempfile() %>">
-<input type="hidden" name="usetempfileproject" value="true">
-<input type="hidden" name="<%= CmsDialog.PARAM_ISPOPUP %>" value="true">
+<input type="hidden" name="<%= CmsEditor.PARAM_TEMPFILE %>" value="<%= wp.getParamTempfile() %>"/>
+<input type="hidden" name="<%= CmsEditor.PARAM_ELEMENTLANGUAGE %>" value="<%= wp.getParamElementlanguage() %>"/>
+<input type="hidden" name="<%= CmsDialog.PARAM_RESOURCE %>" value="<%= wp.getParamTempfile() %>"/>
+<input type="hidden" name="usetempfileproject" value="true"/>
+<input type="hidden" name="<%= CmsDialog.PARAM_ISPOPUP %>" value="true"/>
 </form>
 
 <%= wp.getXmlEditorHtmlEnd() %>
@@ -367,7 +379,7 @@ if (wp.getAction() == CmsXmlContentEditor.ACTION_COPYLOCALE && !wp.hasValidation
 }
 
 %>
-</body>
+<div id="xmladdelementdialog" style="display: none;"></div></body>
 </html><%
 }
 %>

@@ -1,12 +1,8 @@
 /*
- * File   : $Source: /usr/local/cvs/opencms/modules/org.opencms.editors/resources/system/workplace/editors/xmlcontent/edit.js,v $
- * Date   : $Date: 2010-01-18 10:04:29 $
- * Version: $Revision: 1.16 $
- *
  * This library is part of OpenCms -
  * the Open Source Content Management System
  *
- * Copyright (c) 2002 - 2010 Alkacon Software GmbH (http://www.alkacon.com)
+ * Copyright (c) Alkacon Software GmbH (http://www.alkacon.com)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -30,8 +26,37 @@
  */
 
 //------------------------------------------------------//
-// Script for xml content editor
+// Script for XML content editor
 //------------------------------------------------------//
+
+// Searches for a frame by the specified name. Will only return siblings or ancestors.
+function findFrame(startFrame, frameName){
+    if (startFrame == top){
+        // there may be security restrictions prohibiting access to the frame name
+        try{
+            if (startFrame.name == frameName){
+                return startFrame;
+            }
+        }catch(err){}
+        return null;
+    }
+    for (var i=0; i<startFrame.parent.frames.length; i++){
+        // there may be security restrictions prohibiting access to the frame name
+        try{
+            if (startFrame.parent.frames[i].name == frameName) {
+                return startFrame.parent.frames[i];
+            }
+        }catch(err){}
+    }
+    return findFrame(startFrame.parent, frameName);
+}
+// the editors top frame target, may be !='_top' if in advanced direct edit!
+var editorTopFrameTarget= '_top';
+if (top.frames['cmsAdvancedDirectEditor']!=null){
+    editorTopFrameTarget='cmsAdvancedDirectEditor';
+}
+// edit frame object
+var editFrame=findFrame(self,'edit');
 
 // stores the opened window object
 var treewin = null;
@@ -83,14 +108,14 @@ function buttonAction(para) {
 	_form.target = "_self";
 	submit(_form);
 	try {
-		top.edit.buttonbar.focus();
+		editFrame.buttonbar.focus();
 	} catch (e) {}
 
 	switch (para) {
 	case 1:
 		// exit editor without saving
 		_form.action.value = actionExit;
-		_form.target = "_top";
+		_form.target = editorTopFrameTarget;
 		_form.submit();
 		break;
 	case 2:
@@ -136,7 +161,7 @@ function buttonAction(para) {
 	case 9:
 		// save and perform customized action
 		_form.action.value = actionSaveAction;
-		_form.target = "_top";
+		_form.target = editorTopFrameTarget;
 		_form.submit();
 		break;
 	case 10:
@@ -190,12 +215,67 @@ function opensmallwin(url, name, w, h) {
 }
 
 // add an optional element to the currently edited content
-function addElement(elemName, insertAfter) {
+function addElement(elemName, insertAfter, addOptions) {
 	setLastPosition();
-	var _form = document.EDITOR;
-	_form.elementname.value = elemName;
-	_form.elementindex.value = insertAfter;
-	buttonAction(5);
+  var _form = document.EDITOR;
+  _form.elementname.value = elemName;
+  _form.elementindex.value = insertAfter;
+  if (_form.choiceelement) {
+    _form.choiceelement.value = "";
+  }
+  if (addOptions == null) {
+	 addOptions = "";
+  }
+	addOptions = decodeURIComponent(addOptions);
+	if (addOptions != "" && addOptions != "[]") {
+    var optionalElements = eval(addOptions);
+    var choiceType = optionalElements[0].choicetype;
+    _form.choicetype.value = choiceType;
+    $("#xmladdelementdialog").html(buildChoiceDialogOptions(optionalElements));
+    $("#xmladdelementdialog").dialog("option", "title", dialogTitleAddChoice);
+    $("#xmladdelementdialog").dialog("open");
+  } else {
+  	buttonAction(5);
+	}
+}
+
+// adds the selected choice element or gets sub choices for the selected elements
+function addChoiceElement(choiceElement, subChoice) {
+  var _form = document.EDITOR;
+  _form.choiceelement.value = choiceElement;
+  if (subChoice == true) {
+    $.post(vfsPathEditorForm, { action: actionSubChoices, resource: _form.resource.value, tempfile: _form.tempfile.value, elementname: _form.elementname.value, elementindex: _form.elementindex.value, choiceelement: choiceElement, choicetype: _form.choicetype.value}, function(data){ buildChoiceDialog(data); });
+  } else {
+    buttonAction(5);
+  }
+}
+
+// creates the dialog to select sub choice options
+function buildChoiceDialog(data) {
+  $("#xmladdelementdialog").dialog("close");
+  $("#xmladdelementdialog").html(buildChoiceDialogOptions(eval(data)));
+  $("#xmladdelementdialog").dialog("option", "title", dialogTitleAddSubChoice);
+  $("#xmladdelementdialog").dialog("open");
+}
+
+//creates the HTML for the dialog to select the choice options
+function buildChoiceDialogOptions(optionalElements) {
+  var addHtml = "";
+  for (var i=1; i<optionalElements.length; i++) {
+    var currOption = optionalElements[i];
+    var optName = currOption.name;
+    if (document.EDITOR.choiceelement.value != "") {
+      optName = document.EDITOR.choiceelement.value + "/" +optName;
+    }
+    addHtml += "<div class=\"xmlChoiceItem\" onclick=\"addChoiceElement('";
+    addHtml += optName + "', " + currOption.subchoice + ");";
+    addHtml += "\">" + currOption.label;
+    if (currOption.help != "") {
+      addHtml += "<div class=\"xmlChoiceHelp\">" + currOption.help + "</div>";
+    }
+    addHtml += "</div>";
+  }
+  return addHtml;
 }
 
 // move an element in currently edited content
@@ -224,7 +304,7 @@ function removeElement(elemName, index) {
 // clears the last scroll position
 function clearLastPosition() {
 	try {
-		top.edit.setLastPosY(0);
+		editFrame.setLastPosY(0);
 	} catch (e) {}
 }
 
@@ -232,9 +312,9 @@ function clearLastPosition() {
 function setLastPosition() {
 	try {
 		if (browser.isIE) {
-			top.edit.setLastPosY(document.body.scrollTop);
+			editFrame.setLastPosY(document.body.scrollTop);
 		} else {
-			top.edit.setLastPosY(window.pageYOffset);
+			editFrame.setLastPosY(window.pageYOffset);
 		}
 	} catch (e) {
 		// ignore
@@ -289,7 +369,7 @@ function checkPreview(fieldId) {
 function scrollForm() {
 	var posY = 0;
 	try {
-		posY = top.edit.lastPosY;
+		posY = editFrame.lastPosY;
 	} catch (e) {}
 	window.scrollTo(0, posY);
 }
@@ -307,7 +387,7 @@ function closeTreeWin() {
 }
 
 // shows the element operation buttons
-function showElementButtons(elementName, elementIndex, showRemove, showUp, showDown, showAdd) {
+function showElementButtons(elementName, elementIndex, showRemove, showUp, showDown, showAdd, addOptions) {
 	var elemId = elementName + "." + elementIndex;
 	if (oldEditorButtons != null && oldEditorButtons != elemId) {
 		// close eventually open element buttons
@@ -342,7 +422,7 @@ function showElementButtons(elementName, elementIndex, showRemove, showUp, showD
 
 	// add element button
 	if (showAdd) {
-		buttons += button("javascript:addElement('" + elementName + "', " + elementIndex + ")", null, "new", LANG_BT_ADD, buttonStyle);
+		buttons += button("javascript:addElement('" + elementName + "', " + elementIndex + ", '" + encodeURIComponent(addOptions) + "')", null, "new", LANG_BT_ADD, buttonStyle);
 	} else {
 		buttons += button(null, null, "new_in", LANG_BT_ADD, buttonStyle);
 	}

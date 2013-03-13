@@ -15,14 +15,37 @@ FCKCommands.RegisterCommand(
 	)
 );
 
+// Searches for a frame by the specified name. Will only return siblings or ancestors.
+function findFrame(startFrame, frameName){
+    if (startFrame == top){
+        // there may be security restrictions prohibiting access to the frame name
+        try{
+            if (startFrame.name == frameName){
+                return startFrame;
+            }
+        }catch(err){}
+        return null;
+    }
+    for (var i=0; i<startFrame.parent.frames.length; i++){
+        // there may be security restrictions prohibiting access to the frame name
+        try{
+            if (startFrame.parent.frames[i].name == frameName) {
+                return startFrame.parent.frames[i];
+            }
+        }catch(err){}
+    }
+    return findFrame(startFrame.parent, frameName);
+}
+
 // create the path to the item gallery dialog with some request parameters for the dialog
 function tableGalleryDialogUrl() {
 	var resParam = "";
-	if (top.edit.editedResource != null) {
-		resParam = "&resource=" + top.edit.editedResource;
+    var editFrame=findFrame(self, 'edit');
+	if (editFrame.editedResource != null) {
+		resParam = "&resource=" + editFrame.editedResource;
 		
 	} else {
-		resParam = "&resource=" + top.edit.editform.editedResource;
+		resParam = "&resource=" + editFrame.editform.editedResource;
 	}
 	return FCKPlugins.Items["tablegallery"].Path + "index.jsp?dialogmode=editor" + resParam;
 }

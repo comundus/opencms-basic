@@ -14,7 +14,7 @@
 		<properties>
 			<property>
 				<name>Title</name>
-				<value><![CDATA[JQuery FlyDom 3.1.1]]></value>
+				<value><![CDATA[jQuery hint]]></value>
 			</property>
 		</properties>
 		<relations/>

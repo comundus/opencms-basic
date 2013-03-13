@@ -8,11 +8,14 @@
  %><%= wp.htmlStart() %>
 <script type="text/javascript">
 <!--
-<%
-	if (link) {
-		%>this.location.href = "<%= wp.getParamCloseLink() %>";<%
-	}
-%>
+<% if (link) { %>
+// check for direct edit frame
+if (top.frames['cmsAdvancedDirectEditor']!=null && top.frames['cmsAdvancedDirectEditor'].document!=null){
+    location.href = "<%= wp.getParamCloseLink() %>";
+}else{
+	this.location.href = "<%= wp.getParamCloseLink() %>";
+}
+<%	} %>
 //-->
 </script>
 <body>

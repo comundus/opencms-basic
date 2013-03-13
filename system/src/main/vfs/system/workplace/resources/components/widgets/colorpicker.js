@@ -1,12 +1,8 @@
 /*
- * File   : $Source: $
- * Date   : $Date: $
- * Version: $Revision: $
- *
  * This library is part of OpenCms -
  * the Open Source Content Management System
  *
- * Copyright (c) 2002 - 2008 Alkacon Software GmbH (http://www.alkacon.com)
+ * Copyright (c) Alkacon Software GmbH (http://www.alkacon.com)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -60,7 +56,7 @@ function showColorPicker(fieldName) {
 		// Mozilla based or other browser, use standards compliant method to open popup
 		currField = theField;
 		window.open(colorPicker.url + "?" + fieldValue, "colorpicker",
-				      "toolbar=no,menubar=no,personalbar=no,width=10,height=10," +
+				      "toolbar=no,menubar=no,personalbar=no,width=238,height=187," +
 				      "scrollbars=no,resizable=yes"); 
 	}
 }

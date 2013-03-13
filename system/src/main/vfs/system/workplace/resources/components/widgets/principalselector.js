@@ -1,12 +1,8 @@
 /*
- * File   : $Source: /usr/local/cvs/opencms/modules/org.opencms.workplace/resources/system/workplace/resources/components/widgets/principalselector.js,v $
- * Date   : $Date: 2009-06-05 13:31:35 $
- * Version: $Revision: 1.7 $
- *
  * This library is part of OpenCms -
  * the Open Source Content Management System
  *
- * Copyright (c) 2002 - 2008 Alkacon Software GmbH (http://www.alkacon.com)
+ * Copyright (c) Alkacon Software GmbH (http://www.alkacon.com)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public

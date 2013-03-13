@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>7.5.2</version>
+        <version>8.5.1</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -11,22 +11,13 @@
     <artifactId>system</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms System</name>
-    <version>7.5.2</version>
     <description>OpenCms System</description>
     <url>http://opencms-maven.comundus.com</url>
-    
-    <scm>
-        <!-- connection></connection -->
-        <developerConnection>scm:svn:https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/system</developerConnection>
-        <url>https://mavplugocms.svn.sourceforge.net/svnroot/mavplugocms/opencms-basic/trunk/system</url>
-        <tag/>
-    </scm>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>com.comundus.maven</groupId>
-                <artifactId>maven-vfs-plugin</artifactId>
+                <artifactId>vfs-maven-plugin</artifactId>
                 <executions>
                     <execution>
                         <id>clean</id>
@@ -56,35 +47,52 @@
 						<!-- we synchronize subfolders of orgunits in their own project -->
                         <syncVFSPath>/system/shared/</syncVFSPath>
                         <syncVFSPath>/system/workplace/</syncVFSPath>
+
+						<syncVFSPath>/system/modules/org.opencms.ade.config/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ade.containerpage/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ade.contenteditor/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ade.editprovider/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ade.galleries/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ade.postupload/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ade.properties/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ade.publish/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ade.sitemap/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ade.upload/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.editors.codemirror/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.editors.editarea/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.editors.fckeditor/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.editors.tinymce/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.gwt/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.jquery/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.languagedetection/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.administration/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.help/</syncVFSPath>
+						<!-- the following modules contain only the according module jar -->
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.accounts/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.cache/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.content/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.database/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.galleryoverview/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.history/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.link/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.modules/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.projects/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.publishqueue/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.scheduler/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.searchindex/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.workplace/</syncVFSPath>
+						<!-- end the following modules contain only the according module jar -->
+
 						<!-- The module org.opencms.workplace is only needed if no other module which defines default_bodies is present-->
 						<syncVFSPath>/system/modules/org.opencms.workplace/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.editors.editarea/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.editors.fckeditor/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.frontend.layoutpage/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.frontend.photoalbum/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.administration/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.help/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.accounts/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.cache/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.content/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.database/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.galleryoverview/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.history/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.link/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.modules/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.projects/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.publishqueue/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.scheduler/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.searchindex/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.workplace.tools.workplace/</syncVFSPath>
                     </syncVFSPaths>
                 </configuration>
                 <dependencies>
-                        <dependency>
-            				<groupId>mysql</groupId>
-            				<artifactId>mysql-connector-java</artifactId>
-            				<version>5.0.7</version>
-        				</dependency>                
+                      <dependency>
+           				<groupId>${jdbcDriver.groupId}</groupId>
+						<artifactId>${jdbcDriver.artifactId}</artifactId>
+						<version>${jdbcDriver.version}</version>
+       				</dependency>
                 </dependencies>
                 
             </plugin>

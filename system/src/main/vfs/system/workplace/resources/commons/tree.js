@@ -1,12 +1,8 @@
 /*
- * File   : $Source: /usr/local/cvs/opencms/modules/org.opencms.workplace.explorer/resources/system/workplace/resources/commons/tree.js,v $
- * Date   : $Date: 2010-01-18 10:03:57 $
- * Version: $Revision: 1.14 $
- *
  * This library is part of OpenCms -
  * the Open Source Content Management System
  *
- * Copyright (c) 2002 - 2010 Alkacon Software GmbH (http://www.alkacon.com)
+ * Copyright (c) Alkacon Software GmbH (http://www.alkacon.com)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -34,12 +30,30 @@ var treeHeadHtml1 =
     "<html>\n<head>\n" +
     "<meta HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=";
 
+var mousedownHandler = "function(e) {"+
+"var target;"+
+"if (!e) var e = window.event;"+
+"if (e.target) {"+  
+"   target = e.target;"+ 
+"} else if (e.srcElement) {"+ 
+"target = e.srcElement;"+ 
+"}"+
+"if (target.nodeType == 3) {"+
+    "target = target.parentNode;"+
+"}"+
+"if (target && target.tagName && target.tagName.match(/HTML/i)) {"+
+"   return true;"+
+"}"+
+"return false;"+ 
+"}";
+
+
 var treeHeadHtml2 =
     "\">\n" +
     "<title>OpenCms explorer tree</title>\n" +
     "<script type=\"text/javascript\">\n" +
     "document.oncontextmenu = new Function('return false;');\n" +
-    "document.onmousedown = new Function('return false;');\n" +
+    "document.onmousedown = " + mousedownHandler + ";\n" +
     "document.onmouseup = new Function('return false;');\n" +
     "function linkOver(obj) {\n" +
     "var cls = obj.className;\n" +
@@ -267,6 +281,19 @@ function dfsTree(doc, node, depth, last, shape) {
     var loop1;
 
     doc.write("<tr><td>");
+    
+    if (node.folder && node.childs) {
+       var seen = {};
+       var newChildren = [];
+       for (var i = 0; i < node.childs.length; i++) {
+          var currentChild = node.childs[i];
+          if (!seen[currentChild]) {
+             newChildren.push(currentChild);
+          }
+          seen[currentChild] = true;
+       }
+       node.childs = newChildren;
+    }
 
     if (!node.parentId) {
         showPic(doc, tree.icon[9]); // root folder
@@ -421,31 +448,36 @@ function setNoChilds(nodeId) {
     }
 }
 
-// returns the node id from a given name
+//returns the node id from a given name
 function getNodeIdByName(nodeName) {
     var node = tree.root;
+    // special case for the shared folder
+    var isShared = (window.sharedFolderName == tree.root.name); 
 
     // remove first slash; split the path into an array
     var nameParts = nodeName.substr(1).split("/");
 
     // search the tree and try to find a matching folder for each part of the path
     if (nodeName != "/") {
-    	for (var i=0; i<nameParts.length && node; i++) {
-        	var children = node.childs;
+      for (var i=0; i<nameParts.length && node; i++) {
+         if (isShared && i == 0 && ("/" + nameParts[i] + "/" == window.sharedFolderName)) {
+            continue;
+         }
+         var children = node.childs;
         
-        	// clear the current node until we find the next child node.
-        	// if no child is found, then we know that the search was not successful, because 'node' will remain null
-        	node = null;
+         // clear the current node until we find the next child node.
+         // if no child is found, then we know that the search was not successful, because 'node' will remain null
+         node = null;
 
-        	for (var j=0; children && j<children.length; j++) {
-            	var subnode = getNodeById(children[j]);
-            	if (subnode && subnode.name === nameParts[i]) {
-                	// found the next sub-node => continue searching on the next level
-                	node = subnode;
-                	break;
-            	}
-        	}
-    	}
+         for (var j=0; children && j<children.length; j++) {
+            var subnode = getNodeById(children[j]);
+            if (subnode && subnode.name === nameParts[i]) {
+               // found the next sub-node => continue searching on the next level
+               node = subnode;
+               break;
+            }
+         }
+      }
     }
     if (node) {
         return node.id;
@@ -590,8 +622,16 @@ function doActionInsertSelected(doc, nodeId) {
     if (getSitePrefix()) {
         filePrefix = getSitePrefix();
     }
-    window.opener.setFormValue(filePrefix + getNodeNameById(nodeId));
+    getForm().setFormValue(filePrefix + getNodeNameById(nodeId));
 }
+
+function getForm() {
+   if (window['setFormValue']) {
+      return window;
+   }
+   return window.opener; 
+}
+
 
 // called if the folder name is clicked in the tree
 function doAction(doc, nodeId) {
@@ -664,6 +704,10 @@ function updateCurrentFolder(doc, folderName) {
     }
     if (m_rootFolder) {
         folderName = folderName.substring(m_rootFolder.length-1);
+        if (folderName == "") {
+            // assure that folder name is never empty (i.e. the root folder itself)
+            folderName = "/";
+          }
     }
     var nodeId = getNodeIdByName(folderName);
     var nodeName = null;

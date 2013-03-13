@@ -16,8 +16,8 @@ var FCKConfig		= oEditor.FCKConfig;
 var FCKBrowserInfo	= oEditor.FCKBrowserInfo;
 
 /* Enables or disables the enhanced image dialog options. */
-var showEnhancedOptions = false;
-var useTbForLinkOriginal = false;
+var showEnhancedOptions = FCKConfig.ShowEnhancedOptions;
+var useTbForLinkOriginal = FCKConfig.UseTbForLinkOriginal;
 
 /* The selected image (if available). */
 var oImage = null;
@@ -82,7 +82,7 @@ function activeImageAdditionalActions(isInitial) {
 	if (!isInitial == true) {
 		resetCopyrightText();
 		var imgTitle = activeItem.title;
-		if (activeItem.description != "") {
+		if (activeItem.description != "") { 
 			imgTitle = activeItem.description;
 		}
 		GetE("txtAlt").value = imgTitle;
