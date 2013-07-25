@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.comundus</groupId>
 		<artifactId>comundus</artifactId>
-		<version>1.1</version>
+		<version>1.2</version>
 	</parent>
 	<!--
 		Parent POM for OpenCms-Basic. Database support can be triggered by
@@ -19,7 +19,7 @@
 	<artifactId>general</artifactId>
 	<packaging>pom</packaging>
 	<name>OpenCms general</name>
-	<version>8.5.1</version>
+	<version>8.5.2</version>
 	<description>POM with general Information like scm, reporting, release stuff</description>
 	<url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic</url>
 	<prerequisites>
@@ -27,11 +27,6 @@
 	</prerequisites>
 	<inceptionYear>2007</inceptionYear>
 
-    <scm>
-        <connection>scm:git:git@github.com:comundus/opencms-basic.git</connection>
-        <developerConnection>scm:git:git@github.com:comundus/opencms-basic.git</developerConnection>
-        <url>http://github.com/comundus/opencms-basic</url>
-    </scm>    
 
 	<!--
 		per developer configuration may follow (and overwrite global
@@ -350,5 +345,10 @@
 		</pluginManagement>
 	</build>
 
+	<distributionManagement>
+		<site>
+			<url>file:////Data02/projectsites/projects/cm-comundus/opencms-basic</url>
+		</site>
+	</distributionManagement>
 
 </project>

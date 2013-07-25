@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>8.5.1</version>
+        <version>8.5.2</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -12,7 +12,6 @@
     <packaging>pom</packaging>
     <name>OpenCms Orgunits</name>
     <description>OpenCms Orgunits</description>
-    <url>http://opencms-maven.comundus.com</url>
     <build>
         <plugins>
             <plugin>
@@ -43,5 +42,11 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <site>
+            <url>file:////Data02/projectsites/projects/cm-comundus/opencms-basic/orgunits</url>
+        </site>
+    </distributionManagement>
 
 </project>

@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>8.5.1</version>
+        <version>8.5.2</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -12,7 +12,6 @@
     <packaging>war</packaging>
     <name>OpenCms Webapp</name>
     <description>OpenCms web application</description>
-    <url>http://opencms-maven.comundus.com</url>
     <build>
         <finalName>webapp</finalName>
 		<resources>
@@ -92,7 +91,7 @@
         <dependency>
             <groupId>org.opencms</groupId>
             <artifactId>opencms-core</artifactId>
-            <version>8.5.1</version>
+
         </dependency>
         <dependency>
 			<groupId>${jdbcDriver.groupId}</groupId>
@@ -100,5 +99,11 @@
 			<version>${jdbcDriver.version}</version>
     	</dependency>
     </dependencies>
+
+    <distributionManagement>
+        <site>
+            <url>file:////Data02/projectsites/projects/cm-comundus/opencms-basic/webapp</url>
+        </site>
+    </distributionManagement>
 
 </project>

@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.containerpage/resources/containerpage/containerpage.nocache.js</destination>
 		<type>plain</type>
-		<uuidstructure>431fcc87-6dae-11e1-93f6-d9538f94e136</uuidstructure>
-		<uuidresource>43221678-6dae-11e1-93f6-d9538f94e136</uuidresource>
-		<datelastmodified>Wed, 14 Mar 2012 08:18:21 GMT</datelastmodified>
+		<uuidstructure>2a30b3af-e892-11e2-8118-11c76c01acba</uuidstructure>
+		<uuidresource>2a3101d0-e892-11e2-8118-11c76c01acba</uuidresource>
+		<datelastmodified>Tue, 09 Jul 2013 12:22:04 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Wed, 14 Mar 2012 08:18:21 GMT</datecreated>
+		<datecreated>Tue, 09 Jul 2013 12:22:04 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

@@ -7,13 +7,14 @@
             <class/>
             <description><![CDATA[Configuration for OpenCms websites.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
+                <dependency name="org.opencms.gwt" version="8.5.0"/>
                 <dependency name="org.opencms.workplace" version="8.5.0"/>
                 <dependency name="org.opencms.workplace.categories" version="8.5.0"/>
             </dependencies>
@@ -351,7 +352,7 @@
             <class/>
             <description><![CDATA[The containerpage editor.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -366,9 +367,7 @@
             <resources>
                 <resource uri="/system/modules/org.opencms.ade.containerpage/"/>
             </resources>
-            <parameters>
-                <param name="gwt.buildid">20130207</param>
-            </parameters>
+            <parameters/>
         </module>
         <module>
             <name>org.opencms.ade.contenteditor</name>
@@ -377,13 +376,15 @@
             <class/>
             <description><![CDATA[Editor for structured contents.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
-            <dependencies/>
+            <dependencies>
+                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+            </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.contenteditor/resources/" destination="resources/ade/"/>
             </exportpoints>
@@ -391,9 +392,7 @@
                 <resource uri="/system/modules/org.opencms.ade.contenteditor/"/>
                 <resource uri="/system/workplace/editors/acacia/"/>
             </resources>
-            <parameters>
-                <param name="gwt.buildid">20130207</param>
-            </parameters>
+            <parameters/>
         </module>
         <module>
             <name>org.opencms.ade.editprovider</name>
@@ -402,14 +401,14 @@
             <class/>
             <description><![CDATA[This module contains an edit provider for the original Direct Edit which has a number of features from ADE.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.gwt" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="8.5.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.editprovider/resources/" destination="resources/ade/"/>
@@ -417,9 +416,7 @@
             <resources>
                 <resource uri="/system/modules/org.opencms.ade.editprovider/"/>
             </resources>
-            <parameters>
-                <param name="gwt.buildid">20130207</param>
-            </parameters>
+            <parameters/>
         </module>
         <module>
             <name>org.opencms.ade.galleries</name>
@@ -428,7 +425,7 @@
             <class/>
             <description><![CDATA[<p>Gwt based gallery dialog for OpenCms 8<p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -436,7 +433,6 @@
             <dateinstalled/>
             <dependencies>
                 <dependency name="org.opencms.ade.config" version="8.5.0"/>
-                <dependency name="org.opencms.ade.upload" version="8.5.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.galleries/resources/" destination="resources/ade/"/>
@@ -445,9 +441,7 @@
                 <resource uri="/system/modules/org.opencms.ade.galleries/"/>
                 <resource uri="/system/workplace/commons/open_ade_gallery.jsp"/>
             </resources>
-            <parameters>
-                <param name="gwt.buildid">20130207</param>
-            </parameters>
+            <parameters/>
         </module>
         <module>
             <name>org.opencms.ade.postupload</name>
@@ -456,22 +450,22 @@
             <class/>
             <description><![CDATA[This module provides a dialog for editing the configured default properties of a file after uploading it.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname/>
             <authoremail/>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
-            <dependencies/>
+            <dependencies>
+                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+            </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.postupload/resources/" destination="resources/ade/"/>
             </exportpoints>
             <resources>
                 <resource uri="/system/modules/org.opencms.ade.postupload/"/>
             </resources>
-            <parameters>
-                <param name="gwt.buildid">20130207</param>
-            </parameters>
+            <parameters/>
         </module>
         <module>
             <name>org.opencms.ade.properties</name>
@@ -480,22 +474,22 @@
             <class/>
             <description><![CDATA[This module provides the properties dialog for the workplace.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
-            <dependencies/>
+            <dependencies>
+                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+            </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.properties/resources/" destination="resources/ade/"/>
             </exportpoints>
             <resources>
                 <resource uri="/system/modules/org.opencms.ade.properties/"/>
             </resources>
-            <parameters>
-                <param name="gwt.buildid">20130207</param>
-            </parameters>
+            <parameters/>
         </module>
         <module>
             <name>org.opencms.ade.publish</name>
@@ -504,22 +498,22 @@
             <class/>
             <description><![CDATA[<p>Gwt based publish dialog for OpenCms 8<p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname/>
             <authoremail/>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
-            <dependencies/>
+            <dependencies>
+                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+            </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.publish/resources/" destination="resources/ade/"/>
             </exportpoints>
             <resources>
                 <resource uri="/system/modules/org.opencms.ade.publish/"/>
             </resources>
-            <parameters>
-                <param name="gwt.buildid">20130207</param>
-            </parameters>
+            <parameters/>
         </module>
         <module>
             <name>org.opencms.ade.sitemap</name>
@@ -528,7 +522,7 @@
             <class/>
             <description><![CDATA[<p>ADE Sitemap Editor.</p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -536,7 +530,6 @@
             <dateinstalled/>
             <dependencies>
                 <dependency name="org.opencms.ade.config" version="8.5.0"/>
-                <dependency name="org.opencms.gwt" version="8.5.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.sitemap/resources/" destination="resources/ade/"/>
@@ -548,9 +541,7 @@
                 <resource uri="/system/workplace/resources/filetypes/htmlredirect.png"/>
                 <resource uri="/system/workplace/resources/filetypes/htmlredirect_big.png"/>
             </resources>
-            <parameters>
-                <param name="gwt.buildid">20130207</param>
-            </parameters>
+            <parameters/>
         </module>
         <module>
             <name>org.opencms.ade.upload</name>
@@ -559,14 +550,14 @@
             <class/>
             <description><![CDATA[<p>Gwt based upload dialog for OpenCms 8</p>
 					 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.gwt" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="8.5.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.upload/resources/" destination="resources/ade/"/>
@@ -574,9 +565,7 @@
             <resources>
                 <resource uri="/system/modules/org.opencms.ade.upload/"/>
             </resources>
-            <parameters>
-                <param name="gwt.buildid">20130207</param>
-            </parameters>
+            <parameters/>
         </module>
         <module>
             <name>org.opencms.editors</name>
@@ -586,7 +575,7 @@
             <description><![CDATA[<p>This module contains the OpenCms Common Editing tools.</p>
 <p>This module is needed to be able to edit files in the OpenCms Workplace.</p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -663,9 +652,9 @@
             <group>OpenCms Editors</group>
             <class/>
             <description><![CDATA[<p>This module adds the Open Source text editor "CodeMirror" to the OpenCms Workplace.</p>
-<p>Install this module if you want a source code editor with syntax highlighting. The version of CodeMirror is 2.3.3</p>
+<p>Install this module if you want a source code editor with syntax highlighting. The version of CodeMirror is 3.14</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -744,7 +733,7 @@
             <class/>
             <description><![CDATA[<p>This module contains TinyMCE editor for HTML pages and XML content.</p>
 <p>The version of TinyMCE is 3.4.7 (2011-11-03)</p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[OpenCms community]]></authorname>
             <authoremail><![CDATA[opencms-dev@opencms.org]]></authoremail>
             <datecreated/>
@@ -770,7 +759,7 @@
             <class/>
             <description><![CDATA[<p>Provides an OpenCms GWT framework.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -789,7 +778,7 @@
             <group>OpenCms frontend</group>
             <class/>
             <description><![CDATA[This modules includes the jQuery javascript libraries as well as several plugins used by OpenCms]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -808,7 +797,7 @@
             <nicename><![CDATA[OpenCms language detection]]></nicename>
             <class/>
             <description><![CDATA[This module supports text based language detection.]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -829,7 +818,7 @@
             <description><![CDATA[<p>This module contains the German language localization files for the OpenCms workplace.</p>
 <p>Install this module if you want to use the german version of the OpenCms Workplace.</p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -921,7 +910,7 @@
             <description><![CDATA[<p>This module contains the OpenCms Workplace base files.</p>
 <p>It includes common used dialogs and style sheets, that are needed by any workplace module.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1088,7 +1077,7 @@
             <description><![CDATA[<p>This module contains the base components for the administration view.</p>
 <p>Its allows you to install and/or develop administration tools for OpenCms.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1140,7 +1129,7 @@
             <description><![CDATA[<p>This module contains the OpenCms Workplace Explorer.</p>
 <p>Install this module if you want a GUI to work on the OpenCms VFS.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1273,7 +1262,7 @@
             <description><![CDATA[<p>This module contains the OpenCms Workplace handler files.</p>
 <p>It includes the 404 and 500 error handlers that are showed in case of an error of a frontend application.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -1367,7 +1356,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the user accounts and groups.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1804,7 +1793,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the tools for managing the OpenCms projects.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -1997,7 +1986,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace maintenance tools.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>8.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>

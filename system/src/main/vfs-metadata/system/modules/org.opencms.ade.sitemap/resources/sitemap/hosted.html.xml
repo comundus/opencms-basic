@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.sitemap/resources/sitemap/hosted.html</destination>
 		<type>plain</type>
-		<uuidstructure>f83cf7ed-71b1-11e0-891a-99f3e436b62a</uuidstructure>
-		<uuidresource>f83cf7ee-71b1-11e0-891a-99f3e436b62a</uuidresource>
-		<datelastmodified>Thu, 28 Apr 2011 16:10:00 GMT</datelastmodified>
+		<uuidstructure>536d33b2-e896-11e2-98ed-a5279390e9b6</uuidstructure>
+		<uuidresource>536d33b3-e896-11e2-98ed-a5279390e9b6</uuidresource>
+		<datelastmodified>Tue, 09 Jul 2013 12:51:51 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Thu, 28 Apr 2011 16:10:00 GMT</datecreated>
+		<datecreated>Tue, 09 Jul 2013 12:51:51 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

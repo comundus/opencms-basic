@@ -11,7 +11,7 @@ Plugin repository:
     <pluginRepositories>
         <pluginRepository>
             <id>comundus-github</id>
-	        <url>https://github.com/comundus/maven2-repository/raw/master</url>
+	        <url>https://raw.github.com/comundus/maven2-repository/master</url>
         </pluginRepository>
     </pluginRepositories>
 

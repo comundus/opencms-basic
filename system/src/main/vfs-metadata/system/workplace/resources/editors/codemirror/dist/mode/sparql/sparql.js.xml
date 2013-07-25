@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/workplace/resources/editors/codemirror/dist/mode/sparql/sparql.js</destination>
 		<type>plain</type>
-		<uuidstructure>6b8de2d6-f1b9-11e1-82ea-f34ad62d517e</uuidstructure>
-		<uuidresource>6b8de2d7-f1b9-11e1-82ea-f34ad62d517e</uuidresource>
-		<datelastmodified>Wed, 29 Aug 2012 09:11:13 GMT</datelastmodified>
+		<uuidstructure>fabbb6c6-dfca-11e2-8921-170bfb738a71</uuidstructure>
+		<uuidresource>fabbb6c7-dfca-11e2-8921-170bfb738a71</uuidresource>
+		<datelastmodified>Fri, 28 Jun 2013 08:16:34 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Wed, 29 Aug 2012 09:10:47 GMT</datecreated>
+		<datecreated>Fri, 28 Jun 2013 08:16:05 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>
