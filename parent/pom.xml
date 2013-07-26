@@ -61,6 +61,7 @@
 		<opencms.db.user>root</opencms.db.user>
 		<opencms.db.password>root</opencms.db.password>
 		<opencms.db.name>opencms</opencms.db.name>
+		<opencms.webapp.path>/comundus</opencms.webapp.path>
 		<!--
 			the log file path is relative to WEB-INF/classes
 			or to be more precise relative to log4j.properties
@@ -98,9 +99,9 @@
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>tomcat-maven-plugin</artifactId>
 						<configuration>
-							<path>/opencms-basic</path>
-							<url>http://localhost:8080/manager/text</url>
-							<server>local-tomcat-manager-admin</server>
+						    <path>${opencms.webapp.path}</path>
+						    <url>http://localhost:8080/manager</url>
+						    <server>local-tomcat-manager-admin</server>
 						</configuration>
 					</plugin>
 			    </plugins>
@@ -114,9 +115,9 @@
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>tomcat-maven-plugin</artifactId>
 						<configuration>
-							<path>/opencms-basic</path>
-							<url>http://localhost:8080/manager/text</url>
-							<server>local-tomcat-manager-admin</server>
+						    <path>${opencms.webapp.path}</path>
+						    <url>http://localhost:8080/manager/text</url>
+						    <server>local-tomcat-manager-admin</server>
 						</configuration>
 					</plugin>
 			    </plugins>
@@ -513,7 +514,6 @@
 
 	</profiles>
 
-
     <build>
         <!-- order here is significant for build execution! -->
         <plugins>
@@ -542,13 +542,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-      		<plugin>
-                <groupId>com.comundus.maven</groupId>
-                <artifactId>vfs-maven-plugin</artifactId>
-                <configuration>
-                    <adminPassword>admin</adminPassword>
-                </configuration>
-            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -557,6 +550,7 @@
                     <artifactId>vfs-maven-plugin</artifactId>
                     <version>8.5.2</version>
                     <configuration>
+                    	<adminPassword>admin</adminPassword>
                     	<jspVersion>2.0</jspVersion>
                     	<servletVersion>2.4</servletVersion>
                     </configuration>
@@ -578,6 +572,22 @@
 					<artifactId>tomcat-maven-plugin</artifactId>
 					<version>1.1</version>
 				</plugin>
+				<plugin>
+        			<groupId>org.apache.maven.plugins</groupId>
+        			<artifactId>maven-jar-plugin</artifactId>
+		        	<configuration>
+        		  		<archive>
+            				<manifest>
+              					<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              					<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+            				</manifest>
+            				<manifestEntries>
+        						<SCM-Revision>${buildNumber}</SCM-Revision>
+        						<Build-Timestamp>${timestamp}</Build-Timestamp>
+      						</manifestEntries>
+          		  		</archive>
+        			</configuration>
+		      </plugin>
 				<!-- all plugins not directly involved in building the project (e.g. 
 					report plugins) are in general-pom.xml -->   
      	    </plugins>
