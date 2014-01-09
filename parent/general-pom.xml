@@ -19,7 +19,7 @@
 	<artifactId>general</artifactId>
 	<packaging>pom</packaging>
 	<name>OpenCms general</name>
-	<version>8.5.2</version>
+	<version>9.0.0</version>
 	<description>POM with general Information like scm, reporting, release stuff</description>
 	<url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic</url>
 	<prerequisites>

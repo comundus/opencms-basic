@@ -2,21 +2,21 @@
     <modules>
         <module>
             <name>org.opencms.ade.config</name>
-            <nicename><![CDATA[OpenCms 8 ADE Configuration]]></nicename>
+            <nicename><![CDATA[OpenCms 9 ADE Configuration]]></nicename>
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[Configuration for OpenCms websites.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.gwt" version="8.5.0"/>
-                <dependency name="org.opencms.workplace" version="8.5.0"/>
-                <dependency name="org.opencms.workplace.categories" version="8.5.0"/>
+                <dependency name="org.opencms.gwt" version="9.0.0"/>
+                <dependency name="org.opencms.workplace" version="9.0.0"/>
+                <dependency name="org.opencms.workplace.categories" version="7.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.config/classes/" destination="WEB-INF/classes/"/>
@@ -117,6 +117,23 @@
                     </properties>
                     <param name="schema">/system/modules/org.opencms.ade.config/schemas/module_config.xsd</param>
                 </type>
+                <type class="org.opencms.file.types.CmsResourceTypeXmlAdeConfiguration" name="formatter_config" id="308">
+                    <properties>
+                        <property>
+                            <name>locale-available</name>
+                            <value><![CDATA[en]]></value>
+                        </property>
+                        <property>
+                            <name>locale</name>
+                            <value><![CDATA[en]]></value>
+                        </property>
+                        <property>
+                            <name>search.exclude</name>
+                            <value><![CDATA[all]]></value>
+                        </property>
+                    </properties>
+                    <param name="schema">/system/modules/org.opencms.ade.config/schemas/formatters/new_formatter.xsd</param>
+                </type>
                 <type class="org.opencms.file.types.CmsResourceTypeXmlAdeConfiguration" name="seo_file" id="305">
                     <properties>
                         <property>
@@ -163,6 +180,23 @@
                         </property>
                     </properties>
                     <param name="schema">/system/modules/org.opencms.ade.containerpage/schemas/inheritance_config.xsd</param>
+                </type>
+                <type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="xmlvfsbundle" id="306">
+                    <properties>
+                        <property>
+                            <name>search.exclude</name>
+                            <value><![CDATA[all]]></value>
+                        </property>
+                    </properties>
+                    <param name="schema">/system/modules/org.opencms.ade.config/schemas/xmlvfsbundle.xsd</param>
+                </type>
+                <type class="org.opencms.file.types.CmsResourceTypePlain" name="propertyvfsbundle" id="307">
+                    <properties>
+                        <property>
+                            <name>search.exclude</name>
+                            <value><![CDATA[all]]></value>
+                        </property>
+                    </properties>
                 </type>
             </resourcetypes>
             <explorertypes>
@@ -228,13 +262,14 @@
                             <entry key="GUI_EXPLORER_CONTEXT_HISTORY_0" uri="views/admin/admin-main.jsp?root=explorer&amp;path=%2Fhistory" rule="nondeleted"/>
                             <entry key="GUI_EXPLORER_CONTEXT_PROPERTY_0" uri="/system/modules/org.opencms.ade.properties/pages/properties.jsp" rule="nondeleted"/>
                             <entry key="GUI_EXPLORER_CONTEXT_ADVANCED_PROPERTIES_0" name="org.opencms.gwt.client.ui.contextmenu.CmsEditProperties" rule="containerpage-no-different-site"/>
-                            <entry key="GUI_EXPLORER_CONTEXT_RESOURCE_INFO_0" name="org.opencms.gwt.client.ui.contextmenu.CmsResourceInfo" rule="containerpage"/>
+                            <entry key="GUI_EXPLORER_CONTEXT_PAGE_INFO_0" name="org.opencms.gwt.client.ui.contextmenu.CmsResourceInfo" rule="containerpage"/>
                             <entry key="GUI_EXPLORER_CONTEXT_AVAILABILITY_0" name="org.opencms.gwt.client.ui.contextmenu.CmsAvailabilityDialog" rule="containerpage-no-different-site"/>
                             <entry key="GUI_EXPLORER_CONTEXT_LOCK_REPORT_0" name="org.opencms.gwt.client.ui.contextmenu.CmsLockReport" rule="containerpage"/>
                             <entry key="GUI_EXPLORER_CONTEXT_CATEGORIES_0" name="org.opencms.gwt.client.ui.contextmenu.CmsCategories" rule="containerpage-no-different-site"/>
                             <entry key="TEMPLATECONTEXTS" name="templatecontexts" rule="containerpage"/>
                             <entry key="GUI_EXPLORER_CONTEXT_SEO_0" name="org.opencms.gwt.client.ui.contextmenu.CmsOpenSeoDialog" rule="containerpage-no-different-site"/>
                             <entry key="GUI_EXPLORER_CONTEXT_UNDOCHANGES_0" name="org.opencms.gwt.client.ui.contextmenu.CmsRestore" rule="ade-undochanges"/>
+                            <entry key="EDITSMALLELEMENTS" name="editsmallelements" rule="containerpage"/>
                             <entry key="GUI_EXPLORER_CONTEXT_SHOW_WORKPLACE_0" name="org.opencms.gwt.client.ui.contextmenu.CmsShowWorkplace" rule="containerpage"/>
                             <entry key="GUI_EXPLORER_CONTEXT_LOGOUT_0" name="org.opencms.gwt.client.ui.contextmenu.CmsLogout" rule="containerpage"/>
                         </contextmenu>
@@ -331,6 +366,12 @@
                         <accessentry principal="ROLE.WORKPLACE_USER" permissions="+r+v+w+c"/>
                     </accesscontrol>
                 </explorertype>
+                <explorertype name="formatter_config" key="fileicon.formatter_config" icon="formatter_config.png" bigicon="formatter_config_big.png" reference="xmlcontent">
+                    <newresource page="otheroptions" uri="newresource_xmlcontent.jsp?newresourcetype=formatter_config" order="23" autosetnavigation="false" autosettitle="false" info="desc.formatter_config"/>
+                    <accesscontrol>
+                        <accessentry principal="ROLE.WORKPLACE_USER" permissions="+r+v+w+c"/>
+                    </accesscontrol>
+                </explorertype>
                 <explorertype name="inheritance_group" key="fileicon.inheritance_group" icon="inheritancegroup.png" bigicon="inheritancegroup_big.png" reference="xmlcontent">
                     <newresource uri="newresource_xmlcontent.jsp?newresourcetype=inheritance_group" order="27" autosetnavigation="false" autosettitle="false" info="desc.inheritance_group"/>
                     <accesscontrol>
@@ -343,23 +384,35 @@
                         <accessentry principal="ROLE.WORKPLACE_USER" permissions="+r+v+w+c"/>
                     </accesscontrol>
                 </explorertype>
+                <explorertype name="xmlvfsbundle" key="fileicon.xmlvfsbundle" reference="xmlcontent">
+                    <newresource page="otheroptions" uri="newresource_xmlcontent.jsp?newresourcetype=xmlvfsbundle" order="28" autosetnavigation="false" autosettitle="false" info="desc.xmlvfsbundle"/>
+                    <accesscontrol>
+                        <accessentry principal="ROLE.WORKPLACE_USER" permissions="+r+v+w+c"/>
+                    </accesscontrol>
+                </explorertype>
+                <explorertype name="propertyvfsbundle" key="fileicon.propertyvfsbundle" reference="plain">
+                    <newresource page="otheroptions" uri="newresource.jsp?newresourcetype=propertyvfsbundle" order="30" autosetnavigation="false" autosettitle="false" info="desc.propertyvfsbundle"/>
+                    <accesscontrol>
+                        <accessentry principal="ROLE.WORKPLACE_USER" permissions="+r+v+w+c"/>
+                    </accesscontrol>
+                </explorertype>
             </explorertypes>
         </module>
         <module>
             <name>org.opencms.ade.containerpage</name>
-            <nicename><![CDATA[OpenCms 8 ADE Containerpade Editor]]></nicename>
+            <nicename><![CDATA[OpenCms 9 ADE Containerpade Editor]]></nicename>
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[The containerpage editor.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.containerpage/resources/" destination="resources/ade/"/>
@@ -376,14 +429,14 @@
             <class/>
             <description><![CDATA[Editor for structured contents.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.contenteditor/resources/" destination="resources/ade/"/>
@@ -396,19 +449,19 @@
         </module>
         <module>
             <name>org.opencms.ade.editprovider</name>
-            <nicename><![CDATA[OpenCms 8 ADE toolbar direct edit provider]]></nicename>
+            <nicename><![CDATA[OpenCms 9 ADE toolbar direct edit provider]]></nicename>
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[This module contains an edit provider for the original Direct Edit which has a number of features from ADE.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.editprovider/resources/" destination="resources/ade/"/>
@@ -425,14 +478,14 @@
             <class/>
             <description><![CDATA[<p>Gwt based gallery dialog for OpenCms 8<p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.galleries/resources/" destination="resources/ade/"/>
@@ -445,19 +498,19 @@
         </module>
         <module>
             <name>org.opencms.ade.postupload</name>
-            <nicename><![CDATA[OpenCms 8 post-upload dialog]]></nicename>
+            <nicename><![CDATA[OpenCms 9 post-upload dialog]]></nicename>
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[This module provides a dialog for editing the configured default properties of a file after uploading it.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname/>
             <authoremail/>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.postupload/resources/" destination="resources/ade/"/>
@@ -474,14 +527,14 @@
             <class/>
             <description><![CDATA[This module provides the properties dialog for the workplace.<br>
 <i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.properties/resources/" destination="resources/ade/"/>
@@ -493,19 +546,19 @@
         </module>
         <module>
             <name>org.opencms.ade.publish</name>
-            <nicename><![CDATA[OpenCms 8 ADE Publish]]></nicename>
+            <nicename><![CDATA[OpenCms 9 ADE Publish]]></nicename>
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[<p>Gwt based publish dialog for OpenCms 8<p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname/>
             <authoremail/>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.publish/resources/" destination="resources/ade/"/>
@@ -517,19 +570,19 @@
         </module>
         <module>
             <name>org.opencms.ade.sitemap</name>
-            <nicename><![CDATA[OpenCms 8 Sitemap]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Sitemap]]></nicename>
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[<p>ADE Sitemap Editor.</p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.sitemap/resources/" destination="resources/ade/"/>
@@ -545,19 +598,19 @@
         </module>
         <module>
             <name>org.opencms.ade.upload</name>
-            <nicename><![CDATA[OpenCms 8 ADE Upload]]></nicename>
+            <nicename><![CDATA[OpenCms 9 ADE Upload]]></nicename>
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[<p>Gwt based upload dialog for OpenCms 8</p>
 					 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.ade.config" version="8.5.0"/>
+                <dependency name="org.opencms.ade.config" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.ade.upload/resources/" destination="resources/ade/"/>
@@ -569,21 +622,21 @@
         </module>
         <module>
             <name>org.opencms.editors</name>
-            <nicename><![CDATA[OpenCms 8 Common editors]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Common editors]]></nicename>
             <group>OpenCms Editors</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Common Editing tools.</p>
 <p>This module is needed to be able to edit files in the OpenCms Workplace.</p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace" version="1.0.0"/>
-                <dependency name="org.opencms.jquery" version="1.0.0"/>
+                <dependency name="org.opencms.workplace" version="9.0.0"/>
+                <dependency name="org.opencms.jquery" version="9.0.0"/>
             </dependencies>
             <exportpoints/>
             <resources>
@@ -654,7 +707,7 @@
             <description><![CDATA[<p>This module adds the Open Source text editor "CodeMirror" to the OpenCms Workplace.</p>
 <p>Install this module if you want a source code editor with syntax highlighting. The version of CodeMirror is 3.14</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -673,67 +726,13 @@
             <parameters/>
         </module>
         <module>
-            <name>org.opencms.editors.editarea</name>
-            <nicename><![CDATA[OpenCms 8 EditArea editor]]></nicename>
-            <group>OpenCms Editors</group>
-            <class/>
-            <description><![CDATA[<p>This module adds the Open Source text editor "EditArea" to the OpenCms Workplace.</p>
-<p>Install this module if you want a source code editor with syntax highlighting. The version of EditArea is 0.8.2</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
-            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
-            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
-            <datecreated/>
-            <userinstalled/>
-            <dateinstalled/>
-            <dependencies>
-                <dependency name="org.opencms.editors" version="1.2.0"/>
-            </dependencies>
-            <exportpoints>
-                <exportpoint uri="/system/modules/org.opencms.editors.editarea/lib/" destination="WEB-INF/lib/"/>
-            </exportpoints>
-            <resources>
-                <resource uri="/system/workplace/editors/editarea/"/>
-                <resource uri="/system/workplace/resources/editors/editarea/"/>
-            </resources>
-            <parameters/>
-        </module>
-        <module>
-            <name>org.opencms.editors.fckeditor</name>
-            <nicename><![CDATA[OpenCms 8 FCKeditor WYSIWYG editor plugin]]></nicename>
-            <group>OpenCms Editors</group>
-            <class/>
-            <description><![CDATA[<p>This module adds the popular Open Source HTML editor "FCKeditor" to the OpenCms Workplace.</p>
-<p>Install this module if you want a WYSIWYG editor for Mozilla based browsers, Internet Explorer, Safari or Google Chrome. The version of FCKeditor is 2.6.5</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
-            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
-            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
-            <datecreated/>
-            <userinstalled/>
-            <dateinstalled/>
-            <dependencies>
-                <dependency name="org.opencms.editors" version="1.2.0"/>
-            </dependencies>
-            <exportpoints>
-                <exportpoint uri="/system/modules/org.opencms.editors.fckeditor/lib/" destination="WEB-INF/lib/"/>
-            </exportpoints>
-            <resources>
-                <resource uri="/system/workplace/editors/fckeditor/"/>
-                <resource uri="/system/workplace/resources/editors/fckeditor/"/>
-                <resource uri="/system/workplace/resources/components/widgets/fckeditor.js"/>
-                <resource uri="/system/modules/org.opencms.editors.fckeditor/"/>
-            </resources>
-            <parameters/>
-        </module>
-        <module>
             <name>org.opencms.editors.tinymce</name>
-            <nicename><![CDATA[OpenCms 8 TinyMCE WYSIWYG editor plugin]]></nicename>
+            <nicename><![CDATA[OpenCms 9 TinyMCE WYSIWYG editor plugin]]></nicename>
             <group>OpenCms Editors</group>
             <class/>
             <description><![CDATA[<p>This module contains TinyMCE editor for HTML pages and XML content.</p>
-<p>The version of TinyMCE is 3.4.7 (2011-11-03)</p>]]></description>
-            <version>8.5.2</version>
+                              <p>The version of TinyMCE is 4.0.1</p>]]></description>
+            <version>9.0.0</version>
             <authorname><![CDATA[OpenCms community]]></authorname>
             <authoremail><![CDATA[opencms-dev@opencms.org]]></authoremail>
             <datecreated/>
@@ -754,12 +753,12 @@
         </module>
         <module>
             <name>org.opencms.gwt</name>
-            <nicename><![CDATA[OpenCms 8 GWT Base Module]]></nicename>
+            <nicename><![CDATA[OpenCms 9 GWT Base Module]]></nicename>
             <group>OpenCms Editors</group>
             <class/>
             <description><![CDATA[<p>Provides an OpenCms GWT framework.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -774,11 +773,11 @@
         </module>
         <module>
             <name>org.opencms.jquery</name>
-            <nicename><![CDATA[OpenCms 8 jQuery library]]></nicename>
+            <nicename><![CDATA[OpenCms 9 jQuery library]]></nicename>
             <group>OpenCms frontend</group>
             <class/>
             <description><![CDATA[This modules includes the jQuery javascript libraries as well as several plugins used by OpenCms]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -793,32 +792,14 @@
             <parameters/>
         </module>
         <module>
-            <name>org.opencms.languagedetection</name>
-            <nicename><![CDATA[OpenCms language detection]]></nicename>
-            <class/>
-            <description><![CDATA[This module supports text based language detection.]]></description>
-            <version>8.5.2</version>
-            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
-            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
-            <datecreated/>
-            <userinstalled/>
-            <dateinstalled/>
-            <dependencies/>
-            <exportpoints/>
-            <resources>
-                <resource uri="/system/modules/org.opencms.languagedetection/"/>
-            </resources>
-            <parameters/>
-        </module>
-        <module>
             <name>org.opencms.locale.de</name>
-            <nicename><![CDATA[OpenCms 8 German localization for the workplace]]></nicename>
+            <nicename><![CDATA[OpenCms 9 German localization for the workplace]]></nicename>
             <group>OpenCms Localization</group>
             <class/>
             <description><![CDATA[<p>This module contains the German language localization files for the OpenCms workplace.</p>
 <p>Install this module if you want to use the german version of the OpenCms Workplace.</p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -835,13 +816,13 @@
         </module>
         <module>
             <name>org.opencms.locale.es</name>
-            <nicename><![CDATA[OpenCms 8 Spanish localization for the workplace]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Spanish localization for the workplace]]></nicename>
             <group>OpenCms Localization</group>
             <class/>
             <description><![CDATA[<p>This module contains the Spanish language localization files for the OpenCms workplace.</p>
 <p>Install this module if you want to use the Spanish version of the OpenCms Workplace.</p>
 <p><i>&copy; 2013 by OpenCms Hispano (http://www.opencmshispano.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[OpenCms Hispano]]></authorname>
             <authoremail><![CDATA[info@opencmshispano.es]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -858,13 +839,13 @@
         </module>
         <module>
             <name>org.opencms.locale.it</name>
-            <nicename><![CDATA[OpenCms 8 Italian localization for the workplace]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Italian localization for the workplace]]></nicename>
             <group>OpenCms Localization</group>
             <class/>
             <description><![CDATA[<p>This module contains the Italian language localization files for the OpenCms workplace.</p>
 <p>Install this module if you want to use the Italian version of the OpenCms Workplace.</p>
 <p><i>&copy; 2013 by Coranto Informatica di Antonio Cordeddu  (http://www.coranto.it).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Coranto Informatica]]></authorname>
             <authoremail><![CDATA[info@coranto.it]]></authoremail>
             <datecreated/>
@@ -881,11 +862,11 @@
         </module>
         <module>
             <name>org.opencms.locale.ru</name>
-            <nicename><![CDATA[OpenCms 8 Russian localization for the workplace]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Russian localization for the workplace]]></nicename>
             <group>OpenCms Localization</group>
             <class/>
             <description><![CDATA[OpenCms Localization]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[ITDT Ltd.]]></authorname>
             <authoremail><![CDATA[support@itdt.ru]]></authoremail>
             <datecreated/>
@@ -895,22 +876,24 @@
             <exportpoints>
                 <exportpoint uri="/system/workplace/locales/ru/messages/" destination="WEB-INF/classes/"/>
                 <exportpoint uri="/system/workplace/locales/ru/lib/" destination="WEB-INF/lib/"/>
+                <exportpoint uri="/system/workplace/locales/ru/modules/" destination="WEB-INF/classes/"/>
             </exportpoints>
             <resources>
                 <resource uri="/system/workplace/locales/ru/messages/"/>
                 <resource uri="/system/workplace/locales/ru/lib/"/>
+                <resource uri="/system/workplace/locales/ru/modules/"/>
             </resources>
             <parameters/>
         </module>
         <module>
             <name>org.opencms.workplace</name>
-            <nicename><![CDATA[OpenCms 8 Workplace base]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Workplace base]]></nicename>
             <group>OpenCms Workplace</group>
             <class>org.opencms.workplace.CmsWorkplaceAction</class>
             <description><![CDATA[<p>This module contains the OpenCms Workplace base files.</p>
 <p>It includes common used dialogs and style sheets, that are needed by any workplace module.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1071,20 +1054,20 @@
         </module>
         <module>
             <name>org.opencms.workplace.administration</name>
-            <nicename><![CDATA[OpenCms 8 Administration Framework]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Administration Framework]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the base components for the administration view.</p>
 <p>Its allows you to install and/or develop administration tools for OpenCms.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace" version="1.0.0"/>
+                <dependency name="org.opencms.workplace" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.administration/lib/" destination="WEB-INF/lib/"/>
@@ -1102,13 +1085,13 @@
         </module>
         <module>
             <name>org.opencms.workplace.categories</name>
-            <nicename><![CDATA[OpenCms 8 Workplace categories]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Workplace categories]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace category folders.</p>
 <p>It includes the system wide category folders.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -1116,27 +1099,25 @@
             <dateinstalled/>
             <dependencies/>
             <exportpoints/>
-            <resources>
-                <resource uri="/system/categories/"/>
-            </resources>
+            <resources/>
             <parameters/>
         </module>
         <module>
             <name>org.opencms.workplace.explorer</name>
-            <nicename><![CDATA[OpenCms 8 Workplace explorer]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Workplace explorer]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace Explorer.</p>
 <p>Install this module if you want a GUI to work on the OpenCms VFS.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace" version="1.0.0"/>
+                <dependency name="org.opencms.workplace" version="9.0.0"/>
             </dependencies>
             <exportpoints/>
             <resources>
@@ -1237,13 +1218,13 @@
         </module>
         <module>
             <name>org.opencms.workplace.galleries</name>
-            <nicename><![CDATA[OpenCms 8 Workplace galleries]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Workplace galleries]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace gallery folders.</p>
 <p>It includes the system wide gallery folders.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -1256,13 +1237,13 @@
         </module>
         <module>
             <name>org.opencms.workplace.handler</name>
-            <nicename><![CDATA[OpenCms 8 Workplace handler]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Workplace handler]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace handler files.</p>
 <p>It includes the 404 and 500 error handlers that are showed in case of an error of a frontend application.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -1277,19 +1258,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.help</name>
-            <nicename><![CDATA[OpenCms 8 Workplace online help - Base module]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Workplace online help - Base module]]></nicename>
             <group>OpenCms Online Help</group>
             <class/>
             <description><![CDATA[<p>This module installs the basic templates required for the online help in all languages.</p>
 <p><i>&copy; 2013 by Alkacon Software</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace" version="1.0.0"/>
+                <dependency name="org.opencms.workplace" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.help/classes/" destination="WEB-INF/classes/"/>
@@ -1301,19 +1282,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.help.de</name>
-            <nicename><![CDATA[OpenCms 8 Workplace german online help]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Workplace german online help]]></nicename>
             <group>OpenCms Online Help</group>
             <class/>
             <description><![CDATA[<p>This module contains the online help pages for the OpenCms workplace in German language.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.help" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.help" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.help.de/classes/" destination="WEB-INF/classes/"/>
@@ -1326,19 +1307,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.help.en</name>
-            <nicename><![CDATA[OpenCms 8 Workplace english online help]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Workplace english online help]]></nicename>
             <group>OpenCms Online Help</group>
             <class/>
             <description><![CDATA[<p>This module contains the english online help pages for the OpenCms workplace.</p>
 <p><i>&copy; 2013 by Alkacon Software</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 22:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.help" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.help" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.help.en/classes/" destination="WEB-INF/classes/"/>
@@ -1351,19 +1332,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.accounts</name>
-            <nicename><![CDATA[OpenCms 8 Accounts management]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Accounts management]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the user accounts and groups.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.accounts/lib/" destination="WEB-INF/lib/"/>
@@ -1395,6 +1376,8 @@
                 <resource uri="/system/workplace/admin/accounts/unit_parent.jsp"/>
                 <resource uri="/system/workplace/admin/accounts/user_addinfo.jsp"/>
                 <resource uri="/system/workplace/admin/accounts/user_allinfo.jsp"/>
+                <resource uri="/system/workplace/admin/accounts/user_unlock.jsp"/>
+                <resource uri="/system/workplace/admin/accounts/user_kill_sessions.jsp"/>
                 <resource uri="/system/workplace/admin/accounts/user_assign.jsp"/>
                 <resource uri="/system/workplace/admin/accounts/user_delete.jsp"/>
                 <resource uri="/system/workplace/admin/accounts/user_edit.jsp"/>
@@ -1441,6 +1424,8 @@
                 <resource uri="/system/workplace/resources/tools/accounts/icons/big/role_add.png"/>
                 <resource uri="/system/workplace/resources/tools/accounts/icons/big/unit.png"/>
                 <resource uri="/system/workplace/resources/tools/accounts/icons/big/unit_add.png"/>
+                <resource uri="/system/workplace/resources/tools/accounts/icons/big/unlock_user.png"/>
+                <resource uri="/system/workplace/resources/tools/accounts/icons/big/user_kill_sessions.png"/>
                 <resource uri="/system/workplace/resources/tools/accounts/icons/big/unit_delete.png"/>
                 <resource uri="/system/workplace/resources/tools/accounts/icons/big/unit_delete_disabled.png"/>
                 <resource uri="/system/workplace/resources/tools/accounts/icons/big/unit_edit.png"/>
@@ -1463,19 +1448,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.cache</name>
-            <nicename><![CDATA[OpenCms 8 Cache administration tools]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Cache administration tools]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the different internal caches.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.cache/lib" destination="WEB-INF/lib/"/>
@@ -1503,20 +1488,21 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.content</name>
-            <nicename><![CDATA[OpenCms 8 Content tools]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Content tools]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the content of resources.</p>
 <p>Install this module if you want to modify file properties or content elements.</p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
+                <dependency name="org.opencms.workplace.tools.database" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.content/lib/" destination="WEB-INF/lib/"/>
@@ -1565,20 +1551,20 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.database</name>
-            <nicename><![CDATA[OpenCms 8 Database management tools]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Database management tools]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms database maintainance tools.</p>
 <p>Install this module if you want to import/export data, it also contains a static export tool.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.database/lib/" destination="WEB-INF/lib/"/>
@@ -1619,19 +1605,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.galleryoverview</name>
-            <nicename><![CDATA[OpenCms 8 Gallery administration tools]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Gallery administration tools]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains Overviews for every OpenCms gallery types.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.galleryoverview/lib/" destination="WEB-INF/lib/"/>
@@ -1655,19 +1641,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.history</name>
-            <nicename><![CDATA[OpenCms 8 File history administration tools]]></nicename>
+            <nicename><![CDATA[OpenCms 9 File history administration tools]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the file history feature.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.history/lib/" destination="WEB-INF/lib/"/>
@@ -1687,19 +1673,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.link</name>
-            <nicename><![CDATA[OpenCms 8 Link checking tools]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Link checking tools]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for validating links in xml documents and pointer links.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.link/lib/" destination="WEB-INF/lib/"/>
@@ -1723,19 +1709,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.modules</name>
-            <nicename><![CDATA[OpenCms 8 Module management]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Module management]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains administration tools for managing the OpenCms modules.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.modules/lib/" destination="WEB-INF/lib/"/>
@@ -1788,19 +1774,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.projects</name>
-            <nicename><![CDATA[OpenCms 8 Project management]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Project management]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the tools for managing the OpenCms projects.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.projects/lib/" destination="WEB-INF/lib/"/>
@@ -1836,19 +1822,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.publishqueue</name>
-            <nicename><![CDATA[OpenCms 8 Publish queue]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Publish queue]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the tools for view the OpenCms publish queue.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.0</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.publishqueue/lib/" destination="WEB-INF/lib/"/>
@@ -1863,19 +1849,19 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.scheduler</name>
-            <nicename><![CDATA[OpenCms 8 Scheduled jobs management]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Scheduled jobs management]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the tools for managing scheduled jobs.</p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.scheduler/lib" destination="WEB-INF/lib/"/>
@@ -1895,20 +1881,20 @@
         </module>
         <module>
             <name>org.opencms.workplace.tools.searchindex</name>
-            <nicename><![CDATA[OpenCms 8 Search index administration tools]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Search index administration tools]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains tools related to the search capabilities of OpenCms.</p>
 <p>Install this module if you need search capabilities in OpenCms.</p>
 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.1</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.searchindex/lib/" destination="WEB-INF/lib/"/>
@@ -1980,20 +1966,65 @@
             <parameters/>
         </module>
         <module>
+            <name>org.opencms.workplace.tools.sites</name>
+            <nicename><![CDATA[OpenCms 9 Site Management tools]]></nicename>
+            <group>OpenCms Workplace</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the OpenCms administration tools for managing multiple sites served by OpenCms.</p>
+<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.0</version>
+            <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
+            <authoremail><![CDATA[info@alkacon.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
+            </dependencies>
+            <exportpoints>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.sites/lib/" destination="WEB-INF/lib/"/>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.sites/webserver-templates/available-macros.txt" destination="WEB-INF/server-scripts/available-macros.txt"/>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.sites/webserver-templates/cron.sh" destination="WEB-INF/server-scripts/cron.sh"/>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.sites/webserver-templates/script.bat" destination="WEB-INF/server-scripts/script.bat"/>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.sites/webserver-templates/script.sh" destination="WEB-INF/server-scripts/script.sh"/>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.sites/webserver-templates/vhost-secure.template" destination="WEB-INF/server-scripts/vhost-secure.template"/>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.sites/webserver-templates/vhost.template" destination="WEB-INF/server-scripts/vhost.template"/>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.sites/webserver-templates/worker.conf" destination="WEB-INF/server-scripts/worker.conf"/>
+                <exportpoint uri="/system/modules/org.opencms.workplace.tools.sites/webserver-templates/workers.properties" destination="WEB-INF/server-scripts/workers.properties"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/modules/org.opencms.workplace.tools.sites/"/>
+                <resource uri="/system/workplace/resources/tools/sites/icons/"/>
+                <resource uri="/system/workplace/admin/sites/"/>
+                <resource uri="/system/workplace/resources/list/delete_inactive.png"/>
+            </resources>
+            <parameters>
+                <param name="configtemplate">/path/to/webserver/config.template</param>
+                <param name="createou">false</param>
+                <param name="enableconfig">true</param>
+                <param name="filenameprefix">opencms</param>
+                <param name="loggingdir">/path/to/logging/folder/</param>
+                <param name="oudescription">OU for: %(site)</param>
+                <param name="securetemplate">/path/to/webserver/secure-config.template</param>
+                <param name="targetpath">/path/to/config/target/</param>
+                <param name="webserverscript">/path/to/webserver/script.sh</param>
+            </parameters>
+        </module>
+        <module>
             <name>org.opencms.workplace.tools.workplace</name>
-            <nicename><![CDATA[OpenCms 8 Workplace management tools]]></nicename>
+            <nicename><![CDATA[OpenCms 9 Workplace management tools]]></nicename>
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace maintenance tools.</p>
 <p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>8.5.2</version>
+            <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.workplace.administration" version="1.0.0"/>
+                <dependency name="org.opencms.workplace.administration" version="9.0.0"/>
             </dependencies>
             <exportpoints>
                 <exportpoint uri="/system/modules/org.opencms.workplace.tools.workplace/lib/" destination="WEB-INF/lib/"/>
@@ -2056,3 +2087,4 @@
         </module>
     </modules>
 </opencms>
+

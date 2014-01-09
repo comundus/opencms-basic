@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/sites</destination>
+		<type>folder</type>
+		<uuidstructure>f6dd3bfb-7b45-11e2-8bad-13f7e154c8f7</uuidstructure>
+		<datelastmodified>Wed, 20 Feb 2013 15:59:03 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 20 Feb 2013 10:11:59 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[%(key.GUI_SITES_ADMIN_TOOL_HELP_0)]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[tools/sites/icons/big/sites.png:tools/sites/icons/small/sites.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[%(key.GUI_SITES_ADMIN_TOOL_GROUP_0)]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[100.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[%(key.GUI_SITES_ADMIN_TOOL_NAME_0)]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Site Management]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.sites.CmsSitesToolHandler]]></value>
+			</property>
+			<property>
+				<name>default-file</name>
+				<value><![CDATA[index.jsp]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tinymce/plugins/emoticons/img/smiley-cry.gif</destination>
+		<type>image</type>
+		<uuidstructure>c730db53-4086-11e3-bb25-13c7f20aeb68</uuidstructure>
+		<uuidresource>c730db54-4086-11e3-bb25-13c7f20aeb68</uuidresource>
+		<datelastmodified>Tue, 29 Oct 2013 10:40:23 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 29 Oct 2013 10:42:16 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[smiley-cry]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:18,h:18]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

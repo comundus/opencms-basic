@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/toolbar/oc-downloadgallery.png</destination>
+		<type>image</type>
+		<uuidstructure>b315edc4-640b-40a3-95e5-09911e963c57</uuidstructure>
+		<uuidresource>3ecb47b3-9d02-4521-9f0e-601bbea6009d</uuidresource>
+		<datelastmodified>Tue, 17 Jan 2012 13:21:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 16 Jan 2012 13:14:38 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:16,h:16]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

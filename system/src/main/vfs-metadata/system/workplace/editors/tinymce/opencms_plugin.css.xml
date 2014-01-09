@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/tinymce/opencms_plugin.css</destination>
+		<type>jsp</type>
+		<uuidstructure>d0273749-407c-11e3-bd65-13c7f20aeb68</uuidstructure>
+		<uuidresource>d027374a-407c-11e3-bd65-13c7f20aeb68</uuidresource>
+		<datelastmodified>Tue, 29 Oct 2013 09:43:08 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 29 Oct 2013 09:30:56 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

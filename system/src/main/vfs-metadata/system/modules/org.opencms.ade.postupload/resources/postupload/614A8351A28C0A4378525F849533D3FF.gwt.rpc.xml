@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.postupload/resources/postupload/614A8351A28C0A4378525F849533D3FF.gwt.rpc</destination>
 		<type>plain</type>
-		<uuidstructure>bc4ea2d4-e894-11e2-b259-eba08a8842b7</uuidstructure>
-		<uuidresource>bc4ec9e5-e894-11e2-b259-eba08a8842b7</uuidresource>
-		<datelastmodified>Tue, 09 Jul 2013 12:40:28 GMT</datelastmodified>
+		<uuidstructure>1ef2313d-48a1-11e3-8a13-b30474d19c62</uuidstructure>
+		<uuidresource>1ef2584e-48a1-11e3-8a13-b30474d19c62</uuidresource>
+		<datelastmodified>Fri, 08 Nov 2013 18:10:59 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Tue, 09 Jul 2013 12:40:28 GMT</datecreated>
+		<datecreated>Fri, 08 Nov 2013 18:10:59 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

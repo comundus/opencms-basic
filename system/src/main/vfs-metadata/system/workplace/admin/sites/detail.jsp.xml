@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/sites/detail.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>fc07f9cb-7b74-11e2-ba12-13f7e154c8f7</uuidstructure>
+		<uuidresource>fc07f9cc-7b74-11e2-ba12-13f7e154c8f7</uuidresource>
+		<datelastmodified>Wed, 20 Feb 2013 16:57:03 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 20 Feb 2013 15:48:34 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[%(key.GUI_DETAIL_SITE_ADMIN_TOOL_HELP_0)]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[%(key.GUI_SITE_ADMIN_TOOL_GROUP_0)]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[2]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[%(key.GUI_DETAIL_SITE_ADMIN_TOOL_NAME_0):%(key.GUI_DETAIL_SITE_ADMIN_TOOL_NAVBARNAME_0)]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Site details]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[params:sites=%(param.sites)&sitetitle=%(param.sitetitle)&action=initial|path:/sites/detail]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.CmsInvisibleToolHandler]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

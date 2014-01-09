@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/sites/icons/small/sites.png</destination>
+		<type>image</type>
+		<uuidstructure>99fd9470-7b57-11e2-8bad-13f7e154c8f7</uuidstructure>
+		<uuidresource>99fd9471-7b57-11e2-8bad-13f7e154c8f7</uuidresource>
+		<datelastmodified>Wed, 20 Feb 2013 13:30:37 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 20 Feb 2013 12:18:15 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[sites]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>8.5.2</version>
+        <version>9.0.0</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -58,12 +58,9 @@
 						<syncVFSPath>/system/modules/org.opencms.ade.sitemap/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.ade.upload/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.editors.codemirror/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.editors.editarea/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.editors.fckeditor/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.editors.tinymce/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.gwt/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.jquery/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.languagedetection/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.administration/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.help/</syncVFSPath>
 						<!-- the following modules contain only the according module jar -->
@@ -79,6 +76,7 @@
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.publishqueue/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.scheduler/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.searchindex/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.sites/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.workplace/</syncVFSPath>
 						<!-- end the following modules contain only the according module jar -->
 

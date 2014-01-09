@@ -278,6 +278,18 @@
 				</sources>
 				<param name="org.opencms.search.CmsSearchIndex.extractContent">false</param>
 			</index>
+			<!-- 
+			<index class="org.opencms.search.solr.CmsSolrIndex">
+				<name>Solr Gallery Index</name>
+				<rebuild>offline</rebuild>
+				<project>Offline</project> 
+				<locale>all</locale>
+				<configuration>solr_gallery_fields</configuration>
+				<sources>
+					<source>gallery_source_all</source>
+				</sources> 
+				<param name="org.opencms.search.CmsSearchIndex.extractContent">false</param>
+			</index> -->
 		</indexes>
 		<indexsources>
 			<indexsource>
@@ -360,6 +372,7 @@
 					<name>pdf</name>
 					<name>rtf</name>
 					<name>html</name>
+					<name>image</name>
 					<name>generic</name>
 					<name>msoffice-ole2</name>
 					<name>msoffice-ooxml</name>
@@ -393,56 +406,47 @@
 		<fieldconfigurations>
 			<fieldconfiguration>
 				<name>standard</name>
-				<description>The standard OpenCms 8.0 search index field
-					configuration.</description>
+				<description>The standard OpenCms 8.0 search index field configuration.</description>
 				<fields>
-					<field name="content" display="%(key.field.content)" store="compress"
-						index="true" excerpt="true">
+					<field name="content" display="%(key.field.content)" store="compress" index="true" excerpt="true">
 						<mapping type="content" />
 					</field>
-					<field name="title-key" display="-" store="true" index="untokenized"
-						boost="0.0">
+					<field name="title-key" display="-" store="true" index="untokenized" boost="0.0">
 						<mapping type="property">Title</mapping>
 					</field>
-					<field name="title" display="%(key.field.title)" store="false"
-						index="true">
+					<field name="title" display="%(key.field.title)" store="false" index="true">
 						<mapping type="property">Title</mapping>
 					</field>
-					<field name="keywords" display="%(key.field.keywords)" store="true"
-						index="true">
+					<field name="keywords" display="%(key.field.keywords)" store="true" index="true">
 						<mapping type="property">Keywords</mapping>
 					</field>
-					<field name="description" display="%(key.field.description)"
-						store="true" index="true">
+					<field name="description" display="%(key.field.description)" store="true" index="true">
 						<mapping type="property">Description</mapping>
 					</field>
-					<field name="meta" display="%(key.field.meta)" store="false"
-						index="true">
+					<field name="meta" display="%(key.field.meta)" store="false" index="true">
 						<mapping type="property">Title</mapping>
 						<mapping type="property">Keywords</mapping>
 						<mapping type="property">Description</mapping>
 					</field>
 				</fields>
 			</fieldconfiguration>
-			<fieldconfiguration
-				class="org.opencms.search.galleries.CmsGallerySearchFieldConfiguration">
+			<fieldconfiguration class="org.opencms.search.galleries.CmsGallerySearchFieldConfiguration">
 				<name>gallery_fields</name>
 				<description>The OpenCms gallery search index field configuration.</description>
 				<fields>
-					<field name="content" display="%(key.field.content)" store="compress"
-						index="true" excerpt="true">
+					<field name="content" display="%(key.field.content)" store="compress" index="true" excerpt="true">
 						<mapping type="content" />
 					</field>
-					<field name="title-key" store="true" index="untokenized"
-						boost="0.0">
+					<field name="title-key" store="true" index="untokenized" boost="0.0">
 						<mapping type="property">Title</mapping>
 					</field>
-					<field name="title" display="%(key.field.title)" store="false"
-						index="true">
+					<field name="sort-title" display="sort-title" store="false" index="untokenized">
 						<mapping type="property">Title</mapping>
 					</field>
-					<field name="description" display="%(key.field.description)"
-						store="true" index="true">
+					<field name="title" display="%(key.field.title)" store="false" index="true">
+						<mapping type="property">Title</mapping>
+					</field>
+					<field name="description" display="%(key.field.description)" store="true" index="true">
 						<mapping type="property">Description</mapping>
 					</field>
 					<field name="meta" store="false" index="true">
@@ -474,27 +478,44 @@
 					<field name="res_userLastModified" store="true" index="untokenized">
 						<mapping type="attribute">userLastModified</mapping>
 					</field>
-					<field name="res_locales" store="true" index="true"
-						analyzer="WhitespaceAnalyzer">
-						<mapping type="dynamic"
-							class="org.opencms.search.galleries.CmsGallerySearchFieldMapping">res_locales</mapping>
+					<field name="res_locales" store="true" index="true" analyzer="WhitespaceAnalyzer">
+						<mapping type="dynamic" class="org.opencms.search.galleries.CmsGallerySearchFieldMapping">res_locales</mapping>
 					</field>
 					<field name="additional_info" store="true" index="false">
-						<mapping type="dynamic"
-							class="org.opencms.search.galleries.CmsGallerySearchFieldMapping">additional_info</mapping>
+						<mapping type="dynamic" class="org.opencms.search.galleries.CmsGallerySearchFieldMapping">additional_info</mapping>
 					</field>
-					<field name="container_types" store="true" index="true"
-						analyzer="WhitespaceAnalyzer">
-						<mapping type="dynamic"
-							class="org.opencms.search.galleries.CmsGallerySearchFieldMapping">container_types</mapping>
+					<field name="container_types" store="true" index="true" analyzer="WhitespaceAnalyzer">
+						<mapping type="dynamic" class="org.opencms.search.galleries.CmsGallerySearchFieldMapping">container_types</mapping>
 					</field>
 				</fields>
 			</fieldconfiguration>
-			<fieldconfiguration
-				class="org.opencms.search.solr.CmsSolrFieldConfiguration">
+			<fieldconfiguration class="org.opencms.search.solr.CmsSolrFieldConfiguration">
 				<name>solr_fields</name>
 				<description>The Solr search index field configuration.</description>
 				<fields />
+			</fieldconfiguration>
+			<fieldconfiguration class="org.opencms.search.solr.CmsGallerySolrFieldConfiguration">
+				<name>solr_gallery_fields</name>
+				<description>The Solr gallery search index field configuration.</description>
+				<fields>
+					<field name="content" display="%(key.field.content)" store="compress" index="true" excerpt="true">
+						<mapping type="content" />
+					</field>
+					<field name="meta" store="false" index="true">
+						<mapping type="property">Title</mapping>
+						<mapping type="property">Description</mapping>
+						<mapping type="attribute">name</mapping>
+					</field>
+					<field name="searchExclude" store="true" index="untokenized">
+						<mapping type="property-search">search.exclude</mapping>
+					</field>
+					<field name="additionalInfo" store="true" index="false">
+						<mapping type="dynamic" class="org.opencms.search.galleries.CmsGallerySearchFieldMapping">additional_info</mapping>
+					</field>
+					<field name="containerTypes" store="true" index="true" analyzer="WhitespaceAnalyzer">
+						<mapping type="dynamic" class="org.opencms.search.galleries.CmsGallerySearchFieldMapping">container_types</mapping>
+					</field>
+				</fields>
 			</fieldconfiguration>
 		</fieldconfigurations>
 	</search>

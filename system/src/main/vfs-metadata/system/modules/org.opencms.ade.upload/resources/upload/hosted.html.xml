@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.upload/resources/upload/hosted.html</destination>
 		<type>plain</type>
-		<uuidstructure>c267d886-e896-11e2-9720-dd0bd35dece3</uuidstructure>
-		<uuidresource>c267ff97-e896-11e2-9720-dd0bd35dece3</uuidresource>
-		<datelastmodified>Tue, 09 Jul 2013 12:54:57 GMT</datelastmodified>
+		<uuidstructure>21e4bcbb-48a1-11e3-b82e-31d29af0972e</uuidstructure>
+		<uuidresource>21e4e3cc-48a1-11e3-b82e-31d29af0972e</uuidresource>
+		<datelastmodified>Fri, 08 Nov 2013 18:11:04 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Tue, 09 Jul 2013 12:54:57 GMT</datecreated>
+		<datecreated>Fri, 08 Nov 2013 18:11:04 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

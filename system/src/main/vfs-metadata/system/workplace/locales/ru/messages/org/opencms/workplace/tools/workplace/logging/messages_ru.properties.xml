@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/ru/messages/org/opencms/workplace/tools/workplace/logging/messages_ru.properties</destination>
+		<type>plain</type>
+		<uuidstructure>f10ebcfb-9ab1-11e2-920a-496fdeb7578e</uuidstructure>
+		<uuidresource>f10ebcfc-9ab1-11e2-920a-496fdeb7578e</uuidresource>
+		<datelastmodified>Mon, 01 Apr 2013 09:53:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 01 Apr 2013 09:53:01 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

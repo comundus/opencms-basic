@@ -15,10 +15,12 @@
       </localesdefault>
       <timezone>GMT+01:00</timezone>
     </internationalization>
-   		<mail>
-			<mailfrom>nobody@nowhere.com</mailfrom>
-			<mailhost name="10.0.2.200" protocol="smtp" />
-		</mail>
+    <mail>
+      <mailfrom>nobody@nowhere.com</mailfrom>
+      <mailhost name="my.smtp.server" port="25" protocol="smtp" user="username" password="secure"/>
+      <mailhost name="alternative.smtp.server" port="25"/>
+      <mailhost name="another.alternative.smtp.server" port="25"/>
+    </mail>
     <scheduler/>
     <versionhistory enabled="true" count="10" deleted="4"/>
     <resourceinit>
@@ -38,10 +40,10 @@
     </passwordhandler>
     <validationhandler class="org.opencms.security.CmsDefaultValidationHandler"/>
     <sites>
-      <workplace-server>http://127.0.0.1:8080</workplace-server>
+      <workplace-server>http://localhost:8080</workplace-server>
       <default-uri>/sites/default/</default-uri>
       <shared-folder>/shared/</shared-folder>
-      <site server="http://127.0.0.1:8080" uri="/sites/default/"/>
+      <site server="http://localhost:8080" uri="/sites/default/"/>
     </sites>
     <runtimeproperties>
       <param name="compatibility.support.oldlocales">false</param>

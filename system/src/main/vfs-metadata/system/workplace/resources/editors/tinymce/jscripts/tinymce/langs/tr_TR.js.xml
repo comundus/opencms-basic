@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tinymce/langs/tr_TR.js</destination>
+		<type>plain</type>
+		<uuidstructure>d5d97419-4086-11e3-bb25-13c7f20aeb68</uuidstructure>
+		<uuidresource>d5d9741a-4086-11e3-bb25-13c7f20aeb68</uuidresource>
+		<datelastmodified>Tue, 29 Oct 2013 10:42:40 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 29 Oct 2013 10:42:40 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[tr_TR]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

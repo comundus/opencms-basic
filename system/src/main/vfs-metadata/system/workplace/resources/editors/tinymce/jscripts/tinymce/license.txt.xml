@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tinymce/license.txt</destination>
+		<type>plain</type>
+		<uuidstructure>c8134c35-4086-11e3-bb25-13c7f20aeb68</uuidstructure>
+		<uuidresource>c8134c36-4086-11e3-bb25-13c7f20aeb68</uuidresource>
+		<datelastmodified>Tue, 29 Oct 2013 10:40:22 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 29 Oct 2013 10:42:17 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[license]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

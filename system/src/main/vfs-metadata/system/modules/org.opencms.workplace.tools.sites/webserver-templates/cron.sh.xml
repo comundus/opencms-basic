@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.workplace.tools.sites/webserver-templates/cron.sh</destination>
+		<type>plain</type>
+		<uuidstructure>254721a9-3d85-11e3-acc0-919ad3557f10</uuidstructure>
+		<uuidresource>254721aa-3d85-11e3-acc0-919ad3557f10</uuidresource>
+		<datelastmodified>Fri, 25 Oct 2013 14:54:10 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 25 Oct 2013 14:53:01 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Bash Script that reloads Apache that can be used for a cron job]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
