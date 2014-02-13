@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.upload/resources/upload/clear.cache.gif</destination>
 		<type>image</type>
-		<uuidstructure>21ede485-48a1-11e3-b82e-31d29af0972e</uuidstructure>
-		<uuidresource>21ee0b96-48a1-11e3-b82e-31d29af0972e</uuidresource>
-		<datelastmodified>Fri, 08 Nov 2013 18:11:04 GMT</datelastmodified>
+		<uuidstructure>6b17ce42-8f4e-11e3-810a-b1fec472a9fa</uuidstructure>
+		<uuidresource>6b17f553-8f4e-11e3-810a-b1fec472a9fa</uuidresource>
+		<datelastmodified>Thu, 06 Feb 2014 16:47:51 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Fri, 08 Nov 2013 18:11:04 GMT</datecreated>
+		<datecreated>Thu, 06 Feb 2014 16:47:51 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties>

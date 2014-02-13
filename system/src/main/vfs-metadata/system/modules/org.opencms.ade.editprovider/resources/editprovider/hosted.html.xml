@@ -3,12 +3,12 @@
 <export>
 	<file>
 		<destination>system/modules/org.opencms.ade.editprovider/resources/editprovider/hosted.html</destination>
-		<type>plain</type>
-		<uuidstructure>1d7184da-48a1-11e3-9728-b3eb2058dd1b</uuidstructure>
-		<uuidresource>1d71abeb-48a1-11e3-9728-b3eb2058dd1b</uuidresource>
-		<datelastmodified>Fri, 08 Nov 2013 18:10:57 GMT</datelastmodified>
+		<type>binary</type>
+		<uuidstructure>d64ba3f7-8f4a-11e3-ad52-790aa33a98c2</uuidstructure>
+		<uuidresource>d64bcb08-8f4a-11e3-ad52-790aa33a98c2</uuidresource>
+		<datelastmodified>Thu, 06 Feb 2014 16:22:13 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Fri, 08 Nov 2013 18:10:57 GMT</datecreated>
+		<datecreated>Thu, 06 Feb 2014 16:22:13 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

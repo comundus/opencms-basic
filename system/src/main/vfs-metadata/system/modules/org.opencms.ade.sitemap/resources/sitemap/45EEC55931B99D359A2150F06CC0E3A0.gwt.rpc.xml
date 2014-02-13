@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.sitemap/resources/sitemap/45EEC55931B99D359A2150F06CC0E3A0.gwt.rpc</destination>
+		<type>binary</type>
+		<uuidstructure>ef7bd309-8f4d-11e3-a656-a10e0585132d</uuidstructure>
+		<uuidresource>ef7cbd6a-8f4d-11e3-a656-a10e0585132d</uuidresource>
+		<datelastmodified>Thu, 06 Feb 2014 16:44:24 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 06 Feb 2014 16:44:24 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

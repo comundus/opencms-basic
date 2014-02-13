@@ -3,12 +3,12 @@
 <export>
 	<file>
 		<destination>system/modules/org.opencms.ade.publish/resources/publish/614A8351A28C0A4378525F849533D3FF.gwt.rpc</destination>
-		<type>plain</type>
-		<uuidstructure>209077ab-48a1-11e3-9418-4d9336860c0c</uuidstructure>
-		<uuidresource>20909ebc-48a1-11e3-9418-4d9336860c0c</uuidresource>
-		<datelastmodified>Fri, 08 Nov 2013 18:11:02 GMT</datelastmodified>
+		<type>binary</type>
+		<uuidstructure>29173f6e-8f4d-11e3-807a-3118c4508f27</uuidstructure>
+		<uuidresource>2917667f-8f4d-11e3-807a-3118c4508f27</uuidresource>
+		<datelastmodified>Thu, 06 Feb 2014 16:38:51 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Fri, 08 Nov 2013 18:11:02 GMT</datecreated>
+		<datecreated>Thu, 06 Feb 2014 16:38:51 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

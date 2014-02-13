@@ -3,12 +3,12 @@
 <export>
 	<file>
 		<destination>system/modules/org.opencms.ade.sitemap/resources/sitemap/614A8351A28C0A4378525F849533D3FF.gwt.rpc</destination>
-		<type>plain</type>
-		<uuidstructure>21365443-48a1-11e3-a3aa-a76ed3f93b20</uuidstructure>
-		<uuidresource>21367b54-48a1-11e3-a3aa-a76ed3f93b20</uuidresource>
-		<datelastmodified>Fri, 08 Nov 2013 18:11:03 GMT</datelastmodified>
+		<type>binary</type>
+		<uuidstructure>efac0add-8f4d-11e3-a656-a10e0585132d</uuidstructure>
+		<uuidresource>efac0ade-8f4d-11e3-a656-a10e0585132d</uuidresource>
+		<datelastmodified>Thu, 06 Feb 2014 16:44:24 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Fri, 08 Nov 2013 18:11:03 GMT</datecreated>
+		<datecreated>Thu, 06 Feb 2014 16:44:24 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

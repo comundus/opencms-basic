@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/workplace/resources/editors/tinymce/changelog.txt</destination>
 		<type>plain</type>
-		<uuidstructure>d8c32c30-3c5d-11e1-9604-974a2cad26ef</uuidstructure>
-		<uuidresource>d8c32c31-3c5d-11e1-9604-974a2cad26ef</uuidresource>
-		<datelastmodified>Tue, 29 Oct 2013 10:40:24 GMT</datelastmodified>
+		<uuidstructure>2931e2e4-55ba-11e3-9554-3fb9e22d18cd</uuidstructure>
+		<uuidresource>2931e2e5-55ba-11e3-9554-3fb9e22d18cd</uuidresource>
+		<datelastmodified>Mon, 25 Nov 2013 07:30:34 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Wed, 11 Jan 2012 14:09:16 GMT</datecreated>
+		<datecreated>Mon, 25 Nov 2013 10:12:59 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties>
