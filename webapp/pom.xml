@@ -3,14 +3,14 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>9.0.0</version>
+        <version>9.0.1</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.comundus.opencms</groupId>
     <artifactId>webapp</artifactId>
     <packaging>war</packaging>
-    <name>OpenCms Webapp</name>
+    <name>OpenCms Basic</name><!-- This name will be shown in the info page /system/info/version -->
     <description>OpenCms web application</description>
     <build>
         <finalName>webapp</finalName>

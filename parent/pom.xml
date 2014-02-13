@@ -23,7 +23,7 @@
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms Parent</name>
-    <version>9.0.0</version>
+    <version>9.0.1</version>
     <description>OpenCms</description>
     <!--
     <url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic/content</url>
@@ -60,14 +60,15 @@
 	<properties>
 		<opencms.db.user>root</opencms.db.user>
 		<opencms.db.password>root</opencms.db.password>
-		<opencms.db.name>opencms</opencms.db.name>
-		<opencms.webapp.path>/comundus</opencms.webapp.path>
+		<opencms.db.name>ocbasic_mvn</opencms.db.name>
+		<opencms.webapp.path>/opencms-basic</opencms.webapp.path>
 		<!--
 			the log file path is relative to WEB-INF/classes
 			or to be more precise relative to log4j.properties
 		-->
 		<opencms.logfile>../logs/opencms.log</opencms.logfile>
-		<opencms.version>9.0.0</opencms.version>
+		<opencms.version>9.0.1</opencms.version>
+		<vfs-plugin.version>${opencms.version}</vfs-plugin.version>
 		<jmock.version>2.6.0</jmock.version>
 		<hamcrest.version>1.3</hamcrest.version>
 	</properties>
@@ -139,7 +140,8 @@
 		    	</property>
 		    </activation>
 			<properties>
-				<opencms.db.jdbcDriver>org.gjt.mm.mysql.Driver</opencms.db.jdbcDriver>
+			    <opencms.db.providerName>mysql</opencms.db.providerName>
+				<opencms.db.jdbcDriver>com.mysql.jdbc.Driver</opencms.db.jdbcDriver>
 				<opencms.db.jdbcUrl>jdbc:mysql://localhost:3306/${opencms.db.name}</opencms.db.jdbcUrl>
 				<opencms.db.jdbcUrl.params>?characterEncoding\=UTF-8</opencms.db.jdbcUrl.params>
 				<jdbcDriver.groupId>mysql</jdbcDriver.groupId>
@@ -159,6 +161,7 @@
 		<profile>
 			<id>postgresql</id>
 			<properties>
+				<opencms.db.providerName>postgresql</opencms.db.providerName>
 				<opencms.db.jdbcDriver>org.postgresql.Driver</opencms.db.jdbcDriver>
 				<opencms.db.jdbcUrl>jdbc:postgresql://localhost:5432/${opencms.db.name}</opencms.db.jdbcUrl>
 				<jdbcDriver.groupId>postgresql</jdbcDriver.groupId>
@@ -178,6 +181,7 @@
 		<profile>
 			<id>db2</id>
 			<properties>
+				<opencms.db.providerName>db2</opencms.db.providerName>
 				<opencms.db.jdbcDriver>com.ibm.db2.jcc.DB2Driver</opencms.db.jdbcDriver>
 				<opencms.db.jdbcUrl>jdbc:db2://localhost:50000/${opencms.db.name}</opencms.db.jdbcUrl>
 				<opencms.db.jdbcUrl.params></opencms.db.jdbcUrl.params>
@@ -289,7 +293,7 @@
 				<opencms.db.user>opencms-basic</opencms.db.user>
 				<opencms.db.password>opencms-basic</opencms.db.password>
 				<opencms.db.name>opencms-basic</opencms.db.name>
-				<opencms.db.jdbcDriver>org.gjt.mm.mysql.Driver</opencms.db.jdbcDriver>
+				<opencms.db.jdbcDriver>com.mysql.jdbc.Driver</opencms.db.jdbcDriver>
 				<opencms.db.jdbcUrl>jdbc:mysql://10.0.1.182:3306/${opencms.db.name}</opencms.db.jdbcUrl>
 				<opencms.db.jdbcUrl.params>?characterEncoding\=UTF-8</opencms.db.jdbcUrl.params>
 				<jdbcDriver.groupId>mysql</jdbcDriver.groupId>
@@ -548,17 +552,17 @@
         		<plugin>
                     <groupId>com.comundus.maven</groupId>
                     <artifactId>vfs-maven-plugin</artifactId>
-                    <version>9.0.0</version>
+                    <version>${vfs-plugin.version}</version>
                     <configuration>
-                    	<adminPassword>admin</adminPassword>
+                    	<adminPassword>cmopencms</adminPassword>
                     	<jspVersion>2.0</jspVersion>
                     	<servletVersion>2.4</servletVersion>
                     </configuration>
                     <dependencies>
                         <dependency>
-				<groupId>${jdbcDriver.groupId}</groupId>
-				<artifactId>${jdbcDriver.artifactId}</artifactId>
-				<version>${jdbcDriver.version}</version>
+							<groupId>${jdbcDriver.groupId}</groupId>
+							<artifactId>${jdbcDriver.artifactId}</artifactId>
+							<version>${jdbcDriver.version}</version>
                         </dependency>                
                     </dependencies>
 	        	</plugin>
@@ -600,37 +604,47 @@
 	            <artifactId>opencms-core</artifactId>
     	        <version>${opencms.version}</version>
         	    <exclusions>
-            		<exclusion>
-            			<groupId>javax.servlet</groupId>            		
-            			<artifactId>servlet-api</artifactId>
-            		</exclusion>
-            		<exclusion>
-	            		<groupId>junit</groupId>
-    	        		<artifactId>junit</artifactId>
-        	    	</exclusion>
-            		<exclusion>
-	           			<groupId>javax.xml.stream</groupId>
-            			<artifactId>stax-api</artifactId>
-            		</exclusion>
+	            	<!-- [AR 9.0.1] These JARs should not appear in WEB-INF/lib - 
+	            	     They should be in the provided scope or be optional in opencms-core -->
+					<exclusion>
+						<artifactId>gwt-user</artifactId>
+						<groupId>com.google.gwt</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>gwt-dev</artifactId>
+						<groupId>com.google.gwt</groupId>
+					</exclusion>
 	            	<exclusion>
-	            		<artifactId>bval-jsr303</artifactId>
-	            		<groupId>org.apache.bval</groupId>
+	            		<artifactId>gwtexporter</artifactId>
+	            		<groupId>org.timepedia.exporter</groupId>
 	            	</exclusion>
 	            	<exclusion>
-	            		<artifactId>bval-core</artifactId>
-	            		<groupId>org.apache.bval</groupId>
+	            		<artifactId>vie-gwt-client</artifactId>
+	            		<groupId>com.alkacon</groupId>
 	            	</exclusion>
 	            	<exclusion>
-	            		<artifactId>jcl-over-slf4j</artifactId>
-	            		<groupId>org.slf4j</groupId>
+	            		<artifactId>validation-api</artifactId>
+	            		<groupId>javax.validation</groupId>
 	            	</exclusion>
-	            	<!--  coordinates changed to org.ow2.asm:asm in version 4.0 -->
 	            	<exclusion>
-	            		<artifactId>asm</artifactId>
-	            		<groupId>asm</groupId>
-	            	</exclusion>	            	
+	            		<artifactId>acacia-editor-client</artifactId>
+	            		<groupId>com.alkacon</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>geranium-client</artifactId>
+	            		<groupId>com.alkacon</groupId>
+	            	</exclusion>
+	            	<!-- end of unnnecessary JARs -->
 	            </exclusions>
         	</dependency>
+        	<!-- Overrides dependency declared by OpenCms because of DoS vulnerability.
+        	     See: http://mail-archives.apache.org/mod_mbox/www-announce/201402.mbox/%3C52F373FC.9030907@apache.org%3E
+        	 -->
+    		<dependency>
+    			<groupId>commons-fileupload</groupId>
+    			<artifactId>commons-fileupload</artifactId>
+    			<version>1.3.1</version>
+    		</dependency>
         	<!-- Version 1.2 requires servlet 2.5 and JSP 2.1
         	<dependency>
        			<groupId>javax.servlet</groupId>        
@@ -658,7 +672,6 @@
 				<version>4.11</version>
 				<scope>test</scope>
 			</dependency>
-
 			<dependency>
 				<groupId>org.jmock</groupId>
 				<artifactId>jmock</artifactId>
@@ -730,5 +743,4 @@
 			<url>file:////Data02/projectsites/projects/cm-comundus/opencms-basic</url>
 		</site>
 	</distributionManagement>
-
 </project>

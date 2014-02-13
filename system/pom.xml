@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>9.0.0</version>
+        <version>9.0.1</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -46,6 +46,9 @@
 						<!-- we synchronize subfolders of orgunits in their own project -->
                         <syncVFSPath>/system/shared/</syncVFSPath>
                         <syncVFSPath>/system/workplace/</syncVFSPath>
+                        
+                        <!-- Folder /system/info was added by comundus -->
+                        <syncVFSPath>/system/info/</syncVFSPath>
 
 						<syncVFSPath>/system/modules/org.opencms.ade.config/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.ade.containerpage/</syncVFSPath>
@@ -63,7 +66,7 @@
 						<syncVFSPath>/system/modules/org.opencms.jquery/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.administration/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.help/</syncVFSPath>
-						<!-- the following modules contain only the according module jar -->
+						<!-- the following modules contain only the corresponding module jar -->
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.accounts/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.cache/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.content/</syncVFSPath>
@@ -78,7 +81,7 @@
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.searchindex/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.sites/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.workplace/</syncVFSPath>
-						<!-- end the following modules contain only the according module jar -->
+						<!-- end the following modules contain only the corresponding module jar -->
 
 						<!-- The module org.opencms.workplace is only needed if no other module which defines default_bodies is present-->
 						<syncVFSPath>/system/modules/org.opencms.workplace/</syncVFSPath>
