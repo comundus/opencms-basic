@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="**/*.java" kind="src" output="target/webapp/WEB-INF/classes" path="src/main/webapp/WEB-INF/classes"/>
-	<classpathentry excluding="**/*.java" kind="src" output="target/webapp/WEB-INF/config" path="src/main/webapp/WEB-INF/config"/>
+	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="var" path="M2_REPO/javax/activation/activation/1.1.1/activation-1.1.1.jar"/>
 	<classpathentry kind="var" path="M2_REPO/javax/xml/ws/jaxws-api/2.1/jaxws-api-2.1.jar"/>
 	<classpathentry kind="var" path="M2_REPO/javax/xml/bind/jaxb-api/2.1/jaxb-api-2.1.jar"/>

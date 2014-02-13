@@ -1,0 +1,99 @@
+<html>
+<head>
+<style type="text/css">
+/* 
+	Web20 Table Style
+	written by Netway Media, http://www.netway-media.com
+*/
+table {
+  border-collapse: collapse;
+  border: 1px solid #666666;
+  font: normal 11px verdana, arial, helvetica, sans-serif;
+  color: #363636;
+  background: #f6f6f6;
+  text-align:left;
+  }
+caption {
+  text-align: center;
+  font: bold 16px arial, helvetica, sans-serif;
+  background: transparent;
+  padding:6px 4px 8px 0px;
+  color: #CC00FF;
+  text-transform: uppercase;
+}
+thead, tfoot {
+background:url(bg1.png) repeat-x;
+text-align:left;
+height:30px;
+}
+thead th, tfoot th {
+padding:5px;
+}
+table a {
+color: #333333;
+text-decoration:none;
+}
+table a:hover {
+text-decoration:underline;
+}
+tr.odd {
+background: #f1f1f1;
+}
+tbody th, tbody td {
+padding:5px;
+}
+
+td:first-child{
+  background:white;
+  font-weight: bold;
+  padding-right:30px;
+}
+</style>
+</head>
+<%@page session="false" buffer="none" import="org.opencms.jsp.CmsJspActionElement, com.comundus.util.SystemInfo, java.util.*" %>
+<%
+CmsJspActionElement jsp=new CmsJspActionElement(pageContext,request,response);
+%>
+
+<h1> PIKSCMS System information </h1>
+<table>
+<tr>
+ <td>OpenCms Version</td><td><%=SystemInfo.getOpenCmsVersion()%></td>
+</tr>
+<tr>
+ <td>Revision</td><td><%=SystemInfo.getRevision()%></td>
+</tr>
+<tr>
+ <td>timestamp</td><td><%=SystemInfo.getBuildTimestamp()%></td>
+</tr>
+</table>
+
+
+<%
+for(SystemInfo.JarInfo jar:SystemInfo.getJars()){
+  if(jar.title==null){%>
+    <h3><%=jar.fileName%></h3>
+  <%}else{%>
+    <h3><%=jar.title%></h3>
+  <%}%>
+  <table>
+<% if(jar.title!=null){%>
+    <tr>
+     <td>File</td><td><%=jar.fileName%></td>
+    </tr>
+<% }
+   if(jar.version!=null){%>
+    <tr>
+     <td>Version</td><td><%=jar.version%></td>
+    </tr>
+<% }
+   if(jar.scmBuild!=null){%>
+    <tr>
+     <td>Revision</td><td><%=jar.scmBuild%></td>
+    </tr>
+<% }%>
+</table>
+
+<%=jar.additionalData==null?"":"<p>"+jar.additionalData+"</p>"%>
+
+<%}%>
