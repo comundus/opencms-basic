@@ -6,8 +6,8 @@
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[Configuration for OpenCms websites.<br>
-<i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.0.0</version>
+<i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
@@ -297,7 +297,7 @@
                 <explorertype name="content_folder" key="fileicon.configfolder" icon="configfolder.png" bigicon="configfolder_big.png" reference="folder">
                     <newresource page="extendedfolder" uri="newresource.jsp?newresourcetype=content_folder" order="491" autosetnavigation="false" autosettitle="false" info="desc.configfolder"/>
                     <accesscontrol>
-                        <accessentry principal="ROLE.DEVELOPER" permissions="+r+v+w+c"/>
+                        <accessentry principal="ROLE.WORKPLACE_USER" permissions="+r+v+w+c"/>
                     </accesscontrol>
                 </explorertype>
                 <explorertype name="sitemap_config" key="fileicon.sitemap_config" icon="sitemap_config.png" bigicon="sitemap_config_big.png" reference="xmlcontent">
@@ -404,8 +404,8 @@
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[The containerpage editor.<br>
-<i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.0.0</version>
+<i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -428,8 +428,8 @@
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[Editor for structured contents.<br>
-<i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.0.0</version>
+<i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
@@ -453,8 +453,8 @@
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[This module contains an edit provider for the original Direct Edit which has a number of features from ADE.<br>
-<i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.0.0</version>
+<i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -477,8 +477,8 @@
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[<p>Gwt based gallery dialog for OpenCms 8<p>
-<p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -502,8 +502,8 @@
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[This module provides a dialog for editing the configured default properties of a file after uploading it.<br>
-<i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.0.0</version>
+<i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
+            <version>9.0.1</version>
             <authorname/>
             <authoremail/>
             <datecreated/>
@@ -526,8 +526,8 @@
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[This module provides the properties dialog for the workplace.<br>
-<i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.0.0</version>
+<i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
@@ -550,8 +550,8 @@
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[<p>Gwt based publish dialog for OpenCms 8<p>
-<p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname/>
             <authoremail/>
             <datecreated/>
@@ -574,8 +574,8 @@
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[<p>ADE Sitemap Editor.</p>
-<p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -602,8 +602,8 @@
             <group>OpenCms ADE</group>
             <class/>
             <description><![CDATA[<p>Gwt based upload dialog for OpenCms 8</p>
-					 <p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+					 <p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -627,8 +627,8 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Common Editing tools.</p>
 <p>This module is needed to be able to edit files in the OpenCms Workplace.</p>
-<p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -706,8 +706,8 @@
             <class/>
             <description><![CDATA[<p>This module adds the Open Source text editor "CodeMirror" to the OpenCms Workplace.</p>
 <p>Install this module if you want a source code editor with syntax highlighting. The version of CodeMirror is 3.14</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -731,8 +731,8 @@
             <group>OpenCms Editors</group>
             <class/>
             <description><![CDATA[<p>This module contains TinyMCE editor for HTML pages and XML content.</p>
-                              <p>The version of TinyMCE is 4.0.1</p>]]></description>
-            <version>9.0.0</version>
+                              <p>The version of TinyMCE is 4.0.16</p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[OpenCms community]]></authorname>
             <authoremail><![CDATA[opencms-dev@opencms.org]]></authoremail>
             <datecreated/>
@@ -757,7 +757,7 @@
             <group>OpenCms Editors</group>
             <class/>
             <description><![CDATA[<p>Provides an OpenCms GWT framework.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -777,7 +777,7 @@
             <group>OpenCms frontend</group>
             <class/>
             <description><![CDATA[This modules includes the jQuery javascript libraries as well as several plugins used by OpenCms]]></description>
-            <version>9.0.0</version>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -798,8 +798,8 @@
             <class/>
             <description><![CDATA[<p>This module contains the German language localization files for the OpenCms workplace.</p>
 <p>Install this module if you want to use the german version of the OpenCms Workplace.</p>
-<p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -821,7 +821,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the Spanish language localization files for the OpenCms workplace.</p>
 <p>Install this module if you want to use the Spanish version of the OpenCms Workplace.</p>
-<p><i>&copy; 2013 by OpenCms Hispano (http://www.opencmshispano.com).</i></p>]]></description>
+<p><i>&copy; 2014 by OpenCms Hispano (http://www.opencmshispano.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[OpenCms Hispano]]></authorname>
             <authoremail><![CDATA[info@opencmshispano.es]]></authoremail>
@@ -844,7 +844,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the Italian language localization files for the OpenCms workplace.</p>
 <p>Install this module if you want to use the Italian version of the OpenCms Workplace.</p>
-<p><i>&copy; 2013 by Coranto Informatica di Antonio Cordeddu  (http://www.coranto.it).</i></p>]]></description>
+<p><i>&copy; 2014 by Coranto Informatica di Antonio Cordeddu  (http://www.coranto.it).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Coranto Informatica]]></authorname>
             <authoremail><![CDATA[info@coranto.it]]></authoremail>
@@ -866,7 +866,7 @@
             <group>OpenCms Localization</group>
             <class/>
             <description><![CDATA[OpenCms Localization]]></description>
-            <version>9.0.0</version>
+            <version>9.0.1</version>
             <authorname><![CDATA[ITDT Ltd.]]></authorname>
             <authoremail><![CDATA[support@itdt.ru]]></authoremail>
             <datecreated/>
@@ -892,8 +892,8 @@
             <class>org.opencms.workplace.CmsWorkplaceAction</class>
             <description><![CDATA[<p>This module contains the OpenCms Workplace base files.</p>
 <p>It includes common used dialogs and style sheets, that are needed by any workplace module.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1059,7 +1059,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the base components for the administration view.</p>
 <p>Its allows you to install and/or develop administration tools for OpenCms.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1090,7 +1090,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace category folders.</p>
 <p>It includes the system wide category folders.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1109,8 +1109,8 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace Explorer.</p>
 <p>Install this module if you want a GUI to work on the OpenCms VFS.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1223,7 +1223,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace gallery folders.</p>
 <p>It includes the system wide gallery folders.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1242,7 +1242,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace handler files.</p>
 <p>It includes the 404 and 500 error handlers that are showed in case of an error of a frontend application.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1262,7 +1262,7 @@
             <group>OpenCms Online Help</group>
             <class/>
             <description><![CDATA[<p>This module installs the basic templates required for the online help in all languages.</p>
-<p><i>&copy; 2013 by Alkacon Software</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1286,7 +1286,7 @@
             <group>OpenCms Online Help</group>
             <class/>
             <description><![CDATA[<p>This module contains the online help pages for the OpenCms workplace in German language.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1311,7 +1311,7 @@
             <group>OpenCms Online Help</group>
             <class/>
             <description><![CDATA[<p>This module contains the english online help pages for the OpenCms workplace.</p>
-<p><i>&copy; 2013 by Alkacon Software</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1336,7 +1336,7 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the user accounts and groups.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1452,7 +1452,7 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the different internal caches.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1493,8 +1493,8 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the content of resources.</p>
 <p>Install this module if you want to modify file properties or content elements.</p>
-<p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1556,7 +1556,7 @@
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms database maintainance tools.</p>
 <p>Install this module if you want to import/export data, it also contains a static export tool.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1609,7 +1609,7 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains Overviews for every OpenCms gallery types.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1645,7 +1645,7 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing the file history feature.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1677,7 +1677,7 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for validating links in xml documents and pointer links.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1713,8 +1713,8 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains administration tools for managing the OpenCms modules.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1737,6 +1737,10 @@
                 <resource uri="/system/workplace/admin/modules/modules_delete.jsp"/>
                 <resource uri="/system/workplace/admin/modules/modules_edit.jsp"/>
                 <resource uri="/system/workplace/admin/modules/modules_edit_parameters.jsp"/>
+                <resource uri="/system/workplace/admin/modules/modules_add_type.jsp"/>
+                <resource uri="/system/workplace/admin/modules/add_type_report.jsp"/>
+                <resource uri="/system/workplace/admin/modules/modules_clone.jsp"/>
+                <resource uri="/system/workplace/admin/modules/module-clone-report.jsp"/>
                 <resource uri="/system/workplace/admin/modules/modules_edit_resources.jsp"/>
                 <resource uri="/system/workplace/admin/modules/modules_export.jsp"/>
                 <resource uri="/system/workplace/admin/modules/modules_import.jsp"/>
@@ -1753,10 +1757,12 @@
                 <resource uri="/system/workplace/resources/tools/modules/buttons/module_exportpoints.png"/>
                 <resource uri="/system/workplace/resources/tools/modules/buttons/modules.png"/>
                 <resource uri="/system/workplace/resources/tools/modules/icons/big/module_add.png"/>
+                <resource uri="/system/workplace/resources/tools/modules/icons/big/module_add_restype.png"/>
                 <resource uri="/system/workplace/resources/tools/modules/icons/big/module_delete.png"/>
                 <resource uri="/system/workplace/resources/tools/modules/icons/big/module_dependencies.png"/>
                 <resource uri="/system/workplace/resources/tools/modules/icons/big/module_dependencies_add.png"/>
                 <resource uri="/system/workplace/resources/tools/modules/icons/big/module_edit.png"/>
+                <resource uri="/system/workplace/resources/tools/modules/icons/big/module_clone.png"/>
                 <resource uri="/system/workplace/resources/tools/modules/icons/big/module_export.png"/>
                 <resource uri="/system/workplace/resources/tools/modules/icons/big/module_exportpoints.png"/>
                 <resource uri="/system/workplace/resources/tools/modules/icons/big/module_exportpoints_add.png"/>
@@ -1778,8 +1784,8 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the tools for managing the OpenCms projects.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -1826,7 +1832,7 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the tools for view the OpenCms publish queue.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1853,7 +1859,7 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the tools for managing scheduled jobs.</p>
-<p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -1886,8 +1892,8 @@
             <class/>
             <description><![CDATA[<p>This module contains tools related to the search capabilities of OpenCms.</p>
 <p>Install this module if you need search capabilities in OpenCms.</p>
-<p><i>(c) 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1971,8 +1977,8 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms administration tools for managing multiple sites served by OpenCms.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.0.0</version>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+            <version>9.0.1</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -2016,7 +2022,7 @@
             <group>OpenCms Workplace</group>
             <class/>
             <description><![CDATA[<p>This module contains the OpenCms Workplace maintenance tools.</p>
-<p><i>&copy; 2013 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
+<p><i>&copy; 2014 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
             <version>9.0.0</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>

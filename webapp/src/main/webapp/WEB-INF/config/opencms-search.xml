@@ -406,7 +406,7 @@
 		<fieldconfigurations>
 			<fieldconfiguration>
 				<name>standard</name>
-				<description>The standard OpenCms 8.0 search index field configuration.</description>
+				<description>The standard OpenCms search index field configuration.</description>
 				<fields>
 					<field name="content" display="%(key.field.content)" store="compress" index="true" excerpt="true">
 						<mapping type="content" />
@@ -494,6 +494,7 @@
 				<description>The Solr search index field configuration.</description>
 				<fields />
 			</fieldconfiguration>
+			<!-- Removed in OpenCms 9.0.1
 			<fieldconfiguration class="org.opencms.search.solr.CmsGallerySolrFieldConfiguration">
 				<name>solr_gallery_fields</name>
 				<description>The Solr gallery search index field configuration.</description>
@@ -517,6 +518,7 @@
 					</field>
 				</fields>
 			</fieldconfiguration>
+			-->
 		</fieldconfigurations>
 	</search>
 </opencms>
