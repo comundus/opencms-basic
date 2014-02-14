@@ -13,14 +13,14 @@
 <%@ page import = "java.lang.management.*" %>
 
 <%
+	boolean ENABLED = false;
 
-// Username und Passwort prüfen
-
+// Username und Passwort prüfen	
 	String siteAuth = "";
 	String siteUser = "";
 	String sitePassword = "";
 	String sitePass = "6RWeQrywyNZh5uyGKZ+fQsZXN9E=";
-	siteAuth = request.getParameter( "siteA" ); 
+	siteAuth = (String)session.getAttribute( "siteA" ); 
 	siteUser = request.getParameter( "siteU" );
 	sitePassword = request.getParameter( "siteP" );
 	MessageDigest digest = MessageDigest.getInstance("SHA-1");
@@ -31,8 +31,8 @@
 	
 //Wenn Passwort gültig
 	
-	if ( ("Admin".equals( siteUser ) && sitePass.equals( encoded ) ) || "true".equals( siteAuth ) ) {
-		
+	if ( ENABLED && (("Admin".equals( siteUser ) && sitePass.equals( encoded ) ) || "true".equals( siteAuth )) ) {
+		session.setAttribute("siteA", "true");
 //Variablen deklarieren
 		
 		String testCon = "";
@@ -707,6 +707,18 @@
 			<td width="406" height="278"></td>
 			<td width="210"></td>
 		</tr>
+    <% 
+    if (!ENABLED) { %>
+    	<tr>
+
+    		<td colspan = "2">
+    			<div style = "margin:5px 60px 5px 290px; border: 2px solid red; padding:3px 30px; color:black; background-color:#eee;">
+       			Admin-Tool nicht verfügbar.
+       			</div>
+       		</td>
+    	</tr>
+    <% 
+    } %>	
 		<tr>
 			<td height="32" align="right" valign="middle">Benutzername:&nbsp;</td>
 			<td><input type="text" name="siteU" /></td>
