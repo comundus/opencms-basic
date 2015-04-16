@@ -64,8 +64,10 @@
 						<syncVFSPath>/system/modules/org.opencms.editors.tinymce/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.gwt/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.jquery/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ugc/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.administration/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.help/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.spellcheck/</syncVFSPath>
 						<!-- the following modules contain only the corresponding module jar -->
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.accounts/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.cache/</syncVFSPath>
@@ -80,6 +82,7 @@
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.scheduler/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.searchindex/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.sites/</syncVFSPath>
+						
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.workplace/</syncVFSPath>
 						<!-- end the following modules contain only the corresponding module jar -->
 
