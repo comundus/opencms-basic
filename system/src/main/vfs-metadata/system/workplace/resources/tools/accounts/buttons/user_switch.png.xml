@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/accounts/buttons/user_switch.png</destination>
+		<type>image</type>
+		<uuidstructure>2f5830c0-64d2-11db-8713-bf6fa13020a5</uuidstructure>
+		<uuidresource>2f5830c1-64d2-11db-8713-bf6fa13020a5</uuidresource>
+		<datelastmodified>Wed, 07 Feb 2007 11:31:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 26 Oct 2006 09:13:03 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

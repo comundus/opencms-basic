@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/workplace/icons/big/log_preferences.png</destination>
+		<type>image</type>
+		<uuidstructure>49195b5c-5346-11e1-ba8f-e7aa6134161f</uuidstructure>
+		<uuidresource>49195b5d-5346-11e1-ba8f-e7aa6134161f</uuidresource>
+		<datelastmodified>Thu, 09 Feb 2012 11:28:49 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 09 Feb 2012 11:28:49 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[log_preferences]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:32,h:32]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

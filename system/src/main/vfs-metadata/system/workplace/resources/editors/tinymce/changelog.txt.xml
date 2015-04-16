@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/changelog.txt</destination>
+		<type>plain</type>
+		<uuidstructure>2931e2e4-55ba-11e3-9554-3fb9e22d18cd</uuidstructure>
+		<uuidresource>2931e2e5-55ba-11e3-9554-3fb9e22d18cd</uuidresource>
+		<datelastmodified>Mon, 25 Nov 2013 07:30:34 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 25 Nov 2013 10:12:59 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[changelog]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

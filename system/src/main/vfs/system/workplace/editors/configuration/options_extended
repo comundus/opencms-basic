@@ -1,0 +1,108 @@
+# Editor display options
+
+# format selector
+option.formatselect=true
+formatselect.options=p;h1;h2;h3;h4;h5;h6;pre;address;div
+
+# font manipulation
+font.size=true
+font.face=true
+font.color=true
+font.decoration=true
+
+# color
+bg.color=true
+
+# paragraph manipulation
+text.align=true
+text.indent=true
+text.lists=true
+
+# individual buttons for paragraph manipulation
+button.bold=true
+button.italic=true
+button.underline=true
+button.strikethrough=true
+button.super=true
+button.sub=true
+button.alignleft=true
+button.aligncenter=true
+button.alignright=true
+button.justify=true
+button.indent=true
+button.outdent=true
+button.orderedlist=true
+button.unorderedlist=true
+
+# customized editor button
+button.customized=true
+
+# page editor options
+option.element.selection=true
+option.element.language=true
+option.properties=true
+option.cleanup=true
+option.sourcecode=true
+
+# galleries
+gallery.download=true
+gallery.link=true
+gallery.image=true
+gallery.html=true
+gallery.table=true
+
+# advanced gallery flag
+gallery.advanced=true
+
+# enhanced gallery flags
+gallery.enhancedoptions=false
+gallery.usethickbox=false
+
+# link & anchor options
+option.links=true
+option.linkstyleinputs=false
+option.link=true
+option.extlink=true
+option.anchor=true
+option.unlink=true
+
+# misc buttons
+option.images=true
+option.specialchars=true
+option.rule=true
+option.table=true
+option.form=false
+option.style=true
+option.flash=false
+option.spellcheck=false
+option.print=true
+option.help=true
+
+# advanced buttons (may not work with all editors)
+button.abbr=false
+button.absolute=false
+button.acronym=false
+button.advhr=true
+button.attribs=false
+button.blockquote=true
+button.hr=true
+button.cite=false
+button.del=false
+button.image=false
+button.ins=false
+button.insertdate=false
+button.insertlayer=false
+button.inserttime=false
+button.ltr=false
+button.media=false
+button.movebackward=false
+button.moveforward=false
+button.newdocument=false
+button.nonbreaking=false
+button.pagebreak=false
+button.removeformat=true
+button.rtl=false
+button.styleprops=true
+button.template=false
+button.visualaid=true
+button.visualchars=false

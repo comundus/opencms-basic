@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/components/widgets/advancedvfsimage.js</destination>
+		<type>plain</type>
+		<uuidstructure>7df4ca04-206e-11df-9200-9db16379cf8b</uuidstructure>
+		<uuidresource>7df4ca05-206e-11df-9200-9db16379cf8b</uuidresource>
+		<datelastmodified>Fri, 26 Feb 2010 09:46:34 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 23 Feb 2010 11:27:57 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

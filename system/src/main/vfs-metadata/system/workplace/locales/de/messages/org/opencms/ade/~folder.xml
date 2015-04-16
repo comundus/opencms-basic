@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/messages/org/opencms/ade</destination>
+		<type>folder</type>
+		<uuidstructure>60843394-762c-11e0-bcc1-4dcd2ca9d6dc</uuidstructure>
+		<datelastmodified>Wed, 04 May 2011 08:56:19 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 04 May 2011 08:56:19 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

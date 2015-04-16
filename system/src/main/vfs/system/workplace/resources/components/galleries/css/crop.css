@@ -1,0 +1,49 @@
+html {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: /*begin-color AppWorkspace*/#999999/*end-color*/;
+	color: /*begin-color WindowText*/#000000/*end-color*/;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+div.head {
+	padding: 6px 0 6px 4px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: Caption;
+	color: /*begin-color CaptionText*/#ffffff/*end-color*/;
+}
+
+div.imgbg {
+	background-color: /*begin-color ButtonFace*/#f0f0f0/*end-color*/;
+	height: 450px;
+	text-align: center;
+}
+
+div.container {
+}
+
+div.selection {
+	background-color: /*begin-color InfoBackground*/#f9f9f9/*end-color*/;
+	color: /*begin-color InfoText*/#ffffff/*end-color*/;
+	font-size: 12px;
+	padding: 6px 0 6px 4px;
+}
+
+div.width, div.height {
+	padding-bottom: 2px;
+}
+
+div.buttons {
+	padding-top: 6px;
+	border-top: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+	text-align: center;
+}
+
+button {
+	margin: 0 6px 0 4px;
+}

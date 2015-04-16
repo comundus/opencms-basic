@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/downloadgallery/js</destination>
+		<type>folder</type>
+		<uuidstructure>3e62846f-205b-11de-9a68-a75c4a166a24</uuidstructure>
+		<datelastmodified>Fri, 03 Apr 2009 14:25:43 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 03 Apr 2009 14:25:12 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[js for mode]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

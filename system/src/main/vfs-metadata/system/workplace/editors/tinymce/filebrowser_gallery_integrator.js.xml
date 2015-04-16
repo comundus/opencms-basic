@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/tinymce/filebrowser_gallery_integrator.js</destination>
+		<type>jsp</type>
+		<uuidstructure>f8d526bb-f078-4470-9ad0-9e58205807d5</uuidstructure>
+		<uuidresource>f8d526bc-f078-4470-9ad0-9e58205807d5</uuidresource>
+		<datelastmodified>Tue, 17 Jan 2012 15:19:48 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 11 Jan 2012 13:55:37 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

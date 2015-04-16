@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.postupload/pages/postupload_useconfig.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>ea643811-375c-4b14-ad4c-3df748f88ea2</uuidstructure>
+		<uuidresource>f782375a-1c07-4a01-ba1b-64595e157658</uuidresource>
+		<datelastmodified>Tue, 03 Jul 2012 07:50:38 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 03 Jul 2012 07:48:57 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

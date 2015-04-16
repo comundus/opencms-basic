@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/it/messages/org/opencms/ade/upload/clientmessages_it.properties</destination>
+		<type>plain</type>
+		<uuidstructure>db7c5deb-9d76-11e4-8f8a-74d02bc54b39</uuidstructure>
+		<uuidresource>db7c5dec-9d76-11e4-8f8a-74d02bc54b39</uuidresource>
+		<datelastmodified>Tue, 10 Feb 2015 09:23:35 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 16 Jan 2015 11:57:34 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>content-encoding</name>
+				<value><![CDATA[ISO-8859-1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

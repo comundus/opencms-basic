@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/it/messages/org/opencms/workplace/tools/content/check</destination>
+		<type>folder</type>
+		<uuidstructure>dc39ccb8-77df-11dc-b123-91bf46278b31</uuidstructure>
+		<datelastmodified>Thu, 11 Oct 2007 09:53:47 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 11 Oct 2007 09:53:47 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/tinymce/base_content.css</destination>
+		<type>plain</type>
+		<uuidstructure>126b832a-b3d4-11e1-9f11-43f8f38677e0</uuidstructure>
+		<uuidresource>126b832b-b3d4-11e1-9f11-43f8f38677e0</uuidresource>
+		<datelastmodified>Mon, 11 Jun 2012 14:54:49 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 11 Jun 2012 14:45:22 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

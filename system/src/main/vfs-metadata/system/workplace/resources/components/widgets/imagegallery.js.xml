@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/components/widgets/imagegallery.js</destination>
+		<type>plain</type>
+		<uuidstructure>83c080cc-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>0488a5d0-2d83-11d9-bb12-a93dabd07c3b</uuidresource>
+		<datelastmodified>Fri, 05 Jun 2009 10:31:04 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[JS to open image gallery]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

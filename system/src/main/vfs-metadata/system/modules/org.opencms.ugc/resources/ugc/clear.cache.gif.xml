@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ugc/resources/ugc/clear.cache.gif</destination>
+		<type>image</type>
+		<uuidstructure>747426ab-c0b5-11e4-875b-0fa48df655f8</uuidstructure>
+		<uuidresource>747474cc-c0b5-11e4-875b-0fa48df655f8</uuidresource>
+		<datelastmodified>Mon, 02 Mar 2015 08:23:50 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 02 Mar 2015 08:23:50 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:1,h:1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

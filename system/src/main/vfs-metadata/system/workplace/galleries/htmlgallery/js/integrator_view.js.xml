@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/galleries/htmlgallery/js/integrator_view.js</destination>
+		<type>jsp</type>
+		<uuidstructure>dba150e8-49f9-11de-9bb2-350e680a0242</uuidstructure>
+		<uuidresource>dba150e9-49f9-11de-9bb2-350e680a0242</uuidresource>
+		<datelastmodified>Fri, 05 Jun 2009 10:15:02 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 26 May 2009 13:33:54 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[View integrator JS]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

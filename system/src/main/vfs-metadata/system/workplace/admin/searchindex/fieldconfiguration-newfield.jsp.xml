@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/searchindex/fieldconfiguration-newfield.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>669df531-8441-11db-a125-09c80f20c0b6</uuidstructure>
+		<uuidresource>669df532-8441-11db-a125-09c80f20c0b6</uuidresource>
+		<datelastmodified>Mon, 11 Dec 2006 15:32:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 05 Dec 2006 09:17:16 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_LIST_FIELDS_NAME_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[tools/searchindex/icons/big/fieldconfiguration-newfield.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_GROUPS_FIELDCONFIGURATION_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[2.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_LIST_SEARCHINDEX_ACTION_FIELDS_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Add new field to fieldconfiguration]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[params:action=initial&fieldconfiguration=${param.fieldconfiguration}|path:/searchindex/fieldconfigurations/fieldconfiguration/newfield]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.searchindex.CmsSearchToolHandler]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

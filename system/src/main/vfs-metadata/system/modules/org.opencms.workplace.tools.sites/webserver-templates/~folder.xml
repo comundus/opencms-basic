@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.workplace.tools.sites/webserver-templates</destination>
+		<type>folder</type>
+		<uuidstructure>d22e7e52-9de5-11e2-8c36-c1221e6a3a06</uuidstructure>
+		<datelastmodified>Fri, 05 Apr 2013 11:42:33 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 05 Apr 2013 11:41:57 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Example Apache virtual host file and script file]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

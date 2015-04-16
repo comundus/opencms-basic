@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.upload/upload.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>be9eaf09-40df-11e0-b044-e756eface22e</uuidstructure>
+		<uuidresource>be9eaf0a-40df-11e0-b044-e756eface22e</uuidresource>
+		<datelastmodified>Fri, 25 Feb 2011 13:04:14 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 25 Feb 2011 13:04:14 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

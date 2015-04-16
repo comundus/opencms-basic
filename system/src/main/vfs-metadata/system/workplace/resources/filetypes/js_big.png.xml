@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/filetypes/js_big.png</destination>
+		<type>image</type>
+		<uuidstructure>9bf4d181-4032-11e0-bd91-cba538d80d30</uuidstructure>
+		<uuidresource>9bf4d182-4032-11e0-bd91-cba538d80d30</uuidresource>
+		<datelastmodified>Thu, 24 Feb 2011 16:24:53 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 24 Feb 2011 16:24:53 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:24,h:24]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

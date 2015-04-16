@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/components/galleries/js/linkgallery</destination>
+		<type>folder</type>
+		<uuidstructure>b67045ba-451e-11de-80e1-350e680a0242</uuidstructure>
+		<datelastmodified>Tue, 26 May 2009 10:32:11 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 20 May 2009 09:15:08 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Folder for Linkgallery JavaScript]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

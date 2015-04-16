@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/es/messages/org/opencms/workplace/tools/workplace/rfsfile/messages_es.properties</destination>
+		<type>plain</type>
+		<uuidstructure>db284170-386a-11dd-b6aa-111d34530985</uuidstructure>
+		<uuidresource>db284171-386a-11dd-b6aa-111d34530985</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 12 Jun 2008 10:32:28 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/toolbar/oc-linkgallery.gif</destination>
+		<type>image</type>
+		<uuidstructure>066dc610-7222-476a-adc3-352bb4e81035</uuidstructure>
+		<uuidresource>066dc611-7222-476a-adc3-352bb4e81035</uuidresource>
+		<datelastmodified>Tue, 17 Jan 2012 13:21:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 16 Jan 2012 13:14:38 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

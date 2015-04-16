@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/sites/icons/big/favicon.png</destination>
+		<type>image</type>
+		<uuidstructure>c022f009-9309-11e2-a16a-d723659840f0</uuidstructure>
+		<uuidresource>c022f00a-9309-11e2-a16a-d723659840f0</uuidresource>
+		<datelastmodified>Fri, 22 Mar 2013 16:01:37 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 22 Mar 2013 16:01:26 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[fav]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:32,h:32]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

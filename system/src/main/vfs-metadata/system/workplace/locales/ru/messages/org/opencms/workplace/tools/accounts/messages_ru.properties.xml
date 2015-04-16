@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/ru/messages/org/opencms/workplace/tools/accounts/messages_ru.properties</destination>
+		<type>plain</type>
+		<uuidstructure>daecbad1-6e72-11e1-9af0-6192c87e77fb</uuidstructure>
+		<uuidresource>daecbad2-6e72-11e1-9af0-6192c87e77fb</uuidresource>
+		<datelastmodified>Mon, 01 Apr 2013 09:53:19 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 15 Mar 2012 07:45:37 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

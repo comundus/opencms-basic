@@ -1,0 +1,716 @@
+html {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	overflow: hidden;
+}
+
+input, textarea, select {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+button {
+	width: auto;		/* should be set to handle ie problem with button text */
+	overflow: visible;	/* should be set to handle ie problem with button text */
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-left: 4px;
+	height: 25px;
+}
+
+#gallerybuttons a {
+	text-decoration: none;
+}
+
+body {
+	color: /*begin-color WindowText*/#000000/*end-color*/;
+	background-color: /*begin-color Window*/#ffffff/*end-color*/;
+	margin: 0 4px;
+	padding: 0;
+}
+
+img {
+	border: none;
+}
+
+.btnreset {
+	float: left;
+	background-position: center center;
+	background-image: url(../img/reset.gif);
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	font-size: 1px;
+	cursor: pointer;
+}
+
+.btnlocked, .btnunlocked {
+	float: left;
+	background-position: center center;
+	background-image: url(../img/locked.gif);
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	font-size: 1px;
+	cursor: pointer;
+}
+
+.btnunlocked {
+	background-image: url(../img/unlocked.gif);
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+#dialogbuttons {
+	clear: left;
+	text-align: center;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	visibility: visible;
+}
+
+#closebutton {
+	text-align: center;
+	padding: 8px 0 0 0;
+	display: none;
+}
+
+#galleryiteminfo #dialogbuttons #cancelbutton ,
+#categoryiteminfo #dialogbuttons #cancelbutton  {
+	margin-left: 4px;
+
+}
+
+#preview #imagename, #preview #htmlname, 
+#advancedhead, #galleryfolders div.head, #categoryfolders div.head  {
+	color: /*begin-color ButtonText*/#000000/*end-color*/;
+	background-color: /*begin-color ButtonFace*/#f0f0f0/*end-color*/;
+	border-bottom: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+	padding: 6px 4px;
+	font-size: 12px;
+	font-weight: bold;
+	white-space: nowrap;
+	height: 16px;
+	overflow: hidden;
+}
+
+#preview #imagename #toggleInfo,
+#preview #htmlname #toggleInfo {
+	width: 16px;
+	height: 16px;
+	float: left;
+	vertical-align: middle;
+	margin-right: 6px;
+	background-position: center center;
+	cursor: pointer;
+}
+
+#preview #imagename div.hideinfo,
+#preview #htmlname div.hideinfo {
+	background-image: url(../../../buttons/move_up.png);
+}
+
+#preview #imagename div.showinfo,
+#preview #htmlname div.showinfo {
+	background-image: url(../../../buttons/move_down.png);
+}
+
+#preview #previewwrapper, #preview #previewdetailinfo {
+	height: 450px;
+	padding: 0 6px;
+	background-color: /*begin-color ButtonFace*/#f0f0f0/*end-color*/;
+	border-bottom: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+}
+
+#preview #previewwrapperhtml {
+	height: 550px;
+	background-color:/*begin-color window*/#ffffff/*end-color*/;
+	border-bottom: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+}
+
+#preview #imgpreview {
+	text-align: center;
+}
+
+#preview #htmlpreview {
+	text-align: center;
+	height: 550px;
+	overflow: auto;
+}
+
+
+#preview #imgdetails {
+	padding: 6px 4px;
+	border-bottom: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+}
+
+#preview #imgdetails table.wrapper  {
+	width: 100%;
+}
+
+#preview #imgdetails td.wrapper  {
+	width: 50%;
+	vertical-align: top;
+}
+
+#preview #imgdetails.head {
+	font-size: 12px;
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+
+#preview #imgdetails a {
+	text-decoration: none;
+}
+
+#preview #imgdetails img {
+	vertical-align: middle;
+	margin-right: 6px;
+}
+
+#preview #imgdetails #formatoptions td {
+	padding: 2px 2px 0 0;
+}
+
+#preview #imgdetails #croplink {
+	float: left;
+	margin-right: 6px;
+}
+
+#preview #imgdetails #cropremove {
+}
+
+#preview #imgdetails #cropinfo {
+	clear: left;
+}
+
+input.showborder, select.showborder {
+	border: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+}
+
+#preview #dialogbuttons #cancelbutton {
+	margin-left: 4px;
+}
+
+#preview, #galleries, #categories {
+	background-color: /*begin-color InfoBackground*/#f9f9f9/*end-color*/;
+	overflow: hidden;
+}
+
+/* gallery folder list for all galleries --------------------------- */
+#galleryfolderlist, #categoryfolderlist {
+	padding: 6px 4px;
+	height: 550px;		/* overwritten in editor.css */
+	overflow: auto;
+}
+
+#galleryfolderlist div, #categoryfolderlist div {
+	margin-bottom: 6px;
+	padding: 4px;
+	background-color: /*begin-color Window*/#ffffff/*end-color*/;
+	border: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+	cursor: pointer;
+}
+
+#galleryfolderlist div:hover, #categoryfolderlist div:hover, #galleryfolderlist div.active:hover, #categoryfolderlist div.active:hover {
+	background-color: #a8adb4;
+}
+
+#galleryfolderlist div.active, #categoryfolderlist div.active {
+	background-color: #003082;
+}
+
+#galleryfolderlist div span.title, #categoryfolderlist div span.title {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	color: /*begin-color InfoText*/#ffffff/*end-color*/;
+	padding-bottom: 2px;
+}
+
+#galleryfolderlist div span.path, #categoryfolderlist div span.path {
+	display: block;
+	color: /*begin-color GrayText*/#999999/*end-color*/;
+	font-size: 11px;
+	font-style: italic;
+	width: 100%;
+	overflow: hidden;
+}
+
+#galleryfolderlist div:hover span.title, #categoryfolderlist div:hover span.title, #galleryfolderlist div:hover span.path, #categoryfolderlist div:hover span.path,
+#galleryfolderlist div.active span.title, #categoryfolderlist div.active span.title, #galleryfolderlist div.active span.path, #categoryfolderlist div.active span.path {
+	color: /*begin-color HighlightText*/#ffffff/*end-color*/;
+}
+
+/* ----------------------------------------------------------------- */
+
+/* downloadgallery item list --------------------------------------- */
+
+#galleryitemlistinner, #categoryitemlistinner {
+	height: 415px;
+
+}
+
+#galleryitemlistinner div div, #categoryitemlistinner div div {
+	margin-bottom: 1px;
+	padding: 2px;
+	background-color: /*begin-color Window*/#ffffff/*end-color*/;
+	border: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+	cursor: pointer;
+}
+
+#galleryitemlistinner div  div:hover, #galleryitemlistinner div  div.active:hover,
+#categoryitemlistinner div  div:hover, #categoryitemlistinner div  div.active:hover {
+	background-color: #a8adb4;
+}
+
+#galleryitemlistinner div div.active, #categoryitemlistinner div div.active {
+	background-color: #003082;
+}
+
+#galleryitemlistinner div div span.title, #categoryitemlistinner  div div span.title {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	color: /*begin-color InfoText*/#ffffff/*end-color*/;
+	padding-bottom: 2px;
+}
+
+#galleryitemlistinner div div span.filename, #categoryitemlistinner div div span.filename {
+	display: block;
+	color: /*begin-color GrayText*/#999999/*end-color*/;
+	font-size: 11px;
+	font-style: italic;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#galleryitemlistinner div div:hover span.title, #galleryitemlistinner div div:hover span.filename ,
+#galleryitemlistinner div div.active span.title, #galleryitemlistinner div div.active span.filename,
+#categoryitemlistinner div div:hover span.title, #categoryitemlistinner div div:hover span.filename ,
+#categoryitemlistinner div div.active span.title, #categoryitemlistinner div div.active span.filename {
+	color: /*begin-color HighlightText*/#ffffff/*end-color*/;
+}
+
+/* ----------------------------------------------------------------- */
+
+#gallerybuttons, #categorybuttons {
+	padding: 3px 4px;
+}
+
+#galleryuploadbutton, #gallerynewlinkbutton {
+	float: right;
+}
+
+#galleryuploadbutton div, #gallerynewlinkbutton div,
+#opengallerybutton div, #opencategorybutton div {
+	padding-left: 18px;
+}
+
+#gallerypublishbutton div, 
+#gallerysearchbutton div, #categorysearchbutton div,
+#galleryresetsearchbutton div, #categoryresetsearchbutton div {
+	visibility: hidden;
+}
+
+#gallerynewlinkbutton {
+	background-repeat: no-repeat;
+	background-image: url("../../../buttons/wizard.png");
+	background-position: left;
+}
+
+#galleryuploadbutton {
+	background-repeat: no-repeat;
+	background-image: url("../../../buttons/upload.png");
+	background-position: left;
+}
+
+#opengallerybutton {
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+#opengallerybutton.imagegallery {
+	background-image: url("../../../buttons/imagegallery.png");
+}
+
+#opengallerybutton.downloadgallery {
+	background-image: url("../../../buttons/downloadgallery.png");
+}
+
+#opengallerybutton.linkgallery {
+	background-image: url("../../../buttons/linkgallery.png");
+}
+
+#opengallerybutton.htmlgallery {
+	background-image: url("../../../buttons/htmlgallery.png");
+}
+
+#opengallerybutton.tablegallery {
+	background-image: url("../../../buttons/tablegallery.png");
+}
+
+#opencategorybutton {
+	background-repeat: no-repeat;
+	background-image: url("../../../buttons/folder.png");
+	background-position: left;
+}
+
+#gallerypublishbutton {
+	background-repeat:no-repeat;
+	width: 27px;
+	background-image: url("../../../buttons/publish.png");
+	background-position: center;
+
+}
+
+#gallerysearchbutton, #categorysearchbutton {
+	background-repeat:no-repeat;
+	width: 27px;
+	background-image: url("../../../buttons/search.png");
+	background-position: center;
+
+}
+
+#galleryresetsearchbutton, #categoryresetsearchbutton {
+	background-repeat:no-repeat;
+	width: 27px;
+	background-image: url("../../../buttons/deletelocale.png");
+	background-position: center;
+
+}
+
+.smalltext {
+	font-size: 11px;
+	font-style: italic;
+}
+
+#gallerysearchstring, #categorysearchstring {
+	width: 308px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+ 
+#galleryitemlist, #categoryitemlist {
+	background-color: /*begin-color ButtonFace*/#f0f0f0/*end-color*/;
+	border-bottom: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/; 
+	height: 486px; 		/* overwritten in editor.css */ 
+
+
+}
+
+#galleryitems, #categoryitems {
+	display: none;
+}
+
+#galleryitemlist.withoutinfo, #categoryitemlist.withoutinfo {
+	background-color: /*begin-color ButtonFace*/#f0f0f0/*end-color*/;
+	border-bottom: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/; 
+	height: 570px;
+}
+
+#galleryitemlist.withinfo, #categoryitemlist.withinfo {
+	background-color: /*begin-color ButtonFace*/#f0f0f0/*end-color*/;
+	border-bottom: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/; 
+	height: 486px;		/* overwritten in editor.css */
+	
+}
+
+
+#galleryimagelistinner, #categoryimagelistinner {
+	position: relative;
+	overflow: auto;
+	height: 415px;		/* overwritten in editor.css */
+	background-color: #D4D0C8;
+	border-top: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+}
+
+#galleryname, #categoryname {
+	border-top: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+	background-color: /*begin-color ButtonFace*/#f0f0f0/*end-color*/;
+	padding: 6px 4px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#galleryname span, #categoryname span {
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	padding-top: 2px;
+	color: /*begin-color Window*/#ffffff/*end-color*/;
+}
+
+#galleryiteminfo, #categoryiteminfo {
+	background-color: /*begin-color InfoBackground*/#f9f9f9/*end-color*/;
+	color: /*begin-color InfoText*/#ffffff/*end-color*/;
+	padding: 6px 4px 0 4px;
+}
+
+#galleryiteminfo table, #categoryiteminfo table {
+	width: 100%;
+}
+
+#detailinfo{
+	width: 90%;
+	margin-top: 0;
+	position: absolute;
+	z-index: 6;
+	filter: alpha(opacity=90);
+	opacity: 0.90;
+	background-color: /*begin-color InfoBackground*/#f9f9f9/*end-color*/; 
+	border-right: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+	border-bottom: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+	border-left: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+	color: /*begin-color InfoText*/#ffffff/*end-color*/;
+	display: none;
+}
+
+#detailinfodownload {
+	width: 100%;
+	margin-top: 0;
+	position: relative;
+	z-index: 6;
+	background-color: /*begin-color ButtonFace*/#f0f0f0/*end-color*/;
+	border: none;
+	color: /*begin-color InfoText*/#ffffff/*end-color*/;
+	display: none;
+}
+
+#galleryiteminfo table td, #categoryiteminfo table td, #detailinfo td{
+	padding: 2px 0;
+	white-space: nowrap;
+}
+
+#detailinfo td {
+	padding: 2px;
+}
+
+td.iteminfoheadline, td.iteminfostate {
+	font-size: 12px !important;
+	line-height: 15px;
+	height: 20px;
+	padding: 4px 0 0 0;
+}
+
+
+
+
+td.imageinfoheadline, td.iteminfoheadline, td.infoheadline {
+	font-weight: bold;
+}
+
+td.imageinfostate, td.iteminfostate, td.infostate {
+	font-style: italic;
+}
+
+
+#detailinfodownload td {
+	padding: 4px;
+	white-space: nowrap;
+}
+
+#detailinfodownload td.iteminfoheadline, td.iteminfostate {
+	font-size: 12px !important;
+	line-height: 15px;
+	height: 20px;
+	padding: 20px 4px 10px 4px;
+}
+
+#detailinfodownload td.previewiteminfotitle {
+	font-size: 12px !important;
+	padding: 4px 4px;
+	margin: 0;
+	height: 22px;
+	vertical-align: middle;
+}
+
+#galleryitemselectbutton, #categoryitemselectbutton, 
+#galleryitempublishbutton, #categoryitempublishbutton,
+#galleryitempreviewbutton, #categoryitempreviewbutton,
+#galleryitemdeletebutton, #categoryitemdeletebutton {
+	display: none;
+	width: 28px;
+	height: 18px;
+	margin-left: 4px;
+	margin-top: -4px;
+	vertical-align: middle;
+}
+
+#galleryitemselectbutton img, #categoryitemselectbutton img, 
+#galleryitempublishbutton img, #categoryitempublishbutton img,
+#galleryitempreviewbutton img, #categoryitempreviewbutton img, 
+#galleryitemdeletebutton img, #categoryitemdeletebutton img{
+	margin-top: -4px;
+	margin-left: -2px;
+}
+
+td.galleryiteminfotitle, td.categoryiteminfotitle,
+td.galleryiteminfolinkurl, td.categoryiteminfolinkurl{
+	font-size: 12px !important;
+	padding: 0;
+	margin: 0;
+	height: 22px;
+	vertical-align: middle;
+}
+
+
+
+#galleryitemtitle, #categoryitemtitle,
+#galleryitemlinkurl, #categoryitemlinkurl {
+	padding-top: 0px;
+	height: 16px;   /*16px*/
+}
+
+#galleryitemtitle.editable, #categoryitemtitle.editable,
+#galleryitemlinkurl.editable, #categoryitemlinkurl.editable {
+	cursor: pointer;
+	padding-left: 24px;
+	background-image: url("../../../buttons/edit.png");
+	background-position: center left;
+	background-repeat: no-repeat;
+}
+
+#galleryitemtitle form.edittitle, #categoryitemtitle form.edittitle,
+#galleryitemlinkurl form.edittitle, #categoryitemlinkurl form.edittitle {
+	height: 18px;
+	margin: -1px 0 0 0;
+	padding: 0;
+}
+
+#galleryitemtitle input, #categoryitemtitle input,
+#galleryitemlinkurl input, #categoryitemlinkurl input {
+	margin-bottom: 2px;
+	font-size: 12px !important;
+	border: none;
+	width: 75% !important;
+}
+
+#galleryitemtitle button, #categoryitemtitle button,
+#galleryitemlinkurl button, #categoryitemlinkurl button {
+	height: 18px;
+	margin-bottom: 1px;
+	font-size: 9px;
+	margin-left: 4px;
+}
+
+div.imgitem, div.imgitemhover, div.imgitemactive {
+	float: left;
+	padding: 2px 10px;
+	margin: 3px 4px;
+	text-align: center;
+	vertical-align: top;
+	width: 120px;
+	height: 90px;
+}
+
+div.imgitem {
+	border: 1px solid /*begin-color Window*/#ffffff/*end-color*/;
+}
+
+div.imgitemhover {
+	border: 3px solid #a8adb4;
+	padding: 0px 8px;
+}
+
+div.imgitemactive {
+	border: 3px solid #003082;
+	padding: 0px 8px;
+}
+
+div.imgitemwrapper {
+	position: relative;
+}
+
+img.imgthumb {
+	cursor: pointer;	
+}
+
+span.imglayer {
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 5;
+	cursor: pointer;
+}
+
+span.imglayer img {
+	display: block;
+	margin-bottom: 4px;
+	width: 24px;
+	height: 24px;
+}
+
+/* download gallery: show change icon */
+span.changeiconwrapper {
+	position: relative;
+}
+
+span.changeiconlayer {
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 5;
+	cursor: pointer;
+}
+
+span.changeiconlayer img {
+	display: block;
+	margin-bottom: 4px;
+	width: 16px;
+	height: 16px;
+	float: left;
+}
+
+#jHelperTipAttrContainer{ 
+	background: /*begin-color InfoBackground*/#f9f9f9/*end-color*/;
+	border: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+	color: /*begin-color Infotext*/#ffffff/*end-color*/;
+	padding: 2px;
+	white-space: nowrap;
+	display: none;
+}
+
+span.stateinfonew {
+	color: #00A;
+}
+
+span.stateinfochanged {
+	color: #B40000;
+}
+
+#itemgallery-paginationwrapper, #itemcategory-paginationwrapper {
+	height: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#itemgallery-pagination, #itemcategory-pagination {
+	height: 24px;
+	padding-top: 3px;
+	display: block;
+}
+
+#itemgallery-pagination a, #itemcategory-pagination a, #itemgallery-pagination span.current, #itemcategory-pagination span.current {
+	margin-right: 6px;
+	padding: 2px 3px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+#itemgallery-pagination a, #itemcategory-pagination a {
+	border: 1px solid /*begin-color Window*/#ffffff/*end-color*/;
+	color: /*begin-color ThreeDShadow*/#999999/*end-color*/;
+}
+
+#itemgallery-pagination a:hover, #itemcategory-pagination a:hover {
+	border: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+}
+
+#itemgallery-pagination span.current, #itemcategory-pagination span.current {
+	border: 1px solid /*begin-color ButtonShadow*/#999999/*end-color*/;
+	color: /*begin-color Window*/#ffffff/*end-color*/;
+}

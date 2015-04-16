@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/modules/add_type_report.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>f54c8eab-8a87-11e3-985a-094876801169</uuidstructure>
+		<uuidresource>f54c8eac-8a87-11e3-985a-094876801169</uuidresource>
+		<datelastmodified>Mon, 03 Feb 2014 11:54:20 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 31 Jan 2014 14:57:09 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Add resource type report]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/it/messages/org/opencms/workplace/threads</destination>
+		<type>folder</type>
+		<uuidstructure>198ed44d-a650-11e0-9af7-bd0e963009c0</uuidstructure>
+		<datelastmodified>Thu, 11 Oct 2007 09:53:45 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 04 Jul 2011 15:12:57 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

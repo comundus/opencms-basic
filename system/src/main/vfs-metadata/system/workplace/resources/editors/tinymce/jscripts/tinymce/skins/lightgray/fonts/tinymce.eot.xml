@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tinymce/skins/lightgray/fonts/tinymce.eot</destination>
+		<type>plain</type>
+		<uuidstructure>e860f5be-279b-11e4-a042-9723befcacf3</uuidstructure>
+		<uuidresource>e860f5bf-279b-11e4-a042-9723befcacf3</uuidresource>
+		<datelastmodified>Tue, 19 Aug 2014 12:25:30 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 19 Aug 2014 12:25:30 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[tinymce]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

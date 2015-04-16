@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/help/explorer/upload/upload_applet.html</destination>
+		<type>xmlpage</type>
+		<uuidstructure>f76c2acb-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>9c33aa21-ef94-11d9-b28c-21bd740a33b2</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 08 Jul 2005 09:42:33 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[Beschreibt das Hochladen von Dateien auf den OpenCms Server mit dem Java Applet.]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[1.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[Hochladen mit dem Applet]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Hochladen mit dem Applet]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/modules/org.opencms.workplace.help/jsptemplates/help]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

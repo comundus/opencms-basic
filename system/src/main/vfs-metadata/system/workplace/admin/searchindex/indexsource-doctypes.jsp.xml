@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/admin/searchindex/indexsource-doctypes.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>ce8bfe57-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>36ee08ec-1b94-11da-bb23-0334e4183c08</uuidresource>
+		<datelastmodified>Mon, 11 Dec 2006 15:32:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 02 Sep 2005 09:30:35 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[${key.GUI_LIST_DOCUMENTTYPES_NAME_HELP_0}]]></value>
+			</property>
+			<property>
+				<name>NavImage</name>
+				<value><![CDATA[tools/searchindex/icons/big/indexsource-doctypes.png]]></value>
+			</property>
+			<property>
+				<name>NavInfo</name>
+				<value><![CDATA[${key.GUI_GROUPS_INDEXSOURCE_TOOL_GROUP_0}]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[2.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[${key.GUI_LIST_SEARCHINDEX_ACTION_DOCUMENTS_NAME_0}]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Assign doctypes to indexsource]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-args</name>
+				<value><![CDATA[params:action=initial&indexsource=${param.indexsource}|path:/searchindex/indexsources/indexsource/doctypes]]></value>
+			</property>
+			<property>
+				<name>admintoolhandler-class</name>
+				<value><![CDATA[org.opencms.workplace.tools.searchindex.CmsSearchToolHandler]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

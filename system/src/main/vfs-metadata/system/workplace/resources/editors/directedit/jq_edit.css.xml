@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/directedit/jq_edit.css</destination>
+		<type>plain</type>
+		<uuidstructure>9804a2ac-e09d-11dc-a7d2-9b4307eb5433</uuidstructure>
+		<uuidresource>e5eb1ac4-de12-11dc-b804-9b4307eb5433</uuidresource>
+		<datelastmodified>Fri, 22 Feb 2008 11:44:44 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 18 Feb 2008 11:16:06 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[The main stylesheet for the jquery direct edit buttons]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

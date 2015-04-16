@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/ru/messages/org/opencms/xml/adeconfig/seo_file_ru.properties</destination>
+		<type>plain</type>
+		<uuidstructure>419d2fe6-a69e-11e2-bd1e-496fdeb7578e</uuidstructure>
+		<uuidresource>419d2fe7-a69e-11e2-bd1e-496fdeb7578e</uuidresource>
+		<datelastmodified>Tue, 16 Apr 2013 14:02:21 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 16 Apr 2013 14:02:21 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

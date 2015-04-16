@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/ru/modules/org/opencms/dev/demo</destination>
+		<type>folder</type>
+		<uuidstructure>124ff3f4-a68f-11e2-a0d3-496fdeb7578e</uuidstructure>
+		<datelastmodified>Tue, 16 Apr 2013 12:13:39 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 16 Apr 2013 12:13:39 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

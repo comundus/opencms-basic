@@ -1,0 +1,19 @@
+<link type="text/css" rel="stylesheet" href="%(skinUri)editors/directedit/jq_edit.css" />
+<script type="text/javascript">
+if (window.jQuery) {
+} else {
+	%(jquery)
+}
+if (window.$ && window.$.dimensions) {
+	// ignore, dimensions already included
+} else {
+	%(jquery_dimensions)
+}
+if (window.jQuery && window.jQuery.fn && window.jQuery.fn.createAppend) {
+	// ignore, flydom already included
+} else {
+	%(jquery_flydom)
+}
+</script>
+<script type="text/javascript" src="%(skinUri)editors/directedit/jq_edit.js"></script>
+

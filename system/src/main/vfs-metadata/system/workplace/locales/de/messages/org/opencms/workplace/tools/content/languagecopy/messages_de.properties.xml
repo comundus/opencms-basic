@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/messages/org/opencms/workplace/tools/content/languagecopy/messages_de.properties</destination>
+		<type>plain</type>
+		<uuidstructure>fa4f450d-7a98-11de-b0be-03e1332835f5</uuidstructure>
+		<uuidresource>fa4f450e-7a98-11de-b0be-03e1332835f5</uuidresource>
+		<datelastmodified>Mon, 27 Jul 2009 10:33:52 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jul 2009 10:33:52 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

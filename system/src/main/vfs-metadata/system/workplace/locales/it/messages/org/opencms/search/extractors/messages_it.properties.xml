@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/it/messages/org/opencms/search/extractors/messages_it.properties</destination>
+		<type>plain</type>
+		<uuidstructure>82f2a4b2-a64c-11e0-9af7-bd0e963009c0</uuidstructure>
+		<uuidresource>82f2a4b3-a64c-11e0-9af7-bd0e963009c0</uuidresource>
+		<datelastmodified>Wed, 05 Oct 2011 15:02:29 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 04 Jul 2011 14:47:16 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>content-encoding</name>
+				<value><![CDATA[ISO-8859-1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

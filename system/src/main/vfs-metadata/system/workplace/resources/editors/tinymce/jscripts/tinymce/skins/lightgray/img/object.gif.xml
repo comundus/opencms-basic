@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tinymce/skins/lightgray/img/object.gif</destination>
+		<type>image</type>
+		<uuidstructure>e84fb797-279b-11e4-a042-9723befcacf3</uuidstructure>
+		<uuidresource>e84fb798-279b-11e4-a042-9723befcacf3</uuidresource>
+		<datelastmodified>Tue, 19 Aug 2014 12:25:29 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 19 Aug 2014 12:25:29 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[object]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:17,h:13]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

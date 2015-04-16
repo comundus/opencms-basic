@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/list/delete_inactive.png</destination>
+		<type>image</type>
+		<uuidstructure>ab1dc9e6-ee1b-11e2-9268-000c299b0940</uuidstructure>
+		<uuidresource>ab1dc9e7-ee1b-11e2-9268-000c299b0940</uuidresource>
+		<datelastmodified>Tue, 16 Jul 2013 13:29:12 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 16 Jul 2013 13:28:57 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:20]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

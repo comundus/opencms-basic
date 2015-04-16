@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/components/galleries/js/jquery.jeditable.pack.js</destination>
+		<type>plain</type>
+		<uuidstructure>83d5ee06-99d2-11dd-b497-55b439b85a0e</uuidstructure>
+		<uuidresource>8c6a51c2-96c3-11dd-a533-55b439b85a0e</uuidresource>
+		<datelastmodified>Mon, 20 Oct 2008 10:08:55 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 10 Oct 2008 12:04:11 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[jEditable v1.6.1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

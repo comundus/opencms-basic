@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ugc/classes/org</destination>
+		<type>folder</type>
+		<uuidstructure>c3463391-bb12-11e3-a3c7-0ddf2cfaeffd</uuidstructure>
+		<datelastmodified>Thu, 03 Apr 2014 09:31:41 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 03 Apr 2014 09:31:41 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

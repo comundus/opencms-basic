@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.editors.codemirror/classes</destination>
+		<type>folder</type>
+		<uuidstructure>655ed69d-ba11-11e1-8da3-49528da9658f</uuidstructure>
+		<datelastmodified>Tue, 19 Jun 2012 13:19:27 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 19 Jun 2012 13:19:27 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

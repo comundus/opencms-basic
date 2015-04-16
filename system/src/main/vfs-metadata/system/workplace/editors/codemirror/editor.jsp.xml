@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/codemirror/editor.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>35f091b4-50b0-11e1-b660-49528da9658f</uuidstructure>
+		<uuidresource>35f091b5-50b0-11e1-b660-49528da9658f</uuidresource>
+		<datelastmodified>Fri, 28 Jun 2013 08:56:12 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 06 Feb 2012 10:49:14 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[CodeMirror editor]]></value>
+			</property>
+			<property>
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

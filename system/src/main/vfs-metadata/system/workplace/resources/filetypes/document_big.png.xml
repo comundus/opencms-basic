@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/filetypes/document_big.png</destination>
+		<type>image</type>
+		<uuidstructure>caad3fe5-ec79-4311-a457-c06bcb6ebe6f</uuidstructure>
+		<uuidresource>00a77c09-0341-4ed6-abfd-55ef078a0032</uuidresource>
+		<datelastmodified>Thu, 24 Feb 2011 16:23:58 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 24 Feb 2011 16:23:58 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:24,h:24]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

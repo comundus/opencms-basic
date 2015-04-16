@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.containerpage</destination>
+		<type>folder</type>
+		<uuidstructure>acc4446c-2ce9-11df-a5f1-2393f34d19cc</uuidstructure>
+		<datelastmodified>Thu, 11 Mar 2010 08:39:58 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 11 Mar 2010 08:39:58 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

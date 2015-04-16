@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.sitemap/pages/import-aliases.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>367b6c2f-2a6d-4b5d-b4a0-3f7b8519a8ac</uuidstructure>
+		<uuidresource>8c32fbcd-a5b5-49e6-8ab5-aa792e5cb592</uuidresource>
+		<datelastmodified>Thu, 05 May 2011 16:33:23 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 05 May 2011 16:33:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[import-aliases]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

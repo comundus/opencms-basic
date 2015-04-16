@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/help/explorer/newresource/upload.html</destination>
+		<type>xmlpage</type>
+		<uuidstructure>f72bc5ea-11b7-11db-91cd-fdbae480bac9</uuidstructure>
+		<uuidresource>e2fc03c8-ee3e-11d9-bde2-21bd740a33b2</uuidresource>
+		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 06 Jul 2005 16:56:24 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[Beschreibt die Alternativen zum Hochladen von Dateien auf den OpenCms Server.]]></value>
+			</property>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[2.0]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[Neue Datei hochladen]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Neue Datei hochladen]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/modules/org.opencms.workplace.help/jsptemplates/help]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

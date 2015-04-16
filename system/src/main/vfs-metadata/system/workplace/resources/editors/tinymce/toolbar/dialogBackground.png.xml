@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/toolbar/dialogBackground.png</destination>
+		<type>image</type>
+		<uuidstructure>d2a82560-f860-11e2-b124-000c298a1fde</uuidstructure>
+		<uuidresource>d2a82561-f860-11e2-b124-000c298a1fde</uuidresource>
+		<datelastmodified>Mon, 29 Jul 2013 15:09:10 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 29 Jul 2013 15:09:10 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[dialogBackground]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:20,h:300]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

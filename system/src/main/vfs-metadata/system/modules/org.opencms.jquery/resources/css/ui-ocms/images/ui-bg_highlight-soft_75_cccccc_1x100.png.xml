@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.jquery/resources/css/ui-ocms/images/ui-bg_highlight-soft_75_cccccc_1x100.png</destination>
+		<type>image</type>
+		<uuidstructure>63876215-8a92-11e0-ad6c-bff56146ac12</uuidstructure>
+		<uuidresource>d9e0deaf-1a12-11de-83c7-03821fc5d684</uuidresource>
+		<datelastmodified>Thu, 26 Mar 2009 14:32:28 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 26 Mar 2009 14:31:53 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:1,h:100]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

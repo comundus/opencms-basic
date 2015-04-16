@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tinymce/langs/da.js</destination>
+		<type>plain</type>
+		<uuidstructure>46a08636-55ba-11e3-9554-3fb9e22d18cd</uuidstructure>
+		<uuidresource>46a08637-55ba-11e3-9554-3fb9e22d18cd</uuidresource>
+		<datelastmodified>Mon, 20 Jan 2014 13:37:16 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 25 Nov 2013 10:13:48 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[da]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

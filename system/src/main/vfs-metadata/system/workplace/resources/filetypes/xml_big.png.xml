@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/filetypes/xml_big.png</destination>
+		<type>image</type>
+		<uuidstructure>869ea129-4032-11e0-bd91-cba538d80d30</uuidstructure>
+		<uuidresource>869ea12a-4032-11e0-bd91-cba538d80d30</uuidresource>
+		<datelastmodified>Thu, 24 Feb 2011 16:24:17 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 24 Feb 2011 16:24:17 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:24,h:24]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
