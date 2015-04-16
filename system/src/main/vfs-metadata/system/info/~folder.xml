@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/info</destination>
+		<type>folder</type>
+		<uuidstructure>07be488c-94b1-11e3-b381-73f5125785b0</uuidstructure>
+		<datelastmodified>Thu, 13 Feb 2014 13:16:21 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 13 Feb 2014 13:16:21 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

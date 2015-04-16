@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/info/version</destination>
+		<type>jsp</type>
+		<uuidstructure>32baec0e-94b1-11e3-b381-73f5125785b0</uuidstructure>
+		<uuidresource>32baec0f-94b1-11e3-b381-73f5125785b0</uuidresource>
+		<datelastmodified>Thu, 13 Feb 2014 13:38:59 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 13 Feb 2014 13:17:33 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
