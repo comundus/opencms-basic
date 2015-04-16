@@ -1,4 +1,0 @@
-<!-- display resource information -->
-<%= wp.dialogBlockStart(wp.key(org.opencms.workplace.commons.Messages.GUI_MULTI_RESOURCELIST_TITLE_0)) %>
-<%= wp.buildResourceList() %>
-<%= wp.dialogBlockEnd() %>
