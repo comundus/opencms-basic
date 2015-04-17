@@ -131,6 +131,18 @@
 			<version>r55007</version>
 			<scope>runtime</scope>
     	</dependency>
+    	<dependency>
+			<groupId>com.habitsoft</groupId>
+			<artifactId>xhtml-dtds</artifactId>
+			<version>1.0</version>
+			<scope>runtime</scope>
+    	</dependency>
+    	<dependency>
+			<groupId>org.jpedal</groupId>
+  			<artifactId>jpedal-lgpl</artifactId>
+			<version>4.92b23</version>
+			<scope>runtime</scope>
+    	</dependency>
     </dependencies>
 
     <distributionManagement>
