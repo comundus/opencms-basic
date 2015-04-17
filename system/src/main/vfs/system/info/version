@@ -55,7 +55,7 @@ td:first-child{
 CmsJspActionElement jsp=new CmsJspActionElement(pageContext,request,response);
 %>
 
-<h1> PIKSCMS System information </h1>
+<h1> OpenCms System information </h1>
 <table>
 <tr>
  <td>OpenCms Version</td><td><%=SystemInfo.getOpenCmsVersion()%></td>
