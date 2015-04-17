@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.upload/resources/upload/upload.nocache.js</destination>
 		<type>binary</type>
-		<uuidstructure>6b358f84-8f4e-11e3-810a-b1fec472a9fa</uuidstructure>
-		<uuidresource>6b3604b5-8f4e-11e3-810a-b1fec472a9fa</uuidresource>
-		<datelastmodified>Thu, 06 Feb 2014 16:47:52 GMT</datelastmodified>
+		<uuidstructure>520cc6af-c0b5-11e4-b49f-e9bdaa0f6f36</uuidstructure>
+		<uuidresource>520cedc0-c0b5-11e4-b49f-e9bdaa0f6f36</uuidresource>
+		<datelastmodified>Mon, 02 Mar 2015 08:22:52 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Thu, 06 Feb 2014 16:47:52 GMT</datecreated>
+		<datecreated>Mon, 02 Mar 2015 08:22:52 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

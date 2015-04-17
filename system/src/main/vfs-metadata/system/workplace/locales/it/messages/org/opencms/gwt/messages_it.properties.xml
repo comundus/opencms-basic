@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/it/messages/org/opencms/gwt/messages_it.properties</destination>
+		<type>plain</type>
+		<uuidstructure>0f0b8b8c-9dba-11e4-9132-74d02bc54b39</uuidstructure>
+		<uuidresource>0f0b8b8d-9dba-11e4-9132-74d02bc54b39</uuidresource>
+		<datelastmodified>Fri, 16 Jan 2015 20:17:32 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 16 Jan 2015 19:58:36 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>content-encoding</name>
+				<value><![CDATA[ISO-8859-1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

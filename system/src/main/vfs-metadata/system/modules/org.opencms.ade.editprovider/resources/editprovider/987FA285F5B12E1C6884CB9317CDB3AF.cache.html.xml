@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.editprovider/resources/editprovider/987FA285F5B12E1C6884CB9317CDB3AF.cache.html</destination>
+		<type>binary</type>
+		<uuidstructure>7459d203-c0b3-11e4-9976-1f66ad08672a</uuidstructure>
+		<uuidresource>7459f914-c0b3-11e4-9976-1f66ad08672a</uuidresource>
+		<datelastmodified>Mon, 02 Mar 2015 08:09:31 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 02 Mar 2015 08:09:31 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

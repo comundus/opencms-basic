@@ -14,7 +14,7 @@
 		<properties>
 			<property>
 				<name>Title</name>
-				<value><![CDATA[OpenCms Workflow Notification]]></value>
+				<value><![CDATA[OpenCms Workflow: %(release.project)]]></value>
 			</property>
 			<property>
 				<name>content-encoding</name>

@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.sitemap/resources/sitemap/DE0F932F4B4C483ACD58B3F88007494F.gwt.rpc</destination>
 		<type>binary</type>
-		<uuidstructure>ef85be1f-8f4d-11e3-a656-a10e0585132d</uuidstructure>
-		<uuidresource>ef85e530-8f4d-11e3-a656-a10e0585132d</uuidresource>
-		<datelastmodified>Thu, 06 Feb 2014 16:44:24 GMT</datelastmodified>
+		<uuidstructure>1b4d1f73-c0b5-11e4-bb3c-b5202198888e</uuidstructure>
+		<uuidresource>1b4d4684-c0b5-11e4-bb3c-b5202198888e</uuidresource>
+		<datelastmodified>Mon, 02 Mar 2015 08:21:20 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Thu, 06 Feb 2014 16:44:24 GMT</datecreated>
+		<datecreated>Mon, 02 Mar 2015 08:21:20 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

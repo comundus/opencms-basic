@@ -514,7 +514,7 @@ default:
 	wp.escapeParams();
 	wp.setParamAction(null);
 
-%><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+%><!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=<%= wp.getEncoding() %>">
@@ -710,6 +710,8 @@ tinyMCE.init({
 	toolbar_items_size: 'small',
     menubar:false,
     resize : false,
+    entity_encoding: "named",
+    entities: '160,nbsp',
     paste_as_text: <%=""+Boolean.valueOf(OpenCms.getWorkplaceManager().getWorkplaceEditorManager().getEditorConfiguration("tinymce").getParameters().get("paste_text"))%>,
     cmsGalleryEnhancedOptions : <%= options.showElement("gallery.enhancedoptions", displayOptions)%>,
     cmsGalleryUseThickbox : <%= options.showElement("gallery.usethickbox", displayOptions)%>,
@@ -868,7 +870,7 @@ function getEditorHeight(){
 
 <body class="buttons-head" unselectable="on" onunload="closeDialog();">
 
-<form style="width:100%; height:100%; margin:0px; padding:0px; " name="EDITOR" id="EDITOR" method="post" action="<%= wp.getDialogRealUri() %>">
+<form style="position:fixed; top:0; left:0; right:0; bottom:0; margin:0px; padding:0px;" name="EDITOR" id="EDITOR" method="post" action="<%= wp.getDialogRealUri() %>">
 <input type="hidden" name="<%= CmsDialog.PARAM_ACTION %>" value="<%= wp.getParamAction() %>">
 <input type="hidden" name="<%= CmsDialog.PARAM_RESOURCE %>" value="<%= wp.getParamResource() %>">
 <input type="hidden" name="<%= CmsEditor.PARAM_TEMPFILE %>" value="<%= wp.getParamTempfile() %>">
@@ -880,7 +882,7 @@ function getEditorHeight(){
 <input type="hidden" name="<%= CmsEditor.PARAM_MODIFIED %>" value="<%= wp.getParamModified() %>">
 <input type="hidden" name="content" id="content" >
 
-<table cellspacing="0" cellpadding="0" border="0" style="width:100%; height:100%;">
+<table cellspacing="0" cellpadding="0" border="0" style="width:100%; height:100%; table-layout:fixed;">
 
 <tr><td>
 <%= wp.buttonBar(CmsWorkplace.HTML_START) %>
