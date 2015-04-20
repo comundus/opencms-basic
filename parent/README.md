@@ -6,14 +6,24 @@ CREATE DATABASE opencms DEFAULT CHARACTER SET utf8;
 Changes in $MAVEN_HOME/settings.xml
 -----------------------------------
 
-Plugin repository:
+Repositories:
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>comundus-github</id>
-	        <url>https://raw.github.com/comundus/maven2-repository/master</url>
-        </pluginRepository>
-    </pluginRepositories>
+		<repositories>
+			<repository>
+				<id>maven-vfs-plugin-github</id>
+				<url>https://comundus.github.io/maven2-repository</url>
+			</repository>
+		</repositories>
+		<pluginRepositories>
+			<pluginRepository>
+				<id>maven-vfs-plugin-github</id>
+				<url>https://comundus.github.io/maven2-repository</url>
+				<snapshots>
+					<enabled>false</enabled>
+				</snapshots>
+			</pluginRepository>
+		</pluginRepositories>
+    
 
 Declare plugin group:
     
