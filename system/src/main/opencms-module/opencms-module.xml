@@ -8,7 +8,7 @@
             <class/>
             <description><![CDATA[Configuration for OpenCms websites.<br>
 <i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.5.1</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
@@ -459,7 +459,7 @@
             <class/>
             <description><![CDATA[The containerpage editor.<br>
 		<i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.5.1</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -483,7 +483,7 @@
             <class/>
             <description><![CDATA[Editor for structured contents.<br>
 <i>&copy; 2015  by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.5.1</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
@@ -509,7 +509,7 @@
             <description><![CDATA[This module contains an edit provider for the original Direct Edit which has a number of features from ADE.<br>
 
 <i>&copy; 2015  by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.5.0</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -533,7 +533,7 @@
             <class/>
             <description><![CDATA[<p>Gwt based gallery dialog for OpenCms 8<p>
 <p><i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.5.1</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -558,7 +558,7 @@
             <class/>
             <description><![CDATA[This module provides a dialog for editing the configured default properties of a file after uploading it.<br>
 <i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.5.0</version>
+            <version>9.5.2</version>
             <authorname/>
             <authoremail/>
             <datecreated/>
@@ -582,7 +582,7 @@
             <class/>
             <description><![CDATA[This module provides the properties dialog for the workplace.<br>
 <i>&copy; 2015  by Alkacon Software GmbH (http://www.alkacon.com).</i>]]></description>
-            <version>9.5.0</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
@@ -607,7 +607,7 @@
             <description><![CDATA[<p>Gwt based publish dialog for OpenCms 8<p>
 
 <p><i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.5.0</version>
+            <version>9.5.2</version>
             <authorname/>
             <authoremail/>
             <datecreated/>
@@ -632,7 +632,7 @@
             <description><![CDATA[<p>ADE Sitemap Editor.</p>
 
 <p><i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.5.1</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -656,7 +656,7 @@
             <class/>
             <description><![CDATA[<p>Gwt based upload dialog for OpenCms 8</p>
 					 <p><i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.5.0</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -785,7 +785,7 @@
             <class/>
             <description><![CDATA[<p>This module contains TinyMCE editor for HTML pages and XML content.</p>
                               <p>The version of TinyMCE is 4.1.3</p>]]></description>
-            <version>9.5.1</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[OpenCms community]]></authorname>
             <authoremail><![CDATA[opencms-dev@opencms.org]]></authoremail>
             <datecreated/>
@@ -811,7 +811,7 @@
             <class/>
             <description><![CDATA[<p>Provides an OpenCms GWT framework.</p>
 <p><i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.5.0</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
@@ -841,6 +841,27 @@
             <resources>
                 <resource uri="/system/modules/org.opencms.jquery/"/>
                 <resource uri="/system/workplace/resources/jquery/"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
+            <name>org.opencms.locale.cs</name>
+            <nicename><![CDATA[OpenCms 9 Czech localization for the workplace]]></nicename>
+            <group>OpenCms Localization</group>
+            <class/>
+            <description><![CDATA[OpenCms Localization]]></description>
+            <version>9.0.1</version>
+            <authorname><![CDATA[NELASOFT Technologies, s.r.o.]]></authorname>
+            <authoremail><![CDATA[info@nelasoft.cz]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies/>
+            <exportpoints>
+                <exportpoint uri="/system/workplace/locales/cs/messages/" destination="WEB-INF/classes/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/locales/cs/messages/"/>
             </resources>
             <parameters/>
         </module>
@@ -875,7 +896,7 @@
             <description><![CDATA[<p>This module contains the Spanish language localization files for the OpenCms workplace.</p>
 <p>Install this module if you want to use the Spanish version of the OpenCms Workplace.</p>
 <p><i>&copy; 2015 by OpenCms Hispano (http://www.opencmshispano.com).</i></p>]]></description>
-            <version>9.0.0</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[OpenCms Hispano]]></authorname>
             <authoremail><![CDATA[info@opencmshispano.es]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -914,12 +935,36 @@
             <parameters/>
         </module>
         <module>
+            <name>org.opencms.locale.ja</name>
+            <nicename><![CDATA[OpenCms 8 Japanese localization for the workplace]]></nicename>
+            <group>OpenCms Localization</group>
+            <class/>
+            <description><![CDATA[<p>This module contains the Japanese language localization files for the OpenCms workplace.</p>
+<p>Install this module if you want to use the Japanese version of the OpenCms Workplace.</p>
+<p><i>(c) 2012 by  ubicast Co., Ltd(http://www.ubicast.com).</i></p>]]></description>
+            <version>8.5.2</version>
+            <authorname><![CDATA[ubicast Co., Ltd.]]></authorname>
+            <authoremail><![CDATA[info@ubicast.com]]></authoremail>
+            <datecreated/>
+            <userinstalled/>
+            <dateinstalled/>
+            <dependencies/>
+            <exportpoints>
+                <exportpoint uri="/system/workplace/locales/ja/messages/" destination="WEB-INF/classes/"/>
+            </exportpoints>
+            <resources>
+                <resource uri="/system/workplace/locales/ja/messages/"/>
+                <resource uri="/system/workplace/resources/components/js_calendar/lang/calendar-ja.js"/>
+            </resources>
+            <parameters/>
+        </module>
+        <module>
             <name>org.opencms.locale.ru</name>
-            <nicename><![CDATA[OpenCms 9 Russian localization for the workplace]]></nicename>
+            <nicename><![CDATA[OpenCms 9.5.1 Russian localization for the workplace]]></nicename>
             <group>OpenCms Localization</group>
             <class/>
             <description><![CDATA[OpenCms Localization]]></description>
-            <version>9.0.1</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[ITDT Ltd.]]></authorname>
             <authoremail><![CDATA[support@itdt.ru]]></authoremail>
             <datecreated/>
@@ -945,7 +990,7 @@
             <class>org.opencms.ugc.CmsUgcModuleAction</class>
             <description><![CDATA[<p>User generated content API</p>
 								<p><i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.5.0</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail/>
             <datecreated/>
@@ -993,7 +1038,7 @@
             <description><![CDATA[<p>This module contains the OpenCms Workplace base files.</p>
 <p>It includes common used dialogs and style sheets, that are needed by any workplace module.</p>
 <p><i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.5.1</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
@@ -1210,7 +1255,7 @@
             <description><![CDATA[<p>This module contains the OpenCms Workplace Explorer.</p>
 <p>Install this module if you want a GUI to work on the OpenCms VFS.</p>
 <p><i>&copy; 2015 by Alkacon Software GmbH (http://www.alkacon.com).</i></p>]]></description>
-            <version>9.5.0</version>
+            <version>9.5.2</version>
             <authorname><![CDATA[Alkacon Software GmbH]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
