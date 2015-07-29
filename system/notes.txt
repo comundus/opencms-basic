@@ -1,0 +1,7 @@
+Empty folders
+=============
+
+There are empty folders in VFS which need a .gitignore file in order to be included in the Git repository
+
+/system/categories
+/system/galleries
