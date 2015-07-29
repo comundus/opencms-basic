@@ -5,7 +5,7 @@
 		<groupdata>
 			<name>Administrators</name>
 			<description><![CDATA[%(key.GUI_DEFAULTGROUP_ROOT_ADMINS_DESCRIPTION_0)]]></description>
-			<flags>1026</flags>
+			<flags>1024</flags>
 			<parentgroup/>
 		</groupdata>
 		<groupdata>
@@ -15,79 +15,61 @@
 			<parentgroup/>
 		</groupdata>
 		<groupdata>
-			<name>Projectmanagers</name>
-			<description><![CDATA[%(key.GUI_DEFAULTGROUP_ROOT_PROJMANS_DESCRIPTION_0)]]></description>
-			<flags>9222</flags>
-			<parentgroup>Users</parentgroup>
-		</groupdata>
-		<groupdata>
 			<name>Users</name>
 			<description><![CDATA[%(key.GUI_DEFAULTGROUP_ROOT_USERS_DESCRIPTION_0)]]></description>
-			<flags>17412</flags>
+			<flags>25600</flags>
 			<parentgroup/>
 		</groupdata>
-		<groupdata>
-			<name>rootusers</name>
-			<description><![CDATA[root users]]></description>
-			<flags>0</flags>
-			<parentgroup>Users</parentgroup>
-		</groupdata>
-		<userdata>
+		<user>
 			<name>Admin</name>
-			<password><![CDATA[NzlGZ0Y1ZkZVNGVXRUNHTTJHN3Y2Zz09]]></password>
+			<password><![CDATA[JHMwJGUwODAxJHhIQUVObm1yaEp6M3ROWHo0WWcwVEE9PSRMN09jaHRuWC82MThCaVVRZlBKNDBjdWR3ZkdIOGl3RjN2L1ZzMk0xQWtnPQ==]]></password>
 			<firstname> </firstname>
 			<lastname> </lastname>
 			<email> </email>
 			<flags>0</flags>
-			<datecreated>1360579378879</datecreated>
+			<datecreated>1438170465574</datecreated>
 			<userinfo>
-				<entry name="USERPREFERENCES_editors-preferrededitorsplain" type="java.lang.String"><![CDATA[bestavailable]]></entry>
-				<entry name="USERPREFERENCES_editors-preferrededitorsxmlpage" type="java.lang.String"><![CDATA[bestavailable]]></entry>
-				<entry name="USERPREFERENCES_workplace-searchsearchview-style" type="java.lang.String"><![CDATA[explorer]]></entry>
-				<entry name="USER_ADDRESS" type="java.lang.String"/>
 				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_ADMIN_DESCRIPTION_0)]]></entry>
+				<entry name="jlan_hash" type="[B"><![CDATA[rO0ABXVyAAJbQqzzF/gGCFTgAgAAeHAAAAAQIJxhdNpJDK60IvP6WnrmNA==]]></entry>
 			</userinfo>
+			<userroles>
+				<userrole>ROOT_ADMIN</userrole>
+			</userroles>
 			<usergroups>
-				<groupname>
-					<name>Administrators</name>
-				</groupname>
+				<usergroup>Administrators</usergroup>
 			</usergroups>
-		</userdata>
-		<userdata>
+		</user>
+		<user>
 			<name>Export</name>
-			<password><![CDATA[ZE9oL2dwcUJKNTUwWWNPQ2Q3ekVKZz09]]></password>
+			<password><![CDATA[JHMwJGUwODAxJHFXQko0NE5DNGY2ZGIxcXVvR3FaVGc9PSRFRkNabG8vNWpLd2VNdGNiVExwU3diVW9ZTTVrOUcvc0tVQ2ZSYjdKT1o0PQ==]]></password>
 			<firstname> </firstname>
 			<lastname> </lastname>
 			<email> </email>
 			<flags>0</flags>
-			<datecreated>1360579378883</datecreated>
+			<datecreated>1438170465810</datecreated>
 			<userinfo>
-				<entry name="USER_ADDRESS" type="java.lang.String"/>
 				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_EXPORT_DESCRIPTION_0)]]></entry>
 			</userinfo>
+			<userroles/>
 			<usergroups>
-				<groupname>
-					<name>Guests</name>
-				</groupname>
+				<usergroup>Guests</usergroup>
 			</usergroups>
-		</userdata>
-		<userdata>
+		</user>
+		<user>
 			<name>Guest</name>
-			<password><![CDATA[MUIyTTJZOEFzZ1RwZ0FtWTdQaENmZz09]]></password>
+			<password><![CDATA[JHMwJGUwODAxJDlwa0tLV2VHUnZueDNXckhuRGFEbEE9PSRRQTJVSzFscnFHT0RVbjVOeDNxUk4wMHliSXQ3YXlhREtFZ2E3NXR1N2FBPQ==]]></password>
 			<firstname> </firstname>
 			<lastname> </lastname>
 			<email> </email>
 			<flags>0</flags>
-			<datecreated>1360579378872</datecreated>
+			<datecreated>1438170465355</datecreated>
 			<userinfo>
-				<entry name="USER_ADDRESS" type="java.lang.String"/>
 				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_GUEST_DESCRIPTION_0)]]></entry>
 			</userinfo>
+			<userroles/>
 			<usergroups>
-				<groupname>
-					<name>Guests</name>
-				</groupname>
+				<usergroup>Guests</usergroup>
 			</usergroups>
-		</userdata>
+		</user>
 	</usergroupdata>
 </export>
