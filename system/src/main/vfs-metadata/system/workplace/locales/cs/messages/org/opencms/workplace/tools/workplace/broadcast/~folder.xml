@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/cs/messages/org/opencms/workplace/tools/workplace/broadcast</destination>
+		<type>folder</type>
+		<uuidstructure>5a8f945a-f034-11e1-acfc-51f3073ee387</uuidstructure>
+		<datelastmodified>Mon, 27 Aug 2012 10:45:44 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Aug 2012 10:45:44 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

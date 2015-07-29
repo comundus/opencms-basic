@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/cs/messages/org/opencms/ade/publish/messages_cs.properties</destination>
+		<type>plain</type>
+		<uuidstructure>c3536237-e77f-11e1-aea4-51f3073ee387</uuidstructure>
+		<uuidresource>c3536238-e77f-11e1-aea4-51f3073ee387</uuidresource>
+		<datelastmodified>Thu, 27 Feb 2014 14:15:07 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 16 Aug 2012 08:52:52 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[messages_cs]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

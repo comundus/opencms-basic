@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/cs/messages/org/opencms/search/solr</destination>
+		<type>folder</type>
+		<uuidstructure>9dc481f4-9d37-11e3-8e30-0800273de986</uuidstructure>
+		<datelastmodified>Mon, 24 Feb 2014 09:39:54 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 24 Feb 2014 09:39:54 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

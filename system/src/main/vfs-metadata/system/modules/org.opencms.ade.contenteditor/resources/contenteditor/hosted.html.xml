@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.contenteditor/resources/contenteditor/hosted.html</destination>
 		<type>binary</type>
-		<uuidstructure>22079ad8-c0b3-11e4-b9a7-17f67cf4d033</uuidstructure>
-		<uuidresource>2207c1e9-c0b3-11e4-b9a7-17f67cf4d033</uuidresource>
-		<datelastmodified>Mon, 02 Mar 2015 08:07:13 GMT</datelastmodified>
+		<uuidstructure>f1a3fcfc-19b1-11e5-bcc8-d3f0f1f5fa3d</uuidstructure>
+		<uuidresource>f1a4240d-19b1-11e5-bcc8-d3f0f1f5fa3d</uuidresource>
+		<datelastmodified>Tue, 23 Jun 2015 14:12:55 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Mon, 02 Mar 2015 08:07:13 GMT</datecreated>
+		<datecreated>Tue, 23 Jun 2015 14:12:55 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.editprovider/resources/editprovider/D342BFD70169EAC819DCE08421ED0901.gwt.rpc</destination>
 		<type>binary</type>
-		<uuidstructure>74505d1d-c0b3-11e4-9976-1f66ad08672a</uuidstructure>
-		<uuidresource>7450842e-c0b3-11e4-9976-1f66ad08672a</uuidresource>
-		<datelastmodified>Mon, 02 Mar 2015 08:09:31 GMT</datelastmodified>
+		<uuidstructure>44f1f9cd-19b2-11e5-84f8-f52c941fa5ba</uuidstructure>
+		<uuidresource>44f247ee-19b2-11e5-84f8-f52c941fa5ba</uuidresource>
+		<datelastmodified>Tue, 23 Jun 2015 14:15:15 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Mon, 02 Mar 2015 08:09:31 GMT</datecreated>
+		<datecreated>Tue, 23 Jun 2015 14:15:15 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

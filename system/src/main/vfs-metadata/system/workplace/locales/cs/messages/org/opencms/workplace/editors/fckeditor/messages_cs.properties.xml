@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/cs/messages/org/opencms/workplace/editors/fckeditor/messages_cs.properties</destination>
+		<type>plain</type>
+		<uuidstructure>eb55f8c8-a073-11e3-a490-0800273de986</uuidstructure>
+		<uuidresource>eb55f8c9-a073-11e3-a490-0800273de986</uuidresource>
+		<datelastmodified>Fri, 28 Feb 2014 12:40:59 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 28 Feb 2014 12:29:08 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>content-encoding</name>
+				<value><![CDATA[ISO-8859-1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

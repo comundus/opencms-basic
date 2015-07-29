@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/ru/messages/org/opencms/workplace/editors/directedit</destination>
+		<type>folder</type>
+		<uuidstructure>3d32cad4-14d0-11e5-8cf5-01bfaccbe1c9</uuidstructure>
+		<datelastmodified>Wed, 17 Jun 2015 09:07:11 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 17 Jun 2015 09:07:11 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

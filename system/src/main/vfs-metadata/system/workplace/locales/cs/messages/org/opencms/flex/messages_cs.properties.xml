@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/cs/messages/org/opencms/flex/messages_cs.properties</destination>
+		<type>plain</type>
+		<uuidstructure>fdf576b1-9b09-11e3-814b-0800273de986</uuidstructure>
+		<uuidresource>fdf576b2-9b09-11e3-814b-0800273de986</uuidresource>
+		<datelastmodified>Thu, 27 Feb 2014 14:15:07 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 21 Feb 2014 15:08:16 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>content-encoding</name>
+				<value><![CDATA[ISO-8859-1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

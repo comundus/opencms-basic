@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/components/js_calendar/lang/calendar-cs.js</destination>
+		<type>plain</type>
+		<uuidstructure>ff4806ad-14e3-11e5-b8ce-01bfaccbe1c9</uuidstructure>
+		<uuidresource>ff4806ae-14e3-11e5-b8ce-01bfaccbe1c9</uuidresource>
+		<datelastmodified>Wed, 17 Jun 2015 11:28:42 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 17 Jun 2015 11:28:37 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

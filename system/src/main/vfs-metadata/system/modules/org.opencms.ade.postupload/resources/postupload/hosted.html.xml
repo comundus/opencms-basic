@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.postupload/resources/postupload/hosted.html</destination>
 		<type>binary</type>
-		<uuidstructure>161af854-c0b4-11e4-a69e-2187afc8e75a</uuidstructure>
-		<uuidresource>161b1f65-c0b4-11e4-a69e-2187afc8e75a</uuidresource>
-		<datelastmodified>Mon, 02 Mar 2015 08:14:02 GMT</datelastmodified>
+		<uuidstructure>e8febd90-19b2-11e5-affe-69fa1eaac1ab</uuidstructure>
+		<uuidresource>e8fee4a1-19b2-11e5-affe-69fa1eaac1ab</uuidresource>
+		<datelastmodified>Tue, 23 Jun 2015 14:19:50 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Mon, 02 Mar 2015 08:14:02 GMT</datecreated>
+		<datecreated>Tue, 23 Jun 2015 14:19:50 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

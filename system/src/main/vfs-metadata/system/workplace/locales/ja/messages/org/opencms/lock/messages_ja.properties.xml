@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/ja/messages/org/opencms/lock/messages_ja.properties</destination>
+		<type>plain</type>
+		<uuidstructure>11a589a9-c248-11e0-ae2f-406186cb791f</uuidstructure>
+		<uuidresource>11a589aa-c248-11e0-ae2f-406186cb791f</uuidresource>
+		<datelastmodified>Thu, 11 Aug 2011 07:12:50 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 09 Aug 2011 05:26:01 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[messages_ja]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

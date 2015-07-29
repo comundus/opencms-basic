@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/cs/messages/org/opencms/webdav</destination>
+		<type>folder</type>
+		<uuidstructure>dc7ba950-ead9-11e1-83f8-51f3073ee387</uuidstructure>
+		<datelastmodified>Mon, 20 Aug 2012 15:15:22 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 20 Aug 2012 15:15:22 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
