@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ugc/resources/ugc/hosted.html</destination>
 		<type>binary</type>
-		<uuidstructure>4a2d79de-19b4-11e5-be88-b9e737b9eaec</uuidstructure>
-		<uuidresource>4a2def0f-19b4-11e5-be88-b9e737b9eaec</uuidresource>
-		<datelastmodified>Tue, 23 Jun 2015 14:29:43 GMT</datelastmodified>
+		<uuidstructure>16a454fd-bb59-11e5-b33e-d7018da60605</uuidstructure>
+		<uuidresource>16a4a31e-bb59-11e5-b33e-d7018da60605</uuidresource>
+		<datelastmodified>Fri, 15 Jan 2016 07:25:01 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Tue, 23 Jun 2015 14:29:43 GMT</datecreated>
+		<datecreated>Fri, 15 Jan 2016 07:25:01 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

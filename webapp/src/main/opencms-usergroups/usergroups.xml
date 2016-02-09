@@ -22,13 +22,19 @@
 		</groupdata>
 		<user>
 			<name>Admin</name>
-			<password><![CDATA[JHMwJGUwODAxJHhIQUVObm1yaEp6M3ROWHo0WWcwVEE9PSRMN09jaHRuWC82MThCaVVRZlBKNDBjdWR3ZkdIOGl3RjN2L1ZzMk0xQWtnPQ==]]></password>
+			<password><![CDATA[JHMwJGUwODAxJEp5UENEaEo0alFGZ3VQbTZCZU1lRVE9PSRnN1B3R1lLWjRaU3BHRmVIOTlvdXZ1WGw1OElvTnV4a1ZyMXhoWDBWN3RFPQ==]]></password>
 			<firstname> </firstname>
 			<lastname> </lastname>
 			<email> </email>
 			<flags>0</flags>
-			<datecreated>1438170465574</datecreated>
+			<datecreated>1455026787078</datecreated>
 			<userinfo>
+				<entry name="USERPREFERENCES_SYNC_SETTINGS_DESTINATION" type="java.lang.String"><![CDATA[d:\temp\ocms953-basic]]></entry>
+				<entry name="USERPREFERENCES_SYNC_SETTINGS_ENABLED" type="java.lang.Boolean"><![CDATA[true]]></entry>
+				<entry name="USERPREFERENCES_SYNC_SETTINGS_VFS_LIST" type="java.lang.String"><![CDATA[/]]></entry>
+				<entry name="USERPREFERENCES_editors-preferrededitorsplain" type="java.lang.String"><![CDATA[bestavailable]]></entry>
+				<entry name="USERPREFERENCES_editors-preferrededitorsxmlcontent" type="java.lang.String"><![CDATA[bestavailable]]></entry>
+				<entry name="USERPREFERENCES_workplace-searchsearchview-style" type="java.lang.String"><![CDATA[explorer]]></entry>
 				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_ADMIN_DESCRIPTION_0)]]></entry>
 				<entry name="jlan_hash" type="[B"><![CDATA[rO0ABXVyAAJbQqzzF/gGCFTgAgAAeHAAAAAQIJxhdNpJDK60IvP6WnrmNA==]]></entry>
 			</userinfo>
@@ -41,12 +47,12 @@
 		</user>
 		<user>
 			<name>Export</name>
-			<password><![CDATA[JHMwJGUwODAxJHFXQko0NE5DNGY2ZGIxcXVvR3FaVGc9PSRFRkNabG8vNWpLd2VNdGNiVExwU3diVW9ZTTVrOUcvc0tVQ2ZSYjdKT1o0PQ==]]></password>
+			<password><![CDATA[JHMwJGUwODAxJDEzMjRpWkJidzVSMDNpZkhJazVrclE9PSRoaUFCV20rRW1hdmlzandTN01tM1JXTHlza211anc1R1NXUklQejFwZnQ0PQ==]]></password>
 			<firstname> </firstname>
 			<lastname> </lastname>
 			<email> </email>
 			<flags>0</flags>
-			<datecreated>1438170465810</datecreated>
+			<datecreated>1455026787264</datecreated>
 			<userinfo>
 				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_EXPORT_DESCRIPTION_0)]]></entry>
 			</userinfo>
@@ -57,12 +63,12 @@
 		</user>
 		<user>
 			<name>Guest</name>
-			<password><![CDATA[JHMwJGUwODAxJDlwa0tLV2VHUnZueDNXckhuRGFEbEE9PSRRQTJVSzFscnFHT0RVbjVOeDNxUk4wMHliSXQ3YXlhREtFZ2E3NXR1N2FBPQ==]]></password>
+			<password><![CDATA[JHMwJGUwODAxJExCT0RxNUN1VDBoK0N6aVhlSTZhTEE9PSQ0M282R1ZkY05MdXZrTktsK05aNmFYSERKSXNOdmExOW96RjJ0Z0Q1ZEpFPQ==]]></password>
 			<firstname> </firstname>
 			<lastname> </lastname>
 			<email> </email>
 			<flags>0</flags>
-			<datecreated>1438170465355</datecreated>
+			<datecreated>1455026786890</datecreated>
 			<userinfo>
 				<entry name="USER_DESCRIPTION" type="java.lang.String"><![CDATA[%(key.GUI_DEFAULTUSER_ROOT_GUEST_DESCRIPTION_0)]]></entry>
 			</userinfo>

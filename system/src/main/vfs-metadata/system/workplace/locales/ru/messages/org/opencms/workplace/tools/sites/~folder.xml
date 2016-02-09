@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/ru/messages/org/opencms/workplace/tools/sites</destination>
+		<type>folder</type>
+		<uuidstructure>f3016197-1faf-11e5-b427-8587bc85f344</uuidstructure>
+		<datelastmodified>Wed, 01 Jul 2015 05:13:46 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 01 Jul 2015 05:13:46 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/codemirror/dist/mode/brainfuck/brainfuck.js</destination>
+		<type>plain</type>
+		<uuidstructure>bf4cd0b1-b2e7-11e5-88dc-000c2943a707</uuidstructure>
+		<uuidresource>bf4cd0b2-b2e7-11e5-88dc-000c2943a707</uuidresource>
+		<datelastmodified>Mon, 04 Jan 2016 13:33:32 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 04 Jan 2016 13:33:32 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

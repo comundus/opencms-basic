@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/editors/tinymce/jscripts/tinymce/plugins/codemirror/langs/cs.js</destination>
+		<type>plain</type>
+		<uuidstructure>b2a3cfe6-b39f-11e5-a2a4-000c2943a707</uuidstructure>
+		<uuidresource>b2a3cfe7-b39f-11e5-a2a4-000c2943a707</uuidresource>
+		<datelastmodified>Tue, 05 Jan 2016 11:32:49 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 05 Jan 2016 11:30:18 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

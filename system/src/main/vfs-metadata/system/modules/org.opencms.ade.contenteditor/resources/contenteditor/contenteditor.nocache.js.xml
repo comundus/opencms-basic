@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/modules/org.opencms.ade.contenteditor/resources/contenteditor/contenteditor.nocache.js</destination>
 		<type>binary</type>
-		<uuidstructure>f1c20c60-19b1-11e5-bcc8-d3f0f1f5fa3d</uuidstructure>
-		<uuidresource>f1c23371-19b1-11e5-bcc8-d3f0f1f5fa3d</uuidresource>
-		<datelastmodified>Tue, 23 Jun 2015 14:12:56 GMT</datelastmodified>
+		<uuidstructure>b7aeb5d4-bb56-11e5-aa5c-6529870e49a4</uuidstructure>
+		<uuidresource>b7aedce5-bb56-11e5-aa5c-6529870e49a4</uuidresource>
+		<datelastmodified>Fri, 15 Jan 2016 07:08:02 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Tue, 23 Jun 2015 14:12:56 GMT</datecreated>
+		<datecreated>Fri, 15 Jan 2016 07:08:02 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

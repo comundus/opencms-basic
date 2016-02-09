@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/workplace/resources/editors/codemirror/dist/addon/fold/indent-fold.js</destination>
 		<type>plain</type>
-		<uuidstructure>f5525e6a-dfca-11e2-8921-170bfb738a71</uuidstructure>
-		<uuidresource>f5525e6b-dfca-11e2-8921-170bfb738a71</uuidresource>
-		<datelastmodified>Fri, 28 Jun 2013 08:16:36 GMT</datelastmodified>
+		<uuidstructure>b8a6da0d-b2e7-11e5-88dc-000c2943a707</uuidstructure>
+		<uuidresource>b8a6da0e-b2e7-11e5-88dc-000c2943a707</uuidresource>
+		<datelastmodified>Mon, 04 Jan 2016 13:33:21 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Fri, 28 Jun 2013 08:15:56 GMT</datecreated>
+		<datecreated>Mon, 04 Jan 2016 13:33:20 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

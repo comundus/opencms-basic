@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>general</artifactId>
-        <version>9.5.2</version>
+        <version>9.5.3</version>
         <relativePath>general-pom.xml</relativePath>
     </parent>
 	<!--
@@ -23,7 +23,7 @@
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms Parent</name>
-    <version>9.5.2</version>
+    <version>9.5.3</version>
     <description>OpenCms</description>
     <!--
     <url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic/content</url>
@@ -67,7 +67,7 @@
 			or to be more precise relative to log4j.properties
 		-->
 		<opencms.logfile>../logs/opencms.log</opencms.logfile>
-		<opencms.version>9.5.2</opencms.version>
+		<opencms.version>9.5.3</opencms.version>
 		<vfs-plugin.version>${opencms.version}</vfs-plugin.version>
 		<jmock.version>2.6.0</jmock.version>
 		<hamcrest.version>1.3</hamcrest.version>
