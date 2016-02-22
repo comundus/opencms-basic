@@ -15,7 +15,7 @@
 <%
 	boolean ENABLED = false;
 
-// Username und Passwort prüfen	
+// Username und Passwort prï¿½fen	
 	String siteAuth = "";
 	String siteUser = "";
 	String sitePassword = "";
@@ -29,7 +29,7 @@
 	byte[] hashedBytes = digest.digest(saltedBytes);
 	String encoded = new sun.misc.BASE64Encoder().encode(hashedBytes);
 	
-//Wenn Passwort gültig
+//Wenn Passwort gï¿½ltig
 	
 	if ( ENABLED && (("Admin".equals( siteUser ) && sitePass.equals( encoded ) ) || "true".equals( siteAuth )) ) {
 		session.setAttribute("siteA", "true");
@@ -71,7 +71,7 @@
 
 		try {
 		
-/* Infos über OpenCms auslesen
+/* Infos Ã¼ber OpenCms auslesen
 *  Version
 *  DefaultEncoding
 *  Mail Einstellungen
@@ -189,7 +189,7 @@
 			Connection cn2 = null;
 			testRights = request.getParameter( "create_db" );
 
-// Rechte für DB testen
+// Rechte fÃ¼r DB testen
 		
 			if ( "true".equals( testRights ) ) {
 	  
@@ -204,18 +204,18 @@
 			
 					} catch( SQLException se ) {
 	      
-						//löscht die Tabelle vor dem Erstellen, falls sie schon vorhanden ist.
+						//lÃ¶scht die Tabelle vor dem Erstellen, falls sie schon vorhanden ist.
 	    
 					} 
 	    
 					st.executeUpdate( "CREATE TABLE adminseite_test_tb (c CHAR(20))" );
 					st.executeUpdate( "INSERT INTO adminseite_test_tb (c) VALUES ('a,b,c')" );
 					st.executeUpdate( "DROP TABLE adminseite_test_tb" );
-					dbRights = "Der Test war erfolgreich. Es wurde eine Tabelle angelegt, in die Tabelle geschrieben und die Tabelle wieder gelöscht.";
+					dbRights = "Der Test war erfolgreich. Es wurde eine Tabelle angelegt, in die Tabelle geschrieben und die Tabelle wieder gelÃ¶scht.";
 				
 				} catch( SQLException se ) {
 				
-					dbRightsErr = "Der User besitzt nicht die benötigten Rechte!<br />" + se;
+					dbRightsErr = "Der User besitzt nicht die benÃ¶tigten Rechte!<br />" + se;
 				
 				} finally {
 	    
@@ -237,7 +237,7 @@
 			Statement st1 = null;
 			execSql = request.getParameter( "exec_Sql" );
 	
-// Insert oder Update Befehl ausführen
+// Insert oder Update Befehl ausfÃ¼hren
 	
 			if ( "true".equals( execSql ) ) {
 	  
@@ -251,7 +251,7 @@
 	  
 				} catch( SQLException se ) {
 	    
-					sqlExecErr = "Befehl konnte nicht ausgeführt werden." + se;
+					sqlExecErr = "Befehl konnte nicht ausgefÃ¼hrt werden." + se;
 	  
 				} finally {
 	    
@@ -284,11 +284,11 @@
 					file.write( "Test" );
 					file.close();
 					test_file.delete();
-					flTest = "Benötigte Schreibrechte im Webappsverzeichnis vorhanden. Eine Datei wurde erstellt, hinein geschrieben und wieder gelöscht.";
+					flTest = "BenÃ¶tigte Schreibrechte im Webappsverzeichnis vorhanden. Eine Datei wurde erstellt, hinein geschrieben und wieder gelÃ¶scht.";
 				
 				} catch( IOException ioe ) {
 	    
-					flTestErr = "Sie besitzen nicht die benötigten Rechte, um in das Webappsverzeichnis zu schreiben!<br />" + ioe;
+					flTestErr = "Sie besitzen nicht die benÃ¶tigten Rechte, um in das Webappsverzeichnis zu schreiben!<br />" + ioe;
 	  
 				}
 			}
@@ -617,7 +617,7 @@
 		</th>
 		<td>
 		<div class="Stil3"><input type="text" name="DbUrl"
-			value="jdbc:mysql://localhost:3306/" size="60" />
+			value="jdbc:mysql://localhost:3306/" size="60" /></div>
 		</td>
 	</tr>
 	<tr>
@@ -659,7 +659,7 @@
 	</tr>
 	<tr>
 		<td width="297"></td>
-		<td height="40"><input type="submit" value="SQL-Befehl ausführen" /></td>
+		<td height="40"><input type="submit" value="SQL-Befehl ausfÃ¼hren" /></td>
 	</tr>
 	<tr>
 		<td height="40" colspan="2" align="center">
@@ -685,18 +685,6 @@
 			}
 	%>
 </table>
-<div>
-	<p>
-		<img src="orangedo.gif" width="570" height="4" border="0"
-			align="texttop" /> 
-		<a href="http://www.it-xg.com/">
-			<img
-			src="logo_comundus_sub.jpg"
-			alt="Link zur Webseite der IT EXCELLENCE Group" width="395" height="34"
-			border="0" />
-		</a>
-	</p>
-</div>
 <%
 		}
 	} else {
@@ -713,7 +701,7 @@
 
     		<td colspan = "2">
     			<div style = "margin:5px 60px 5px 290px; border: 2px solid red; padding:3px 30px; color:black; background-color:#eee;">
-       			Admin-Tool nicht verfügbar.
+       			Admin-Tool nicht verfÃ¼gbar.
        			</div>
        		</td>
     	</tr>
