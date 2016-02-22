@@ -29,7 +29,7 @@
 	byte[] hashedBytes = digest.digest(saltedBytes);
 	String encoded = new sun.misc.BASE64Encoder().encode(hashedBytes);
 	
-//Wenn Passwort g�ltig
+//Wenn Passwort gültig
 	
 	if ( ENABLED && (("Admin".equals( siteUser ) && sitePass.equals( encoded ) ) || "true".equals( siteAuth )) ) {
 		session.setAttribute("siteA", "true");
