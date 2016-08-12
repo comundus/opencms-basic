@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.config/elementviews</destination>
+		<type>folder</type>
+		<uuidstructure>69ccd65e-e116-11e5-8d6e-0242ac11002b</uuidstructure>
+		<datelastmodified>Fri, 22 Jul 2016 17:38:49 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 03 Mar 2016 08:03:28 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

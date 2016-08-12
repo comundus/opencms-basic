@@ -4,10 +4,10 @@
 	<file>
 		<destination>system/workplace/admin/workplace/logging</destination>
 		<type>folder</type>
-		<uuidstructure>b598a639-5265-11e1-ba62-e7aa6134161f</uuidstructure>
-		<datelastmodified>Thu, 09 Feb 2012 11:42:31 GMT</datelastmodified>
+		<uuidstructure>d3f293c2-5004-11e6-83ab-5c260a60caaf</uuidstructure>
+		<datelastmodified>Fri, 22 Jul 2016 17:38:24 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Wed, 08 Feb 2012 15:00:58 GMT</datecreated>
+		<datecreated>Fri, 22 Jul 2016 12:07:14 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties>
@@ -25,7 +25,7 @@
 			</property>
 			<property>
 				<name>NavPos</name>
-				<value><![CDATA[4]]></value>
+				<value><![CDATA[4.0]]></value>
 			</property>
 			<property>
 				<name>NavText</name>

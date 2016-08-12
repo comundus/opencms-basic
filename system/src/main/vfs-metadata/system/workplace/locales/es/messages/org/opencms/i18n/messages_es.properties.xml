@@ -4,11 +4,11 @@
 	<file>
 		<destination>system/workplace/locales/es/messages/org/opencms/i18n/messages_es.properties</destination>
 		<type>plain</type>
-		<uuidstructure>d8158334-386a-11dd-b6aa-111d34530985</uuidstructure>
-		<uuidresource>d8158335-386a-11dd-b6aa-111d34530985</uuidresource>
-		<datelastmodified>Fri, 03 Nov 2006 16:42:30 GMT</datelastmodified>
+		<uuidstructure>9e0e7f7a-2e20-11e6-9187-79ccfd198777</uuidstructure>
+		<uuidresource>9e0e7f7b-2e20-11e6-9187-79ccfd198777</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:07:41 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Thu, 12 Jun 2008 10:32:23 GMT</datecreated>
+		<datecreated>Thu, 09 Jun 2016 09:00:30 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties/>

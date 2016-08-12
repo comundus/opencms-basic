@@ -4,10 +4,10 @@
 	<file>
 		<destination>system/workplace/admin/accounts/imexport_user_data</destination>
 		<type>folder</type>
-		<uuidstructure>823bf492-b752-11db-a09d-417220e76ee8</uuidstructure>
-		<datelastmodified>Thu, 08 Feb 2007 09:19:14 GMT</datelastmodified>
+		<uuidstructure>de495d27-5004-11e6-83ab-5c260a60caaf</uuidstructure>
+		<datelastmodified>Fri, 22 Jul 2016 17:38:22 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Thu, 08 Feb 2007 08:58:13 GMT</datecreated>
+		<datecreated>Fri, 22 Jul 2016 12:07:32 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties>
@@ -25,7 +25,7 @@
 			</property>
 			<property>
 				<name>NavPos</name>
-				<value><![CDATA[7]]></value>
+				<value><![CDATA[7.0]]></value>
 			</property>
 			<property>
 				<name>NavText</name>

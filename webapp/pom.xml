@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>9.5.3</version>
+        <version>10.0.1</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -113,6 +113,112 @@
         <dependency>
             <groupId>org.opencms</groupId>
             <artifactId>opencms-core</artifactId>
+        </dependency>
+        <!--  
+        	from version 10 on the module jars are no longer in the module zip.
+        	so we have to add them as dependencies
+         -->
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.workplace</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.sites</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.searchindex</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.scheduler</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.publishqueue</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.projects</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.modules</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.link</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.history</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.git</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.galleryoverview</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.database</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.content</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.cache</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.tools.accounts</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.explorer</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.workplace.administration</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.ugc</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.gwt</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.editors.tinymce</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.editors.codemirror</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.apollo.template.webform</artifactId>
+		</dependency>
+        <!--  
+        	END from version 10 on the module jars are no longer in the module zip.
+        	so we have to add them as dependencies
+         -->
+        <!-- this file is missing in the public repo, so we provide it here -->
+        <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>org.opencms.ui.widgetset</artifactId>
+            <version>${opencms.version}</version>
         </dependency>
         <dependency>
 			<groupId>${jdbcDriver.groupId}</groupId>

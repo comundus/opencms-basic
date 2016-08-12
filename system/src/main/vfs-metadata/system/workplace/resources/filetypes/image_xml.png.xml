@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/filetypes/image_xml.png</destination>
+		<type>image</type>
+		<uuidstructure>c9eee56b-61cb-11e5-bd18-a1aa1f21b3dc</uuidstructure>
+		<uuidresource>c9eee56c-61cb-11e5-bd18-a1aa1f21b3dc</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:06:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 23 Sep 2015 08:19:19 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[image_xml]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:16,h:16]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

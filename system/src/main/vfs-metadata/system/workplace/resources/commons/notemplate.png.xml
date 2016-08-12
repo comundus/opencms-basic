@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/commons/notemplate.png</destination>
+		<type>image</type>
+		<uuidstructure>653b45a9-7735-11e0-89e5-d14bc4448678</uuidstructure>
+		<uuidresource>653b45aa-7735-11e0-89e5-d14bc4448678</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:06:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 05 May 2011 16:33:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[notemplate]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:64,h:64]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

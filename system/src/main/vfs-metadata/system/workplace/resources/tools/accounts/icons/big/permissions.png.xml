@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/accounts/icons/big/permissions.png</destination>
+		<type>image</type>
+		<uuidstructure>762ed41f-5c59-11e0-931f-e56374e618d7</uuidstructure>
+		<uuidresource>762ed420-5c59-11e0-931f-e56374e618d7</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:07:33 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 01 Apr 2011 12:13:32 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Permissions]]></value>
+			</property>
+			<property type="shared">
+				<name>image.size</name>
+				<value><![CDATA[w:32,h:32]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

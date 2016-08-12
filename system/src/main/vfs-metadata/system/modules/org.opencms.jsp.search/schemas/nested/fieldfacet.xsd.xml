@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.jsp.search/schemas/nested/fieldfacet.xsd</destination>
+		<type>plain</type>
+		<uuidstructure>ff3383fb-a62e-11e4-9ae0-bfc0090a1084</uuidstructure>
+		<uuidresource>ff3383fc-a62e-11e4-9ae0-bfc0090a1084</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:08:24 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 27 Jan 2015 14:15:50 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Nested content to store the options for a field facet]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>9.5.3</version>
+        <version>10.0.1</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -46,12 +46,14 @@
 						<!-- we synchronize subfolders of orgunits in their own project -->
                         <syncVFSPath>/system/shared/</syncVFSPath>
                         <syncVFSPath>/system/workplace/</syncVFSPath>
-                        
+                        <!-- Folder /system/userimages/ added in version 10 -->
+                        <syncVFSPath>/system/userimages/</syncVFSPath>
                         <!-- Folder /system/info was added by comundus -->
                         <syncVFSPath>/system/info/</syncVFSPath>
 
 						<syncVFSPath>/system/modules/org.opencms.ade.config/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.ade.containerpage/</syncVFSPath>
+						<!-- removed in version 10 -->
+						<!-- syncVFSPath>/system/modules/org.opencms.ade.containerpage/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.ade.contenteditor/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.ade.editprovider/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.ade.galleries/</syncVFSPath>
@@ -59,31 +61,37 @@
 						<syncVFSPath>/system/modules/org.opencms.ade.properties/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.ade.publish/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.ade.sitemap/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.ade.upload/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.ade.upload/</syncVFSPath-->
 						<syncVFSPath>/system/modules/org.opencms.editors.codemirror/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.editors.tinymce/</syncVFSPath>
+						<!-- removed in version 10 -->
+						<!-- syncVFSPath>/system/modules/org.opencms.editors.tinymce/</syncVFSPath-->
 						<syncVFSPath>/system/modules/org.opencms.gwt/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.jquery/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.jsp.search/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.ugc/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.administration/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.help/</syncVFSPath>
+						<!-- removed in version 10 -->
+						<!--syncVFSPath>/system/modules/org.opencms.workplace.help/</syncVFSPath-->
 						<syncVFSPath>/system/modules/org.opencms.workplace.spellcheck/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.git/</syncVFSPath>
 						<!-- the following modules contain only the corresponding module jar -->
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.accounts/</syncVFSPath>
+						<!-- removed in version 10 -->
+						<!-- syncVFSPath>/system/modules/org.opencms.workplace.tools.accounts/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.cache/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.content/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.database/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.galleryoverview/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.history/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.history/</syncVFSPath-->
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.link/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.modules/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.projects/</syncVFSPath>
+						<!-- removed in version 10 -->
+						<!-- syncVFSPath>/system/modules/org.opencms.workplace.tools.projects/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.publishqueue/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.scheduler/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.searchindex/</syncVFSPath>
+						<syncVFSPath>/system/modules/org.opencms.workplace.tools.searchindex/</syncVFSPath-->
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.sites/</syncVFSPath>
-						
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.workplace/</syncVFSPath>
+						<!-- removed in version 10 -->
+						<!-- syncVFSPath>/system/modules/org.opencms.workplace.tools.workplace/</syncVFSPath-->
 						<!-- end the following modules contain only the corresponding module jar -->
 
 						<!-- The module org.opencms.workplace is only needed if no other module which defines default_bodies is present-->

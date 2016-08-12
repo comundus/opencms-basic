@@ -4,19 +4,14 @@
 	<file>
 		<destination>system/workplace/locales/es/messages/org/opencms/workplace/search/messages_es.properties</destination>
 		<type>plain</type>
-		<uuidstructure>da377882-386a-11dd-b6aa-111d34530985</uuidstructure>
-		<uuidresource>da377883-386a-11dd-b6aa-111d34530985</uuidresource>
-		<datelastmodified>Thu, 11 Oct 2007 09:30:45 GMT</datelastmodified>
+		<uuidstructure>9e376377-2e20-11e6-9187-79ccfd198777</uuidstructure>
+		<uuidresource>9e376378-2e20-11e6-9187-79ccfd198777</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:07:42 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Thu, 12 Jun 2008 10:32:26 GMT</datecreated>
+		<datecreated>Thu, 09 Jun 2016 09:00:30 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
-		<properties>
-			<property>
-				<name>Title</name>
-				<value><![CDATA[messages_de]]></value>
-			</property>
-		</properties>
+		<properties/>
 		<relations/>
 		<accesscontrol/>
 	</file>

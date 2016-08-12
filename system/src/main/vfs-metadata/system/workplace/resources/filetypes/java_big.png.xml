@@ -6,7 +6,7 @@
 		<type>image</type>
 		<uuidstructure>69ce12a9-4032-11e0-bd91-cba538d80d30</uuidstructure>
 		<uuidresource>69ce12aa-4032-11e0-bd91-cba538d80d30</uuidresource>
-		<datelastmodified>Thu, 24 Feb 2011 16:23:28 GMT</datelastmodified>
+		<datelastmodified>Fri, 22 Jul 2016 12:05:47 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
 		<datecreated>Thu, 24 Feb 2011 16:23:28 GMT</datecreated>
 		<usercreated>Admin</usercreated>
@@ -14,7 +14,7 @@
 		<properties>
 			<property type="shared">
 				<name>image.size</name>
-				<value><![CDATA[w:20,h:20]]></value>
+				<value><![CDATA[w:24,h:24]]></value>
 			</property>
 		</properties>
 		<relations/>

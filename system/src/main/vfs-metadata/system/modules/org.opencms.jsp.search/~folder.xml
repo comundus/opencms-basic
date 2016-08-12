@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.jsp.search</destination>
+		<type>folder</type>
+		<uuidstructure>7c3f1c02-a62c-11e4-9ae0-bfc0090a1084</uuidstructure>
+		<datelastmodified>Fri, 22 Jul 2016 17:38:50 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 27 Jan 2015 13:57:52 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

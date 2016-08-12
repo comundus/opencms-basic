@@ -4,16 +4,16 @@
 	<file>
 		<destination>system/galleries/pics</destination>
 		<type>folder</type>
-		<uuidstructure>8221c535-11b7-11db-91cd-fdbae480bac9</uuidstructure>
-		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<uuidstructure>a177e83e-5004-11e6-83ab-5c260a60caaf</uuidstructure>
+		<datelastmodified>Fri, 22 Jul 2016 12:05:50 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<datecreated>Fri, 22 Jul 2016 12:05:50 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
 		<properties>
 			<property>
 				<name>exportname</name>
-				<value><![CDATA[/pics/]]></value>
+				<value><![CDATA[pics]]></value>
 			</property>
 		</properties>
 		<relations/>

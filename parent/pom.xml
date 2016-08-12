@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>general</artifactId>
-        <version>9.5.3</version>
+        <version>10.0.1</version>
         <relativePath>general-pom.xml</relativePath>
     </parent>
 	<!--
@@ -23,7 +23,7 @@
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms Parent</name>
-    <version>9.5.3</version>
+    <version>10.0.1</version>
     <description>OpenCms</description>
     <!--
     <url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic/content</url>
@@ -67,8 +67,8 @@
 			or to be more precise relative to log4j.properties
 		-->
 		<opencms.logfile>../logs/opencms.log</opencms.logfile>
-		<opencms.version>9.5.3</opencms.version>
-		<vfs-plugin.version>${opencms.version}a</vfs-plugin.version>
+		<opencms.version>10.0.1</opencms.version>
+		<vfs-plugin.version>${opencms.version}</vfs-plugin.version>
 		<jmock.version>2.6.0</jmock.version>
 		<hamcrest.version>1.3</hamcrest.version>
 	</properties>
@@ -88,7 +88,7 @@
 						<artifactId>tomcat-maven-plugin</artifactId>
 						<configuration>
 						    <path>${opencms.webapp.path}</path>
-						    <url>http://localhost:8080/manager</url>
+						    <url>http://localhost:18080/manager</url>
 						    <server>local-tomcat-manager-admin</server>
 						</configuration>
 					</plugin>
@@ -117,7 +117,7 @@
 						<artifactId>tomcat-maven-plugin</artifactId>
 						<configuration>
 						    <path>${opencms.webapp.path}</path>
-						    <url>http://localhost:8080/manager/text</url>
+						    <url>http://localhost:18080/manager/text</url>
 						    <server>local-tomcat-manager-admin</server>
 						</configuration>
 					</plugin>
@@ -635,8 +635,198 @@
 	            		<groupId>com.alkacon</groupId>
 	            	</exclusion>
 	            	<!-- end of unnnecessary JARs -->
+	            	<!-- [KS 10.0.1] These JARs should not appear in WEB-INF/lib - 
+	            	     They should be in the provided scope or be optional in opencms-core -->
+	            	<!-- already defined for version 9.0.1 -->
+	            	<!-- exclusion>
+	            		<artifactId>gwt-dev</artifactId>
+	            		<groupId>com.google.gwt</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>gwt-user</artifactId>
+	            		<groupId>com.google.gwt</groupId>
+	            	</exclusion-->
+	            	<!-- end of already defined for version 9.0.1 -->
+	            	<exclusion>
+	            		<artifactId>vaadin-client</artifactId>
+	            		<groupId>com.vaadin</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>vaadin-client-compiler</artifactId>
+	            		<groupId>com.vaadin</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>vaadin-sass-compiler</artifactId>
+	            		<groupId>com.vaadin</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>flute</artifactId>
+	            		<groupId>com.vaadin.external.flute</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>gwt-dev</artifactId>
+	            		<groupId>com.google.gwt</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>yuicompressor</artifactId>
+	            		<groupId>com.yahoo.platform.yui</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>asm</artifactId>
+	            		<groupId>org.ow2.asm</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>asm-commons</artifactId>
+	            		<groupId>org.ow2.asm</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>asm-tree</artifactId>
+	            		<groupId>org.ow2.asm</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>asm-util</artifactId>
+	            		<groupId>org.ow2.asm</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>org.timepedia.exporter</artifactId>
+	            		<groupId>gwtexporter</groupId>
+	            	</exclusion>
+	            	<exclusion>
+	            		<artifactId>org.w3c.css</artifactId>
+	            		<groupId>sac</groupId>
+	            	</exclusion>
+	            	<!-- end of unnnecessary JARs -->
 	            </exclusions>
         	</dependency>
+	        <!--  
+	        	from version 10 on the module jars are no longer in the module zip.
+	        	so we have to add them as dependencies.
+	        	When there is a new version of OpenCms, the following dependencies have to be checked against the lib folder of an original installation of OpenCms
+	         -->
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.workplace</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.sites</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.searchindex</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.scheduler</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.publishqueue</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.projects</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.modules</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.link</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.history</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.git</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.galleryoverview</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.database</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.content</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.cache</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.tools.accounts</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.explorer</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.workplace.administration</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.ugc</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.gwt</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.editors.tinymce</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.editors.codemirror</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.opencms</groupId>
+			    <artifactId>org.opencms.apollo.template.webform</artifactId>
+			    <version>${opencms.version}</version>
+			</dependency>
+	        <!-- 
+	        	END When there is a new version of OpenCms, the following dependencies have to be checked against the lib folder of an original installation of OpenCms
+	         -->
+            <!-- this file is missing in the public repo, so we provide it here -->
+            <dependency>
+                <groupId>org.opencms</groupId>
+                <artifactId>org.opencms.ui.widgetset</artifactId>
+                <version>${opencms.version}</version>
+            </dependency>
         	<!-- Overrides dependency declared by OpenCms because of DoS vulnerability.
         	     See: http://mail-archives.apache.org/mod_mbox/www-announce/201402.mbox/%3C52F373FC.9030907@apache.org%3E
         	 -->
@@ -725,11 +915,24 @@
 				<artifactId>jdave-unfinalizer</artifactId>
 				<version>1.1</version>
 				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>dumbster</groupId>
+				<artifactId>dumbster</artifactId>
+				<version>1.6</version>
+				<scope>test</scope>
+			</dependency>			
+			<dependency>
+				<groupId>org.hsqldb</groupId>
+				<artifactId>hsqldb</artifactId>
+				<version>2.3.2</version>
+				<scope>test</scope>
 			</dependency>			
 			<!--  End test dependencies  -->
 		</dependencies>	
 	</dependencyManagement>
     <modules>
+        <module>../widgetset-jar</module>
         <module>../webapp</module>  <!-- this must always come first -->
         <module>../system</module>	<!-- containing categories, but not orgunits -->
         <module>../content</module>  <!-- requires categories from system -->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/gallery.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>01e0b3b9-2d24-11df-abdb-43be96c33985</uuidstructure>
+		<uuidresource>01e0b3ba-2d24-11df-abdb-43be96c33985</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:06:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 11 Mar 2010 15:37:31 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

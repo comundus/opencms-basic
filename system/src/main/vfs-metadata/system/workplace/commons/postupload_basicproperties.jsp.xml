@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/postupload_basicproperties.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>0da00905-0f45-11e5-b81f-e9e4a966f961</uuidstructure>
+		<uuidresource>0da00906-0f45-11e5-b81f-e9e4a966f961</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:06:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 10 Jun 2015 07:48:16 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol>
+			<accessentry>
+				<uuidprincipal>ROLE.ELEMENT_AUTHOR</uuidprincipal>
+				<flags>512</flags>
+				<permissionset>
+					<allowed>1</allowed>
+					<denied>0</denied>
+				</permissionset>
+			</accessentry>
+		</accesscontrol>
+	</file>
+</export>

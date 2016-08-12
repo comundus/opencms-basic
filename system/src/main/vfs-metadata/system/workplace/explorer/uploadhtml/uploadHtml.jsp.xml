@@ -6,7 +6,7 @@
 		<type>jsp</type>
 		<uuidstructure>f2855e0f-789c-11dc-88e8-7799c52f7191</uuidstructure>
 		<uuidresource>f2855e10-789c-11dc-88e8-7799c52f7191</uuidresource>
-		<datelastmodified>Mon, 15 Oct 2007 14:02:18 GMT</datelastmodified>
+		<datelastmodified>Fri, 22 Jul 2016 12:06:06 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
 		<datecreated>Fri, 12 Oct 2007 08:27:19 GMT</datecreated>
 		<usercreated>Admin</usercreated>
@@ -19,14 +19,6 @@
 			<property>
 				<name>Title</name>
 				<value><![CDATA[Dialog - New resource upload HTML]]></value>
-			</property>
-			<property>
-				<name>admintoolhandler-args</name>
-				<value><![CDATA[params:resource=${param.resource}|path:/uploadhtml]]></value>
-			</property>
-			<property>
-				<name>admintoolhandler-class</name>
-				<value><![CDATA[org.opencms.workplace.tools.CmsDefaultToolHandler]]></value>
 			</property>
 			<property type="shared">
 				<name>export</name>

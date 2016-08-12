@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/uploadAction.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>54fc80dc-287a-11e0-9363-9d0a6b56f130</uuidstructure>
+		<uuidresource>54fc80dd-287a-11e0-9363-9d0a6b56f130</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:06:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 25 Jan 2011 11:57:49 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[The upload JSP]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol>
+			<accessentry>
+				<uuidprincipal>ROLE.ELEMENT_AUTHOR</uuidprincipal>
+				<flags>512</flags>
+				<permissionset>
+					<allowed>1</allowed>
+					<denied>0</denied>
+				</permissionset>
+			</accessentry>
+		</accesscontrol>
+	</file>
+</export>

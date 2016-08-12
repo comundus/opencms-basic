@@ -5,7 +5,7 @@
 		<destination>system/workplace/admin/publishqueue</destination>
 		<type>folder</type>
 		<uuidstructure>248813db-6ff5-11db-873f-bf6fa13020a5</uuidstructure>
-		<datelastmodified>Mon, 13 Nov 2006 09:04:32 GMT</datelastmodified>
+		<datelastmodified>Fri, 22 Jul 2016 17:38:24 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
 		<datecreated>Thu, 09 Nov 2006 13:21:00 GMT</datecreated>
 		<usercreated>Admin</usercreated>
@@ -25,7 +25,7 @@
 			</property>
 			<property>
 				<name>NavPos</name>
-				<value><![CDATA[15.0]]></value>
+				<value><![CDATA[35.0]]></value>
 			</property>
 			<property>
 				<name>NavText</name>

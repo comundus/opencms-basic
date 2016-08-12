@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/es/messages/org/opencms/ade/galleries/messages_es.properties</destination>
+		<type>plain</type>
+		<uuidstructure>9e927c54-2e20-11e6-9187-79ccfd198777</uuidstructure>
+		<uuidresource>9e927c55-2e20-11e6-9187-79ccfd198777</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:07:40 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 09 Jun 2016 09:00:31 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

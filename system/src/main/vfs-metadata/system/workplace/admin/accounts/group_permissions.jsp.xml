@@ -6,7 +6,7 @@
 		<type>jsp</type>
 		<uuidstructure>3b685a9e-5ba9-11e0-883d-e56374e618d7</uuidstructure>
 		<uuidresource>3b685a9f-5ba9-11e0-883d-e56374e618d7</uuidresource>
-		<datelastmodified>Fri, 01 Apr 2011 12:24:26 GMT</datelastmodified>
+		<datelastmodified>Fri, 22 Jul 2016 12:07:31 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
 		<datecreated>Thu, 31 Mar 2011 15:12:02 GMT</datecreated>
 		<usercreated>Admin</usercreated>
@@ -18,7 +18,7 @@
 			</property>
 			<property>
 				<name>NavImage</name>
-				<value><![CDATA[tools/accounts/icons/big/pemissions.png]]></value>
+				<value><![CDATA[tools/accounts/icons/big/permissions.png]]></value>
 			</property>
 			<property>
 				<name>NavInfo</name>

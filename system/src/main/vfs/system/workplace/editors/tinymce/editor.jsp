@@ -522,7 +522,7 @@ default:
 
 <link rel="stylesheet" type="text/css" href="<%= wp.getStyleUri("workplace.css") %>">
 <link rel="stylesheet" type="text/css" href="<%= cms.link("/system/workplace/editors/tinymce/tinymce_xmlpage.css") %>">
-<script type="text/javascript" src="<%= CmsWorkplace.getSkinUri() + "editors/tinymce/jscripts/tinymce/" %>tinymce.min.js"></script>
+<script type="text/javascript" src="<%= CmsWorkplace.getStaticResourceUri("editors/tinymce/jscripts/tinymce/tinymce.min.js") %>"></script>
 <script type="text/javascript" src="<%= CmsWorkplace.getSkinUri() + "jquery/packed/" %>jquery.js"></script>
 <script type="text/javascript">
 
@@ -557,6 +557,14 @@ function confirmDeleteLocale() {
 function buttonAction(para) {
 	var _form = document.EDITOR;
 	_form.action.value = "";
+	var isWp = false;
+    try { 
+        if (top.document.querySelector(".o-editor-frame")) {
+            isWp = true; 
+        } else { 
+            isWp = false; 
+        }
+    } catch (e) {}
     switch (para) {
     case 1:
         // reload the editor
@@ -700,7 +708,7 @@ tinyMCE.init({
     // General options
     codemirror: {
       indentOnInit: true, // whether or not to indent code on init.
-      path: "<%= CmsWorkplace.getSkinUri() + "editors/codemirror/dist/" %>", // path to CodeMirror distribution
+      path: "<%= CmsStringUtil.joinPaths(OpenCms.getSystemInfo().getStaticResourceContext() , "editors/codemirror/dist/") %>", // path to CodeMirror distribution
       config: {           // CodeMirror config object
          lineNumbers: true
       }
@@ -783,7 +791,7 @@ tinyMCE.init({
 		// Add Publisg button
 	    ed.addButton('oc-publish', {
 	    	title : '<%= CmsEncoder.encodeJavaEntities(wp.key(org.opencms.workplace.editors.Messages.GUI_EXPLORER_CONTEXT_PUBLISH_0), encoding)  %>',
-	        image : '<%=cms.link("/system/workplace/resources/editors/tinymce/toolbar/oc-publish.gif")%>',
+	        image : '<%=CmsWorkplace.getStaticResourceUri("editors/tinymce/toolbar/oc-publish.gif")%>',
 	        onclick : function() {
 	        	var exitTarget='_top';
 	        	//the editors exit frame target, may be !='_top' if in advanced direct edit!
@@ -797,21 +805,21 @@ tinyMCE.init({
 	 	// Add Save & Exit button
 	    ed.addButton('oc-save-exit', {
 	    	title : '<%= CmsEncoder.encodeJavaEntities(wp.key(org.opencms.workplace.editors.Messages.GUI_BUTTON_SAVECLOSE_0), encoding) %>',
-	        image : '<%=cms.link("/system/workplace/resources/editors/tinymce/toolbar/oc-save-exit.gif")%>',
+	        image : '<%=CmsWorkplace.getStaticResourceUri("editors/tinymce/toolbar/oc-save-exit.gif")%>',
 	        onclick : ocmsSaveExit
 	   });
 	   
 	 	// Add Save button
 	    ed.addButton('oc-save', {
 	    	title : '<%= CmsEncoder.encodeJavaEntities(wp.key(org.opencms.workplace.editors.Messages.GUI_BUTTON_SAVE_0), encoding) %>',
-	        image : '<%=cms.link("/system/workplace/resources/editors/tinymce/toolbar/oc-save.gif")%>',
+	        image : '<%=CmsWorkplace.getStaticResourceUri("/editors/tinymce/toolbar/oc-save.gif")%>',
 	        onclick : ocmsSave
 	   });
 
 	 	// Add Exit button
 	    ed.addButton('oc-exit', {
 	    	title : '<%= CmsEncoder.encodeJavaEntities(wp.key(org.opencms.workplace.editors.Messages.GUI_BUTTON_CLOSE_0), encoding) %>',
-	        image : '<%=cms.link("/system/workplace/resources/editors/tinymce/toolbar/oc-exit.gif")%>',
+	        image : '<%=CmsWorkplace.getStaticResourceUri("editors/tinymce/toolbar/oc-exit.gif")%>',
 	        onclick : ocmsExit
 	   });
 	}
@@ -855,10 +863,21 @@ function addCustomShortcuts(editor){
 
 //sets field values and submits the editor form
 function execAction(editor, action, target) {
+    var isWp = false;
+    try { 
+        if (top.document.querySelector(".o-editor-frame")) {
+            isWp = true; 
+        } else { 
+            isWp = false; 
+        }
+    } catch (e) {}
 	var form = document.forms["EDITOR"];
 	form.content.value = encodeURIComponent(editor.getContent());
 	form.action.value = action;
 	form.target = target;
+	  if (isWp) {
+         form.target="_self";
+      }
 	form.submit(); 
 }
 // JavaScript resize editor stuff

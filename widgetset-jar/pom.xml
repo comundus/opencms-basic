@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.comundus.opencms</groupId>
+        <artifactId>parent</artifactId>
+        <version>10.0.1</version>
+        <relativePath>../parent/pom.xml</relativePath>
+    </parent>
+    <groupId>org.opencms</groupId>
+    <artifactId>org.opencms.ui.widgetset</artifactId>
+    <version>10.0.1</version>
+    <packaging>pom</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.10</version>
+                <executions>
+                  <execution>
+                    <id>attach-jar</id>
+                    <goals>
+                      <goal>attach-artifact</goal>
+                    </goals>
+                    <configuration>
+                        <artifacts>
+                            <artifact>
+                                <file>lib/opencms-widgetset.jar</file>
+                                <type>jar</type>
+                            </artifact>
+                        </artifacts>
+                    </configuration>
+                  </execution>
+                </executions>
+                </plugin>
+        </plugins>
+    </build>
+</project>

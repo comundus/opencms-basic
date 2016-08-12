@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/resources/tools/git</destination>
+		<type>folder</type>
+		<uuidstructure>2402b642-4fcf-11e5-8d85-8163cdc4d609</uuidstructure>
+		<datelastmodified>Fri, 22 Jul 2016 17:38:47 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 31 Aug 2015 10:57:58 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

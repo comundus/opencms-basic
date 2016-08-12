@@ -19,6 +19,7 @@
 				<importversion class="org.opencms.importexport.CmsImportVersion5" />
 				<importversion class="org.opencms.importexport.CmsImportVersion6" />
 				<importversion class="org.opencms.importexport.CmsImportVersion7" />
+				<importversion class="org.opencms.importexport.CmsImportVersion10" />
 			</importversions>
 			<immutables>
 				<resource uri="/system/" />
@@ -60,12 +61,13 @@
 			<suffix key=".doc" />
 			<suffix key=".xls" />
 			<suffix key=".ppt" />
-		        <suffix key=".docx" />
-		        <suffix key=".xlsx" />
-		        <suffix key=".pptx" />			
+            <suffix key=".docx" />
+            <suffix key=".xlsx" />
+            <suffix key=".pptx" />			
 			<suffix key=".pdf" />
 			<suffix key=".txt" />
 			<suffix key=".css" />
+			<suffix key=".js" />
 			<suffix key=".zip" />
 			<suffix key=".swf" />
 		</defaultsuffixes>
@@ -162,6 +164,7 @@
 				<param name="addBOM">false</param>
 				<param name="wrapper">org.opencms.file.wrapper.CmsResourceWrapperPreventCreateNameCI:thumbs.db|.thumbnails|.xvpics|.DS_Store</param>
 				<param name="wrapper">org.opencms.file.wrapper.CmsResourceWrapperReplaceDeleted</param>
+				<param name="wrapper">org.opencms.file.wrapper.CmsResourceWrapperModules</param>
 			</params>					
 		</repository>
 	</repositories>

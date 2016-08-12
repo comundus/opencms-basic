@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.config/pages/render-seo-file.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>4a982d98-b3ec-4709-a5c3-2c57a9c670c5</uuidstructure>
+		<uuidresource>71b01b3d-207f-46b3-b7c0-d551782070ca</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:06:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 05 May 2011 16:33:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[render-seo-file]]></value>
+			</property>
+			<property>
+				<name>cache</name>
+				<value><![CDATA[uri]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

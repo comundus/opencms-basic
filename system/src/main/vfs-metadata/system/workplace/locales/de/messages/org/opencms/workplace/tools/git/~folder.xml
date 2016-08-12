@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/de/messages/org/opencms/workplace/tools/git</destination>
+		<type>folder</type>
+		<uuidstructure>108d6507-0560-11e6-b7b4-89ce38ab6798</uuidstructure>
+		<datelastmodified>Fri, 22 Jul 2016 17:38:32 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 18 Apr 2016 12:21:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

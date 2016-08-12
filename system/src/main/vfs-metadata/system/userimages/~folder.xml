@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/userimages</destination>
+		<type>folder</type>
+		<uuidstructure>b2522d75-5004-11e6-83ab-5c260a60caaf</uuidstructure>
+		<datelastmodified>Fri, 22 Jul 2016 17:38:49 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 22 Jul 2016 12:06:18 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol>
+			<accessentry>
+				<uuidprincipal>ROLE.ELEMENT_AUTHOR</uuidprincipal>
+				<flags>518</flags>
+				<permissionset>
+					<allowed>1</allowed>
+					<denied>0</denied>
+				</permissionset>
+			</accessentry>
+		</accesscontrol>
+	</file>
+</export>

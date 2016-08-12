@@ -4,19 +4,14 @@
 	<file>
 		<destination>system/workplace/locales/es/messages/org/opencms/main/messages_es.properties</destination>
 		<type>plain</type>
-		<uuidstructure>d8726f63-386a-11dd-b6aa-111d34530985</uuidstructure>
-		<uuidresource>d8726f64-386a-11dd-b6aa-111d34530985</uuidresource>
-		<datelastmodified>Mon, 27 Mar 2006 12:00:00 GMT</datelastmodified>
+		<uuidstructure>9dfd1a3c-2e20-11e6-9187-79ccfd198777</uuidstructure>
+		<uuidresource>9dfd1a3d-2e20-11e6-9187-79ccfd198777</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:07:41 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Thu, 12 Jun 2008 10:32:24 GMT</datecreated>
+		<datecreated>Thu, 09 Jun 2016 09:00:30 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
-		<properties>
-			<property>
-				<name>content-encoding</name>
-				<value><![CDATA[ISO-8859-1]]></value>
-			</property>
-		</properties>
+		<properties/>
 		<relations/>
 		<accesscontrol/>
 	</file>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.ade.config/formatters/function.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>087ba7c9-e7fc-4336-acb8-d3416a4eb1fd</uuidstructure>
+		<uuidresource>087ba7c9-e7fc-4336-acb8-d3416a4eb1fe</uuidresource>
+		<datelastmodified>Fri, 22 Jul 2016 12:06:18 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 24 Sep 2015 13:14:22 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>cache</name>
+				<value><![CDATA[container-element;locale]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

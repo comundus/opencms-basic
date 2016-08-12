@@ -4,22 +4,13 @@
 	<file>
 		<destination>system/workplace/explorer/uploadhtml</destination>
 		<type>folder</type>
-		<uuidstructure>3d2326bc-789b-11dc-9dda-7799c52f7191</uuidstructure>
-		<datelastmodified>Mon, 15 Oct 2007 12:40:54 GMT</datelastmodified>
+		<uuidstructure>ab6d58d0-5004-11e6-83ab-5c260a60caaf</uuidstructure>
+		<datelastmodified>Fri, 22 Jul 2016 17:38:26 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Fri, 12 Oct 2007 08:15:06 GMT</datecreated>
+		<datecreated>Fri, 22 Jul 2016 12:06:06 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
-		<properties>
-			<property>
-				<name>Title</name>
-				<value><![CDATA[Upload HTML]]></value>
-			</property>
-			<property>
-				<name>default-file</name>
-				<value><![CDATA[uploadHtml.jsp]]></value>
-			</property>
-		</properties>
+		<properties/>
 		<relations/>
 		<accesscontrol/>
 	</file>
