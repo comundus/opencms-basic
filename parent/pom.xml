@@ -88,7 +88,7 @@
 						<artifactId>tomcat-maven-plugin</artifactId>
 						<configuration>
 						    <path>${opencms.webapp.path}</path>
-						    <url>http://localhost:18080/manager</url>
+						    <url>http://localhost:8080/manager</url>
 						    <server>local-tomcat-manager-admin</server>
 						</configuration>
 					</plugin>
@@ -117,7 +117,7 @@
 						<artifactId>tomcat-maven-plugin</artifactId>
 						<configuration>
 						    <path>${opencms.webapp.path}</path>
-						    <url>http://localhost:18080/manager/text</url>
+						    <url>http://localhost:8080/manager/text</url>
 						    <server>local-tomcat-manager-admin</server>
 						</configuration>
 					</plugin>
