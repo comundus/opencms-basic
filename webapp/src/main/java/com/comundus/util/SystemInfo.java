@@ -1,12 +1,16 @@
+// (C) comundus GmbH, D-71332 WAIBLINGEN, www.comundus.com
 package com.comundus.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
@@ -15,15 +19,32 @@ import java.util.jar.Attributes;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
+/**
+ * 
+ *
+ */
 public class SystemInfo {
 
-    public static Properties versionProps=null;
+    private static Properties versionProps=null;
     
-    private static Properties getVersionProps() throws IOException{
-	if(versionProps==null){
-	    versionProps=new Properties();
-	    versionProps.load(SystemInfo.class.getResourceAsStream("/org/opencms/main/version.properties"));
-	}
+    private static Object LOCK = new Object();
+    
+    private static Properties getVersionProps() throws IOException{               
+        
+        synchronized(LOCK) {
+            if(versionProps==null){
+                versionProps=new Properties();
+                InputStream in = null;
+                try {
+                    in = SystemInfo.class.getResourceAsStream("/org/opencms/main/version.properties");
+                    versionProps.load(in);
+                } finally {
+                    if (in != null) {
+                        in.close();
+                    }
+                }
+            }
+        }
 	return versionProps;
     }
     
@@ -32,10 +53,9 @@ public class SystemInfo {
 	    return getVersionProps().getProperty("version.number");
 	} catch (Exception e) {
 	    
-	    e.printStackTrace();
+	    log("", e);
 	    return "could not read opencms version : "+e.getClass().getName()+": "+e.getMessage();
 	}
-	
     }
     
     public static String getRevision(){
@@ -43,70 +63,85 @@ public class SystemInfo {
 	    return getVersionProps().getProperty("scm.revision");
 	} catch (Exception e) {
 	    
-	    e.printStackTrace();
+	    log("", e);
 	    return "could not read SCM Revision : "+e.getClass().getName()+": "+e.getMessage();
 	}
-
-	
     }
     
     public static String getBuildTimestamp(){
+        String timestampStr = "(null)";
 	try {
-	    String timestampStr=getVersionProps().getProperty("build.timestamp");
+	    timestampStr = getVersionProps().getProperty("build.timestamp");
 	    if(timestampStr==null||timestampStr.isEmpty()){
 		return "-";
 	    }
 	    return String.valueOf(new Date(Long.valueOf(timestampStr)));
-	    
+	} catch (NumberFormatException e) {
+	    return timestampStr;
 	} catch (Exception e) {
 	    
-	    e.printStackTrace();
+	    log("", e);
 	    return "could not read build timestamp : "+e.getClass().getName()+": "+e.getMessage();
 	}
-
+    }    
+    
+    public static List<JarInfo> getJars() {
+        return getJars(new String[0]);
     }
-
-    
-    
-    public static List<JarInfo> getJars(){
+    public static List<JarInfo> getJars(String[] preferredTexts) {
 	
-	Set<JarInfo> result= new TreeSet<JarInfo>(new JarInfoComparator("de.badenwuerttemberg","_de.gdz.intranet.pagetypes","com.comundus","de.gdz"));
+        Set<String> mergedPreferredTexts = new HashSet<>();
+        mergedPreferredTexts.addAll(Arrays.asList("opencms-core", "sonia-ocms", "ostfalia"));
+        mergedPreferredTexts.addAll(Arrays.asList(preferredTexts));
+        
+	Set<JarInfo> result= new TreeSet<JarInfo>(new JarInfoComparator(mergedPreferredTexts.toArray(new String[0])));
 	
-	File[] a = new File(getWebInfPath()+"/lib").listFiles();
-	for(File f:a){
+	File[] webappJarFiles = new File(getWebInfPath()+"/lib").listFiles();
+        for (File f : webappJarFiles) {
 	    
 	    try {
-		if(f.getName().endsWith(".jar")){
-		    JarFile jar = new JarFile(f);
-		    Manifest manifest = jar.getManifest();
-		    
-		    if(manifest==null){
-			result.add(new JarInfo(f.getName(),null,null,null,"No manifest found"));
-		    }else{
-		    
-			Attributes attrs=manifest.getMainAttributes();
-			String title=attrs.getValue("Implementation-Title");
-			String version=attrs.getValue("Implementation-Version");
-			String scmBuild=attrs.getValue("SCM-Revision");			
+                if (f.getName().endsWith(".jar")) {
+		    JarFile jar = null;
+		    try {
+		        jar = new JarFile(f);
+		        Manifest manifest = jar.getManifest();
 
-			result.add(new JarInfo(f.getName(), version, scmBuild, title));
-		    }
-		    
-		}
-		
+		        if(manifest==null){
+		            result.add(new JarInfo(f.getName(),null,null,null,"No manifest found"));
+		        }else{
+
+		            Attributes attrs=manifest.getMainAttributes();
+		            String title=attrs.getValue("Implementation-Title");
+		            String version=attrs.getValue("Implementation-Version");
+		            String scmBuild=attrs.getValue("SCM-Revision");			
+
+		            result.add(new JarInfo(f.getName(), version, scmBuild, title));
+		        }
+		    } finally {
+		        if (jar != null) {
+		            jar.close();
+		        }
+		    }		    
+		}		
 		
 	    } catch (IOException e) {
 		result.add(new JarInfo(f.getName(),null,null,null,"could not read jar "));
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+		log("", e);
 	    }
-	    
-	    //result.add(f.getName());
 	}
-	return new ArrayList(result);
+	return new ArrayList<JarInfo>(result);
     }
     
     
+    private static void log(String msg, Exception e) {
+        if (msg!= null && !msg.isEmpty()) {
+            System.err.println (msg);
+        }
+        if (e != null) {
+            e.printStackTrace();
+        }        
+    }
+
     public static String getWebInfPath(){
 	 
 	String filePath = "";
@@ -119,9 +154,7 @@ public class SystemInfo {
     }
     
     
-    public static class JarInfo{
-	
-	
+    public static class JarInfo {
 	
 	public JarInfo(String fileName, String version, String scmBuild,
 		String title) {
@@ -191,8 +224,6 @@ public class SystemInfo {
 		}
 	    }
 	    return 0;
-	}
-	
-    }
-    
+	}	
+    }    
 }
