@@ -376,7 +376,7 @@
                                     <executable>java</executable>
                                     <arguments>
                                         <argument>-classpath</argument>
-                                        <argument>"${release.webappLibCP};${release.tomcatLibCP};${release.webappClassesDir}"</argument>
+                                        <argument>"${release.webappLibCP}${path.separator}${release.tomcatLibCP}${path.separator}${release.webappClassesDir}"</argument>
                                         <argument>org.opencms.main.CmsShell</argument>
                                         <argument>-base=${release.opencmsBase}</argument>
                                         <argument>-script=${release.cmsShellScript}</argument>
