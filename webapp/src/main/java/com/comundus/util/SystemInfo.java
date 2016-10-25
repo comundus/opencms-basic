@@ -90,7 +90,7 @@ public class SystemInfo {
     }
     public static List<JarInfo> getJars(String[] preferredTexts) {
 	
-        Set<String> mergedPreferredTexts = new HashSet<>();
+        Set<String> mergedPreferredTexts = new HashSet();
         mergedPreferredTexts.addAll(Arrays.asList("opencms-core", "sonia-ocms", "ostfalia"));
         mergedPreferredTexts.addAll(Arrays.asList(preferredTexts));
         
