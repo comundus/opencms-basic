@@ -68,7 +68,7 @@
         -->
         <opencms.logfile>../logs/opencms.log</opencms.logfile>
         <opencms.version>10.0.1</opencms.version>
-        <vfs-plugin.version>${opencms.version}</vfs-plugin.version>
+        <vfs-plugin.version>${opencms.version}a</vfs-plugin.version>
         <jmock.version>2.8.1</jmock.version>
         <hamcrest.version>1.3</hamcrest.version>
         <java.version>1.7</java.version>
