@@ -22,11 +22,7 @@
 	<version>10.0.1</version>
 	<description>POM with general Information like scm, reporting, release stuff</description>
 	<url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic</url>
-	<prerequisites>
-		<maven>2.0.5</maven>
-	</prerequisites>
 	<inceptionYear>2007</inceptionYear>
-
 
 	<!--
 		per developer configuration may follow (and overwrite global
@@ -34,59 +30,6 @@
 		</properties> </profile> </profiles>
 	-->
 	<profiles>
-		<profile>
-		<!--
-		This profile allows to execute eclipse:eclipse setting the folder name as the project name
-		Usage: mvn -P eclipse validate
-		    It's kind of a hassle, but so is Maven!
-
-			actually we don't need it in the opencms-basic project, because there are no java projects
-		 -->
-		  <id>eclipse</id>
-		  <build>
-		  <plugins>
-		    <!-- Use Groovy to set new properties -->
-            <plugin>
-              <groupId>org.codehaus.groovy.maven</groupId>
-              <artifactId>gmaven-plugin</artifactId>
-              <executions>
-                <execution>
-                  <id>setBasedirName</id>
-                  <phase>validate</phase>
-                  <goals>
-                    <goal>execute</goal>
-                  </goals>
-                  <configuration>
-                    <properties>
-                      <basedir>${basedir}</basedir>
-                    </properties>
-                    <source>
-                      import java.io.File;
-                      int separatorIdx=project.properties.basedir.lastIndexOf(File.separator)
-                      project.properties.setProperty('basedirName',project.properties.basedir.substring(separatorIdx+1));
-                    </source>
-                  </configuration>
-                </execution>
-              </executions>
-            </plugin>
-	        <plugin>
-              <artifactId>maven-eclipse-plugin</artifactId>
- 	          <executions>
-                <execution>
-                  <phase>validate</phase>
-                  <goals>
-                    <goal>eclipse</goal>
-                  </goals>
-                </execution>
-              </executions>
-              <configuration>
-                <projectNameTemplate>${basedirName}</projectNameTemplate>
-                <downloadSources>true</downloadSources>
-              </configuration>
-            </plugin>
-          </plugins>
-		  </build>
-        </profile>
 
 	</profiles>
 
@@ -327,10 +270,6 @@
 			            	<groupId>org.codehaus.groovy.maven</groupId>
 			            	<artifactId>gmaven-plugin</artifactId>
 			            	<version>1.0</version>
-			        </plugin>
-				        <plugin>
-			            	<artifactId>maven-eclipse-plugin</artifactId>
-			            	<version>2.9</version>
 			        </plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
