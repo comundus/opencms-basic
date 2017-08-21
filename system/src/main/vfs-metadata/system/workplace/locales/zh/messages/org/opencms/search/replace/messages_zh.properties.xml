@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/zh/messages/org/opencms/search/replace/messages_zh.properties</destination>
+		<type>plain</type>
+		<uuidstructure>78c90c09-b5f7-11e6-a690-63fe7803cd8d</uuidstructure>
+		<uuidresource>78c90c0a-b5f7-11e6-a690-63fe7803cd8d</uuidresource>
+		<datelastmodified>Wed, 19 Jul 2017 14:06:15 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 29 Nov 2016 05:48:36 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

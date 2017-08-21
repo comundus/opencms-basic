@@ -5,6 +5,7 @@
 		<groupId>com.comundus</groupId>
 		<artifactId>comundus</artifactId>
 		<version>1.2</version>
+		<relativePath/>
 	</parent>
 	<!--
 		Parent POM for OpenCms-Basic. Database support can be triggered by
@@ -19,10 +20,11 @@
 	<artifactId>general</artifactId>
 	<packaging>pom</packaging>
 	<name>OpenCms general</name>
-	<version>10.0.1</version>
+	<version>10.5.2</version>
 	<description>POM with general Information like scm, reporting, release stuff</description>
 	<url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic</url>
 	<inceptionYear>2007</inceptionYear>
+
 
 	<!--
 		per developer configuration may follow (and overwrite global
@@ -266,24 +268,34 @@
 					<artifactId>maven-docck-plugin</artifactId>
 					<version>1.0</version>
 				</plugin>
-			        <plugin>
-			            	<groupId>org.codehaus.groovy.maven</groupId>
-			            	<artifactId>gmaven-plugin</artifactId>
-			            	<version>1.0</version>
-			        </plugin>
+		        <plugin>
+	            	<groupId>org.codehaus.groovy.maven</groupId>
+	            	<artifactId>gmaven-plugin</artifactId>
+	            	<version>1.0</version>
+		        </plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
 					<version>2.4</version>
 			            </plugin>
-				    <plugin>
-					  <groupId>org.codehaus.mojo</groupId>
-					  <artifactId>versions-maven-plugin</artifactId>
-					  <version>2.1</version>
-					  <configuration>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>2.1</version>
+					<configuration>
 						<generateBackupPoms>false</generateBackupPoms>
-					  </configuration>
-			        </plugin>
+					</configuration>
+			    </plugin>
+			    <plugin>
+				  <groupId>org.apache.tomcat.maven</groupId>
+				  <artifactId>tomcat6-maven-plugin</artifactId>
+				  <version>2.2</version>
+				  <configuration>
+                        <path>${opencms.webapp.path}</path>
+                        <url>http://localhost:8080/manager/text</url>
+                        <server>local-tomcat-manager-admin</server> 
+  					  </configuration>
+		        </plugin>
 				<plugin>
 					<artifactId>maven-antrun-plugin</artifactId>
 					<version>1.8</version>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/zh/messages/org/opencms/workplace/tools/content/convertxml/messages_zh.properties</destination>
+		<type>plain</type>
+		<uuidstructure>02fa300c-a492-11e6-8103-0a0027000003</uuidstructure>
+		<uuidresource>02fa300d-a492-11e6-8103-0a0027000003</uuidresource>
+		<datelastmodified>Wed, 19 Jul 2017 14:06:16 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 07 Nov 2016 02:29:30 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

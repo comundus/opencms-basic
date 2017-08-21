@@ -153,7 +153,7 @@
 							rule="containerpage" />
 						<entry key="GUI_EXPLORER_CONTEXT_ADE_ADVANCED_0" rule="containerpage">
 							<entry key="GUI_EXPLORER_CONTEXT_AVAILABILITY_0"
-							name="org.opencms.gwt.client.ui.contextmenu.CmsAvailabilityDialog"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsEmbeddedAction" params="dialogId=org.opencms.ui.actions.CmsAvailabilityDialogAction"
 							rule="containerpage-no-different-site-and-has-editor-role" />
 							<entry key="GUI_EXPLORER_CONTEXT_LOCK_REPORT_0"
 							name="org.opencms.gwt.client.ui.contextmenu.CmsLockReport" rule="containerpage" />
@@ -313,7 +313,7 @@
 							rule="containerpage" />
 						<entry key="GUI_EXPLORER_CONTEXT_ADE_ADVANCED_0" rule="containerpage">
 							<entry key="GUI_EXPLORER_CONTEXT_AVAILABILITY_0"
-							name="org.opencms.gwt.client.ui.contextmenu.CmsAvailabilityDialog"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsEmbeddedAction" params="dialogId=org.opencms.ui.actions.CmsAvailabilityDialogAction"
 							rule="containerpage-no-different-site-and-has-editor-role" />
 							<entry key="GUI_EXPLORER_CONTEXT_LOCK_REPORT_0"
 							name="org.opencms.gwt.client.ui.contextmenu.CmsLockReport" rule="containerpage" />
@@ -436,7 +436,7 @@
 							rule="containerpage-no-different-site" />
 						<entry key="GUI_EXPLORER_CONTEXT_ADE_ADVANCED_0" rule="containerpage">
 							<entry key="GUI_EXPLORER_CONTEXT_AVAILABILITY_0"
-							name="org.opencms.gwt.client.ui.contextmenu.CmsAvailabilityDialog"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsEmbeddedAction" params="dialogId=org.opencms.ui.actions.CmsAvailabilityDialogAction"
 							rule="containerpage-no-different-site-and-has-editor-role" />
 							<entry key="GUI_EXPLORER_CONTEXT_LOCK_REPORT_0"
 							name="org.opencms.gwt.client.ui.contextmenu.CmsLockReport" rule="containerpage" />
@@ -457,7 +457,7 @@
 					order="50" autosetnavigation="false" autosettitle="false" info="desc.jsp" />
 				<accesscontrol>
 					<accessentry principal="DEFAULT" permissions="+r+v" />
-					<accessentry principal="ROLE.DEVELOPER" permissions="+r+v+w+c" />
+					<accessentry principal="ROLE.VFS_MANAGER" permissions="+r+v+w+c" />
 					<accessentry principal="GROUP.Guests" permissions="-r-v-w-c" />
 				</accesscontrol>
 				<editoptions>
@@ -537,6 +537,41 @@
 						<entry key="GUI_EXPLORER_CONTEXT_PROPERTY_0"
 							uri="/system/workplace/commons/properties.jsp"
 							rule="nondeleted" />
+
+						<entry key="GUI_EXPLORER_CONTEXT_ADVANCED_PROPERTIES_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsEditProperties"
+							rule="containerpage-no-different-site-and-has-editor-role" />
+						<entry key="GUI_EXPLORER_CONTEXT_REPLACE_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsReplace" rule="containerpage" />
+						<entry key="GUI_EXPLORER_CONTEXT_UNDOCHANGES_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsRestore" rule="ade-undochanges" />
+						<entry key="GUI_EXPLORER_CONTEXT_PREVIEW_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsPreview"
+							rule="containerpage" />
+						<entry key="GUI_EXPLORER_CONTEXT_RESOURCE_INFO_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsResourceInfo"
+							rule="containerpage" />
+						<entry key="GUI_EXPLORER_CONTEXT_RENAME_0" name="org.opencms.gwt.client.ui.contextmenu.CmsRename"
+							rule="containerpage" />
+						<entry key="GUI_EXPLORER_CONTEXT_ADE_ADVANCED_0" rule="containerpage">
+							<entry key="GUI_EXPLORER_CONTEXT_AVAILABILITY_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsAvailabilityDialog"
+							rule="containerpage-no-different-site-and-has-editor-role" />
+							<entry key="GUI_EXPLORER_CONTEXT_LOCK_REPORT_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsLockReport" rule="containerpage" />
+							<entry key="GUI_EXPLORER_CONTEXT_CATEGORIES_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsCategories" rule="containerpage-no-different-site-and-has-editor-role" />
+						</entry>
+						<entry key="GUI_EXPLORER_CONTEXT_DELETE_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsDeleteResource"
+							rule="containerpage" />
+						<entry key="GUI_EXPLORER_CONTEXT_UNDELETE_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsUndelete" rule="containerpage-deleted" />
+						<entry key="GUI_EXPLORER_CONTEXT_OLD_WORKPLACE_0"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsShowClassicWorkplace"
+							rule="editprovider" />
+						<entry key="GUI_EXPLORER_CONTEXT_LOGOUT_0" name="org.opencms.gwt.client.ui.contextmenu.CmsLogout"
+							rule="editprovider" />
 					</contextmenu>
 				</editoptions>
 			</explorertype>
@@ -637,7 +672,7 @@
 							rule="containerpage-no-different-site" />
 						<entry key="GUI_EXPLORER_CONTEXT_ADE_ADVANCED_0" rule="containerpage">
 							<entry key="GUI_EXPLORER_CONTEXT_AVAILABILITY_0"
-							name="org.opencms.gwt.client.ui.contextmenu.CmsAvailabilityDialog"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsEmbeddedAction" params="dialogId=org.opencms.ui.actions.CmsAvailabilityDialogAction"
 							rule="containerpage-no-different-site-and-has-editor-role" />
 							<entry key="GUI_EXPLORER_CONTEXT_LOCK_REPORT_0"
 							name="org.opencms.gwt.client.ui.contextmenu.CmsLockReport" rule="containerpage" />
@@ -1115,7 +1150,7 @@
 							
 						<entry key="GUI_EXPLORER_CONTEXT_ADE_ADVANCED_0" rule="containerpage">
 							<entry key="GUI_EXPLORER_CONTEXT_AVAILABILITY_0"
-							name="org.opencms.gwt.client.ui.contextmenu.CmsAvailabilityDialog"
+							name="org.opencms.gwt.client.ui.contextmenu.CmsEmbeddedAction" params="dialogId=org.opencms.ui.actions.CmsAvailabilityDialogAction"
 							rule="containerpage-no-different-site-and-has-editor-role" />
 							<entry key="GUI_EXPLORER_CONTEXT_LOCK_REPORT_0"
 							name="org.opencms.gwt.client.ui.contextmenu.CmsLockReport" rule="containerpage" />
@@ -1630,6 +1665,15 @@
 				</menurule>
 			</menurules>
 		</explorertypes>
+		<account-infos>
+    		<account-info field="firstname" editable="false" />
+    		<account-info field="lastname" editable="false" />
+    		<account-info field="email" editable="true" />
+    		<account-info field="institution" editable="true" />
+    		<account-info field="address" editable="true" />
+    		<account-info field="zipcode" editable="true" />
+    		<account-info field="city" editable="true" />
+		</account-infos>
 		<default-preferences>
 			<preference-tab name="basic">
 				<preference name="locale" value="en"
@@ -1742,7 +1786,7 @@
 				<preference name="gallery.imagegallery" />
 				<preference name="gallery.downloadgallery" />
 				<preference name="gallery.htmlgallery" />		
-				<preference name="org.opencms.ui.apps.CmsFileExplorerSettings" value="{'collapsed_collumns':['PROPERTY_PROJECT','PROPERTY_NAVIGATION_TEXT','PROPERTY_PERMISSIONS','PROPERTY_USER_MODIFIED','PROPERTY_DATE_MODIFIED','PROPERTY_DATE_RELEASED','PROPERTY_DATE_EXPIRED','PROPERTY_DATE_CREATED','PROPERTY_USER_CREATED','PROPERTY_STATE_NAME','PROPERTY_USER_LOCKED'],'sort_column':'PROPERTY_RESOURCE_NAME','sort_order':true}"/>		
+				<preference name="org.opencms.ui.apps.CmsFileExplorerSettings" value="{'collapsed_collumns':['PROPERTY_PROJECT','PROPERTY_NAVIGATION_TEXT','PROPERTY_COPYRIGHT','PROPERTY_CACHE','PROPERTY_PERMISSIONS','PROPERTY_USER_MODIFIED','PROPERTY_DATE_MODIFIED','PROPERTY_DATE_RELEASED','PROPERTY_DATE_EXPIRED','PROPERTY_DATE_CREATED','PROPERTY_USER_CREATED','PROPERTY_STATE_NAME','PROPERTY_USER_LOCKED'],'sort_column':'PROPERTY_RESOURCE_NAME','sort_order':true}"/>		
 			</preference-tab>
 		</default-preferences>
 		<workplace-customfoot>

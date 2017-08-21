@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/da/messages/org/opencms/workplace/demos/widget/messages_da.properties</destination>
+		<type>plain</type>
+		<uuidstructure>8f00395a-7980-11e6-961d-c96a072a4bcc</uuidstructure>
+		<uuidresource>8f00395b-7980-11e6-961d-c96a072a4bcc</uuidresource>
+		<datelastmodified>Wed, 19 Jul 2017 14:04:32 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 23 Mar 2006 10:34:23 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

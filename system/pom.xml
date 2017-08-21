@@ -1,118 +1,122 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-        <groupId>com.comundus.opencms</groupId>
-        <artifactId>parent</artifactId>
-        <version>10.0.1</version>
-        <relativePath>../parent/pom.xml</relativePath>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.comundus.opencms</groupId>
-    <artifactId>system</artifactId>
-    <packaging>pom</packaging>
-    <name>OpenCms System</name>
-    <description>OpenCms System</description>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.comundus.maven</groupId>
-                <artifactId>vfs-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>clean</id>
-                        <phase>clean</phase>
-                        <goals>
-                            <goal>clean</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>package</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>module</goal>
-                            <goal>sync</goal>
-                            <goal>publish</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <syncVFSPaths>
-                        <syncVFSPath>/system/categories/</syncVFSPath>
-                        <syncVFSPath>/system/galleries/</syncVFSPath>
-                        <syncVFSPath>/system/handler/</syncVFSPath>
-                        <syncVFSPath>/system/login/</syncVFSPath>
-                        <!-- we'll leave that to the setup: syncVFSPath>/system/lost-found/</syncVFSPath -->
-                        <!-- we must leave that to the setup: syncVFSPath>/system/orgunits/</syncVFSPath -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>com.comundus.opencms</groupId>
+		<artifactId>parent</artifactId>
+		<version>10.5.2</version>
+		<relativePath>../parent/pom.xml</relativePath>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.comundus.opencms</groupId>
+	<artifactId>system</artifactId>
+	<packaging>pom</packaging>
+	<name>OpenCms System</name>
+	<description>OpenCms System</description>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.comundus.maven</groupId>
+				<artifactId>vfs-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>package</id>
+						<phase>package</phase>
+						<goals>
+							<goal>module</goal>
+							<goal>sync</goal>
+							<goal>publish</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<syncVFSPaths>
+						<syncVFSPath>/system/categories/</syncVFSPath>
+						<syncVFSPath>/system/galleries/</syncVFSPath>
+						<syncVFSPath>/system/handler/</syncVFSPath>
+						<syncVFSPath>/system/login/</syncVFSPath>
+						<!-- we'll leave that to the setup: syncVFSPath>/system/lost-found/</syncVFSPath -->
+						<!-- we must leave that to the setup: syncVFSPath>/system/orgunits/</syncVFSPath -->
 						<!-- we synchronize subfolders of orgunits in their own project -->
-                        <syncVFSPath>/system/shared/</syncVFSPath>
-                        <syncVFSPath>/system/workplace/</syncVFSPath>
-                        <!-- Folder /system/userimages/ added in version 10 -->
-                        <syncVFSPath>/system/userimages/</syncVFSPath>
-                        <!-- Folder /system/info was added by comundus -->
-                        <syncVFSPath>/system/info/</syncVFSPath>
+						<syncVFSPath>/system/shared/</syncVFSPath>
+						<!-- Folder /system/userimages/ added in version 10 -->
+						<syncVFSPath>/system/userimages/</syncVFSPath>
+						<!-- Folder /system/info was added by comundus -->
+						<syncVFSPath>/system/info/</syncVFSPath>
 
 						<syncVFSPath>/system/modules/org.opencms.ade.config/</syncVFSPath>
 						<!-- removed in version 10 -->
-						<!-- syncVFSPath>/system/modules/org.opencms.ade.containerpage/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.ade.contenteditor/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.ade.editprovider/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.ade.galleries/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.ade.postupload/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.ade.properties/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.ade.publish/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.ade.sitemap/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.ade.upload/</syncVFSPath-->
+						<!-- syncVFSPath>/system/modules/org.opencms.ade.containerpage/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.ade.contenteditor/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.ade.editprovider/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.ade.galleries/</syncVFSPath> <syncVFSPath>/system/modules/org.opencms.ade.postupload/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.ade.properties/</syncVFSPath> <syncVFSPath>/system/modules/org.opencms.ade.publish/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.ade.sitemap/</syncVFSPath> <syncVFSPath>/system/modules/org.opencms.ade.upload/</syncVFSPath -->
 						<syncVFSPath>/system/modules/org.opencms.editors.codemirror/</syncVFSPath>
 						<!-- removed in version 10 -->
-						<!-- syncVFSPath>/system/modules/org.opencms.editors.tinymce/</syncVFSPath-->
+						<!-- syncVFSPath>/system/modules/org.opencms.editors.tinymce/</syncVFSPath -->
 						<syncVFSPath>/system/modules/org.opencms.gwt/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.jquery/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.jsp.search/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.ugc/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.administration/</syncVFSPath>
 						<!-- removed in version 10 -->
-						<!--syncVFSPath>/system/modules/org.opencms.workplace.help/</syncVFSPath-->
+						<!--syncVFSPath>/system/modules/org.opencms.workplace.help/</syncVFSPath -->
 						<syncVFSPath>/system/modules/org.opencms.workplace.spellcheck/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.git/</syncVFSPath>
 						<!-- the following modules contain only the corresponding module jar -->
 						<!-- removed in version 10 -->
-						<!-- syncVFSPath>/system/modules/org.opencms.workplace.tools.accounts/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.cache/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.content/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.database/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.galleryoverview/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.history/</syncVFSPath-->
+						<!-- syncVFSPath>/system/modules/org.opencms.workplace.tools.accounts/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.workplace.tools.cache/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.workplace.tools.content/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.workplace.tools.database/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.workplace.tools.galleryoverview/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.workplace.tools.history/</syncVFSPath -->
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.link/</syncVFSPath>
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.modules/</syncVFSPath>
 						<!-- removed in version 10 -->
-						<!-- syncVFSPath>/system/modules/org.opencms.workplace.tools.projects/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.publishqueue/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.scheduler/</syncVFSPath>
-						<syncVFSPath>/system/modules/org.opencms.workplace.tools.searchindex/</syncVFSPath-->
+						<!-- syncVFSPath>/system/modules/org.opencms.workplace.tools.projects/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.workplace.tools.publishqueue/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.workplace.tools.scheduler/</syncVFSPath> 
+							<syncVFSPath>/system/modules/org.opencms.workplace.tools.searchindex/</syncVFSPath -->
 						<syncVFSPath>/system/modules/org.opencms.workplace.tools.sites/</syncVFSPath>
 						<!-- removed in version 10 -->
-						<!-- syncVFSPath>/system/modules/org.opencms.workplace.tools.workplace/</syncVFSPath-->
-						<!-- end the following modules contain only the corresponding module jar -->
+						<!-- syncVFSPath>/system/modules/org.opencms.workplace.tools.workplace/</syncVFSPath -->
+						<!-- end the following modules contain only the corresponding module 
+							jar -->
 
-						<!-- The module org.opencms.workplace is only needed if no other module which defines default_bodies is present-->
+						<!-- The module org.opencms.workplace is only needed if no other module 
+							which defines default_bodies is present -->
 						<syncVFSPath>/system/modules/org.opencms.workplace/</syncVFSPath>
-                    </syncVFSPaths>
-                </configuration>
-                <dependencies>
-                      <dependency>
-           				<groupId>${jdbcDriver.groupId}</groupId>
+					</syncVFSPaths>
+					<syncResources>
+						<syncResource>
+							<resource>/system/workplace/</resource>
+						</syncResource>
+					</syncResources>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>${jdbcDriver.groupId}</groupId>
 						<artifactId>${jdbcDriver.artifactId}</artifactId>
 						<version>${jdbcDriver.version}</version>
-       				</dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
 
-    <distributionManagement>
-        <site>
-            <url>file:////Data02/projectsites/projects/cm-comundus/opencms-basic/system</url>
-        </site>
-    </distributionManagement>
+	<distributionManagement>
+		<site>
+			<url>file:////Data02/projectsites/projects/cm-comundus/opencms-basic/system</url>
+		</site>
+	</distributionManagement>
 
 </project>
