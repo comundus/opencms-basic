@@ -6,7 +6,7 @@
 		<type>jsp</type>
 		<uuidstructure>26ada581-2175-11e1-a3f6-4d6aceb32220</uuidstructure>
 		<uuidresource>26ada582-2175-11e1-a3f6-4d6aceb32220</uuidresource>
-		<datelastmodified>Fri, 22 Jul 2016 12:06:18 GMT</datelastmodified>
+		<datelastmodified>Wed, 19 Jul 2017 14:05:20 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
 		<datecreated>Thu, 08 Dec 2011 08:18:04 GMT</datecreated>
 		<usercreated>Admin</usercreated>
@@ -28,6 +28,14 @@
 				<flags>132</flags>
 				<permissionset>
 					<allowed>0</allowed>
+					<denied>0</denied>
+				</permissionset>
+			</accessentry>
+			<accessentry>
+				<uuidprincipal>ROLE.ELEMENT_AUTHOR</uuidprincipal>
+				<flags>518</flags>
+				<permissionset>
+					<allowed>1</allowed>
 					<denied>0</denied>
 				</permissionset>
 			</accessentry>

@@ -260,13 +260,13 @@ else
 		if [[ ! ($DEFAULT_MODULES_TO_EXPORT =~ (^| )$module($| ) ) ]]; then
 			newModules="${newModules}${module} "
 		fi
-		if [[ $newModules != "" ]]; then
-			sed -i "/^DEFAULT_MODULES_TO_EXPORT/s/=\"/=\"$newModules/" $configfile
-			echo
-			echo " * Added new modules \"$newModules\" to the config file."
-			echo
-		fi
 	done
+	if [[ $newModules != "" ]]; then
+		sed -i "/^DEFAULT_MODULES_TO_EXPORT/s/=\"/=\"$newModules/" $configfile
+		echo
+		echo " * Added new modules \"$newModules\" to the config file."
+		echo
+	fi
 fi
 echo " * Set modules to export: \"$modulesToExport\"."
 
@@ -564,7 +564,7 @@ if [ $copyAndUnzip == 1 ]; then
 			#delete all resources currently checked in in the project
 			if [[ "$(pwd)" == "${MODULE_PATH}"* ]]; then
 				echo "   * Removing old version of the module resources under $(pwd)."
-				rm -fr ./*
+				rm -fr ./{.[^.],}*
 				if [[ $? != 0 ]]; then
 					echo
 					echo "ERROR: Failed to remove all resources under $(pwd)."

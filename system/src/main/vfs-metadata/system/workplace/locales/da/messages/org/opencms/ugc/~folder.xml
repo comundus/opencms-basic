@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/da/messages/org/opencms/ugc</destination>
+		<type>folder</type>
+		<uuidstructure>8e5ccd4d-7980-11e6-961d-c96a072a4bcc</uuidstructure>
+		<datelastmodified>Wed, 19 Jul 2017 14:04:31 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 02 May 2014 08:25:59 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

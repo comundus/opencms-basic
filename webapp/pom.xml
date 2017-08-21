@@ -3,7 +3,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>10.0.1</version>
+        <version>10.5.2</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -199,20 +199,21 @@
 		    <groupId>org.opencms</groupId>
 		    <artifactId>org.opencms.editors.codemirror</artifactId>
 		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.apollo.template.webform</artifactId>
-		</dependency>
         <!--  
         	END from version 10 on the module jars are no longer in the module zip.
         	so we have to add them as dependencies
          -->
-        <!-- this file is missing in the public repo, so we provide it here -->
-        <dependency>
-            <groupId>org.opencms</groupId>
-            <artifactId>org.opencms.ui.widgetset</artifactId>
-            <version>${opencms.version}</version>
-        </dependency>
+        <!-- this file is missing in the public repo, so we provide it here (no longer missing since OpenCms 10.5) -->
+        <!-- dependency>
+             <groupId>org.opencms</groupId>
+             <artifactId>org.opencms.ui.widgetset</artifactId>
+             <version>${opencms.version}</version>
+       </dependency-->
+       <dependency>
+			<groupId>org.opencms</groupId>
+		    <artifactId>opencms-widgetset</artifactId>
+		    <version>${opencms.version}</version>
+		</dependency>
         <dependency>
 			<groupId>${jdbcDriver.groupId}</groupId>
 			<artifactId>${jdbcDriver.artifactId}</artifactId>
@@ -242,6 +243,21 @@
 			<version>4.92b23</version>
 			<scope>runtime</scope>
     	</dependency>
+        <!--  new dependencies for OpenCms 10.5.2 -->
+		<!-- dependency>
+		    <groupId>org.opencms</groupId>
+		    <artifactId>org.opencms.apollo.template.imgur</artifactId>
+		</dependency-->
+		<!-- dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-themes</artifactId>
+		    <version>7.7.6</version>
+		</dependency-->
+		<!-- dependency>
+		    <groupId>org.vaadin.addons</groupId>
+		    <artifactId>filteringtable</artifactId>
+		    <version>0.9.15.v7</version>
+		</dependency-->
     </dependencies>
 
     <distributionManagement>

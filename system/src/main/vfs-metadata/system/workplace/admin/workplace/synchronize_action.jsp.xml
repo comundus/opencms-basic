@@ -4,9 +4,9 @@
 	<file>
 		<destination>system/workplace/admin/workplace/synchronize_action.jsp</destination>
 		<type>jsp</type>
-		<uuidstructure>d40f69d9-5004-11e6-83ab-5c260a60caaf</uuidstructure>
-		<uuidresource>d40f69da-5004-11e6-83ab-5c260a60caaf</uuidresource>
-		<datelastmodified>Fri, 22 Jul 2016 12:07:14 GMT</datelastmodified>
+		<uuidstructure>421d7499-6c8b-11e7-8b36-d481d77c3c32</uuidstructure>
+		<uuidresource>421d749a-6c8b-11e7-8b36-d481d77c3c32</uuidresource>
+		<datelastmodified>Wed, 19 Jul 2017 14:05:02 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
 		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
 		<usercreated>Admin</usercreated>

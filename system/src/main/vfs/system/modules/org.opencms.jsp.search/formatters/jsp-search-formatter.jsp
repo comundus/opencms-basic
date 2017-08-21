@@ -73,7 +73,7 @@
 				</c:if>
 			</div>
 			<div class="row" style="margin-top: 20px;">
-				<c:set var="hasFacets" value="${(cms:getListSize(search.fieldFacets) > 0) or (not empty search.facetQuery)}" />
+				<c:set var="hasFacets" value="${(cms:getListSize(search.fieldFacets) > 0) or (cms:getListSize(search.rangeFacets) > 0) or (not empty search.facetQuery)}" />
 				<c:if test="${hasFacets}">
 					<!-- Facets -->
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -100,6 +100,7 @@
 							</div>
 						</c:if>
 									
+						<!-- Field facets -->
 						<c:set var="fieldFacetControllers" value="${controllers.fieldFacets}" />
 						<c:forEach var="facet" items="${search.fieldFacets}">
 							<c:set var="facetController"
@@ -134,8 +135,34 @@
 								</div>
 							</c:if>
 						</c:forEach>
+
+						<!-- Range facets -->
+						<c:set var="rangeFacetControllers" value="${controllers.rangeFacets}" />
+						<c:forEach var="facet" items="${search.rangeFacets}">
+							<c:set var="facetController"
+								value="${rangeFacetControllers.rangeFacetController[facet.name]}" />
+							<c:if test="${cms:getListSize(facet.counts) > 0}">
+								<div class="panel panel-default">
+									<div class="panel-heading">${facetController.config.label}</div>
+									<div class="panel-body">
+										<c:forEach var="facetItem" items="${facet.counts}">
+											<div class="checkbox">
+												<label> <input type="checkbox"
+													name="${facetController.config.paramKey}"
+													value="${facetItem.value}"
+													onclick="submitSearchForm()"
+													${facetController.state.isChecked[facetItem.value]?"checked":""} />
+													${facetItem.value} (${facetItem.count})
+												</label>
+											</div>
+										</c:forEach>
+									</div>
+								</div>
+							</c:if>
+						</c:forEach>
 					</div>
 				</c:if>
+
 			<!-- Search results -->
 				<c:set var="colWidthResults" value="${hasFacets?8:12}" />
 				<div class="col-lg-${colWidthResults} col-md-${colWidthResults} col-sm-${colWidthResults} col-xs-12">
@@ -145,14 +172,17 @@
 							<p>
 								<fmt:message key="query.compare_2">
 									<fmt:param>${common.state.query}</fmt:param>
-									<fmt:param>${search.finalQuery.query}</fmt:param>
+									<fmt:param>${search.finalQuery}</fmt:param>
 								</fmt:message>
 							</p>
+						</c:when>
+						<c:when test="${not common.config.searchForEmptyQueryParam && empty common.state.query}">
+							<h3><fmt:message key="search.noquery" /></h3>
 						</c:when>
 						<c:when test="${empty search.searchResults && empty search.exception}">
 							<h3>
 							<c:choose>
-							<c:when test="${not empty controllers.didYouMean.config}" >
+							<c:when test="${not empty controllers.didYouMean.config && not empty search.didYouMeanSuggestion}" >
 								<c:set var="suggestion" value="${search.didYouMeanSuggestion}" />
 								<c:choose>
 								<c:when test="${controllers.didYouMean.config.collate}">

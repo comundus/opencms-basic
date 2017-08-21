@@ -5,12 +5,17 @@
 		<destination>sites/default</destination>
 		<type>folder</type>
 		<uuidstructure>372fbfa0-3337-11e2-b7df-a7ae9b61e4b8</uuidstructure>
-		<datelastmodified>Tue, 09 Feb 2016 14:52:34 GMT</datelastmodified>
+		<datelastmodified>Mon, 21 Aug 2017 12:05:17 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
 		<datecreated>Tue, 20 Nov 2012 17:25:01 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
-		<properties/>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[default site]]></value>
+			</property>
+		</properties>
 		<relations/>
 		<accesscontrol>
 			<accessentry>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/zh/messages/org/opencms/apollo/template</destination>
+		<type>folder</type>
+		<uuidstructure>e13784e0-0a8c-11e6-9767-0a0027000000</uuidstructure>
+		<datelastmodified>Wed, 19 Jul 2017 14:06:14 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 25 Apr 2016 02:24:47 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

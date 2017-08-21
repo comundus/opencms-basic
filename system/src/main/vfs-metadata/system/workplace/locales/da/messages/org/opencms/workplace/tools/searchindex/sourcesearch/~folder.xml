@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/da/messages/org/opencms/workplace/tools/searchindex/sourcesearch</destination>
+		<type>folder</type>
+		<uuidstructure>8f3f8bd3-7980-11e6-961d-c96a072a4bcc</uuidstructure>
+		<datelastmodified>Wed, 19 Jul 2017 14:04:32 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 23 Aug 2010 08:31:58 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

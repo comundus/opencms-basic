@@ -372,6 +372,13 @@
                 <mimetype extension=".ots" type="application/vnd.oasis.opendocument.spreadsheet-template" />
                 <mimetype extension=".otp" type="application/vnd.oasis.opendocument.presentation-template" />
                 <mimetype extension=".otg" type="application/vnd.oasis.opendocument.graphics-template" />
+				
+                <!--
+                # RFC5545 - Internet Calendaring and Scheduling Core Object Specification
+                # (iCalendar)
+                  -->    
+                <mimetype extension=".ics" type="text/calendar" />
+
          
 			</mimetypes>
             
@@ -455,6 +462,7 @@
 				<translation>s#[^0-9a-zA-Z_$~\.\-\/]#!#g</translation>
 				<translation>s#!+##g</translation>
 				<translation>s#-+#-#g</translation>
+				<translation>s#^(.{250}).*$#$1#</translation>
 			</filetranslations>
 			<foldertranslations enabled="false" />
 		</translations>
@@ -526,6 +534,8 @@
 				<schematype class="org.opencms.xml.types.CmsXmlVfsImageValue"
 					defaultwidget="org.opencms.widgets.CmsVfsImageWidget" />
 				<schematype class="org.opencms.xml.types.CmsXmlCategoryValue"
+					defaultwidget="org.opencms.widgets.CmsCategoryWidget" />
+				<schematype class="org.opencms.xml.types.CmsXmlDynamicCategoryValue"
 					defaultwidget="org.opencms.widgets.CmsCategoryWidget" />
 			</schematypes>
 		</xmlcontent>

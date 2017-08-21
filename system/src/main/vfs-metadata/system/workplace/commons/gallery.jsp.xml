@@ -6,7 +6,7 @@
 		<type>jsp</type>
 		<uuidstructure>01e0b3b9-2d24-11df-abdb-43be96c33985</uuidstructure>
 		<uuidresource>01e0b3ba-2d24-11df-abdb-43be96c33985</uuidresource>
-		<datelastmodified>Fri, 22 Jul 2016 12:06:18 GMT</datelastmodified>
+		<datelastmodified>Wed, 19 Jul 2017 14:05:20 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
 		<datecreated>Thu, 11 Mar 2010 15:37:31 GMT</datecreated>
 		<usercreated>Admin</usercreated>
@@ -18,6 +18,15 @@
 			</property>
 		</properties>
 		<relations/>
-		<accesscontrol/>
+		<accesscontrol>
+			<accessentry>
+				<uuidprincipal>ROLE.ELEMENT_AUTHOR</uuidprincipal>
+				<flags>512</flags>
+				<permissionset>
+					<allowed>1</allowed>
+					<denied>0</denied>
+				</permissionset>
+			</accessentry>
+		</accesscontrol>
 	</file>
 </export>

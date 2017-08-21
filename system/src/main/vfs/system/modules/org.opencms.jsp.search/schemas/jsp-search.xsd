@@ -4,6 +4,7 @@
 	<xsd:include schemaLocation="opencms://system/modules/org.opencms.jsp.search/schemas/nested/additionalparam.xsd"/>
 	<xsd:include schemaLocation="opencms://system/modules/org.opencms.jsp.search/schemas/nested/sortoption.xsd"/>
 	<xsd:include schemaLocation="opencms://system/modules/org.opencms.jsp.search/schemas/nested/fieldfacet.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/org.opencms.jsp.search/schemas/nested/rangefacet.xsd"/>
 	<xsd:include schemaLocation="opencms://system/modules/org.opencms.jsp.search/schemas/nested/queryfacet.xsd"/>
 	<xsd:include schemaLocation="opencms://system/modules/org.opencms.jsp.search/schemas/nested/highlighting.xsd"/>
 	<xsd:include schemaLocation="opencms://system/modules/org.opencms.jsp.search/schemas/nested/didyoumean.xsd"/>
@@ -23,6 +24,8 @@
 			<xsd:element name="Index" type="OpenCmsString" minOccurs="0" />
 			<xsd:element name="SearchForEmptyQuery" type="OpenCmsBoolean" minOccurs="0" />
 			<xsd:element name="IgnoreQuery" type="OpenCmsBoolean" minOccurs="0" />
+			<xsd:element name="IgnoreReleaseDate" type="OpenCmsBoolean" minOccurs="0" />
+			<xsd:element name="IgnoreExpirationDate" type="OpenCmsBoolean" minOccurs="0" />
 			<xsd:element name="QueryModifier" type="OpenCmsString" minOccurs="0" />
 			<xsd:element name="QueryParam" type="OpenCmsString" minOccurs="0" />
 			<xsd:element name="LastQueryParam" type="OpenCmsString" minOccurs="0" />
@@ -36,6 +39,7 @@
 			<xsd:element name="SortParam" type="OpenCmsString" minOccurs="0" />
 			<xsd:element name="SortOption" type="OpenCmsSortOptionConfig" minOccurs="0" maxOccurs="unbounded" />
 			<xsd:element name="FieldFacet" type="OpenCmsFieldFacetConfig" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="RangeFacet" type="OpenCmsRangeFacetConfig" minOccurs="0" maxOccurs="unbounded" />
 			<xsd:element name="QueryFacet" type="OpenCmsQueryFacetConfig" minOccurs="0" />
 			<xsd:element name="Highlighting" type="OpenCmsHighlightingConfig" minOccurs="0" />
 			<xsd:element name="DidYouMean" type="OpenCmsDidYouMeanConfig" minOccurs="0" />
@@ -52,6 +56,8 @@
 			<defaults>
 				<default element="Title" value="%(key.default.JspSearchConfig.Title)" />
 				<default element="IgnoreQuery" value="true" />
+				<default element="IgnoreReleaseDate" value="true" />
+				<default element="IgnoreExpirationDate" value="true" />
 				<default element="EscapeQueryCharacters" value="true" />
 			</defaults>
 			<layouts/>
@@ -61,9 +67,15 @@
 				<searchsetting element="Title" searchcontent="false" />
 				<searchsetting element="Core" searchcontent="false" />
 				<searchsetting element="Index" searchcontent="false" />
+				<searchsetting element="SearchForEmptyQuery" searchcontent="false" />
+				<searchsetting element="IgnoreQuery" searchcontent="false" />
+				<searchsetting element="IgnoreReleaseDate" searchcontent="false" />
+				<searchsetting element="IgnoreExpirationDate" searchcontent="false" />
+				<searchsetting element="QueryModifier" searchcontent="false" />
 				<searchsetting element="QueryParam" searchcontent="false" />
 				<searchsetting element="LastQueryParam" searchcontent="false" />
 				<searchsetting element="EscapeQueryCharacters" searchcontent="false" />
+				<searchsetting element="ReloadedParam" searchcontent="false" />
 				<searchsetting element="ExtraSolrParams" searchcontent="false" />
 				<searchsetting element="AdditionalRequestParams" searchcontent="false" />
 				<searchsetting element="PageParam" searchcontent="false" />
@@ -72,6 +84,7 @@
 				<searchsetting element="SortParam" searchcontent="false" />
 				<searchsetting element="SortOption" searchcontent="false" />
 				<searchsetting element="FieldFacet" searchcontent="false" />
+				<searchsetting element="RangeFacet" searchcontent="false" />
 				<searchsetting element="QueryFacet" searchcontent="false" />
 				<searchsetting element="Highlighting" searchcontent="false" />
 				<searchsetting element="DidYouMean" searchcontent="false" />
@@ -82,6 +95,7 @@
 				<tab element="PageParam" name="Pagination"/>
 				<tab element="SortParam" name="SortOptions"/>
 				<tab element="FieldFacet" name="FieldFacets"/>
+				<tab element="RangeFacet" name="RangeFacets"/>
 				<tab element="QueryFacet" name="QueryFacets"/>
 				<tab element="Highlighting" name="Highlighting"/>
 				<tab element="DidYouMean" name="DidYouMeanTab"/>

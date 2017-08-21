@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/locales/da/messages/org/opencms/file/collectors</destination>
+		<type>folder</type>
+		<uuidstructure>8e97b3c6-7980-11e6-961d-c96a072a4bcc</uuidstructure>
+		<datelastmodified>Wed, 19 Jul 2017 14:04:31 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 03 Nov 2006 15:50:22 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>
