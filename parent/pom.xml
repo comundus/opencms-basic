@@ -22,8 +22,8 @@
     <groupId>com.comundus.opencms</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <name>OpenCms Parent</name>
-    <description>OpenCms</description>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>OpenCms Parent</description>
     <!--
     <url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic/content</url>
     -->
@@ -56,21 +56,31 @@
         <tag/>
     </scm>
 
-	<properties>
-		<opencms.db.user>root</opencms.db.user>
-		<opencms.db.password>root</opencms.db.password>
-		<opencms.db.name>ocbasic_mvn</opencms.db.name>
-		<opencms.webapp.path>/opencms-basic</opencms.webapp.path>
-		<!--
+    <properties>
+        <opencms.db.user>root</opencms.db.user>
+        <opencms.db.password>root</opencms.db.password>
+        <opencms.db.name>ocbasic_mvn</opencms.db.name>
+        <opencms.webapp.path>/opencms-basic</opencms.webapp.path>
+        <!--
 			the log file path is relative to WEB-INF/classes
 			or to be more precise relative to log4j.properties
-		-->
-		<opencms.logfile>../logs/opencms.log</opencms.logfile>
-		<opencms.version>10.5.2</opencms.version>
-		<vfs-plugin.version>${opencms.version}</vfs-plugin.version>
-        <jmock.version>2.8.1</jmock.version>
-		<hamcrest.version>1.3</hamcrest.version>
+        -->
+        <opencms.logfile>../logs/opencms.log</opencms.logfile>
         <java.version>1.7</java.version>
+        <!--
+        TC 5: Servlet 2.4, JSP 2.0, Java >= 1.4
+        TC 6: Servlet 2.5, JSP 2.1, Java >= 5
+        TC 7: Servlet 3.0, JSP 2.2, Java >= 6
+        TC 8: Servlet 3.1, JSP 2.3, Java >= 7
+         -->
+        <servlet.version>3.0.1</servlet.version>
+        <jsp.version>2.2.1</jsp.version>
+        <opencms.version>10.5.2</opencms.version>
+        <vfs-plugin.version>${opencms.version}</vfs-plugin.version>
+        <jmock.version>2.8.1</jmock.version>
+        <hamcrest.version>1.3</hamcrest.version>
+        <mysql.jdbcDriver.version>5.1.40</mysql.jdbcDriver.version>
+
 	</properties>
 	<!--
 		per developer configuration may follow (and overwrite global
@@ -146,7 +156,7 @@
 				<opencms.db.jdbcUrl.params>?characterEncoding\=UTF-8</opencms.db.jdbcUrl.params>
 				<jdbcDriver.groupId>mysql</jdbcDriver.groupId>
 				<jdbcDriver.artifactId>mysql-connector-java</jdbcDriver.artifactId>
-				<jdbcDriver.version>5.1.26</jdbcDriver.version>
+				<jdbcDriver.version>${mysql.jdbcDriver.version}</jdbcDriver.version>
 				<opencms.vfs.driver>org.opencms.db.mysql.CmsVfsDriver</opencms.vfs.driver>
 				<opencms.user.driver>org.opencms.db.mysql.CmsUserDriver</opencms.user.driver>
 				<opencms.project.driver>org.opencms.db.mysql.CmsProjectDriver</opencms.project.driver>
@@ -253,7 +263,7 @@
 							<dependency>
 								<groupId>com.sun</groupId>
 								<artifactId>tools</artifactId>
-								<version>1.5</version>
+								<version>CURRENT</version>
 								<scope>system</scope>
 								<systemPath>${java.home}/../lib/tools.jar</systemPath>
 							</dependency>
@@ -318,7 +328,7 @@
 				<opencms.db.jdbcUrl.params>?characterEncoding\=UTF-8</opencms.db.jdbcUrl.params>
 				<jdbcDriver.groupId>mysql</jdbcDriver.groupId>
 				<jdbcDriver.artifactId>mysql-connector-java</jdbcDriver.artifactId>
-				<jdbcDriver.version>5.1.26</jdbcDriver.version>
+				<jdbcDriver.version>${mysql.jdbcDriver.version}</jdbcDriver.version>
 				<opencms.vfs.driver>org.opencms.db.mysql.CmsVfsDriver</opencms.vfs.driver>
 				<opencms.user.driver>org.opencms.db.mysql.CmsUserDriver</opencms.user.driver>
 				<opencms.project.driver>org.opencms.db.mysql.CmsProjectDriver</opencms.project.driver>
@@ -846,15 +856,15 @@
         	</dependency>
         	 -->
         	<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>jsp-api</artifactId>
-				<version>2.0</version>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>javax.servlet.jsp-api</artifactId>
+				<version>${jsp.version}</version>
 				<scope>provided</scope>
-			</dependency>
+        	</dependency>
         	<dependency>
 				<groupId>javax.servlet</groupId>
-				<artifactId>servlet-api</artifactId>
-				<version>2.4</version>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${servlet.version}</version>
 				<scope>provided</scope>
 			</dependency>
 			
