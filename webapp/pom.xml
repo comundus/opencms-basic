@@ -14,18 +14,31 @@
     <description>OpenCms web application</description>
     <build>
         <finalName>webapp</finalName>
-		<resources>
-      		<resource>
-        		<directory>src/main/webapp/WEB-INF/classes</directory>
-				<targetPath>../webapp/WEB-INF/classes</targetPath>
-        		<filtering>true</filtering>
-      		</resource>
-      		<resource>
-        		<directory>src/main/webapp/WEB-INF/config</directory>
-				<targetPath>../webapp/WEB-INF/config</targetPath>
-        		<filtering>true</filtering>
-      		</resource>
-    	</resources>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/webapp</directory>
+                <targetPath>${project.build.directory}/generated/webapp</targetPath>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.jsp</include>
+                    <include>**/*.jspf</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/webapp</directory>
+                <targetPath>${project.build.directory}/generated/webapp</targetPath>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>**/*.properties</exclude>
+                    <exclude>**/*.xml</exclude>
+                    <exclude>**/*.jsp</exclude>
+                    <exclude>**/*.jspf</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
         <pluginManagement>
             <plugins>
                 <plugin>
