@@ -243,21 +243,6 @@
 			<version>4.92b23</version>
 			<scope>runtime</scope>
     	</dependency>
-        <!--  new dependencies for OpenCms 10.5.2 -->
-		<!-- dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.apollo.template.imgur</artifactId>
-		</dependency-->
-		<!-- dependency>
-		    <groupId>com.vaadin</groupId>
-		    <artifactId>vaadin-themes</artifactId>
-		    <version>7.7.6</version>
-		</dependency-->
-		<!-- dependency>
-		    <groupId>org.vaadin.addons</groupId>
-		    <artifactId>filteringtable</artifactId>
-		    <version>0.9.15.v7</version>
-		</dependency-->
     </dependencies>
 
     <distributionManagement>

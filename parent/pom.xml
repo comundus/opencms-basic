@@ -70,6 +70,7 @@
 		<vfs-plugin.version>${opencms.version}</vfs-plugin.version>
         <jmock.version>2.8.1</jmock.version>
 		<hamcrest.version>1.3</hamcrest.version>
+        <java.version>1.7</java.version>
 	</properties>
 	<!--
 		per developer configuration may follow (and overwrite global
@@ -345,192 +346,181 @@
           </modules>
         </profile>
 
-		<profile>
-			<id>release</id>
-			<properties>
-				<release.opencmsBase>${basedir}/../webapp/target/webapp/WEB-INF</release.opencmsBase>
-				<release.webappLibCP>${release.opencmsBase}/lib/*</release.webappLibCP>
-				<release.tomcatLibCP>target/servletlib/*</release.tomcatLibCP>
-				<release.webappClassesDir>${release.opencmsBase}/classes</release.webappClassesDir>
-				<release.cmsShellScript>src/release-scripts/release-${project.version}/exportopencms-commands.txt</release.cmsShellScript>
-			</properties>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-dependency-plugin</artifactId>
-						<inherited>false</inherited>
-						<executions>
-							<execution>
-								<id>copy-servlet-jars</id>
-								<phase>initialize</phase>
-								<goals>
-									<goal>copy</goal>
-								</goals>
-								<configuration>
-									<artifactItems>
-										<artifactItem>
-								            <groupId>javax.servlet</groupId>
-	            							<artifactId>servlet-api</artifactId>
-	            							<version>2.4</version>
-											<type>jar</type>
-											<overWrite>false</overWrite>
-										</artifactItem>
-										<artifactItem>
-								            <groupId>javax.servlet</groupId>
-	            							<artifactId>jsp-api</artifactId>
-	            							<version>2.0</version>
-											<type>jar</type>
-											<overWrite>false</overWrite>
-										</artifactItem>
-									</artifactItems>
-									<outputDirectory>${project.build.directory}/servletlib</outputDirectory>
-									<overWriteReleases>false</overWriteReleases>
-									<overWriteSnapshots>true</overWriteSnapshots>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-assembly-plugin</artifactId>
-						<inherited>false</inherited>
-						<executions>
-							<execution>
-							    <id>assembly-release</id>
-								<phase>initialize</phase>
-								<goals>
-									<goal>directory-single</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<finalName>opencms</finalName>
-							<descriptors>
-								<descriptor>src/release-scripts/release-${project.version}/release-assembly.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</plugin>
-					<plugin>
-				        <groupId>org.codehaus.mojo</groupId>
-        				<artifactId>exec-maven-plugin</artifactId>
-        				<version>1.1</version>
-						<inherited>false</inherited>
-						<executions>
-							<execution>
-								<id>export-opencms</id>
-								<phase>initialize</phase>
-								<goals>
-									<goal>exec</goal>
-								</goals>
-								<configuration>
-									<executable>java</executable>
-									<arguments>
-										<argument>-classpath</argument>
-										<argument>"${release.webappLibCP};${release.tomcatLibCP};${release.webappClassesDir}"</argument>
-										<argument>org.opencms.main.CmsShell</argument>
-										<argument>-base=${release.opencmsBase}</argument>
-										<argument>-script=${release.cmsShellScript}</argument>
-									</arguments>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<artifactId>maven-antrun-plugin</artifactId>
-						<version>1.7</version>
-						<inherited>false</inherited>
-						<executions>
-						    <execution>
-						       <id>prepare-tree</id>
-								<phase>validate</phase>
-								<goals>
-									<goal>run</goal>
-								</goals>
-								<configuration>
-									<target>
-									    <mkdir dir="target/opencms-release/modules" />
-									</target>
-								</configuration>
-						    </execution>
-						    <execution>
-								<id>copy-modules</id>
-								<phase>initialize</phase>
-								<goals>
-									<goal>run</goal>
-								</goals>
-								<configuration>
-									<target>
-									    <!--  Copies modules from webapp to the assembly, replacing ampersands with the XML entity in manifest.xml -->
-	   								    <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath"/>
-									    <for param="filepath">
-									      <path>
-										     <fileset dir="../webapp/target/webapp/WEB-INF/packages/modules" includes="**/*.zip"/>
-										  </path>
-										  <sequential>
-										    <var name="for.filename" unset="true" />
-										    <basename property="for.filename" file="@{filepath}" />
-										    <unzip src="@{filepath}" dest="target/opencms-release-temp/modules/${for.filename}" encoding="UTF8" />
-										    <replace file="target/opencms-release-temp/modules/${for.filename}/manifest.xml" token="&amp;" value="&amp;amp;" encoding="UTF8" />
-										    <zip basedir="target/opencms-release-temp/modules/${for.filename}" destfile="target/opencms-release/modules/${for.filename}" encoding="UTF8" />
-										  </sequential>
-										</for>
-									</target>
-								</configuration>
-							</execution>
-						    <!--
-						    	copy comundus and customer jars and remove version number
-						    	comment in, if customer wants it and change/add the included files names
-							-->
-						    <!--execution>
-								<id>rename-jars</id>
-								<phase>initialize</phase>
-								<goals>
-									<goal>run</goal>
-								</goals>
-								<configuration>
-									<target>
-										<copy toDir="target/opencms-release-${project.version}/webapp/WEB-INF/lib">
-											<fileset dir="../webapp/target/webapp/WEB-INF/lib"
-													 includes="*com.customer.project.module.*-${project.version}.jar,*com.comundus.*-${project.version}.jar"
-											/>
-											<globmapper from="*-${project.version}.jar" to="*.jar"/>
-										</copy>
-									</target>
-								</configuration>
-							</execution-->
-							<execution>
-								<id>zip-release</id>
-								<phase>initialize</phase>
-								<goals>
-									<goal>run</goal>
-								</goals>
-								<configuration>
-									<target>
-	  									<!--  Zips release directory and renames it afterwards -->
-										<zip destfile="target/opencms-release-${project.version}.zip" basedir="target/opencms-release" encoding="UTF8" />
-										<move file="target/opencms-release" tofile="target/opencms-release-${project.version}"/>
-									</target>
-								</configuration>
-							</execution>
-						</executions>
-						<dependencies>
-							<dependency>
-								<groupId>ant-contrib</groupId>
-								<artifactId>ant-contrib</artifactId>
-								<version>1.0b3</version>
-								<exclusions>
-									<exclusion>
-										<groupId>ant</groupId>
-										<artifactId>ant</artifactId>
-									</exclusion>
-								</exclusions>
-							</dependency>
-						</dependencies>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
+        <profile>
+            <id>release</id>
+            <properties>
+                <release.opencmsBase>${basedir}/../webapp/target/webapp/WEB-INF</release.opencmsBase>
+                <release.webappLibCP>${release.opencmsBase}/lib/*</release.webappLibCP>
+                <release.tomcatLibCP>target/servletlib/*</release.tomcatLibCP>
+                <release.webappClassesDir>${release.opencmsBase}/classes</release.webappClassesDir>
+                <release.cmsShellScript>src/release-scripts/release-${project.version}/exportopencms-commands.txt</release.cmsShellScript>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <inherited>false</inherited>
+                        <executions>
+                            <execution>
+                                <id>copy-servlet-jars</id>
+                                <phase>initialize</phase>
+                                <goals>
+                                    <goal>copy</goal>
+                                </goals>
+                                <configuration>
+                                    <artifactItems>
+                                        <artifactItem>
+                                            <groupId>javax.servlet</groupId>
+                                            <artifactId>servlet-api</artifactId>
+                                            <version>2.4</version>
+                                            <type>jar</type>
+                                            <overWrite>false</overWrite>
+                                        </artifactItem>
+                                        <artifactItem>
+                                            <groupId>javax.servlet</groupId>
+                                            <artifactId>jsp-api</artifactId>
+                                            <version>2.0</version>
+                                            <type>jar</type>
+                                            <overWrite>false</overWrite>
+                                        </artifactItem>
+                                    </artifactItems>
+                                    <outputDirectory>${project.build.directory}/servletlib</outputDirectory>
+                                    <overWriteReleases>false</overWriteReleases>
+                                    <overWriteSnapshots>true</overWriteSnapshots>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-assembly-plugin</artifactId>
+                        <inherited>false</inherited>
+                        <executions>
+                            <execution>
+                                <id>assembly-release</id>
+                                <phase>initialize</phase>
+                                <goals>
+                                    <goal>directory-single</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <finalName>opencms</finalName>
+                            <descriptors>
+                                <descriptor>src/release-scripts/release-${project.version}/release-assembly.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.1</version>
+                        <inherited>false</inherited>
+                        <executions>
+                            <execution>
+                                <id>export-opencms</id>
+                                <phase>initialize</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>java</executable>
+                                    <arguments>
+                                        <argument>-classpath</argument>
+                                        <argument>"${release.webappLibCP}${path.separator}${release.tomcatLibCP}${path.separator}${release.webappClassesDir}"</argument>
+                                        <argument>org.opencms.main.CmsShell</argument>
+                                        <argument>-base=${release.opencmsBase}</argument>
+                                        <argument>-script=${release.cmsShellScript}</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.7</version>
+                        <inherited>false</inherited>
+                        <executions>
+                            <execution>
+                                <id>prepare-tree</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target>
+                                        <mkdir dir="target/opencms-release/modules" />
+                                    </target>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>copy-modules</id>
+                                <phase>initialize</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target>
+                                        <!-- Copies modules from webapp to the assembly, replacing ampersands with the XML entity in manifest.xml -->
+                                        <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath" />
+                                        <for param="filepath">
+                                            <path>
+                                                <fileset dir="../webapp/target/webapp/WEB-INF/packages/modules" includes="**/*.zip" />
+                                            </path>
+                                            <sequential>
+                                                <var name="for.filename" unset="true" />
+                                                <basename property="for.filename" file="@{filepath}" />
+                                                <unzip src="@{filepath}" dest="target/opencms-release-temp/modules/${for.filename}"
+                                                    encoding="UTF8" />
+                                                <replace file="target/opencms-release-temp/modules/${for.filename}/manifest.xml"
+                                                    token="&amp;" value="&amp;amp;" encoding="UTF8" />
+                                                <zip basedir="target/opencms-release-temp/modules/${for.filename}" destfile="target/opencms-release/modules/${for.filename}"
+                                                    encoding="UTF8" />
+                                            </sequential>
+                                        </for>
+                                    </target>
+                                </configuration>
+                            </execution>
+                            <!-- copy comundus and customer jars and remove version number comment in, if customer wants it and change/add 
+                                the included files names -->
+                            <!--execution> <id>rename-jars</id> <phase>initialize</phase> <goals> <goal>run</goal> </goals> <configuration> 
+                                <target> <copy toDir="target/opencms-release-${project.version}/webapp/WEB-INF/lib"> <fileset dir="../webapp/target/webapp/WEB-INF/lib" 
+                                includes="*com.customer.project.module.*-${project.version}.jar,*com.comundus.*-${project.version}.jar" /> <globmapper from="*-${project.version}.jar" 
+                                to="*.jar"/> </copy> </target> </configuration> </execution -->
+                            <execution>
+                                <id>zip-release</id>
+                                <phase>initialize</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target>
+                                        <!-- Zips release directory and renames it afterwards -->
+                                        <zip destfile="target/opencms-release-${project.version}.zip" basedir="target/opencms-release"
+                                            encoding="UTF8" />
+                                        <move file="target/opencms-release" tofile="target/opencms-release-${project.version}" />
+                                    </target>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>ant-contrib</groupId>
+                                <artifactId>ant-contrib</artifactId>
+                                <version>1.0b3</version>
+                                <exclusions>
+                                    <exclusion>
+                                        <groupId>ant</groupId>
+                                        <artifactId>ant</artifactId>
+                                    </exclusion>
+                                </exclusions>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <!--
         	there are more profiles in general-pom.xml
          -->
@@ -544,8 +534,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                  </configuration>
              </plugin> 
             <plugin>
@@ -832,20 +822,9 @@
 			    <artifactId>org.opencms.editors.codemirror</artifactId>
 			    <version>${opencms.version}</version>
 			</dependency>
-			<!-- dependency>
-			    <groupId>org.opencms</groupId>
-			    <artifactId>org.opencms.apollo.template.imgur</artifactId>
-			    <version>${opencms.version}</version>
-			</dependency-->
 	        <!-- 
 	        	END When there is a new version of OpenCms, the following dependencies have to be checked against the lib folder of an original installation of OpenCms
 	         -->
-            <!-- this file is missing in the public repo, so we provide it here (no longer missing since OpenCms 10.5) -->
-            <!-- dependency>
-                <groupId>org.opencms</groupId>
-                <artifactId>org.opencms.ui.widgetset</artifactId>
-                <version>${opencms.version}</version>
-            </dependency-->
             <dependency>
 			    <groupId>org.opencms</groupId>
 			    <artifactId>opencms-widgetset</artifactId>
@@ -879,7 +858,7 @@
 				<scope>provided</scope>
 			</dependency>
 			
-			<!--  Test dependencies      -->
+			<!-- Test dependencies -->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
@@ -952,7 +931,7 @@
 				<version>2.3.2</version>
 				<scope>test</scope>
 			</dependency>			
-			<!--  End test dependencies  -->
+			<!-- End test dependencies -->
 		</dependencies>	
 	</dependencyManagement>
 
