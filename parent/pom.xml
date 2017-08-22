@@ -62,10 +62,17 @@
         <opencms.db.name>ocbasic_mvn</opencms.db.name>
         <opencms.webapp.path>/opencms-basic</opencms.webapp.path>
         <!--
-			the log file path is relative to WEB-INF/classes
-			or to be more precise relative to log4j.properties
+        	# From log4j.properties:
+			# OpenCms provides a special variable ${opencms.logfile} to the environment, which contains
+			# the log file path. The location of this file is calculated relative to this 
+			# "log4j.properties" file on OpenCms startup. If this file is located in the folder "${classes}",
+			# then the log is written to "${classes}../logs/opencms.log". 
+			# To disable this mechanism, you must set ${opencms.set.logfile} to "false". In this case 
+			# you must configure the log output file manually.
+
+        	Therefore this variable must not be resolved by Maven.
         -->
-        <opencms.logfile>../logs/opencms.log</opencms.logfile>
+        <opencms.logfile.variable>${opencms.logfile}</opencms.logfile.variable>
         <java.version>1.7</java.version>
         <!--
         TC 5: Servlet 2.4, JSP 2.0, Java >= 1.4
