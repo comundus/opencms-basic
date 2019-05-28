@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
-    version="2.0">
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
 
     <description><![CDATA[
         <h1>The OpenCms / JSP integration tag library</h1>
@@ -13,7 +13,7 @@
         For more details about Alkacon Software GmbH, please see http://www.alkacon.com/.</p>
     ]]></description>
     <display-name>OpenCms JSP standard taglib</display-name>
-    <tlib-version>1.0</tlib-version>
+    <tlib-version>1.1</tlib-version>
     <short-name>cms</short-name>
     <uri>http://www.opencms.org/taglib/cms</uri>
 
@@ -318,6 +318,14 @@
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
+        <attribute>
+            <description><![CDATA[
+                The encoding used to encode URL parameters . 
+            ]]></description>
+            <name>paramEncoding</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
     </tag>
 
    <tag>
@@ -403,7 +411,7 @@
         <description><![CDATA[
             This tag is used to decorate HTML.</P>
             The code in the body of the tag is decorated according to the given configuration file and locale.</P>
-            A template for the config file is found at <code>/system/shared/decoration/configuration.xml</code>.</P>
+            A template for the config file is found at <code>/system/config/decoration/configuration.xml</code>.</P>
             Look up the documentation for more information.
         ]]></description>
         <name>decorate</name>
@@ -431,6 +439,14 @@
               Default: Empty list.
             ]]></description>
             <name>noAutoCloseTags</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+              Indicates the parse action should be disabled to allow inline editing in the container page editor.
+            ]]></description>
+            <name>allowInlineEdit</name>
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
@@ -465,6 +481,14 @@
               Default: The empty list.
             ]]></description>
             <name>noAutoCloseTags</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+              Indicates the parse action should be disabled to allow inline editing in the container page editor.
+            ]]></description>
+            <name>allowInlineEdit</name>
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
@@ -1724,7 +1748,7 @@
     <tag>
         <description><![CDATA[
             This tag allows flexible creation of scaled images using the OpenCms native image scaling mechanism.
-            It generates a ScaledImage bean that can render scaled versions of the selected image, adding the
+            It generates an image bean that can render scaled versions of the selected image, adding the
             required image scaling parameters.<br/><br/>
             The following image formats are supported: BMP, GIF, JPEG, PNG, PNM, TIFF.
             <em>
@@ -1749,7 +1773,7 @@
         <variable>
             <description>Bean containing the scaled image.</description>
             <name-from-attribute>var</name-from-attribute>
-            <variable-class>org.opencms.jsp.util.CmsJspScaledImageBean</variable-class>
+            <variable-class>org.opencms.jsp.util.CmsJspImageBean</variable-class>
             <declare>true</declare>
             <scope>AT_BEGIN</scope>
         </variable>
@@ -1938,7 +1962,7 @@
         <attribute>
             <description><![CDATA[
               Optional comma separated list of hi DPI veariants to produce, e.g. "1.3x,1.5x,2x,3x". If you only
-              need the "retina" variant, use "2x". Hi DPI variants may be found in the resulting ScaledImageBean in
+              need the "retina" variant, use "2x". Hi DPI variants may be found in the resulting image bean in
               the map "hiDpiImages".
             ]]></description>
             <name>hiDpiVariants</name>
@@ -1946,7 +1970,7 @@
         </attribute>
         <attribute>
             <description><![CDATA[
-                The name of the variable used to store the resulting ScaledImage bean
+                The name of the variable used to store the resulting image bean
             ]]></description>
             <name>var</name>
             <rtexprvalue>true</rtexprvalue>
@@ -2021,6 +2045,14 @@
             <rtexprvalue>true</rtexprvalue>
         </attribute>
         <attribute>
+           <description><![CDATA[
+                A map containing setting presets for elements in this container. If settings are passed in this map, they will not be user-editable on elements in the container.
+            ]]></description>
+            <name>settings</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
             <description><![CDATA[
                 A type assigned to the container, e.g. "content" or "top-wide" or "left".</P>
                 The type can be used to select the formatter that is used to render a content in the container.
@@ -2064,10 +2096,10 @@
                 This attribute defines the tag that the <code>&lt;cms:container&gt;</code>-tag is translated to.<BR>
             Values should have the the form:</P>
             <DL>
-              <DT><code><b>&lt;{tag-name}&gt;</b></code></DT>
+              <DT><code><b>{tag-name}</b></code></DT>
               <DD> <code>tag-name</code> is a name of a valid HTML tag.</DD>
             </DL>
-            Default: <code>&lt;div&gt;</code>
+            Default: <code>div</code>
             ]]></description>
             <name>tag</name>
             <required>false</required>
@@ -2121,12 +2153,12 @@
             <rtexprvalue>true</rtexprvalue>
         </attribute>
         <attribute>
-        	<description><![CDATA[
-        		The container name prefix to use for nested container names.
-     			If empty the element instance id of the parent element will be used.
-        	]]></description>
-        	<name>nameprefix</name>
-        	<required>false</required>
+            <description><![CDATA[
+                The container name prefix to use for nested container names.
+                If empty the element instance id of the parent element will be used.
+            ]]></description>
+            <name>nameprefix</name>
+            <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
@@ -2164,9 +2196,17 @@
         <body-content>JSP</body-content>
         <attribute>
             <description><![CDATA[
-                If you use the tag inside a formatter that already has settings, you can pass these settings to the formatter used by the display tag.
+                <p>If you use the tag inside a formatter that already has settings, you can pass these settings to the formatter used by the display tag.</p>
             ]]></description>
             <name>passSettings</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+                <p>Allows to set the element settings as a java.util.Map<String,String>.</p>
+            ]]></description>
+            <name>settings</name>
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
@@ -2241,6 +2281,113 @@
             <rtexprvalue>true</rtexprvalue>
             <type>java.lang.String</type>
         </attribute>
+    </tag>
+        <tag>
+        <description><![CDATA[
+            <p>Via this tag, you can render an XML content with a given formatter from inside a (formatter) JSP.</p>
+            <p>
+                This tag is simpler than the &lt;cms:display&gt; tag in that it only allows you to specify a single formatter.
+            </p>
+            <p>Optionally, you can display edit points at the output. They facilitate similar editing functionality as <code>&lt;cms:edit&gt;</code>.
+            </p>
+            <p>In the body of the <code>&lt;cms:display&gt;</code> the following other tags can be used</p>
+            <ul>
+                <li>
+                    <code>&lt;cms:param&gt;</code>
+                    <p>This tag, contrary to it's default purpose, is used to pass element settings.</p>
+                    <p>To pass a setting, write:</p>
+                    <p>
+                    <code>&lt;cms:param name="settingName"&gt;settingValue&lt;/cms:param&gt;</code>
+                    </p>
+                    </p>
+                    The setting values specified here, overwrite the values that are possibly passed from the settings of the surrounding formatter (see the attribute <code>passSettings</code>.
+                </li>
+        ]]></description>
+        <name>simpledisplay</name>
+        <tag-class>org.opencms.jsp.CmsJspTagSimpleDisplay</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description><![CDATA[
+                <p>If you use the tag inside a formatter that already has settings, you can pass these settings to the formatter used by the display tag.</p>
+            ]]></description>
+            <name>passSettings</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+                <p>Specifies the formatter configuration file which should be used to render the content.</p>
+            ]]></description>
+            <name>formatter</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+                <p>Allows to set the element settings as a java.util.Map<String,String>.</p>
+            ]]></description>
+            <name>settings</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+                <p>If set to <code>true</code>, the "Edit" button is added to the edit buttons.</p>
+                <p><em>Default: <code>false</code></em></p>
+            ]]></description>
+            <name>editable</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+                Site path or structure id of the XML content that should be rendered via the <code>&lt;cms:display&gt;</code>-tag.
+            ]]></description>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+              <p>If set to <code>true</code> the "Create" option is added to the edit buttons.
+              Newly created resources have the same type as the resource displayed.
+              </p>
+            ]]></description>
+            <name>create</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+              <p>The location where newly created contents are stored is read from sitemap configurations.
+              <code>creationSiteMap</code> specifies the sitemap from which the configuration should be used. Provide the (site-relative) path to a folder in the (sub)sitemap.</p>
+              <em>Default: The (sub)sitemap of the currently requested URI.
+            ]]></description>
+            <name>creationSiteMap</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+              <p>If set to <code>true</code>, the "Delete" option is added to the edit buttons.</p>
+              <em>Default: <code>false</code></em>
+            ]]></description>
+            <name>delete</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+              The fully qualified class name of a <code>org.opencms.file.collectors.I_CmsCollectorPostCreateHandler</code> that
+              is called when a new resource is created via the tag.
+            ]]></description>
+            <name>postCreateHandler</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+
     </tag>
     <tag>
         <description><![CDATA[
@@ -2581,12 +2728,13 @@
         </attribute>
         <attribute>
             <description><![CDATA[
-                VFS-URI of the search form configuration file (either a JSON file or an XML content of type <code>jsp-search-form</code>.
+                Value specifying the search form configuration file (either a JSON file or an XML content of type <code>jsp-search-form</code>.
+                You can provide path, structure id or resource object to identify the file.
             ]]></description>
             <name>configFile</name>
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
-            <type>java.lang.String</type>
+            <type>java.lang.Object</type>
         </attribute>
         <attribute>
                 <description><![CDATA[
@@ -2600,6 +2748,82 @@
         <attribute>
             <description><![CDATA[
                 Instead of a configuration file, the JSON config can be directly given as String.
+            ]]></description>
+            <name>configString</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+              <p>The tag allows for detection of changes on resources collected by the
+              search tag  (editing, creation, deletion). If <code>addContentInfo</code> is set to true, these changes are taken into account when publishing
+              changes for the current web page.</p>
+              <p>This feature makes only sense if you use the tag to display (editable) lists of contents. By default,
+              at most (the first) 200 list items are checked for changes. The default can be altered using the attribute
+              <code>contentInfoMaxItems</code></p>
+              <em>Default: <code>false</code></em>.
+              <p><em>Hint:</em>The attribute is ignored if <code>contentInfoMaxItems</code> is specified.</p>
+            ]]></description>
+            <name>addContentInfo</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.Boolean</type>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+                Enables detection of changed resources as described for <code>addContentInfo</code>. Additionally, sets
+                the maximal number of investigated resources to the provided value.
+            ]]></description>
+            <name>contentInfoMaxItems</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.Integer</type>
+        </attribute>
+    </tag>
+
+    <tag>
+          <description><![CDATA[
+            <p>This tag provides support to generate search forms and result lists for a server-side handled Solr search.
+            It takes an (XML or JSON) configuration file or a JSON configuration String and essentially exposes an object with the search results
+            and also the necessary information to suitably build up your search form.
+            It supports facets and highlighting.</p>
+            <p>If you do not specify a search index explicitly, the tag uses "Solr Offline" and "Solr Online",
+            depending on the current project.</p>
+            <p>To get detailed information on the configuraiton options,
+                just have a look at an XML content of type <code>jsp-search-form</code> or look up the JavaDoc of the JSON configuration parser
+                <code>org.opencms.jsp.search.config.parser.CmsJSONSearchConfigurationParser</code>.
+           ]]></description>
+        <name>simplesearch</name>
+        <tag-class>org.opencms.jsp.CmsJspTagSimpleSearch</tag-class>
+        <body-content>JSP</body-content>
+        <variable>
+            <name-from-attribute>var</name-from-attribute>
+            <variable-class>org.opencms.jsp.search.result.I_CmsSearchResultWrapper</variable-class>
+            <declare>true</declare>
+            <scope>NESTED</scope>
+        </variable>
+        <attribute>
+              <description><![CDATA[The name of the variable that exposes an object of type <code>org.opencms.jsp.search.result.I_CmsSearchResultWrapper</code>,
+              which gives you access to the search results and to a search form controller.
+               ]]></description>
+            <name>var</name>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
+            <type>org.opencms.jsp.search.result.I_CmsSearchResultWrapper</type>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+                VFS-URI, structure id, or resource object identifying the search form configuration file of type <code>listconfig</code>.
+            ]]></description>
+            <name>configFile</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.Object</type>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+                Override settings in the configuration file by using a JSON config string.
             ]]></description>
             <name>configString</name>
             <required>false</required>
@@ -2679,6 +2903,31 @@
                 The name of the element, which will be used as the JSON key.
             ]]></description>
             <name>element</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description><![CDATA[
+            Allows the JSP programmer to dynamically add request parameters (using the <cms.param> tag) inside the body of this tag.
+            The original request parameters will be restored after the body of this tag.
+        ]]></description>
+        <name>addparams</name>
+        <tag-class>org.opencms.jsp.CmsJspTagAddParams</tag-class>
+        <body-content>JSP</body-content>
+    </tag>
+
+      <tag>
+        <description><![CDATA[Can be used to create a java.util.Map with string keys and values using nested <cms:param> tags.]]></description>
+        <name>map</name>
+        <tag-class>org.opencms.jsp.CmsJspTagMap</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description><![CDATA[
+                The page context variable to store the map in.
+            ]]></description>
+            <name>var</name>
             <required>true</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
@@ -2791,6 +3040,50 @@
         <function-class>org.opencms.jsp.util.CmsJspElFunctions</function-class>
         <function-signature>
             java.lang.String stripHtml(java.lang.Object)
+        </function-signature>
+    </function>
+
+    <function>
+        <description><![CDATA[
+            Calculates the next smallest integer for the given number parameter.
+        ]]></description>
+        <name>mathFloor</name>
+        <function-class>org.opencms.jsp.util.CmsJspElFunctions</function-class>
+        <function-signature>
+            java.lang.Long mathFloor(java.lang.Object)
+        </function-signature>
+    </function>
+
+    <function>
+        <description><![CDATA[
+            Calculates the next largest integer for the given number parameter.
+        ]]></description>
+        <name>mathCeil</name>
+        <function-class>org.opencms.jsp.util.CmsJspElFunctions</function-class>
+        <function-signature>
+            java.lang.Long mathCeil(java.lang.Object)
+        </function-signature>
+    </function>
+
+    <function>
+        <description><![CDATA[
+            Calculates the next integer for the given number parameter by rounding.
+        ]]></description>
+        <name>mathRound</name>
+        <function-class>org.opencms.jsp.util.CmsJspElFunctions</function-class>
+        <function-signature>
+            java.lang.Long mathRound(java.lang.Object)
+        </function-signature>
+    </function>
+
+    <function>
+        <description><![CDATA[
+             Converts the given Object to a (Double) number, falling back to a default if this is not possible.
+        ]]></description>
+        <name>toNumber</name>
+        <function-class>org.opencms.jsp.util.CmsJspElFunctions</function-class>
+        <function-signature>
+            java.lang.Double toNumber(java.lang.Object, java.lang.Object)
         </function-signature>
     </function>
 
@@ -2980,7 +3273,18 @@
         <name>isSubSitemap</name>
         <function-class>org.opencms.jsp.util.CmsJspElFunctions</function-class>
         <function-signature>
-            java.lang.String isSubSitemap(org.opencms.file.CmsResource)
+            boolean isSubSitemap(org.opencms.file.CmsResource)
+        </function-signature>
+    </function>
+
+    <function>
+        <description><![CDATA[
+             Returns whether the given value is an instance of <code>A_CmsJspValueWrapper</code>.
+        ]]></description>
+        <name>isWrapper</name>
+        <function-class>org.opencms.jsp.util.CmsJspElFunctions</function-class>
+        <function-signature>
+            boolean isWrapper(java.lang.Object)
         </function-signature>
     </function>
 
@@ -3004,7 +3308,7 @@
         <name>changeFileNameSuffixToo</name>
         <function-class>org.opencms.util.CmsStringUtil</function-class>
         <function-signature>
-            java.lang.String changeFileNameSuffixToo(java.lang.String, java.lang.String)
+            java.lang.String changeFileNameSuffixTo(java.lang.String,java.lang.String)
         </function-signature>
     </function>
 
@@ -3207,4 +3511,6 @@
             boolean validateRegex(java.lang.String, java.lang.String)
         </function-signature>
     </function>
+
+
 </taglib>

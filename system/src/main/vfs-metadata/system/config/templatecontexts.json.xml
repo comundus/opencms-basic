@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/config/templatecontexts.json</destination>
+		<type>plain</type>
+		<uuidstructure>727bb70c-d14c-11e8-9434-b90516ef3600</uuidstructure>
+		<uuidresource>727bb70d-d14c-11e8-9434-b90516ef3600</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:57 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 25 Sep 2013 07:33:36 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Template device contexts]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

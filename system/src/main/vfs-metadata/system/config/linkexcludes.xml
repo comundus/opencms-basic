@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/config/linkexcludes</destination>
+		<type>xmlcontent</type>
+		<uuidstructure>726d8624-d14c-11e8-9434-b90516ef3600</uuidstructure>
+		<uuidresource>726d8625-d14c-11e8-9434-b90516ef3600</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:57 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Wed, 17 Dec 2008 11:07:08 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Link excludes for internal link check]]></value>
+			</property>
+			<property>
+				<name>locale-available</name>
+				<value><![CDATA[en]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

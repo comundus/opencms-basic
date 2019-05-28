@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.base/elementviews/system-elements</destination>
+		<type>elementview</type>
+		<uuidstructure>cf0f2604-e114-11e5-8d6e-0242ac11002b</uuidstructure>
+		<uuidresource>cf0f2605-e114-11e5-8d6e-0242ac11002b</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:48 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 03 Mar 2016 07:51:59 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[System elements]]></value>
+			</property>
+			<property>
+				<name>locale</name>
+				<value><![CDATA[en]]></value>
+			</property>
+			<property>
+				<name>locale-available</name>
+				<value><![CDATA[en]]></value>
+			</property>
+			<property>
+				<name>search.exclude</name>
+				<value><![CDATA[true]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol>
+			<accessentry>
+				<uuidprincipal>OVERWRITE_ALL</uuidprincipal>
+				<flags>256</flags>
+				<permissionset>
+					<allowed>0</allowed>
+					<denied>0</denied>
+				</permissionset>
+			</accessentry>
+			<accessentry>
+				<uuidprincipal>ROLE.CATEGORY_EDITOR</uuidprincipal>
+				<flags>512</flags>
+				<permissionset>
+					<allowed>5</allowed>
+					<denied>0</denied>
+				</permissionset>
+			</accessentry>
+			<accessentry>
+				<uuidprincipal>ROLE.GALLERY_EDITOR</uuidprincipal>
+				<flags>512</flags>
+				<permissionset>
+					<allowed>5</allowed>
+					<denied>0</denied>
+				</permissionset>
+			</accessentry>
+		</accesscontrol>
+	</file>
+</export>

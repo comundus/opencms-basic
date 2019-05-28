@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+        <file>
+            <destination>system/modules</destination>
+            <type>folder</type>
+            <properties/>
+        </file>
+</export>

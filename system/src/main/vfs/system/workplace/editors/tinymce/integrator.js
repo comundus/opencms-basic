@@ -56,7 +56,7 @@ pageContext.setAttribute("embeddedConfigurationName", embeddedConfigurationName)
  * Returning <code>true</code> when all data has been set and the dialog should be closed.<p>
  */
 /* absolute path to the JSP that displays the image in original size */
-var vfsPopupUri = "<%= cms.link("/system/modules/org.opencms.jquery/pages/imagePopup.html") %>";
+var vfsPopupUri = "<%= cms.link("/system/workplace/editors/tinymce/image_popup.html") %>";
 var showSelect = "true";
 
 
@@ -77,7 +77,7 @@ var tinymce = parentDialog.tinymce;
 var editorConfig= {};
  
 /* Absolute path to the JSP that displays the image in original size. */
-var imagePopupUri = "<%= cms.link("/system/modules/org.opencms.jquery/pages/imagePopup.html") %>";
+var imagePopupUri = "<%= cms.link("/system/workplace/editors/tinymce/image_popup.html") %>";
 
 // some string constants
 
@@ -107,6 +107,7 @@ var Ok =function(){
  */
 function closeDialog(){
    editor.windowManager.close();
+   editor.execCommand("removeDialogStyle",false,null)
 }
 
 /**

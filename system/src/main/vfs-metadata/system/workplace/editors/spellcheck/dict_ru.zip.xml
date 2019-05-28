@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/spellcheck/dict_ru.zip</destination>
+		<type>binary</type>
+		<uuidstructure>3dc64551-aac5-11e3-b868-591400608713</uuidstructure>
+		<uuidresource>3dc64552-aac5-11e3-b868-591400608713</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:48 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 13 Mar 2014 15:36:27 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[dict_ru]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

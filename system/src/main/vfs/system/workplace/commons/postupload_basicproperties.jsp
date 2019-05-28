@@ -9,5 +9,5 @@ dialog.setAddBasicProperties(true);
   	<title>Properties</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   </head>
-  <body style="margin: 0px;">&nbsp;</body>
+  <body class="-opencms" style="margin: 0px;">&nbsp;</body>
 </html>

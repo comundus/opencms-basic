@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.base/pages/render-string-template.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>aeab959f-6afd-11e7-b91c-a5f4ea347311</uuidstructure>
+		<uuidresource>aeab95a0-6afd-11e7-b91c-a5f4ea347311</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:48 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 17 Jul 2017 14:39:04 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

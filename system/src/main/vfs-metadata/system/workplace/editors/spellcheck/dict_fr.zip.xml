@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/editors/spellcheck/dict_fr.zip</destination>
+		<type>binary</type>
+		<uuidstructure>3db4b91e-aac5-11e3-b868-591400608713</uuidstructure>
+		<uuidresource>3db4b91f-aac5-11e3-b868-591400608713</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:48 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 13 Mar 2014 15:36:27 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[dict_fr]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/config/decoration/decoration.xsd</destination>
+		<type>plain</type>
+		<uuidstructure>727415e1-d14c-11e8-9434-b90516ef3600</uuidstructure>
+		<uuidresource>727415e2-d14c-11e8-9434-b90516ef3600</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:57 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 08 Nov 2005 15:20:44 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Nested XSD for decoration]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

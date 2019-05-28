@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.base/.config</destination>
+		<type>module_config</type>
+		<uuidstructure>2baf86ab-62be-11e5-a6b9-35cf27d9ef56</uuidstructure>
+		<uuidresource>2baf86ac-62be-11e5-a6b9-35cf27d9ef56</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:48 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Thu, 24 Sep 2015 13:14:22 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>locale</name>
+				<value><![CDATA[en]]></value>
+			</property>
+			<property>
+				<name>locale-available</name>
+				<value><![CDATA[en]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

@@ -3,10 +3,10 @@
 <export>
 	<file>
 		<destination>system/workplace/editors/tinymce/opencms_plugin.css</destination>
-		<type>jsp</type>
+		<type>plain</type>
 		<uuidstructure>d0273749-407c-11e3-bd65-13c7f20aeb68</uuidstructure>
 		<uuidresource>d027374a-407c-11e3-bd65-13c7f20aeb68</uuidresource>
-		<datelastmodified>Wed, 19 Jul 2017 14:05:18 GMT</datelastmodified>
+		<datelastmodified>Mon, 27 May 2019 13:14:49 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
 		<datecreated>Tue, 29 Oct 2013 09:30:56 GMT</datecreated>
 		<usercreated>Admin</usercreated>

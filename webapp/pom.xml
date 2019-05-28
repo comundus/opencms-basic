@@ -3,11 +3,11 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>10.5.2</version>
+        <version>${revision}</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
+    
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.comundus.opencms</groupId>
     <artifactId>webapp</artifactId>
     <packaging>war</packaging>
     <name>OpenCms Basic</name><!-- This name will be shown in the info page /system/info/version -->
@@ -123,7 +123,6 @@
             </plugin>
             <plugin>
         		<artifactId>maven-resources-plugin</artifactId>
-        		<version>2.6</version>
         		<executions>
           			<execution>
             			<id>copy-resources</id>
@@ -154,140 +153,63 @@
             <groupId>org.opencms</groupId>
             <artifactId>opencms-core</artifactId>
         </dependency>
-        <!--  
-        	from version 10 on the module jars are no longer in the module zip.
-        	so we have to add them as dependencies
-         -->
 		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.workplace</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.sites</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.searchindex</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.scheduler</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.publishqueue</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.projects</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.modules</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.link</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.history</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.git</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.galleryoverview</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.database</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.content</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.cache</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.tools.accounts</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.explorer</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.workplace.administration</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.ugc</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.gwt</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.editors.tinymce</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.opencms</groupId>
-		    <artifactId>org.opencms.editors.codemirror</artifactId>
-		</dependency>
-        <!--  
-        	END from version 10 on the module jars are no longer in the module zip.
-        	so we have to add them as dependencies
-         -->
-        <!-- this file is missing in the public repo, so we provide it here (no longer missing since OpenCms 10.5) -->
-        <!-- dependency>
-             <groupId>org.opencms</groupId>
-             <artifactId>org.opencms.ui.widgetset</artifactId>
-             <version>${opencms.version}</version>
-       </dependency-->
-       <dependency>
-			<groupId>org.opencms</groupId>
-		    <artifactId>opencms-widgetset</artifactId>
-		    <version>${opencms.version}</version>
-		</dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>opencms-modules</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>opencms-resources</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>org.opencms.locale.cs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>org.opencms.locale.ru</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>org.opencms.locale.zh</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>org.opencms.locale.ja</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>org.opencms.locale.de</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>org.opencms.locale.da</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>org.opencms.locale.es</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>org.opencms.locale.it</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.cssparser</groupId>
+            <artifactId>cssparser</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.octo.captcha</groupId>
+            <artifactId>jcaptcha</artifactId>
+        </dependency>
         <dependency>
 			<groupId>${jdbcDriver.groupId}</groupId>
 			<artifactId>${jdbcDriver.artifactId}</artifactId>
 			<version>${jdbcDriver.version}</version>
     	</dependency>
     	<dependency>
-			<groupId>cryptix-jce</groupId>
-			<artifactId>cryptix-jce-provider</artifactId>
-			<version>20050328</version>
-			<scope>runtime</scope>
-    	</dependency>
-    	<dependency>
 			<groupId>org.alfresco</groupId>
 			<artifactId>jlan</artifactId>
 			<version>r55007</version>
-			<scope>runtime</scope>
-    	</dependency>
-    	<dependency>
-			<groupId>com.habitsoft</groupId>
-			<artifactId>xhtml-dtds</artifactId>
-			<version>1.0</version>
-			<scope>runtime</scope>
-    	</dependency>
-    	<dependency>
-			<groupId>org.jpedal</groupId>
-  			<artifactId>jpedal-lgpl</artifactId>
-			<version>4.92b23</version>
 			<scope>runtime</scope>
     	</dependency>
     </dependencies>

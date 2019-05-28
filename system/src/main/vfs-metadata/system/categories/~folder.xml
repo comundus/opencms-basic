@@ -4,13 +4,22 @@
 	<file>
 		<destination>system/categories</destination>
 		<type>folder</type>
-		<uuidstructure>1da1b414-6c8b-11e7-8b36-d481d77c3c32</uuidstructure>
-		<datelastmodified>Wed, 19 Jul 2017 14:04:01 GMT</datelastmodified>
+		<uuidstructure>69929061-8081-11e9-98a2-f8cab8492ef3</uuidstructure>
+		<datelastmodified>Mon, 27 May 2019 13:14:52 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Wed, 19 Jul 2017 14:04:01 GMT</datecreated>
+		<datecreated>Mon, 27 May 2019 13:14:52 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
-		<properties/>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Global categories]]></value>
+			</property>
+			<property>
+				<name>Title_de</name>
+				<value><![CDATA[Globale Kategorien]]></value>
+			</property>
+		</properties>
 		<relations/>
 		<accesscontrol/>
 	</file>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/config/wysiwyg</destination>
+		<type>folder</type>
+		<uuidstructure>7289c0e4-d14c-11e8-9434-b90516ef3600</uuidstructure>
+		<datelastmodified>Mon, 27 May 2019 13:14:57 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Editor display options]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

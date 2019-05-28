@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>10.5.2</version>
+        <version>${revision}</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
+    
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.comundus.opencms</groupId>
     <artifactId>content</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms Content</name>
@@ -37,7 +39,7 @@
                 </executions>
                 <configuration>
                     <syncVFSPaths>
-		        		<syncVFSPath>/shared/</syncVFSPath>
+                        <syncVFSPath>/shared/</syncVFSPath>
                         <syncVFSPath>/sites/default/</syncVFSPath>
                     </syncVFSPaths>
                 </configuration>

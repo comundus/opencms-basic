@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/config/notification/notification</destination>
+		<type>xmlcontent</type>
+		<uuidstructure>727e4f21-d14c-11e8-9434-b90516ef3600</uuidstructure>
+		<uuidresource>727e4f22-d14c-11e8-9434-b90516ef3600</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:57 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[OpenCms Content Notification]]></value>
+			</property>
+			<property>
+				<name>content-encoding</name>
+				<value><![CDATA[ISO-8859-1]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

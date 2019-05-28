@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<!--
 		in order to make the parent pom smaller some information were put into a separate pom (general-pom.xml)
 	 -->
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>10.5.2</version>
+        <version>${revision}</version>
         <relativePath>parent</relativePath>
     </parent>
 	<!--
@@ -19,34 +19,32 @@
 		ways.
 	-->
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.comundus.opencms</groupId>
     <artifactId>opencms-basic</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms Basic Root</name>
-    <version>10.5.2</version>
     <description>OpenCms</description>
     <!--
     <url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic/content</url>
     -->
     <url>http://opencms-maven.comundus.com</url>
-	<prerequisites>
-    	<maven>2.2.1</maven>
-  	</prerequisites>
+    <prerequisites>
+        <maven>3.5.4</maven>
+    </prerequisites>
     <inceptionYear>2007</inceptionYear>
-	
+
     <developers>
         <developer>
             <id>ar</id>
             <name>Adrian Rodriguez</name>
             <email>a.rodriguez@comundus.com</email>
-            <url/>
+            <url />
             <organization>comundus GmbH</organization>
             <organizationUrl>http://www.comundus.com</organizationUrl>
             <roles>
                 <role>lead developer</role>
             </roles>
             <timezone>1</timezone>
-            <properties/>
+            <properties />
         </developer>
     </developers>
 
@@ -54,10 +52,10 @@
         <connection>scm:git:https://github.com/comundus/opencms-basic.git</connection>
         <developerConnection>scm:git:https://github.com/comundus/opencms-basic.git</developerConnection>
         <url>https://github.com/comundus/opencms-basic.git</url>
-        <tag/>
+        <tag />
     </scm>
 
-	<properties/>
+    <properties />
     <profiles>
         <!-- in OpenCms Basic the release build does not work because we only have example 
         release files which refer to imaginary resources -->
@@ -87,15 +85,15 @@
                                     <artifactItems>
                                         <artifactItem>
                                             <groupId>javax.servlet</groupId>
-                                            <artifactId>servlet-api</artifactId>
-                                            <version>2.4</version>
+                                            <artifactId>javax.servlet-api</artifactId>
+                                            <version>4.0.1</version>
                                             <type>jar</type>
                                             <overWrite>false</overWrite>
                                         </artifactItem>
                                         <artifactItem>
-                                            <groupId>javax.servlet</groupId>
-                                            <artifactId>jsp-api</artifactId>
-                                            <version>2.0</version>
+                                            <groupId>javax.servlet.jsp</groupId>
+                                            <artifactId>javax.servlet.jsp-api</artifactId>
+                                            <version>2.3.3</version>
                                             <type>jar</type>
                                             <overWrite>false</overWrite>
                                         </artifactItem>
@@ -130,7 +128,7 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
-                        <version>1.1</version>
+                        <version>1.6.0</version>
                         <inherited>false</inherited>
                         <executions>
                             <execution>
@@ -154,11 +152,11 @@
                     </plugin>
                     <plugin>
                         <artifactId>maven-antrun-plugin</artifactId>
-                        <version>1.7</version>
+                        <version>1.8</version>
                         <inherited>false</inherited>
                         <executions>
                             <execution>
-                               <id>prepare-tree</id>
+                                <id>prepare-tree</id>
                                 <phase>validate</phase>
                                 <goals>
                                     <goal>run</goal>
@@ -180,16 +178,16 @@
                                         <!--  Copies modules from webapp to the assembly, replacing ampersands with the XML entity in manifest.xml -->
                                         <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath"/>
                                         <for param="filepath">
-                                          <path>
+                                            <path>
                                              <fileset dir="webapp/target/webapp/WEB-INF/packages/modules" includes="**/*.zip"/>
-                                          </path>
-                                          <sequential>
+                                            </path>
+                                            <sequential>
                                             <var name="for.filename" unset="true" />
                                             <basename property="for.filename" file="@{filepath}" />
                                             <unzip src="@{filepath}" dest="target/opencms-release-temp/modules/${for.filename}" encoding="UTF8" />
                                             <replace file="target/opencms-release-temp/modules/${for.filename}/manifest.xml" token="&amp;" value="&amp;amp;" encoding="UTF8" />
                                             <zip basedir="target/opencms-release-temp/modules/${for.filename}" destfile="target/opencms-release/modules/${for.filename}" encoding="UTF8" />
-                                          </sequential>
+                                            </sequential>
                                         </for>
                                     </target>
                                 </configuration>
@@ -253,15 +251,15 @@
 
             actually we don't need it in the opencms-basic project, because there are no java projects
         -->
-       <profile>
-          <id>vfs</id>
-          <modules>
+        <profile>
+            <id>vfs</id>
+            <modules>
                 <!-- vfs modules -->
                 <module>webapp</module>  <!-- this must always come first -->
                 <module>system</module>  <!-- containing categories, but not orgunits -->
                 <module>content</module>  <!-- requires categories from system -->
                 <module>orgunits</module>  <!-- requires content -->
-          </modules>
+            </modules>
         </profile>
     </profiles>
 
@@ -273,12 +271,12 @@
         <module>parent</module>  <!-- requires content -->
         <module>parent/general-pom.xml</module>  <!-- requires content -->
 		<!-- the following modules are additional modules which originally do not belong to the OpenCms Basic project -->
-		<!-- module>../template3_vfs</module -->
+        <!-- module>../template3_vfs</module -->
     </modules>
 
-	<distributionManagement>
-		<site>
-			<url>file:////Data02/projectsites/projects/cm-comundus/opencms-basic</url>
-		</site>
-	</distributionManagement>
+    <distributionManagement>
+        <site>
+            <url>file:////Data02/projectsites/projects/cm-comundus/opencms-basic</url>
+        </site>
+    </distributionManagement>
 </project>

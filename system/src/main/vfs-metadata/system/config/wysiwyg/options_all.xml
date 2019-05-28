@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/config/wysiwyg/options_all</destination>
+		<type>plain</type>
+		<uuidstructure>728c31e7-d14c-11e8-9434-b90516ef3600</uuidstructure>
+		<uuidresource>728c31e8-d14c-11e8-9434-b90516ef3600</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:57 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 27 Jun 2005 08:00:00 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>NavPos</name>
+				<value><![CDATA[20]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Common options enabled]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

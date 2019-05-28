@@ -4,26 +4,13 @@
 	<file>
 		<destination>system/workplace/explorer</destination>
 		<type>folder</type>
-		<uuidstructure>292a9638-6c8b-11e7-8b36-d481d77c3c32</uuidstructure>
-		<datelastmodified>Wed, 19 Jul 2017 14:05:30 GMT</datelastmodified>
+		<uuidstructure>6e34052b-8081-11e9-98a2-f8cab8492ef3</uuidstructure>
+		<datelastmodified>Mon, 27 May 2019 13:14:59 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Wed, 19 Jul 2017 14:04:20 GMT</datecreated>
+		<datecreated>Mon, 27 May 2019 13:14:59 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
-		<properties>
-			<property>
-				<name>Title</name>
-				<value><![CDATA[Explorer Tools]]></value>
-			</property>
-			<property>
-				<name>cache</name>
-				<value><![CDATA[bypass]]></value>
-			</property>
-			<property>
-				<name>default-file</name>
-				<value><![CDATA[/system/workplace/views/explorer/explorer_files.jsp?mode=explorerview&reload=true]]></value>
-			</property>
-		</properties>
+		<properties/>
 		<relations/>
 		<accesscontrol/>
 	</file>

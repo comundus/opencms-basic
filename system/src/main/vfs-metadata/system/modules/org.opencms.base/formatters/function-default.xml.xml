@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.base/formatters/function-default.xml</destination>
+		<type>function_config</type>
+		<uuidstructure>d9d312d4-9a06-11e8-b9b2-1f0f0d8667a3</uuidstructure>
+		<uuidresource>d9d312d5-9a06-11e8-b9b2-1f0f0d8667a3</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:48 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Tue, 07 Aug 2018 05:58:04 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Internal default function formatter]]></value>
+			</property>
+			<property>
+				<name>locale</name>
+				<value><![CDATA[en]]></value>
+			</property>
+			<property>
+				<name>locale-available</name>
+				<value><![CDATA[en]]></value>
+			</property>
+			<property>
+				<name>search.exclude</name>
+				<value><![CDATA[all]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

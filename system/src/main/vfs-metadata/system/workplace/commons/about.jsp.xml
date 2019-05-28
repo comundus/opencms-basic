@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/workplace/commons/about.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>1761c0f6-b2be-4d21-892f-0cfe75f67779</uuidstructure>
+		<uuidresource>9d8e5c90-9bad-4209-b71f-88a618eaef69</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:49 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Mon, 12 Apr 2010 07:44:27 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties/>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

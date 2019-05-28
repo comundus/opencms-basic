@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<file>
+		<destination>system/modules/org.opencms.base/copyresources/sample-formatter.jsp</destination>
+		<type>jsp</type>
+		<uuidstructure>61ad6a7c-75e7-11e8-8de8-8715041bae26</uuidstructure>
+		<uuidresource>61ad6a7d-75e7-11e8-8de8-8715041bae26</uuidresource>
+		<datelastmodified>Mon, 27 May 2019 13:14:48 GMT</datelastmodified>
+		<userlastmodified>Admin</userlastmodified>
+		<datecreated>Fri, 22 Jun 2018 06:42:07 GMT</datecreated>
+		<usercreated>Admin</usercreated>
+		<flags>0</flags>
+		<properties>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Sample formatter for new resource types]]></value>
+			</property>
+			<property type="shared">
+				<name>export</name>
+				<value><![CDATA[false]]></value>
+			</property>
+		</properties>
+		<relations/>
+		<accesscontrol/>
+	</file>
+</export>

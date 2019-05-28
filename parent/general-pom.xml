@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<parent>
-		<groupId>com.comundus</groupId>
-		<artifactId>comundus</artifactId>
-		<version>4</version>
-		<relativePath/>
-	</parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.comundus</groupId>
+        <artifactId>comundus</artifactId>
+        <version>4</version>
+        <relativePath />
+    </parent>
 	<!--
 		Parent POM for OpenCms-Basic. Database support can be triggered by
 		Maven profiles. Currently mysql, postgresql and db2 are supported.
@@ -15,312 +16,328 @@
 		ignored if another profile from this POM will be activated by other
 		ways.
 	-->
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.comundus.opencms</groupId>
-	<artifactId>general</artifactId>
-	<packaging>pom</packaging>
-	<name>${project.groupId}:${project.artifactId}</name>
-	<version>10.5.2</version>
-	<description>OpenCms general - POM with general Information like scm, reporting, release stuff</description>
-	<url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic</url>
-	<inceptionYear>2007</inceptionYear>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.comundus.opencms</groupId>
+    <artifactId>general</artifactId>
+    <packaging>pom</packaging>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <version>${revision}</version>
+    <description>OpenCms general - POM with general Information like scm, reporting, release stuff</description>
+    <url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic</url>
+    <inceptionYear>2007</inceptionYear>
 
+    <properties>
+        <revision>11.0.0</revision>
+    </properties>
 
 	<!--
 		per developer configuration may follow (and overwrite global
 		properties) : <profiles> <profile> <id>det</id> <properties> ...
 		</properties> </profile> </profiles>
 	-->
-	<profiles>
+    <profiles>
 
-	</profiles>
+    </profiles>
 
-	<build>
-		<finalName>${project.artifactId}</finalName>
-		<!-- order here is significant for build execution! -->
-		<plugins>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <!-- order here is significant for build execution! -->
+        <plugins>
 
-			<!-- for maven reports -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId>
-		        <dependencies>
-		        	<dependency><!-- add support for ssh/scp -->
-		            	<groupId>org.apache.maven.wagon</groupId>
-		            	<artifactId>wagon-ssh</artifactId>
-		            	<version>2.2</version>
-		           	</dependency>
-		        </dependencies>
-				<configuration>
-					<locales>de</locales>
-					<reportPlugins>
-						<!-- Manage site info part creation -->
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-project-info-reports-plugin</artifactId>
-							<configuration>
-								<dependencyLocationsEnabled>true</dependencyLocationsEnabled>
-								<dependencyDetailsEnabled>false</dependencyDetailsEnabled>
-								<offline>false</offline>
-							</configuration>
-							<reports>
-								<report>index</report>
-								<report>summary</report>
-								<report>dependencies</report>
-								<report>issue-tracking</report>
-							</reports>
-						</plugin>
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-surefire-report-plugin</artifactId>
-						</plugin>
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-javadoc-plugin</artifactId>
-							<configuration>
-								<failOnError>false</failOnError>
-							</configuration>
-					        <reportSets>
-					          <reportSet>
-					            <id>non-aggregate</id>
-					            <reports>
-					              <report>javadoc</report>
-					            </reports>
-					          </reportSet>
-					          <reportSet>
-					            <id>aggregate</id>
-					            <reports>
-					              <report>aggregate</report>
-					            </reports>
-					          </reportSet>
-					        </reportSets>
-					    </plugin>
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-changes-plugin</artifactId>
-					        <reportSets>
-					          <reportSet>
-					            <reports>
-					              <report>changes-report</report>
-					            </reports>
-					          </reportSet>
-					        </reportSets>
-					        <configuration>
-					          	<issueManagementSystems>
-					            	<issueManagementSystem>changes.xml</issueManagementSystem>
-					            	<!-- issueManagementSystem>JIRA</issueManagementSystem-->
-					          	</issueManagementSystems>
-							<!--  the next two configurations are for use with Jira. This is not set up correctly now. So we are getting the infos from the changes.xml -->
-							<!--
-									If you are lazy and only ever want the latest release in you JIRA Report, you can use the <onlyCurrentVersion> configuration parameter. It will take the version from your project's POM and try to match it against the "Fix for" version of the JIRA issues.
-									Once you have configured this, you can forget about it, as it updates itself when you change the version number in your POM.
-									Note: The names of your versions in JIRA must match the ones you use in your POM. The -SNAPSHOT part of the version in your POM is handled automatically by the plugin, so you don't need to include -SNAPSHOT in the names of your versions in JIRA.
-					        -->
-								<onlyCurrentVersion>true</onlyCurrentVersion>
-
-							<!--
-									Using fix version id(s)
-									This is the manual way of doing it. You specify one or more fix version ids, separated by commas. The version ids are usually five digit numbers, but that depends on your JIRA installation.
-									The good thing about this method is that you can specify exactly which versions you want, but you have to remember to update your configuration for every new release that you want to include in the report.
-							 -->
-					         <!--
-					          <fixVersionIds>10311</fixVersionIds>
-					          -->
-					        </configuration>
-						</plugin>
-						<plugin>
-							<groupId>org.codehaus.mojo</groupId>
-							<artifactId>cobertura-maven-plugin</artifactId>
-						</plugin>
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-docck-plugin</artifactId>
-						</plugin>
-					</reportPlugins>
-				</configuration>
-				<executions>
-					<execution>
-						<id>attach-descriptor</id>
-						<goals>
-							<goal>attach-descriptor</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-	        <!--  add the project version to the opencms-module.xml -->
-	        <plugin>
-	            <groupId>com.google.code.maven-replacer-plugin</groupId>
-	            <artifactId>replacer</artifactId>
-	            <executions>
-	                <execution>
-	                    <phase>prepare-package</phase>
-	                    <goals>
-	                        <goal>replace</goal>
-	                    </goals>
-	                </execution>
-	            </executions>
-	            <configuration>
-	                <!-- file>src/main/opencms-module/opencms-module.xml</file-->
+            <!-- for maven reports -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <dependencies>
+                    <dependency><!-- add support for ssh/scp -->
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-ssh</artifactId>
+                        <version>3.3.2</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <locales>de</locales>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-descriptor</id>
+                        <goals>
+                            <goal>attach-descriptor</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- add the project version to the opencms-module.xml -->
+            <plugin>
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>replacer</artifactId>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>replace</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- file>src/main/opencms-module/opencms-module.xml</file -->
 	                <!--  ignore errors because in java projects there is no opencms-module.xml -->
-	                <ignoreErrors>true</ignoreErrors>
-	                <replacements>
-	                	<replacement>
+                    <ignoreErrors>true</ignoreErrors>
+                    <replacements>
+                        <replacement>
 	                		<!--  xpath currently not working. Seems to be a bug -->
-	                		<!-- xpath>module/version</xpath-->
-			                <token>\&gt;(\d+\.)+\d+\&lt;</token>
-			                <value>\&gt;${project.version}\&lt;</value>
-	                	</replacement>
-	                </replacements>
-	                <includes>
-	                	<include>*/src/main/opencms-module/opencms-module.xml</include>
-	                </includes>
+                            <!-- xpath>module/version</xpath -->
+                            <token>\&gt;(\d+\.)+\d+\&lt;</token>
+                            <value>\&gt;${project.version}\&lt;</value>
+                        </replacement>
+                    </replacements>
+                    <includes>
+                        <include>*/src/main/opencms-module/opencms-module.xml</include>
+                    </includes>
 	                <!-- exclude system. otherwise all original OpenCms Modules would get that version number too -->
-	                <excludes>
-	                	<exclude>*/system/src/main/opencms-module/opencms-module.xml</exclude>
-	                </excludes>
-	            </configuration>
-	        </plugin>
-			<!-- sets variables with the svn revision and timestamp -->
-			<plugin>
-			  	<groupId>org.codehaus.mojo</groupId>
-			  	<artifactId>buildnumber-maven-plugin</artifactId>
-		                <version>1.4.1-comundus</version>
-			  	<executions>
-				  <execution>
-		    		<phase>validate</phase>
-		      		<goals>
-		        	  <goal>create</goal>
-		      		</goals>
-		    	  </execution>
-		  		</executions>
-		  		<configuration>
-		    		<doCheck>false</doCheck>
-		    		<doUpdate>false</doUpdate>
-		    		<revisionOnScmFailure>-</revisionOnScmFailure>
-		    		<locale>en_US</locale>
-		    		<timestampFormat>{0,date,dd.MM.yyyy HH:mm:ss zzz}</timestampFormat>
-		    		<providerImplementations>
-			            <svn>javasvn</svn>
-			        </providerImplementations>
-		  		</configuration>
-			  <dependencies>
-			    <dependency>
-				  <groupId>org.tmatesoft.svnkit</groupId>
-				  <artifactId>svnkit</artifactId>
-				  <version>1.8.11</version>
-				</dependency>
-			  </dependencies>
-			</plugin>
-		</plugins>
-
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-dependency-plugin</artifactId>
-					<version>2.10</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-changes-plugin</artifactId>
-					<version>2.8</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-project-info-reports-plugin</artifactId>
-					<version>2.6</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.12.4</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-report-plugin</artifactId>
-					<version>2.12.4</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.9</version>
-	      			</plugin>
-			        <plugin>
-			            <groupId>com.google.code.maven-replacer-plugin</groupId>
-			            <artifactId>replacer</artifactId>
-			            <version>1.5.3</version>
-	      			</plugin>
-					<plugin>
-				        <artifactId>maven-resources-plugin</artifactId>
-	        			<version>2.7</version>
-	        			<configuration>
-	          				<encoding>UTF-8</encoding>
-	        			</configuration>
-	      			</plugin>
-				<plugin>
-				  <groupId>org.apache.maven.plugins</groupId>
-				  <artifactId>maven-site-plugin</artifactId>
-				  <version>3.2</version>
-				</plugin>
-				<plugin>
-				  	<groupId>org.codehaus.mojo</groupId>
-				  	<artifactId>buildnumber-maven-plugin</artifactId>
-				  	<version>1.2</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-docck-plugin</artifactId>
-					<version>1.0</version>
-				</plugin>
-		        <plugin>
-	            	<groupId>org.codehaus.groovy.maven</groupId>
-	            	<artifactId>gmaven-plugin</artifactId>
-	            	<version>1.0</version>
-		        </plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-assembly-plugin</artifactId>
-					<version>2.6</version>
-			            </plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>versions-maven-plugin</artifactId>
-					<version>2.1</version>
-					<configuration>
-						<generateBackupPoms>false</generateBackupPoms>
-					</configuration>
-			    </plugin>
-			    <plugin>
-				  <groupId>org.apache.tomcat.maven</groupId>
-				  <artifactId>tomcat6-maven-plugin</artifactId>
-				  <version>2.2</version>
-				  <configuration>
+                    <excludes>
+                        <exclude>*/system/src/main/opencms-module/opencms-module.xml</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <!-- sets variables with the svn revision and timestamp -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.4.1-comundus</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <doCheck>false</doCheck>
+                    <doUpdate>false</doUpdate>
+                    <revisionOnScmFailure>-</revisionOnScmFailure>
+                    <locale>en_US</locale>
+                    <timestampFormat>{0,date,dd.MM.yyyy HH:mm:ss zzz}</timestampFormat>
+                    <providerImplementations>
+                        <svn>javasvn</svn>
+                    </providerImplementations>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.tmatesoft.svnkit</groupId>
+                        <artifactId>svnkit</artifactId>
+                        <version>1.9.3</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+        
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.1.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-changes-plugin</artifactId>
+                    <version>2.12.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M3</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-report-plugin</artifactId>
+                    <version>3.0.0-M3</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.google.code.maven-replacer-plugin</groupId>
+                    <artifactId>replacer</artifactId>
+                    <version>1.5.3</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.1.0</version>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.7.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>buildnumber-maven-plugin</artifactId>
+                    <version>1.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-docck-plugin</artifactId>
+                    <version>1.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.groovy.maven</groupId>
+                    <artifactId>gmaven-plugin</artifactId>
+                    <version>1.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.1.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>2.7</version>
+                    <configuration>
+                        <generateBackupPoms>false</generateBackupPoms>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat6-maven-plugin</artifactId>
+                    <version>2.2</version>
+                    <configuration>
                         <path>${opencms.webapp.path}</path>
                         <url>http://localhost:8080/manager/text</url>
-                        <server>local-tomcat-manager-admin</server> 
-  					  </configuration>
-		        </plugin>
-				<plugin>
-					<artifactId>maven-antrun-plugin</artifactId>
-					<version>1.8</version>
-				</plugin>
-		                <plugin>
-			                <groupId>org.codehaus.mojo</groupId>
-			                <artifactId>cobertura-maven-plugin</artifactId>
-			                <executions>
-			                      <execution>
-			                        <id>default</id>
-			                        <phase>none</phase>
-			                      </execution>
-			                </executions>
-		                </plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+                        <server>local-tomcat-manager-admin</server>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.8</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>cobertura-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>default</id>
+                            <phase>none</phase>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    
+    <reporting>
+        <plugins>
+            <!-- Manage site info part creation -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <configuration>
+                    <dependencyLocationsEnabled>true</dependencyLocationsEnabled>
+                    <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
+                    <offline>false</offline>
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>index</report>
+                            <report>summary</report>
+                            <report>dependencies</report>
+                            <report>issue-tracking</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <failOnError>false</failOnError>
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <id>non-aggregate</id>
+                        <reports>
+                            <report>javadoc</report>
+                        </reports>
+                    </reportSet>
+                    <reportSet>
+                        <id>aggregate</id>
+                        <reports>
+                            <report>aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changes-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>changes-report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+                <configuration>
+                    <issueManagementSystems>
+                        <issueManagementSystem>changes.xml</issueManagementSystem>
+                        <!-- issueManagementSystem>JIRA</issueManagementSystem -->
+                    </issueManagementSystems>
+                    <!-- the next two configurations are for 
+                        use with Jira. This is not set up correctly now. So we are getting the infos 
+                        from the changes.xml -->
+                    <!-- If you are lazy and only ever want the 
+                        latest release in you JIRA Report, you can use the <onlyCurrentVersion> configuration 
+                        parameter. It will take the version from your project's POM and try to match 
+                        it against the "Fix for" version of the JIRA issues. Once you have configured 
+                        this, you can forget about it, as it updates itself when you change the version 
+                        number in your POM. Note: The names of your versions in JIRA must match the 
+                        ones you use in your POM. The -SNAPSHOT part of the version in your POM is 
+                        handled automatically by the plugin, so you don't need to include -SNAPSHOT 
+                        in the names of your versions in JIRA. -->
+                    <onlyCurrentVersion>true</onlyCurrentVersion>
 
-	<distributionManagement>
-		<site>
-			<url>file:////Data02/projectsites/projects/cm-comundus/opencms-basic</url>
-		</site>
-	</distributionManagement>
+                    <!-- Using fix version id(s) This is the 
+                        manual way of doing it. You specify one or more fix version ids, separated 
+                        by commas. The version ids are usually five digit numbers, but that depends 
+                        on your JIRA installation. The good thing about this method is that you can 
+                        specify exactly which versions you want, but you have to remember to update 
+                        your configuration for every new release that you want to include in the 
+                        report. -->
+                    <!-- <fixVersionIds>10311</fixVersionIds> -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-docck-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <distributionManagement>
+        <site>
+            <url>file:////Data02/projectsites/projects/cm-comundus/opencms-basic</url>
+        </site>
+    </distributionManagement>
 
 </project>
