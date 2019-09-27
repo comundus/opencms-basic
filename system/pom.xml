@@ -51,17 +51,13 @@
                         <syncVFSPath>/system/info/</syncVFSPath>
                         
                         <syncVFSPath>/system/modules/org.opencms.base/</syncVFSPath>
-                        <syncVFSPath>/system/modules/org.opencms.jquery/</syncVFSPath>
 						
                         <syncVFSPath>/system/config/</syncVFSPath> <!-- depends on org.opencms.base -->
                         
                         <!-- we leave that to the setup: syncVFSPath>/system/workplace/</syncVFSPath -->
                         <syncVFSPath>/system/workplace/editors/</syncVFSPath>
                         <syncVFSPath>/system/workplace/commons/</syncVFSPath>
-                        <syncVFSPath>/system/workplace/explorer/</syncVFSPath>
-                        <syncVFSPath>/system/workplace/galleries/</syncVFSPath>
                         <syncVFSPath>/system/workplace/resources/</syncVFSPath>
-                        <syncVFSPath>/system/workplace/views/</syncVFSPath>
                     </syncVFSPaths>
                 </configuration>
                 <dependencies>

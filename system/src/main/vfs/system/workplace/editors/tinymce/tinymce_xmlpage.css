@@ -1,6 +1,0 @@
-@import url("opencms_plugin.css");
-/* These rules are used for laying out TinyMCE's button toolbar rows next to each other, not as rows. */
-
-.tox-statusbar__branding{
- 	display: none !important;
- }
