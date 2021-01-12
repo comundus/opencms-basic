@@ -205,6 +205,14 @@
             <groupId>org.dom4j</groupId>
             <artifactId>dom4j</artifactId>
          </dependency>
+         <dependency>
+            <groupId>net.sourceforge.cssparser</groupId>
+            <artifactId>cssparser</artifactId>
+         </dependency>
+         <dependency>
+            <groupId>com.octo.captcha</groupId>
+            <artifactId>jcaptcha</artifactId>
+         </dependency>
     </dependencies>
 
     <distributionManagement>

@@ -4,6 +4,44 @@
     <file>
         <destination>system/workplace</destination>
         <type>folder</type>
-        <properties/>
+        <uuidstructure>61ef5612-54de-11eb-81f2-2cdb0768d477</uuidstructure>
+        <datelastmodified>Jan 12, 2021 2:59:29 PM</datelastmodified>
+        <userlastmodified>Admin</userlastmodified>
+        <datecreated>Jan 12, 2021 2:59:26 PM</datecreated>
+        <usercreated>Admin</usercreated>
+        <flags>0</flags>
+        <properties>
+            <property>
+                <name>content-encoding</name>
+                <value><![CDATA[UTF-8]]></value>
+            </property>
+            <property>
+                <name>export</name>
+                <value><![CDATA[false]]></value>
+            </property>
+            <property>
+                <name>login-form</name>
+                <value><![CDATA[/system/login/index.html]]></value>
+            </property>
+        </properties>
+        <relations/>
+        <accesscontrol>
+            <accessentry>
+                <uuidprincipal>ALL_OTHERS</uuidprincipal>
+                <flags>134</flags>
+                <permissionset>
+                    <allowed>0</allowed>
+                    <denied>0</denied>
+                </permissionset>
+            </accessentry>
+            <accessentry>
+                <uuidprincipal>ROLE.WORKPLACE_USER</uuidprincipal>
+                <flags>518</flags>
+                <permissionset>
+                    <allowed>5</allowed>
+                    <denied>0</denied>
+                </permissionset>
+            </accessentry>
+        </accesscontrol>
     </file>
 </export>

@@ -72,7 +72,7 @@
         	Therefore this variable must not be resolved by Maven.
         -->
         <opencms.logfile.variable>${opencms.logfile}</opencms.logfile.variable>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
         <!--
         TC 5: Servlet 2.4, JSP 2.0, Java >= 1.4
         TC 6: Servlet 2.5, JSP 2.1, Java >= 5
@@ -81,10 +81,10 @@
          -->
         <servlet.version>3.1.0</servlet.version>
         <jsp.version>2.3.1</jsp.version>
-        <opencms.version>11.0.1</opencms.version>
+        <opencms.version>11.0.2</opencms.version>
         <vfs-plugin.version>${opencms.version}</vfs-plugin.version>
-        <jmock.version>2.11</jmock.version>
-        <hamcrest.version>2.1</hamcrest.version>
+        <jmock.version>2.12.0</jmock.version>
+        <hamcrest.version>2.2</hamcrest.version>
         <mysql.jdbcDriver.version>8.0.15</mysql.jdbcDriver.version>
 
     </properties>
@@ -321,8 +321,8 @@
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>tomcat-maven-plugin</artifactId>
-                    <version>1.1</version>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>2.2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -447,11 +447,21 @@
                 <version>r55007</version>
                 <scope>runtime</scope>
             </dependency>
+            <dependency>
+                <groupId>net.sourceforge.cssparser</groupId>
+                <artifactId>cssparser</artifactId>
+                <version>0.9.29</version>
+            </dependency>
+            <dependency>
+                <groupId>com.octo.captcha</groupId>
+                <artifactId>jcaptcha</artifactId>
+                <version>1.0-all</version>
+            </dependency>
             <!-- Test dependencies -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.12</version>
+                <version>4.13.1</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -517,7 +527,7 @@
             <dependency>
                 <groupId>org.hsqldb</groupId>
                 <artifactId>hsqldb</artifactId>
-                <version>2.4.1</version>
+                <version>2.5.1</version>
                 <scope>test</scope>
             </dependency>
             <!-- End test dependencies -->

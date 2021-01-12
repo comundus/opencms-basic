@@ -32,8 +32,8 @@ chacc '/system/workplace/editors/' 'ROLE' 'ELEMENT_AUTHOR' '+I+O+R+V']]></import
             <export-mode name="reduced"/>
             <description><![CDATA[Configuration for OpenCms websites.<br>
 <i>&copy; by Alkacon Software GmbH &amp; Co. KG (http://www.alkacon.com).</i>]]></description>
-            <version>11.0.1</version>
-            <checkpoint-time>1558954314748</checkpoint-time>
+            <version>11.0.2</version>
+            <checkpoint-time>1610459969227</checkpoint-time>
             <authorname><![CDATA[Alkacon Software GmbH &amp; Co. KG]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
             <datecreated/>
@@ -662,7 +662,7 @@ chacc '/system/workplace/editors/' 'ROLE' 'ELEMENT_AUTHOR' '+I+O+R+V']]></import
             <description><![CDATA[<p>Contains various configuration files to specify OpenCms core behavior.</p>
 <p><i>&copy; by Alkacon Software GmbH &amp; Co. KG (http://www.alkacon.com).</i></p>]]></description>
             <version>11.0.1</version>
-            <checkpoint-time>1558954320719</checkpoint-time>
+            <checkpoint-time>1610459973523</checkpoint-time>
             <authorname><![CDATA[Alkacon Software GmbH &amp; Co. KG]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
             <datecreated/>
