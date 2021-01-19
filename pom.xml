@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>parent</artifactId>
-        <version>10.5.2</version>
+        <version>${revision}</version>
         <relativePath>parent</relativePath>
     </parent>
 	<!--
@@ -23,14 +23,13 @@
     <artifactId>opencms-basic</artifactId>
     <packaging>pom</packaging>
     <name>OpenCms Basic Root</name>
-    <version>10.5.2</version>
     <description>OpenCms</description>
     <!--
     <url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic/content</url>
     -->
     <url>http://opencms-maven.comundus.com</url>
 	<prerequisites>
-    	<maven>2.2.1</maven>
+    	<maven>3.5.4</maven>
   	</prerequisites>
     <inceptionYear>2007</inceptionYear>
 	

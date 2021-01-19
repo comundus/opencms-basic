@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.comundus.opencms</groupId>
 		<artifactId>parent</artifactId>
-		<version>10.5.2</version>
+		<version>${revision}</version>
 		<relativePath>../parent/pom.xml</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>

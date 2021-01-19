@@ -20,11 +20,14 @@
 	<artifactId>general</artifactId>
 	<packaging>pom</packaging>
 	<name>${project.groupId}:${project.artifactId}</name>
-	<version>10.5.2</version>
+	<version>${revision}</version>
 	<description>OpenCms general - POM with general Information like scm, reporting, release stuff</description>
 	<url>http://projectsites.intra.comundus.de/projects/cm-comundus/opencms-basic</url>
 	<inceptionYear>2007</inceptionYear>
 
+    <properties>
+        <revision>10.5.2</revision>
+    </properties>
 
 	<!--
 		per developer configuration may follow (and overwrite global

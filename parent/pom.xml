@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.comundus.opencms</groupId>
         <artifactId>general</artifactId>
-        <version>10.5.2</version>
+        <version>${revision}</version>
         <relativePath>general-pom.xml</relativePath>
     </parent>
 	<!--
@@ -29,7 +29,7 @@
     -->
     <url>http://opencms-maven.comundus.com</url>
 	<prerequisites>
-    	<maven>2.2.1</maven>
+    	<maven>3.5.4</maven>
   	</prerequisites>
     <inceptionYear>2007</inceptionYear>
 	
