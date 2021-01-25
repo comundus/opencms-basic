@@ -142,7 +142,7 @@
           			</execution>
         		</executions>
                 <configuration>
-                    <encoding>iso-8859-15</encoding>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
       		</plugin>
         </plugins>
