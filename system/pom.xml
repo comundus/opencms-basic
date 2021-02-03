@@ -39,25 +39,106 @@
                 </executions>
                 <configuration>
                     <syncVFSPaths>
-                        <syncVFSPath>/system/categories/</syncVFSPath>
+                        <syncVFSPath>/system/info/</syncVFSPath>
                         <syncVFSPath>/system/handler/</syncVFSPath>
                         <syncVFSPath>/system/login/</syncVFSPath>
-                        <!-- not needed any more: syncVFSPath>/system/lost-found/</syncVFSPath -->
-                        <!-- we must leave that to the setup: syncVFSPath>/system/orgunits/</syncVFSPath -->
-                        <!-- we synchronize subfolders of orgunits in their own project -->
-                        <syncVFSPath>/system/userimages/</syncVFSPath>
-                        
-                        <!-- Folder /system/info was added by comundus -->
-                        <syncVFSPath>/system/info/</syncVFSPath>
-                        
                         <syncVFSPath>/system/modules/org.opencms.base/</syncVFSPath>
-						
-                        <syncVFSPath>/system/config/</syncVFSPath> <!-- depends on org.opencms.base -->
-                        
-                        <!-- we leave that to the setup: syncVFSPath>/system/workplace/</syncVFSPath -->
-                        <syncVFSPath>/system/workplace/editors/</syncVFSPath>
-                        <syncVFSPath>/system/workplace/commons/</syncVFSPath>
-                        <syncVFSPath>/system/workplace/resources/</syncVFSPath>
+                        <syncVFSPath>/system/userimages/temp/</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/about.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/editor-backlink.html</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/resourceIcon.css</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/gallery.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/open_ade_gallery.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/postupload_basicproperties.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/postupload_useconfig.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/postupload.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/properties.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/direct_publish.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/publish_project.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/publish.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/download-aliases.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/import-aliases.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/sitemap.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/upload.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/commons/uploadAction.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/commons/notemplate.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/filetypes/resourceNotFoundBig.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/filetypes/resourceNotFoundSmall.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/acacia/</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/dialogs/</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/simple/</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/simplehtml/</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/spellcheck</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/direct_edit.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/jquery_direct_edit_include.txt</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/direct_edit_include.txt</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/editor.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/editor_main.jsp</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/anchor.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/bold.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/bullist.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/center.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/cleanup.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/color_fill.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/color_text.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/copy.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/cut.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/details.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/directedit_cl.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/directedit_in.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/directedit_op.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/editorsearch.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/elements.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/elements_in.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/erase.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/exit.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/image.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/indent.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/italic.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/left.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/link.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/numlist.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/outdent.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/paste.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/properties.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/properties_in.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/redo.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/right.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/save.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/save_exit.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/specialchar.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/table.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/table_td.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/table_tr.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/underline.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/undo.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/xmledit.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/xmledit_add.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/xmledit_del.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/buttons/xmledit_del_add.png</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/editors/directedit/</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/editors/simple/</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/editors/simplehtml/</syncVFSPath>
+                        <syncVFSPath>/system/workplace/resources/editors/xmlcontent/</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/codemirror/</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/tinymce/base_content.css</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/tinymce/filebrowser_gallery_integrator.js</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/tinymce/image_popup.html</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/tinymce/integrator.js</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/tinymce/opencms_plugin.css</syncVFSPath>
+                        <syncVFSPath>/system/workplace/editors/tinymce/opencms_plugin.js</syncVFSPath>
+                        <syncVFSPath>/system/config/linkexcludes</syncVFSPath>
+                        <syncVFSPath>/system/config/page.dtd</syncVFSPath>
+                        <syncVFSPath>/system/config/decoration/</syncVFSPath>
+                        <syncVFSPath>/system/config/showversion</syncVFSPath>
+                        <syncVFSPath>/system/config/templatecontexts.json</syncVFSPath>
+                        <syncVFSPath>/system/config/notification/notification</syncVFSPath>
+                        <syncVFSPath>/system/config/notification/publish-notification</syncVFSPath>
+                        <syncVFSPath>/system/config/notification/workflow-notification</syncVFSPath>
+                        <syncVFSPath>/system/config/notification/password-change-notification</syncVFSPath>
+                        <syncVFSPath>/system/config/notification/password-new-password-from-admin-notification</syncVFSPath>
+                        <syncVFSPath>/system/config/notification/password-new-user-notification</syncVFSPath>
+                        <syncVFSPath>/system/config/wysiwyg/</syncVFSPath>
                     </syncVFSPaths>
                 </configuration>
                 <dependencies>
