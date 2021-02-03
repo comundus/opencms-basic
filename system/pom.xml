@@ -62,7 +62,7 @@
                         </syncResource>
                         <syncResource>
                             <resource>/system/workplace/commons/</resource>
-                            <excludes><!-- resources from legacy module if exists
+                            <excludes><!-- resources from legacy module if exists -->
                                 <exclude>/system/workplace/commons/includes/</exclude>
                                 <exclude>/system/workplace/commons/style/</exclude>
                                 <exclude>/system/workplace/commons/template/</exclude>
@@ -84,13 +84,13 @@
                                 <exclude>/system/workplace/commons/show_deleted.jsp</exclude>
                                 <exclude>/system/workplace/commons/synchronize.jsp</exclude>
                                 <exclude>/system/workplace/commons/user_selection.jsp</exclude>
-                                <exclude>/system/workplace/commons/property_multifile.jsp</exclude> -->
+                                <exclude>/system/workplace/commons/property_multifile.jsp</exclude>
                             </excludes>
                         </syncResource>
                         <syncResource>
                             <resource>/system/workplace/resources/</resource>
                             <excludes>
-                                <!-- resources from formgenerator module if exists
+                                <!-- resources from formgenerator module if exists -->
                                 <exclude>/system/workplace/resources/filetypes/v8-alkacon-webform.png</exclude>
                                 <exclude>/system/workplace/resources/filetypes/v8-alkacon-webform_big.png</exclude>
                                 <exclude>/system/workplace/resources/filetypes/v8-alkacon-webformreport.png</exclude>
@@ -98,8 +98,8 @@
                                 <exclude>/system/workplace/resources/tools/database/icons/big/v8-webform.png</exclude>
                                 <exclude>/system/workplace/resources/tools/database/buttons/v8-webform_delete_disabled.png</exclude>
                                 <exclude>/system/workplace/resources/tools/database/buttons/v8-webform_download.png</exclude>
-                                <exclude>/system/workplace/resources/tools/database/buttons/v8-webform_edit.png</exclude> -->
-                                <!-- resources from legacy module if exists 
+                                <exclude>/system/workplace/resources/tools/database/buttons/v8-webform_edit.png</exclude>
+                                <!-- resources from legacy module if exists -->
                                 <exclude>/system/workplace/resources/buttons/apply.png</exclude>
                                 <exclude>/system/workplace/resources/buttons/apply_in.png</exclude>
                                 <exclude>/system/workplace/resources/buttons/calendar.png</exclude>
@@ -413,7 +413,7 @@
                                 <exclude>/system/workplace/resources/tools/galleryoverview/icons/big/gal_link.png</exclude>
                                 <exclude>/system/workplace/resources/tools/galleryoverview/icons/big/gal_manage.png</exclude>
                                 <exclude>/system/workplace/resources/tools/galleryoverview/icons/big/gal_table.png</exclude>
-                                <exclude>/system/workplace/resources/tools/galleryoverview/icons/small/gal_manage.png</exclude>-->
+                                <exclude>/system/workplace/resources/tools/galleryoverview/icons/small/gal_manage.png</exclude>
                             </excludes>
                         </syncResource>
                     </syncResources>
