@@ -38,14 +38,28 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <syncVFSPath>/system/handler/</syncVFSPath>
-                    <syncVFSPath>/system/login/</syncVFSPath>
-                    <syncVFSPath>/system/userimages/</syncVFSPath>
-                    <syncVFSPath>/system/info/</syncVFSPath><!-- Folder /system/info was added by comundus -->
-                    <syncVFSPath>/system/modules/org.opencms.base/</syncVFSPath>
-                    <syncVFSPath>/system/config/</syncVFSPath><!-- depends on org.opencms.configuration -->
-                    <syncVFSPath>/system/workplace/editors/</syncVFSPath>
                     <syncResources>
+                        <syncResource>
+                            <resource>/system/handler/</resource>
+                        </syncResource>
+                        <syncResource>
+                            <resource>/system/login/</resource>
+                        </syncResource>
+                        <syncResource>
+                            <resource>/system/userimages/</resource>
+                        </syncResource>
+                        <syncResource>
+                            <resource>/system/info/</resource><!-- Folder /system/info was added by comundus -->
+                        </syncResource>
+                        <syncResource>
+                            <resource>/system/modules/org.opencms.base/</resource>
+                        </syncResource>
+                        <syncResource>
+                            <resource>/system/config/</resource><!-- depends on org.opencms.configuration -->
+                        </syncResource>
+                        <syncResource>
+                            <resource>/system/workplace/editors/</resource>
+                        </syncResource>
                         <syncResource>
                             <resource>/system/workplace/commons/</resource>
                             <excludes><!-- resources from legacy module if exists -->
