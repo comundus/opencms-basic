@@ -115,6 +115,8 @@
                                 <exclude>/system/workplace/resources/buttons/help.png</exclude>
                                 <exclude>/system/workplace/resources/buttons/imagegallery.png</exclude>
                                 <exclude>/system/workplace/resources/buttons/linkgallery.png</exclude>
+                                <exclude>/system/workplace/resources/buttons/tablegallery.png</exclude>
+                                <exclude>/system/workplace/resources/buttons/htmlgallery.png</exclude>
                                 <exclude>/system/workplace/resources/buttons/logout.png</exclude>
                                 <exclude>/system/workplace/resources/buttons/move_down.png</exclude>
                                 <exclude>/system/workplace/resources/buttons/move_down_in.png</exclude>
@@ -347,6 +349,8 @@
                                 <exclude>/system/workplace/resources/tools/database/icons/small/database_manage.png</exclude>
                                 <exclude>/system/workplace/resources/tools/database/icons/small/staticexport.png</exclude>
                                 <exclude>/system/workplace/resources/filetypes/htmlimport.png</exclude>
+                                <exclude>/system/workplace/resources/filetypes/page.gif</exclude>
+                                <exclude>/system/workplace/resources/filetypes/page_big.png</exclude>
                                 <exclude>/system/workplace/resources/tools/linkvalidation/icons/big/link.png</exclude>
                                 <exclude>/system/workplace/resources/tools/linkvalidation/icons/big/link_extern.png</exclude>
                                 <exclude>/system/workplace/resources/tools/linkvalidation/icons/big/link_extern_results.png</exclude>
