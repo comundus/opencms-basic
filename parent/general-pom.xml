@@ -35,7 +35,12 @@
 		</properties> </profile> </profiles>
 	-->
 	<profiles>
-
+		<profile>
+		    <id>release-commons-modules</id>
+		    <properties>
+			<revision>${env.OPENCMS_VERSION}</revision>
+		    </properties>
+		</profile>
 	</profiles>
 
 	<build>
