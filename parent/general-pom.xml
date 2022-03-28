@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.comundus</groupId>
         <artifactId>comundus</artifactId>
-        <version>7</version>
+        <version>8</version>
         <relativePath />
     </parent>
     <!--
@@ -143,31 +143,21 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.1.2</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-changes-plugin</artifactId>
-                    <version>2.12.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.1.1</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.0.0-M5</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-report-plugin</artifactId>
-                    <version>3.0.0-M5</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.2.0</version>
                 </plugin>
                 <plugin>
                     <groupId>com.google.code.maven-replacer-plugin</groupId>
@@ -175,16 +165,13 @@
                     <version>1.5.3</version>
                 </plugin>
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>3.2.0</version>
-                    <configuration>
-                        <encoding>UTF-8</encoding>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.9.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -204,12 +191,10 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.3.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
-                    <version>2.8.1</version>
                     <configuration>
                         <generateBackupPoms>false</generateBackupPoms>
                     </configuration>
@@ -226,7 +211,6 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-antrun-plugin</artifactId>
-                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -288,45 +272,6 @@
                         </reports>
                     </reportSet>
                 </reportSets>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-changes-plugin</artifactId>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>changes-report</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-                <configuration>
-                    <issueManagementSystems>
-                        <issueManagementSystem>changes.xml</issueManagementSystem>
-                        <!-- issueManagementSystem>JIRA</issueManagementSystem -->
-                    </issueManagementSystems>
-                    <!-- the next two configurations are for 
-                        use with Jira. This is not set up correctly now. So we are getting the infos 
-                        from the changes.xml -->
-                    <!-- If you are lazy and only ever want the 
-                        latest release in you JIRA Report, you can use the <onlyCurrentVersion> configuration 
-                        parameter. It will take the version from your project's POM and try to match 
-                        it against the "Fix for" version of the JIRA issues. Once you have configured 
-                        this, you can forget about it, as it updates itself when you change the version 
-                        number in your POM. Note: The names of your versions in JIRA must match the 
-                        ones you use in your POM. The -SNAPSHOT part of the version in your POM is 
-                        handled automatically by the plugin, so you don't need to include -SNAPSHOT 
-                        in the names of your versions in JIRA. -->
-                    <onlyCurrentVersion>true</onlyCurrentVersion>
-
-                    <!-- Using fix version id(s) This is the 
-                        manual way of doing it. You specify one or more fix version ids, separated 
-                        by commas. The version ids are usually five digit numbers, but that depends 
-                        on your JIRA installation. The good thing about this method is that you can 
-                        specify exactly which versions you want, but you have to remember to update 
-                        your configuration for every new release that you want to include in the 
-                        report. -->
-                    <!-- <fixVersionIds>10311</fixVersionIds> -->
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>

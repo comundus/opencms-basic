@@ -122,6 +122,7 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
         		<artifactId>maven-resources-plugin</artifactId>
         		<executions>
           			<execution>
@@ -132,13 +133,13 @@
             			</goals>
             			<configuration>
               				<outputDirectory>${basedir}/target/webapp/WEB-INF/lib</outputDirectory>
-              				<resources>          
+              				<resources>
                 				<resource>
                   					<directory>${basedir}/lib</directory>
                   					<filtering>false</filtering>
                 				</resource>
-              				</resources>              
-            			</configuration>            
+              				</resources>
+            			</configuration>
           			</execution>
         		</executions>
                 <configuration>
