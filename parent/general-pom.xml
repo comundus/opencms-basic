@@ -8,14 +8,14 @@
         <version>7</version>
         <relativePath />
     </parent>
-	<!--
-		Parent POM for OpenCms-Basic. Database support can be triggered by
-		Maven profiles. Currently mysql, postgresql and db2 are supported.
-		tomcat and mysql profiles are activated by default (see activate section of the two profiles).
-		We do not use the <activeByDefault> directive within the profile itself because it will be
-		ignored if another profile from this POM will be activated by other
-		ways.
-	-->
+    <!--
+        Parent POM for OpenCms-Basic. Database support can be triggered by
+        Maven profiles. Currently mysql, postgresql and db2 are supported.
+        tomcat and mysql profiles are activated by default (see activate section of the two profiles).
+        We do not use the <activeByDefault> directive within the profile itself because it will be
+        ignored if another profile from this POM will be activated by other
+        ways.
+    -->
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.comundus.opencms</groupId>
     <artifactId>general</artifactId>
@@ -27,16 +27,21 @@
     <inceptionYear>2007</inceptionYear>
 
     <properties>
-        <revision>11.0.1</revision>
+        <revision>12.0</revision>
     </properties>
 
-	<!--
-		per developer configuration may follow (and overwrite global
-		properties) : <profiles> <profile> <id>det</id> <properties> ...
-		</properties> </profile> </profiles>
-	-->
+    <!--
+        per developer configuration may follow (and overwrite global
+        properties) : <profiles> <profile> <id>det</id> <properties> ...
+        </properties> </profile> </profiles>
+    -->
     <profiles>
-
+        <profile>
+            <id>release-commons-modules</id>
+            <properties>
+            <revision>${env.OPENCMS_VERSION}</revision>
+            </properties>
+        </profile>
     </profiles>
 
     <build>
@@ -81,11 +86,11 @@
                 </executions>
                 <configuration>
                     <!-- file>src/main/opencms-module/opencms-module.xml</file -->
-	                <!--  ignore errors because in java projects there is no opencms-module.xml -->
+                    <!--  ignore errors because in java projects there is no opencms-module.xml -->
                     <ignoreErrors>true</ignoreErrors>
                     <replacements>
                         <replacement>
-	                		<!--  xpath currently not working. Seems to be a bug -->
+                            <!--  xpath currently not working. Seems to be a bug -->
                             <!-- xpath>module/version</xpath -->
                             <token>\&gt;(\d+\.)+\d+\&lt;</token>
                             <value>\&gt;${project.version}\&lt;</value>
@@ -94,7 +99,7 @@
                     <includes>
                         <include>*/src/main/opencms-module/opencms-module.xml</include>
                     </includes>
-	                <!-- exclude system. otherwise all original OpenCms Modules would get that version number too -->
+                    <!-- exclude system. otherwise all original OpenCms Modules would get that version number too -->
                     <excludes>
                         <exclude>*/system/src/main/opencms-module/opencms-module.xml</exclude>
                     </excludes>

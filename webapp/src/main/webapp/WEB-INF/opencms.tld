@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <taglib xmlns="http://java.sun.com/xml/ns/javaee"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
-    version="2.1">
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
 
     <description><![CDATA[
         <h1>The OpenCms / JSP integration tag library</h1>
@@ -50,6 +50,50 @@
           <rtexprvalue>true</rtexprvalue>
       </attribute>
     </tag>
+
+    <tag>
+        <description><![CDATA[
+        Loads a resource bundle and stores it in the named scoped variable or
+        the bundle configuration variable. Like &lt;fmt:setBundle&gt;, but using OpenCms'
+        bundle loader mechanism.
+    ]]></description>
+    <name>setBundle</name>
+    <tag-class>org.opencms.jsp.CmsJspTagSetBundle</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+        <description><![CDATA[
+            Resource bundle base name. This is the bundle's
+            fully-qualified resource name, which has the same
+            form as a fully-qualified class name, that is, it uses
+            "." as the package component separator and does not
+            have any file type (such as ".class" or ".properties")
+            suffix.
+        ]]></description>
+        <name>basename</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+        <description><![CDATA[
+            Name of the exported scoped variable which stores
+            the i18n localization context of type
+            javax.servlet.jsp.jstl.fmt.LocalizationC
+            ontext.
+        ]]></description>
+        <name>var</name>
+        <required>false</required>
+        <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+        <description><![CDATA[
+            Scope of var or the localization context
+            configuration variable.
+        ]]></description>
+        <name>scope</name>
+        <required>false</required>
+        <rtexprvalue>false</rtexprvalue>
+    </attribute>
+  </tag>
 
     <tag>
         <description><![CDATA[
@@ -320,7 +364,7 @@
         </attribute>
         <attribute>
             <description><![CDATA[
-                The encoding used to encode URL parameters . 
+                The encoding used to encode URL parameters .
             ]]></description>
             <name>paramEncoding</name>
             <required>false</required>
@@ -328,7 +372,7 @@
         </attribute>
         <attribute>
             <description><![CDATA[
-                The file name to use for the download link. 
+                The file name to use for the download link.
             ]]></description>
             <name>filename</name>
             <required>false</required>
@@ -2163,13 +2207,14 @@
         <attribute>
             <description><![CDATA[
                 The container name prefix to use for nested container names.
-                If empty the element instance id of the parent element will be used.
+                 If empty the element instance id of the parent element will be used.
             ]]></description>
             <name>nameprefix</name>
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
+
     <tag>
         <description><![CDATA[
             <p>Via this tag, you can render an XML content with a given formatter from inside a (formatter) JSP.</p>
@@ -2298,9 +2343,9 @@
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
-        
     </tag>
-        <tag>
+
+    <tag>
         <description><![CDATA[
             <p>Via this tag, you can render an XML content with a given formatter from inside a (formatter) JSP.</p>
             <p>
@@ -2333,11 +2378,19 @@
             <rtexprvalue>true</rtexprvalue>
         </attribute>
         <attribute>
-            <description><![CDATA[
+             <description><![CDATA[
                 <p>Specifies the formatter configuration file which should be used to render the content.</p>
             ]]></description>
             <name>formatter</name>
-            <required>true</required>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+             <description><![CDATA[
+                <p>Specifies a formatter key to determine the formatter used to render the content.</p>
+            ]]></description>
+            <name>formatterKey</name>
+            <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
         <attribute>
@@ -2405,8 +2458,8 @@
             <rtexprvalue>true</rtexprvalue>
             <type>java.lang.String</type>
         </attribute>
-
     </tag>
+
     <tag>
         <description><![CDATA[
             <p>This tag can be used only inside <code>&lt;cms:display&gt;</code>. It specifies which formatter should be used to format a content of a special resource type.
@@ -2433,10 +2486,11 @@
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
+
     <tag>
-          <description><![CDATA[
+        <description><![CDATA[
             This tag loads single XML content items.
-           ]]></description>
+        ]]></description>
         <name>formatter</name>
         <tag-class>org.opencms.jsp.CmsJspTagFormatter</tag-class>
         <body-content>JSP</body-content>
@@ -2936,8 +2990,10 @@
         <body-content>JSP</body-content>
     </tag>
 
-      <tag>
-        <description><![CDATA[Can be used to create a java.util.Map with string keys and values using nested <cms:param> tags.]]></description>
+    <tag>
+        <description><![CDATA[
+            Can be used to create a java.util.Map with string keys and values using nested <cms:param> tags.
+        ]]></description>
         <name>map</name>
         <tag-class>org.opencms.jsp.CmsJspTagMap</tag-class>
         <body-content>JSP</body-content>
@@ -2948,6 +3004,154 @@
             <name>var</name>
             <required>true</required>
             <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+     <tag>
+        <description><![CDATA[
+            Creates a JSON object and adds it to the surrounding JSON context, or stores the JSON in a
+            page context attribute. The content of the JSON object is provided by nested cms:json... tags.
+        ]]></description>
+        <name>jsonobject</name>
+        <tag-class>org.opencms.jsp.CmsJspTagJsonObject</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>The name of the page context attribute to store the JSON in.</description>
+            <name>var</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The target Object to store the JSON in. This must be another JSON object.</description>
+            <name>target</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The key used to add this value to the surrounding JSON context. Should be used
+            if and only if the surrounding JSON tag is a jsonobject tag.</description>
+            <name>key</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>This parameter controls what is stored in the page context attribute given by the var
+            attribute. If mode equals 'text', formatted JSON for the value will be stored; if mode equals 'object', the JSON value itself.
+            If mode equals 'wrapper', a CmsJspJsonWrapper around the object is stored.
+            The default value is 'wrapper'.
+            </description>
+            <name>mode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The scope to store the generated JSON variable in, can be 'page' (default), 'request', , 'session' or 'application'.</description>
+            <name>scope</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+     <tag>
+        <description><![CDATA[
+            Creates a JSON array and adds it to the surrounding JSON context, or stores the JSON in a
+            page context attribute. The content of the array is provided by nested cms:json... tags.
+        ]]></description>
+        <name>jsonarray</name>
+        <tag-class>org.opencms.jsp.CmsJspTagJsonArray</tag-class>
+        <body-content>JSP</body-content>
+          <attribute>
+            <description>The name of the page context attribute to store the JSON in.</description>
+            <name>var</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The target Object to store the JSON in. This must be another JSON object.</description>
+            <name>target</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The key used to add this value to the surrounding JSON context. Should be used
+            if and only if the surrounding JSON tag is a jsonobject tag.</description>
+            <name>key</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+         <attribute>
+            <description>This parameter controls what is stored in the page context attribute given by the var
+            attribute. If mode equals 'text', formatted JSON for the value will be stored; if mode equals 'object', the JSON value itself.
+            If mode equals 'wrapper', a CmsJspJsonWrapper around the object is stored.
+            The default value is 'wrapper'.
+            </description>
+            <name>mode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The scope to store the generated JSON variable in, can be 'page' (default), 'request', , 'session' or 'application'.</description>
+            <name>scope</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description><![CDATA[
+            Takes a JSON value from the 'value' attribute and adds it to the surrounding JSON context or
+            sets it as a page context attribute.
+        ]]>
+        </description>
+        <name>jsonvalue</name>
+        <tag-class>org.opencms.jsp.CmsJspTagJsonValue</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>The JSON value.</description>
+            <name>value</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The name of the page context attribute to store the JSON in.</description>
+            <name>var</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The target Object to store the JSON in. This must be another JSON object.</description>
+            <name>target</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The key used to add this value to the surrounding JSON context. Should be used
+            if and only if the surrounding JSON tag is a jsonobject tag.</description>
+            <name>key</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>This parameter controls what is stored in the page context attribute given by the var
+            attribute. If mode equals 'text', formatted JSON for the value will be stored; if mode equals 'object', the JSON value itself.
+            If mode equals 'wrapper', a CmsJspJsonWrapper around the object is stored.
+            The default value is 'wrapper'.
+            </description>
+            <name>mode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+        	<description>If true, uses the given value as a string to parse JSON from, else just uses the value as-is.</description>
+        	<name>parse</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        </attribute>
+         <attribute>
+        	<description>Name of a page scope variable to store a parse error in. If no parse error occurs, the variable is set to null.</description>
+        	<name>errorVar</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
 
@@ -3529,6 +3733,18 @@
             boolean validateRegex(java.lang.String, java.lang.String)
         </function-signature>
     </function>
+
+    <function>
+        <description><![CDATA[
+            Parses JSON data into an object.
+        ]]></description>
+        <name>parseJson</name>
+        <function-class>org.opencms.jsp.util.CmsJspElFunctions</function-class>
+        <function-signature>
+            java.lang.Object parseJson(java.lang.String)
+        </function-signature>
+    </function>
+
 
 
 </taglib>

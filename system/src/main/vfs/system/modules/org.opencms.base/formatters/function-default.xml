@@ -5,10 +5,11 @@
     <NiceName><![CDATA[Internal default function formatter]]></NiceName>
     <Jsp>
       <link type="WEAK">
-        <target><![CDATA[/system/modules/org.opencms.base/pages/function-default.jsp]]></target>
+        <target><![CDATA[/system/modules/org.opencms.base/formatters/function-default.jsp]]></target>
         <uuid>f25037c5-6654-47fe-80ef-20ca9f9c7e8f</uuid>
       </link>
     </Jsp>
     <Description><![CDATA[Default formatter for newly created functions - do not use directly]]></Description>
+    <StrictContainers>true</StrictContainers>
   </FunctionConfig>
 </FunctionConfigs>

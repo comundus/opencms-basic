@@ -4,7 +4,7 @@
   <servers>
     <SMB/>
   </servers>
-	
+    
   <SMB>
       <host name="OCMSJLAN" domain="OCMSJLANDOMAIN">
       <broadcast>255.255.255.255</broadcast>
@@ -29,11 +29,11 @@
   
   <security>
     <shareMapper>
-	<class>org.opencms.jlan.CmsJlanShareMapper</class>
+    <class>org.opencms.jlan.CmsJlanShareMapper</class>
     </shareMapper>
-    <JCEProvider>cryptix.jce.provider.CryptixCrypto</JCEProvider>
+    <JCEProvider>org.bouncycastle.jce.provider.BouncyCastleProvider</JCEProvider>
     <usersInterface>
-    	<class>org.opencms.jlan.CmsJlanUsers</class>
+        <class>org.opencms.jlan.CmsJlanUsers</class>
     </usersInterface>
   </security>
 </jlanserver>

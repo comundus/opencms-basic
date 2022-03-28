@@ -1,65 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="warn">
-	<Appenders>
-	    <Console name="CONSOLE" target="SYSTEM_OUT">
-	      <PatternLayout pattern="%d{DATE} %5p [%30.30C:%4L] %m%n" />
-	    </Console>
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+          <PatternLayout pattern="%d{DATE} %5p [%30.30C:%4L] %X %m%n" />
+        </Console>
 
-		<RollingFile name="OC" fileName="${sys:opencms.logfile}"
-			filePattern="${sys:opencms.logfile}.%i.log.gz">
-			<PatternLayout pattern="%d{DATE} %5p [%30.30C:%4L] %m%n" />
-			<Policies>
-				<SizeBasedTriggeringPolicy size="5 MB"/>
-			</Policies>
-			<DefaultRolloverStrategy max="20"/>
-		</RollingFile>
+        <RollingFile name="OC" fileName="${sys:opencms.logfile}"
+            filePattern="${sys:opencms.logfile}.%i.log.gz">
+            <PatternLayout>
+                <LevelPatternSelector defaultPattern="%d{DATE} [r:%6X{request_id}] %5p [%30.30C:%4L] %m %n">
+                    <PatternMatch key="ERROR" pattern="%d{DATE} [r:%6X{request_id}] %5p [%30.30C:%4L] %m %X %n" />
+                </LevelPatternSelector>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
 
-		<RollingFile name="OCSearch" fileName="${sys:opencms.logfolder}opencms-search.log"
-			filePattern="${sys:opencms.logfolder}opencms-search.log.%i.log.gz">
-			<PatternLayout pattern="%d{DATE} %5p [%30.30C:%4L] %m%n" />
-			<Policies>
-				<SizeBasedTriggeringPolicy size="5 MB"/>
-			</Policies>
-			<DefaultRolloverStrategy max="20"/>
-		</RollingFile>
+        <RollingFile name="OCSearch" fileName="${sys:opencms.logfolder}opencms-search.log"
+            filePattern="${sys:opencms.logfolder}opencms-search.log.%i.log.gz">
+            <PatternLayout>
+                <LevelPatternSelector defaultPattern="%d{DATE} [r:%6X{request_id}] %5p [%30.30C:%4L] %m %n">
+                    <PatternMatch key="ERROR" pattern="%d{DATE} [r:%6X{request_id}] %5p [%30.30C:%4L] %m %X %n" />
+                </LevelPatternSelector>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
 
-		<RollingFile name="OCMemoryMonitor" fileName="${sys:opencms.logfolder}opencms-memory.log"
-			filePattern="${sys:opencms.logfolder}opencms-memory.log.%i.log.gz">
-			<PatternLayout pattern="%d{DATE} %5p [%30.30C:%4L] %m%n" />
-			<Policies>
-				<SizeBasedTriggeringPolicy size="5 MB"/>
-			</Policies>
-			<DefaultRolloverStrategy max="20"/>
-		</RollingFile>
+        <RollingFile name="OCMemoryMonitor" fileName="${sys:opencms.logfolder}opencms-memory.log"
+            filePattern="${sys:opencms.logfolder}opencms-memory.log.%i.log.gz">
+            <PatternLayout>
+                <LevelPatternSelector defaultPattern="%d{DATE} [r:%6X{request_id}] %5p [%30.30C:%4L] %m %n">
+                    <PatternMatch key="ERROR" pattern="%d{DATE} [r:%6X{request_id}] %5p [%30.30C:%4L] %m %X %n" />
+                </LevelPatternSelector>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
 
-	</Appenders>
-	<Loggers>
-	    <Logger level="error" name="com.vaadin"/>
-	    <Logger level="error" name="org.opencms"/>
-	    <Logger level="info" name="org.opencms.db.log"/>
-	    <Logger level="info" name="org.opencms.db.mysql.CmsProjectDriver"/>
-	    <Logger level="info" name="org.opencms.db.oracle.CmsProjectDriver"/>
-	    <Logger level="info" name="org.opencms.init"/>
-	    <Logger level="info" name="org.opencms.jsp.CmsJspLoginBean"/>
-	    <Logger level="info" name="org.opencms.monitor"/>
-	    <Logger level="info" name="org.opencms.scheduler"/>
-	    <Logger level="warn" name="org.opencms.search" additivity="false">
-	        <AppenderRef ref="OCSearch"/>
-	    </Logger>
-	    <Logger level="warn" name="org.opencms.jsp.search" additivity="false">
-	        <AppenderRef ref="OCSearch"/>
-	    </Logger>
-	    <Logger level="warn" name="org.opencms.jsp.CmsJspTagSearch" additivity="false">
-	        <AppenderRef ref="OCSearch"/>
-	    </Logger>
-	    <Logger level="warn" name="org.opencms.jsp.CmsJspTagSimpleSearch" additivity="false">
-	        <AppenderRef ref="OCSearch"/>
-	    </Logger>
-	    <Logger level="info" name="org.opencms.monitor.CmsMemoryMonitor" additivity="false">
-	        <AppenderRef ref="OCMemoryMonitor"/>
-	    </Logger>
-	    <Root level="error">
-	        <AppenderRef ref="OC"/>
-	    </Root>
-	</Loggers>
+    </Appenders>
+    <Loggers>
+        <Logger level="error" name="com.vaadin"/>
+        <Logger level="error" name="org.opencms"/>
+        <Logger level="info" name="org.opencms.db.log"/>
+        <Logger level="info" name="org.opencms.db.mysql.CmsProjectDriver"/>
+        <Logger level="info" name="org.opencms.db.oracle.CmsProjectDriver"/>
+        <Logger level="info" name="org.opencms.init"/>
+        <Logger level="info" name="org.opencms.jsp.CmsJspLoginBean"/>
+        <Logger level="info" name="org.opencms.monitor"/>
+        <Logger level="info" name="org.opencms.scheduler"/>
+        <Logger level="warn" name="org.opencms.ade.configuration.CmsADEConfigData.request" />
+        <Logger level="warn" name="org.opencms.search" additivity="false">
+            <AppenderRef ref="OCSearch"/>
+        </Logger>
+        <Logger level="warn" name="org.opencms.jsp.search" additivity="false">
+            <AppenderRef ref="OCSearch"/>
+        </Logger>
+        <Logger level="warn" name="org.opencms.jsp.CmsJspTagSearch" additivity="false">
+            <AppenderRef ref="OCSearch"/>
+        </Logger>
+        <Logger level="warn" name="org.opencms.jsp.CmsJspTagSimpleSearch" additivity="false">
+            <AppenderRef ref="OCSearch"/>
+        </Logger>
+        <Logger level="info" name="org.opencms.monitor.CmsMemoryMonitor" additivity="false">
+            <AppenderRef ref="OCMemoryMonitor"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="OC"/>
+        </Root>
+    </Loggers>
 </Configuration>

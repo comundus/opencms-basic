@@ -4,18 +4,13 @@
 	<file>
 		<destination>sites/default</destination>
 		<type>folder</type>
-		<uuidstructure>372fbfa0-3337-11e2-b7df-a7ae9b61e4b8</uuidstructure>
-		<datelastmodified>Mon, 21 Aug 2017 12:05:17 GMT</datelastmodified>
+		<uuidstructure>9a1afdad-ae66-11ec-a86c-cc483ab67959</uuidstructure>
+		<datelastmodified>Mon, 28 Mar 2022 07:13:43 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Tue, 20 Nov 2012 17:25:01 GMT</datecreated>
+		<datecreated>Mon, 28 Mar 2022 07:13:43 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
-		<properties>
-			<property>
-				<name>Title</name>
-				<value><![CDATA[default site]]></value>
-			</property>
-		</properties>
+		<properties/>
 		<relations/>
 		<accesscontrol>
 			<accessentry>

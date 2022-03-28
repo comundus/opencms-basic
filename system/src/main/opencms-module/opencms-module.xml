@@ -204,11 +204,7 @@ chacc '/system/workplace/editors/' 'ROLE' 'ELEMENT_AUTHOR' '+I+O+R+V']]></import
                     <param name="schema">/system/modules/org.opencms.ade.sitemap/schemas/redirect.xsd</param>
                 </type>
                 <type class="org.opencms.file.types.CmsResourceTypeFolderSubSitemap" name="subsitemap" id="23"/>
-                <type class="org.opencms.file.types.CmsResourceTypeFolderExtended" name="content_folder" id="24">
-                    <copy-resources>
-                        <copy-resource source="/system/modules/org.opencms.base/copyresources/sitemap.config" target="${resource.folder.path}/.config" type="new"/>
-                    </copy-resources>
-                </type>
+                <type class="org.opencms.file.types.CmsResourceTypeSubsitemapContentFolder" name="content_folder" id="24"/>
                 <type class="org.opencms.file.types.CmsResourceTypeXmlAdeConfiguration" name="sitemap_config" id="14">
                     <properties>
                         <property>
