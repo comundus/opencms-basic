@@ -123,9 +123,6 @@
                             <descriptors>
                                 <descriptor>src/release-scripts/release-${project.version}/release-assembly.xml</descriptor>
                             </descriptors>
-                            <formats>
-                                <format>dir</format>
-                            </formats>
                         </configuration>
                     </plugin>
                     <plugin>
