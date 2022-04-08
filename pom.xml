@@ -66,7 +66,10 @@
                 <release.webappLibCP>${release.opencmsBase}/lib/*</release.webappLibCP>
                 <release.tomcatLibCP>target/servletlib/*</release.tomcatLibCP>
                 <release.webappClassesDir>${release.opencmsBase}/classes</release.webappClassesDir>
-                <release.cmsShellScript>src/release-scripts/release-${project.version}/exportopencms-commands.txt</release.cmsShellScript>
+		<release.dir>src/release-scripts/release</release.dir>
+                <release.cmsShellScript>${release.dir}/exportopencms-commands.txt</release.cmsShellScript>
+		<release.file.name>opencms-basic</release.file.name>
+                <release.project.title>OpenCms Basic</release.project.title>
             </properties>
             <build>
                 <plugins>
@@ -86,15 +89,21 @@
                                         <artifactItem>
                                             <groupId>javax.servlet</groupId>
                                             <artifactId>javax.servlet-api</artifactId>
-                                            <version>4.0.1</version>
+                                            <version>${servlet.version}</version>
                                             <type>jar</type>
                                             <overWrite>false</overWrite>
                                         </artifactItem>
                                         <artifactItem>
                                             <groupId>javax.servlet.jsp</groupId>
                                             <artifactId>javax.servlet.jsp-api</artifactId>
-                                            <version>2.3.3</version>
+                                            <version>${jsp.version}</version>
                                             <type>jar</type>
+                                            <overWrite>false</overWrite>
+                                        </artifactItem>
+                                        <artifactItem>
+                                            <groupId>${jdbcDriver.groupId}</groupId>
+                                            <artifactId>${jdbcDriver.artifactId}</artifactId>
+                                            <version>${jdbcDriver.version}</version>
                                             <overWrite>false</overWrite>
                                         </artifactItem>
                                     </artifactItems>
@@ -106,13 +115,60 @@
                         </executions>
                     </plugin>
                     <plugin>
+                        <groupId>org.codehaus.gmaven</groupId>
+                        <artifactId>groovy-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>generate-cmsshell-script</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>execute</goal>
+                                </goals>
+                                <configuration>
+                                    <properties>
+                                        <basedir>${basedir}</basedir>
+                                        <projectVersion>${project.version}</projectVersion>
+                                        <projectTitle>${release.project.title}</projectTitle>
+                                    </properties>
+                                    <scriptpath>${basedir}/src/release-scripts/groovy</scriptpath>
+                                    <source>
+                                         import java.io.File;
+	                              releaseConfig = properties.basedir + '/src/release-scripts/release-' + properties.projectVersion
+	                              exportDef =  releaseConfig + '/ExportDefinition.groovy';
+	                              targetFile = releaseConfig + '/exportopencms-commands.txt'
+	                              OpenCmsExport.setTargetFile(targetFile)
+	                              OpenCmsExport.startScript("${properties.projectTitle}. Version ${properties.projectVersion}")
+	                              evaluate(new File(exportDef))
+	                              OpenCmsExport.finishScript()
+                                    </source>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>package-war</id>
+                                <phase>process-resources</phase>
+                                <goals>
+                                    <goal>war</goal>
+                                </goals>
+                                <configuration>
+                                    <warSourceDirectory>${basedir}/webapp/target/webapp</warSourceDirectory>
+                                    <primaryArtifact>false</primaryArtifact>
+                                    <warSourceExcludes>admin.jsp</warSourceExcludes>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-assembly-plugin</artifactId>
-                        <inherited>false</inherited>
                         <executions>
                             <execution>
                                 <id>assembly-release</id>
-                                <phase>initialize</phase>
+                                <phase>compile</phase>
                                 <goals>
                                     <goal>single</goal>
                                 </goals>
@@ -121,18 +177,17 @@
                         <configuration>
                             <finalName>opencms</finalName>
                             <descriptors>
-                                <descriptor>src/release-scripts/release-${project.version}/release-assembly.xml</descriptor>
+                                <descriptor>${release.dir}/release-assembly.xml</descriptor>
                             </descriptors>
                         </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
-                        <inherited>false</inherited>
                         <executions>
                             <execution>
                                 <id>export-opencms</id>
-                                <phase>initialize</phase>
+                                <phase>compile</phase>
                                 <goals>
                                     <goal>exec</goal>
                                 </goals>
@@ -150,13 +205,11 @@
                         </executions>
                     </plugin>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-antrun-plugin</artifactId>
-                        <inherited>false</inherited>
                         <executions>
                             <execution>
                                 <id>prepare-tree</id>
-                                <phase>validate</phase>
+                                <phase>initialize</phase>
                                 <goals>
                                     <goal>run</goal>
                                 </goals>
@@ -168,26 +221,19 @@
                             </execution>
                             <execution>
                                 <id>copy-modules</id>
-                                <phase>initialize</phase>
+                                <phase>compile</phase>
                                 <goals>
                                     <goal>run</goal>
                                 </goals>
                                 <configuration>
                                     <target>
-                                        <!--  Copies modules from webapp to the assembly, replacing ampersands with the XML entity in manifest.xml -->
-                                        <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath"/>
-                                        <for param="filepath">
-                                            <path>
-                                             <fileset dir="webapp/target/webapp/WEB-INF/packages/modules" includes="**/*.zip"/>
-                                            </path>
-                                            <sequential>
-                                            <var name="for.filename" unset="true" />
-                                            <basename property="for.filename" file="@{filepath}" />
-                                            <unzip src="@{filepath}" dest="target/opencms-release-temp/modules/${for.filename}" encoding="UTF8" />
-                                            <replace file="target/opencms-release-temp/modules/${for.filename}/manifest.xml" token="&amp;" value="&amp;amp;" encoding="UTF8" />
-                                            <zip basedir="target/opencms-release-temp/modules/${for.filename}" destfile="target/opencms-release/modules/${for.filename}" encoding="UTF8" />
-                                            </sequential>
-                                        </for>
+                                        <!-- copy module files from webapp -->
+                                        <copy todir="target/opencms-release/opencms" >
+                                            <fileset dir="${release.opencmsBase}/packages/modules" includes="*.zip"/>
+                                        </copy>
+                                        <copy todir="target/opencms-release/opencms/db-export" >
+                                            <fileset dir="${release.opencmsBase}/packages" includes="*.zip"/>
+                                        </copy>
                                     </target>
                                 </configuration>
                             </execution>
@@ -214,15 +260,15 @@
                             </execution-->
                             <execution>
                                 <id>zip-release</id>
-                                <phase>initialize</phase>
+                                <phase>compile</phase>
                                 <goals>
                                     <goal>run</goal>
                                 </goals>
                                 <configuration>
                                     <target>
                                         <!--  Zips release directory and renames it afterwards -->
-                                        <zip destfile="target/opencms-release-${project.version}.zip" basedir="target/opencms-release" encoding="UTF8" />
-                                        <move file="target/opencms-release" tofile="target/opencms-release-${project.version}"/>
+                                        <zip destfile="target/${release.file.name}-${project.version}-r${buildNumber}.zip" basedir="target/opencms-release" encoding="UTF8" />
+                                        <move file="target/opencms-release" tofile="target/${release.file.name}-${project.version}-r${buildNumber}"/>
                                     </target>
                                 </configuration>
                             </execution>
@@ -265,12 +311,12 @@
     <modules>
         <module>webapp</module>  <!-- this must always come first -->
         <module>system</module>	<!-- containing categories, but not orgunits -->
+	<!-- the following modules are additional modules which originally do not belong to the OpenCms Basic project -->
+        <!-- module>../template3_vfs</module -->
         <module>content</module>  <!-- requires categories from system -->
         <module>orgunits</module>  <!-- requires content -->
+	<module>parent/general-pom.xml</module>  <!-- requires content -->
         <module>parent</module>  <!-- requires content -->
-        <module>parent/general-pom.xml</module>  <!-- requires content -->
-		<!-- the following modules are additional modules which originally do not belong to the OpenCms Basic project -->
-        <!-- module>../template3_vfs</module -->
     </modules>
 
     <distributionManagement>

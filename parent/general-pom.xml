@@ -109,7 +109,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>buildnumber-maven-plugin</artifactId>
-                <version>1.4.1-comundus</version>
                 <executions>
                     <execution>
                         <phase>validate</phase>
@@ -122,11 +121,10 @@
                     <doCheck>false</doCheck>
                     <doUpdate>false</doUpdate>
                     <revisionOnScmFailure>-</revisionOnScmFailure>
-                    <locale>en_US</locale>
-                    <timestampFormat>{0,date,dd.MM.yyyy HH:mm:ss zzz}</timestampFormat>
                     <providerImplementations>
                         <svn>javasvn</svn>
                     </providerImplementations>
+                    <shortRevisionLength>7</shortRevisionLength>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -168,6 +166,9 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>3.2.0</version>
+                    <configuration>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -176,7 +177,7 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>buildnumber-maven-plugin</artifactId>
-                    <version>1.4</version>
+                    <version>1.4.1-comundus</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -243,7 +244,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <configuration>
-                    <dependencyLocationsEnabled>true</dependencyLocationsEnabled>
                     <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
                     <offline>false</offline>
                 </configuration>

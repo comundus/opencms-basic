@@ -321,7 +321,8 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <artifactId>tomcat-maven-plugin</artifactId>
+                    <version>2.2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -338,6 +339,31 @@
                             </manifestEntries>
                         </archive>
                     </configuration>
+                </plugin>
+                <plugin>
+                  <groupId>org.codehaus.gmaven</groupId>
+                  <artifactId>groovy-maven-plugin</artifactId>
+                  <version>2.1.1</version>
+                  <executions>
+                    <execution>
+                      <id>vfs-clean</id>
+                      <phase>clean</phase>
+                      <inherited>true</inherited>
+                      <configuration>
+                        <source>
+                          ant.echo(message:'Delete #synclist.txt...')
+                          ant.delete(file:properties['vfs-plugin.synclist'], failonerror:false)
+                        </source>
+                      </configuration>
+                    </execution>
+                  </executions>
+                  <dependencies>
+                    <dependency>
+                      <groupId>org.codehaus.groovy</groupId>
+                      <artifactId>groovy-all</artifactId>
+                      <version>2.4.21</version>
+                    </dependency>
+                  </dependencies>
                 </plugin>
                 <!-- all plugins not directly involved in building the project (e.g. 
                     report plugins) are in general-pom.xml -->   
