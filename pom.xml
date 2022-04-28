@@ -66,9 +66,9 @@
                 <release.webappLibCP>${release.opencmsBase}/lib/*</release.webappLibCP>
                 <release.tomcatLibCP>target/servletlib/*</release.tomcatLibCP>
                 <release.webappClassesDir>${release.opencmsBase}/classes</release.webappClassesDir>
-		<release.dir>src/release-scripts/release</release.dir>
+                <release.dir>src/release-scripts/release</release.dir>
                 <release.cmsShellScript>${release.dir}/exportopencms-commands.txt</release.cmsShellScript>
-		<release.file.name>opencms-basic</release.file.name>
+                <release.file.name>opencms-basic</release.file.name>
                 <release.project.title>OpenCms Basic</release.project.title>
             </properties>
             <build>
@@ -311,7 +311,7 @@
     <modules>
         <module>webapp</module>  <!-- this must always come first -->
         <module>system</module>	<!-- containing categories, but not orgunits -->
-	<!-- the following modules are additional modules which originally do not belong to the OpenCms Basic project -->
+        <!-- the following modules are additional modules which originally do not belong to the OpenCms Basic project -->
         <!-- module>../template3_vfs</module -->
         <module>content</module>  <!-- requires categories from system -->
         <module>orgunits</module>  <!-- requires content -->

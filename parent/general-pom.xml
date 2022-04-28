@@ -27,7 +27,7 @@
     <inceptionYear>2007</inceptionYear>
 
     <properties>
-        <revision>12.0</revision>
+        <revision>13.0</revision>
     </properties>
 
     <!--
@@ -35,15 +35,6 @@
         properties) : <profiles> <profile> <id>det</id> <properties> ...
         </properties> </profile> </profiles>
     -->
-    <profiles>
-        <profile>
-            <id>release-commons-modules</id>
-            <properties>
-            <revision>${env.OPENCMS_VERSION}</revision>
-            </properties>
-        </profile>
-    </profiles>
-
     <build>
         <finalName>${project.artifactId}</finalName>
         <!-- order here is significant for build execution! -->

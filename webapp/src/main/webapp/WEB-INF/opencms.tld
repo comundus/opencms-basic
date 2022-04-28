@@ -1370,6 +1370,11 @@
             <rtexprvalue>true</rtexprvalue>
             <type>java.lang.String</type>
         </attribute>
+        <attribute>
+        	<description>The folder to upload binary folders to. If not set, upload for binary files is disabled.</description>
+        	<name>uploadFolder</name>
+        	<rtexprvalue>true</rtexprvalue>
+        </attribute>
     </tag>
 
     <tag>
@@ -2343,6 +2348,19 @@
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
+        <attribute>
+            <description><![CDATA[
+              Flag to indicate if the included file should be cacheable in the Flex Cache.</P>
+              Default: "true".
+            ]]></description>
+            <name>cacheable</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+        	<description>The folder to upload binary folders to. If not set, upload for binary files is disabled.</description>
+        	<name>uploadFolder</name>
+        	<rtexprvalue>true</rtexprvalue>
+        </attribute>
     </tag>
 
     <tag>
@@ -2457,6 +2475,19 @@
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
             <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+              Flag to indicate if the included file should be cacheable in the Flex Cache.</P>
+              Default: "true".
+            ]]></description>
+            <name>cacheable</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+		<attribute>
+        	<description>The folder to upload binary folders to. If not set, upload for binary files is disabled.</description>
+        	<name>uploadFolder</name>
+        	<rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
 
