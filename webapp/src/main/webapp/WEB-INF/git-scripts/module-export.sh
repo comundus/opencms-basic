@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Script to export modules from a mounted OpenCms.
 # To be used for a manual Git workflow.

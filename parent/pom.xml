@@ -81,7 +81,7 @@
          -->
         <servlet.version>3.1.0</servlet.version>
         <jsp.version>2.3.1</jsp.version>
-        <opencms.version>13.0</opencms.version>
+        <opencms.version>14.0</opencms.version>
         <vfs-plugin.version>${opencms.version}</vfs-plugin.version>
         <jmock.version>2.12.0</jmock.version>
         <hamcrest.version>2.2</hamcrest.version>
