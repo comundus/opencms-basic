@@ -397,6 +397,10 @@
                         <groupId>org.apache.logging.log4j</groupId>
                         <artifactId>log4j-web</artifactId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-text</artifactId>
+                    </exclusion>
                 </exclusions>
             </dependency>
             <dependency>
@@ -591,6 +595,11 @@
                 <version>2.6.1</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+			    <groupId>org.apache.commons</groupId>
+			    <artifactId>commons-text</artifactId>
+			    <version>1.10.0</version>
+			</dependency>
             <!-- End test dependencies -->
         </dependencies>
     </dependencyManagement>

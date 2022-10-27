@@ -230,6 +230,10 @@
             <groupId>com.octo.captcha</groupId>
             <artifactId>jcaptcha</artifactId>
          </dependency>
+         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+         </dependency>
     </dependencies>
 
     <distributionManagement>
