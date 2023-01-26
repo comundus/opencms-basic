@@ -1,7 +1,41 @@
-.settings
-**/.settings
-.project
+# IDE
+#####
+*.iml
 .classpath
-#synclist.txt
-**/target
+.project
+#!/.project
+.settings/
+.idea
+
+# Build results
+###############
+bin/
+build/
+target/
+dist/
 **/#synclist.txt
+**.css.map
+*.css.map
+
+# Build tool configurations
+###########################
+.ivy
+.sass-cache
+.sass-cache/*
+build_gradle
+node_modules
+.gradle
+
+# Other
+#######
+test-coverage
+tmp
+.web_bundle_build
+/bundles
+/gradle-*.properties
+test-results
+
+# Project specific
+##################
+.metadata/
+/generated/
