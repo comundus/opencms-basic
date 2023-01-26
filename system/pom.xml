@@ -60,13 +60,6 @@
                         <syncVFSPath>/system/workplace/resources/</syncVFSPath>
                     </syncVFSPaths>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>${jdbcDriver.groupId}</groupId>
-                        <artifactId>${jdbcDriver.artifactId}</artifactId>
-                        <version>${jdbcDriver.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
