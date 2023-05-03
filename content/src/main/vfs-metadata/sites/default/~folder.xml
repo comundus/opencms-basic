@@ -4,13 +4,42 @@
 	<file>
 		<destination>sites/default</destination>
 		<type>folder</type>
-		<uuidstructure>8aaa6d9b-c6c3-11ec-9fff-cc483ab67959</uuidstructure>
-		<datelastmodified>Thu, 28 Apr 2022 07:19:28 GMT</datelastmodified>
+		<uuidstructure>77d1939e-e98c-11ed-8e92-605b301a0674</uuidstructure>
+		<datelastmodified>Wed, 03 May 2023 08:48:02 GMT</datelastmodified>
 		<userlastmodified>Admin</userlastmodified>
-		<datecreated>Thu, 28 Apr 2022 07:19:28 GMT</datecreated>
+		<datecreated>Wed, 03 May 2023 08:28:23 GMT</datecreated>
 		<usercreated>Admin</usercreated>
 		<flags>0</flags>
-		<properties/>
+		<properties>
+			<property>
+				<name>Description</name>
+				<value><![CDATA[The OpenCms demo, brought to you by Alkacon Software.]]></value>
+			</property>
+			<property>
+				<name>NavText</name>
+				<value><![CDATA[Overview]]></value>
+			</property>
+			<property>
+				<name>Title</name>
+				<value><![CDATA[Demo Site]]></value>
+			</property>
+			<property>
+				<name>mercury.privacy.policy</name>
+				<value><![CDATA[/.content/privacy-policy.xml]]></value>
+			</property>
+			<property>
+				<name>mercury.theme</name>
+				<value><![CDATA[/system/modules/alkacon.mercury.theme/css/theme-standard.min.css]]></value>
+			</property>
+			<property>
+				<name>mercury.title.prefix</name>
+				<value><![CDATA[OpenCms |]]></value>
+			</property>
+			<property>
+				<name>template</name>
+				<value><![CDATA[/system/modules/alkacon.mercury.template/templates/mercury.jsp]]></value>
+			</property>
+		</properties>
 		<relations/>
 		<accesscontrol>
 			<accessentry>

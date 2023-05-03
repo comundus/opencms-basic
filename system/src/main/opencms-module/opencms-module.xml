@@ -32,7 +32,7 @@ chacc '/system/workplace/editors/' 'ROLE' 'ELEMENT_AUTHOR' '+I+O+R+V']]></import
             <export-mode name="reduced"/>
             <description><![CDATA[Configuration for OpenCms websites.<br>
 <i>&copy; by Alkacon Software GmbH &amp; Co. KG (http://www.alkacon.com).</i>]]></description>
-            <version>14.0.0</version>
+            <version>15.0.0</version>
             <checkpoint-time>1610459969227</checkpoint-time>
             <authorname><![CDATA[Alkacon Software GmbH &amp; Co. KG]]></authorname>
             <authoremail><![CDATA[sales@alkacon.com]]></authoremail>
@@ -462,6 +462,20 @@ chacc '/system/workplace/editors/' 'ROLE' 'ELEMENT_AUTHOR' '+I+O+R+V']]></import
                     <param name="resource.flag.internal">true</param>
                     <param name="schema">/system/modules/org.opencms.ade.config/schemas/site_plugin.xsd</param>
                 </type>
+                <type class="org.opencms.file.types.CmsResourceTypeXmlAdeConfiguration" name="attr_editor_config" id="324">
+                    <properties>
+                        <property>
+                            <name>locale-available</name>
+                            <value><![CDATA[en]]></value>
+                        </property>
+                        <property>
+                            <name>locale</name>
+                            <value><![CDATA[en]]></value>
+                        </property>
+                    </properties>
+                    <param name="resource.flag.internal">true</param>
+                    <param name="schema">/system/modules/org.opencms.ade.config/schemas/attr_editor_config.xsd</param>
+                </type>
             </resourcetypes>
             <explorertypes>
                 <explorertype name="subsitemap" key="fileicon.subsitemap" smalliconstyle="oc-icon-16-subsitemap" bigiconstyle="oc-icon-24-subsitemap" reference="folder">
@@ -666,6 +680,12 @@ chacc '/system/workplace/editors/' 'ROLE' 'ELEMENT_AUTHOR' '+I+O+R+V']]></import
                         <accessentry principal="ROLE.WORKPLACE_USER" permissions="+r+v+w+c"/>
                     </accesscontrol>
                 </explorertype>
+                 <explorertype name="attr_editor_config" key="fileicon.attr_editor_config" smalliconstyle="oc-icon-16-formatter_config" bigiconstyle="oc-icon-24-formatter_config" reference="xmlcontent">
+                    <newresource creatable="true" order="23" autosetnavigation="false" autosettitle="false" info="desc.attr_editor_config"/>
+                    <accesscontrol>
+                        <accessentry principal="ROLE.WORKPLACE_USER" permissions="+r+v+w+c"/>
+                    </accesscontrol>
+                </explorertype>
             </explorertypes>
         </module>
         <module>
@@ -677,7 +697,7 @@ chacc '/system/workplace/editors/' 'ROLE' 'ELEMENT_AUTHOR' '+I+O+R+V']]></import
             <export-mode name="reduced"/>
             <description><![CDATA[<p>Contains various configuration files to specify OpenCms core behavior.</p>
 <p><i>&copy; by Alkacon Software GmbH &amp; Co. KG (http://www.alkacon.com).</i></p>]]></description>
-            <version>14.0.0</version>
+            <version>15.0.0</version>
             <checkpoint-time>1610459973523</checkpoint-time>
             <authorname><![CDATA[Alkacon Software GmbH &amp; Co. KG]]></authorname>
             <authoremail><![CDATA[info@alkacon.com]]></authoremail>
@@ -685,7 +705,7 @@ chacc '/system/workplace/editors/' 'ROLE' 'ELEMENT_AUTHOR' '+I+O+R+V']]></import
             <userinstalled/>
             <dateinstalled/>
             <dependencies>
-                <dependency name="org.opencms.base" version="14.0.0"/>
+                <dependency name="org.opencms.base" version="15.0.0"/>
             </dependencies>
             <exportpoints/>
             <resources>

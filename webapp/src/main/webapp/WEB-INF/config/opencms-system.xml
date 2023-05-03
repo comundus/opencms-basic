@@ -107,7 +107,7 @@
         <authorizationhandler class="org.opencms.security.CmsDefaultAuthorizationHandler" />
         <encryption>
             <text-encryption class="org.opencms.crypto.CmsAESTextEncryption" name="default">
-                <param name="secret">SnX7oiXDoqR81zYt8D1uIKab</param>
+                <param name="secret">X5QT76Dms4l1fYEJF39sULOS</param>
             </text-encryption>
         </encryption>
         <publishmanager>
@@ -128,7 +128,7 @@
         <subscriptionmanager enabled="true" poolname="default" maxvisited="100" />
         <detail-page-handler class="org.opencms.ade.detailpage.CmsDefaultDetailPageHandler"/>
         <shell-server enabled="false" port="1101" />
-        <userdata>
+        <userdata autoload="true">
             <userdata-domain class="org.opencms.jsp.userdata.CmsUserDataHeader"/>
             <userdata-domain class="org.opencms.jsp.userdata.CmsDefaultUserDataDomain"/>
         </userdata>
