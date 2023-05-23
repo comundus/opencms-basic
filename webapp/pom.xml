@@ -47,7 +47,7 @@
                     <configuration>
                         <warSourceDirectory>${project.build.directory}/generated/webapp</warSourceDirectory>
                         <includeEmptyDirectories>true</includeEmptyDirectories>
-                        <outputFileNameMapping>@{artifactId}@-@{version}@.@{extension}@</outputFileNameMapping>
+                        <outputFileNameMapping>@{artifactId}@@{dashClassifier?}@.@{extension}@</outputFileNameMapping>
                         <archive>
                             <manifest>
                                 <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
@@ -229,10 +229,6 @@
          <dependency>
             <groupId>com.octo.captcha</groupId>
             <artifactId>jcaptcha</artifactId>
-         </dependency>
-         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-text</artifactId>
          </dependency>
     </dependencies>
 

@@ -315,7 +315,7 @@
         <!-- module>../template3_vfs</module -->
         <module>content</module>  <!-- requires categories from system -->
         <module>orgunits</module>  <!-- requires content -->
-	<module>parent/general-pom.xml</module>  <!-- requires content -->
+        <module>parent/general-pom.xml</module>  <!-- requires content -->
         <module>parent</module>  <!-- requires content -->
     </modules>
 
