@@ -246,7 +246,7 @@
                 <opencms.db.name>opencms-basic</opencms.db.name>
                 <opencms.db.jdbcDriver>com.mysql.cj.jdbc.Driver</opencms.db.jdbcDriver>
                 <opencms.db.jdbcUrl>jdbc:mysql://10.0.1.182:3306/${opencms.db.name}</opencms.db.jdbcUrl>
-                <opencms.db.jdbcUrl.params>?characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=UTC</opencms.db.jdbcUrl.params>
+                <opencms.db.jdbcUrl.params>?useSSL=false&amp;serverTimezone=UTC</opencms.db.jdbcUrl.params>
                 <jdbcDriver.groupId>mysql</jdbcDriver.groupId>
                 <jdbcDriver.artifactId>mysql-connector-java</jdbcDriver.artifactId>
                 <jdbcDriver.version>${mysql.jdbcDriver.version}</jdbcDriver.version>
