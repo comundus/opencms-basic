@@ -1,4 +1,4 @@
-USE fraunhofer;
+USE ${database};
 
 CREATE TABLE CMS_USERS (
     USER_ID NVARCHAR(36) NOT NULL,

@@ -1,4 +1,4 @@
-USE fraunhofer;
+USE ${database};
 
 DROP TABLE CMS_CONTENTS;
 DROP TABLE CMS_GROUPUSERS;
