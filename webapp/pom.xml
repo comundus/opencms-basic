@@ -47,7 +47,7 @@
                     <configuration>
                         <warSourceDirectory>${project.build.directory}/generated/webapp</warSourceDirectory>
                         <includeEmptyDirectories>true</includeEmptyDirectories>
-                        <outputFileNameMapping>@{artifactId}@@{dashClassifier?}@.@{extension}@</outputFileNameMapping>
+                        <outputFileNameMapping>@{artifactId}@@{dashClassifier?}@-@{version}@.@{extension}@</outputFileNameMapping>
                         <archive>
                             <manifest>
                                 <addDefaultImplementationEntries>true</addDefaultImplementationEntries>

@@ -107,7 +107,7 @@
         <authorizationhandler class="org.opencms.security.CmsDefaultAuthorizationHandler" />
         <encryption>
             <text-encryption class="org.opencms.crypto.CmsAESTextEncryption" name="default">
-                <param name="secret">X5QT76Dms4l1fYEJF39sULOS</param>
+                <param name="secret">gCZWlAMAxrXzWCuq9FIwRP9q</param>
             </text-encryption>
         </encryption>
         <publishmanager>

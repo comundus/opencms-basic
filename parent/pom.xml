@@ -81,11 +81,16 @@
          -->
         <servlet.version>3.1.0</servlet.version>
         <jsp.version>2.3.1</jsp.version>
-        <opencms.version>15.0</opencms.version>
+        <opencms.version>16.0</opencms.version>
         <vfs-plugin.version>${opencms.version}</vfs-plugin.version>
         <jmock.version>2.12.0</jmock.version>
         <hamcrest.version>2.2</hamcrest.version>
+        <mysql.jdbcDriver.groupId>com.mysql</mysql.jdbcDriver.groupId>
+        <mysql.jdbcDriver.artifactId>mysql-connector-j</mysql.jdbcDriver.artifactId>
         <mysql.jdbcDriver.version>8.0.28</mysql.jdbcDriver.version>
+        <mariadb.jdbcDriver.groupId>org.mariadb.jdbc</mariadb.jdbcDriver.groupId>
+        <mariadb.jdbcDriver.artifactId>mariadb-java-client</mariadb.jdbcDriver.artifactId>
+        <mariadb.jdbcDriver.version>3.2.0</mariadb.jdbcDriver.version>
 
     </properties>
     <!--
@@ -157,12 +162,12 @@
             </activation>
             <properties>
                 <opencms.db.providerName>mysql</opencms.db.providerName>
-                <opencms.db.jdbcDriver>com.mysql.cj.jdbc.Driver</opencms.db.jdbcDriver>
-                <opencms.db.jdbcUrl>jdbc:mysql://localhost:3306/${opencms.db.name}</opencms.db.jdbcUrl>
+                <opencms.db.jdbcDriver>org.mariadb.jdbc.Driver</opencms.db.jdbcDriver>
+                <opencms.db.jdbcUrl>jdbc:mariadb://localhost:3306/${opencms.db.name}</opencms.db.jdbcUrl>
                 <opencms.db.jdbcUrl.params>?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC</opencms.db.jdbcUrl.params>
-                <jdbcDriver.groupId>mysql</jdbcDriver.groupId>
-                <jdbcDriver.artifactId>mysql-connector-java</jdbcDriver.artifactId>
-                <jdbcDriver.version>${mysql.jdbcDriver.version}</jdbcDriver.version>
+                <jdbcDriver.groupId>${mariadb.jdbcDriver.groupId}</jdbcDriver.groupId>
+                <jdbcDriver.artifactId>${mariadb.jdbcDriver.artifactId}</jdbcDriver.artifactId>
+                <jdbcDriver.version>${mariadb.jdbcDriver.version}</jdbcDriver.version>
                 <opencms.vfs.driver>org.opencms.db.mysql.CmsVfsDriver</opencms.vfs.driver>
                 <opencms.user.driver>org.opencms.db.mysql.CmsUserDriver</opencms.user.driver>
                 <opencms.project.driver>org.opencms.db.mysql.CmsProjectDriver</opencms.project.driver>
@@ -244,12 +249,12 @@
                 <opencms.db.user>opencms-basic</opencms.db.user>
                 <opencms.db.password>opencms-basic</opencms.db.password>
                 <opencms.db.name>opencms-basic</opencms.db.name>
-                <opencms.db.jdbcDriver>com.mysql.cj.jdbc.Driver</opencms.db.jdbcDriver>
-                <opencms.db.jdbcUrl>jdbc:mysql://10.0.1.182:3306/${opencms.db.name}</opencms.db.jdbcUrl>
-                <opencms.db.jdbcUrl.params>?useSSL=false&amp;serverTimezone=UTC</opencms.db.jdbcUrl.params>
-                <jdbcDriver.groupId>mysql</jdbcDriver.groupId>
-                <jdbcDriver.artifactId>mysql-connector-java</jdbcDriver.artifactId>
-                <jdbcDriver.version>${mysql.jdbcDriver.version}</jdbcDriver.version>
+                <opencms.db.jdbcDriver>org.mariadb.jdbc.Driver</opencms.db.jdbcDriver>
+                <opencms.db.jdbcUrl>jdbc:mariadb://10.0.1.182:3306/${opencms.db.name}</opencms.db.jdbcUrl>
+                <opencms.db.jdbcUrl.params>?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC</opencms.db.jdbcUrl.params>
+                <jdbcDriver.groupId>${mariadb.jdbcDriver.groupId}</jdbcDriver.groupId>
+                <jdbcDriver.artifactId>${mariadb.jdbcDriver.artifactId}</jdbcDriver.artifactId>
+                <jdbcDriver.version>${mariadb.jdbcDriver.version}</jdbcDriver.version>
                 <opencms.vfs.driver>org.opencms.db.mysql.CmsVfsDriver</opencms.vfs.driver>
                 <opencms.user.driver>org.opencms.db.mysql.CmsUserDriver</opencms.user.driver>
                 <opencms.project.driver>org.opencms.db.mysql.CmsProjectDriver</opencms.project.driver>
@@ -460,8 +465,8 @@
                 <version>${jdbcDriver.version}</version>
                 <exclusions>
                     <exclusion>
-                      <groupId>com.google.protobuf</groupId>
-                      <artifactId>protobuf-java</artifactId>
+                        <groupId>*</groupId>
+                        <artifactId>*</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>

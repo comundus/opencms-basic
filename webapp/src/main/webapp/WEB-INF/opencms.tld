@@ -326,6 +326,30 @@
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
+        <attribute>
+             <description><![CDATA[
+                The type of link to generate. One of default, perma, online, server (uses default if not set).
+            ]]></description>
+            <name>type</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+             <description><![CDATA[
+                The type of link to generate. One of default, perma, online, server (uses default if not set).
+            ]]></description>
+            <name>var</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+             <description><![CDATA[
+                The scope to use for the variable if the var attribute is used. One of (page|request|session|application).
+            ]]></description>
+            <name>scope</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
     </tag>
 
     <tag>
@@ -3000,6 +3024,22 @@
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
+        <attribute>
+        <description><![CDATA[
+            Special dummy value to replace parameters which would otherwise be XML-escaped. 
+        ]]></description>
+            <name>replaceInvalid</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description><![CDATA[
+            Comma-separated list of parameters which should be XML-escaped even if replaceInvalid is set. 
+        ]]></description>
+            <name>escapeInvalid</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
     </tag>
 
     <tag>
@@ -3208,6 +3248,12 @@
         <attribute>
             <description>The post-create handler configuration to use when creating new elements.</description>
             <name>postCreateHandler</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The upload folder to use for binary files.</description>
+            <name>uploadFolder</name>
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>

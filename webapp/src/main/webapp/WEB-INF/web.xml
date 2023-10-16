@@ -349,7 +349,7 @@
 
 
     <!-- **************************** CMIS configuration ********************************* -->
-
+<!-- 
     <listener>
         <listener-class>org.apache.chemistry.opencmis.server.impl.CmisRepositoryContextListener</listener-class>
     </listener>
@@ -363,7 +363,7 @@
             <param-name>cmisVersion</param-name>
             <param-value>1.0</param-value>
         </init-param>
-        <!-- do not load on startup by default -->
+
         <load-on-startup>-1</load-on-startup>
     </servlet>
 
@@ -374,7 +374,7 @@
             <param-name>callContextHandler</param-name>
             <param-value>org.apache.chemistry.opencmis.server.shared.BasicAuthCallContextHandler</param-value>
         </init-param>
-        <!-- do not load on startup by default -->
+
         <load-on-startup>-2</load-on-startup>
     </servlet>
 
@@ -387,7 +387,7 @@
         <servlet-name>cmisatom</servlet-name>
         <url-pattern>/cmisatom/*</url-pattern>
     </servlet-mapping>
-
+-->
     <!-- *************************** WebDAV configuration ******************************** -->
     
     <servlet>
