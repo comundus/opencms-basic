@@ -195,6 +195,10 @@
             <artifactId>org.opencms.locale.it</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.opencms</groupId>
+            <artifactId>org.opencms.locale.fr</artifactId>
+        </dependency>
+        <dependency>
 			<groupId>${jdbcDriver.groupId}</groupId>
 			<artifactId>${jdbcDriver.artifactId}</artifactId>
     	</dependency>

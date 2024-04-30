@@ -454,6 +454,11 @@
                 <artifactId>org.opencms.locale.it</artifactId>
                 <version>${opencms.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.opencms</groupId>
+                <artifactId>org.opencms.locale.fr</artifactId>
+                <version>${opencms.version}</version>
+            </dependency>
             <!-- END When there is a new version of OpenCms, the following 
                 dependencies have to be checked against the lib folder of an original installation 
                 of OpenCms -->
