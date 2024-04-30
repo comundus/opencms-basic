@@ -81,7 +81,7 @@
          -->
         <servlet.version>3.1.0</servlet.version>
         <jsp.version>2.3.1</jsp.version>
-        <opencms.version>16.0</opencms.version>
+        <opencms.version>17.0</opencms.version>
         <vfs-plugin.version>${opencms.version}</vfs-plugin.version>
         <jmock.version>2.12.0</jmock.version>
         <hamcrest.version>2.2</hamcrest.version>
@@ -163,7 +163,7 @@
             <properties>
                 <opencms.db.providerName>mysql</opencms.db.providerName>
                 <opencms.db.jdbcDriver>org.mariadb.jdbc.Driver</opencms.db.jdbcDriver>
-                <opencms.db.jdbcUrl>jdbc:mariadb://localhost:3306/${opencms.db.name}</opencms.db.jdbcUrl>
+                <opencms.db.jdbcUrl>jdbc:mariadb://localhost:3307/${opencms.db.name}</opencms.db.jdbcUrl>
                 <opencms.db.jdbcUrl.params>?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC</opencms.db.jdbcUrl.params>
                 <jdbcDriver.groupId>${mariadb.jdbcDriver.groupId}</jdbcDriver.groupId>
                 <jdbcDriver.artifactId>${mariadb.jdbcDriver.artifactId}</jdbcDriver.artifactId>
